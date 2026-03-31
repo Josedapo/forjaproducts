@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "name": "Bookata",
+      "slug": "bookata",
+      "phase": "build",
+      "url": "https://bookata.es",
+      "origin": {
+        "ideaSlug": "recomendador-libros-infantiles",
+        "timeline": [
+          { "idea": "Netflix de libros infantiles", "date": "2026-03-28", "verdict": "PIVOT" },
+          { "idea": "Recomendador de libros infantiles tipo Netflix", "date": "2026-03-28", "verdict": "ADVANCE" }
+        ]
+      },
+      "shape": {
+        "audience": "Parents of children 6-16 in Spain searching for book recommendations by age and interests",
+        "notFor": "Children directly, adult readers, textbooks/academic market",
+        "aspiration": "Become the go-to resource in Spanish for discovering children's and young adult books",
+        "differentiator": "Visual discovery experience + curated editorial recommendations ('Por que te va a enganchar') + organization by age x genre matching how parents search",
+        "businessModel": "Amazon Associates (3-7% commission) + Display ads (at scale) + Featured listings for indie authors (future)",
+        "keyMetric": "Clicks to Amazon per month",
+        "mlpScope": "Visual catalog by age (5 ranges: 6-8, 8-10, 10-12, 12-14, 14-16) and genre (6: fantasia, aventuras, misterio, amor, ci-fi, autoayuda), 50-75 books with editorial hooks",
+        "seoTarget": "~21,760 vol/month, almost all KD 0-4"
+      },
+      "build": {
+        "techStack": "Next.js 15.5 + Tailwind CSS 4 + TypeScript",
+        "fonts": "Fredoka (display) + Nunito (body)",
+        "hosting": "Vercel free tier, auto-deploy from GitHub (Josedapo/bookata)",
+        "domain": "bookata.es",
+        "status": "31 books with Google Books covers, 28+ static pages, warm editorial design with carousels by age, colored genre navigation, blurred cover backdrop on book detail pages",
+        "next": "Complete catalog to 50-75 books, run /forja-seo-validate, then /forja-launch"
+      },
+      "validate": null,
+      "launch": {
+        "vitalSigns": [
+          { "metric": "Organic sessions/month", "target": "1,000+" },
+          { "metric": "Clicks to Amazon/month", "target": "100+" },
+          { "metric": "Pages per session", "target": "2.5+" }
+        ]
+      }
+    }
+  ]
+}
