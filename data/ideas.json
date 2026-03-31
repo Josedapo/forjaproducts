@@ -1,32 +1,1279 @@
 {
   "candidates": [
-    {"idea":"Trip scenario manager","description":"Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints","pain":"Existing tools (Rome2rio, Google Maps) search routes but don't help manage and compare multiple scenarios; users resort to spreadsheets and screenshots","source":"Indie Hackers post + multiple builders attempting solutions, none dominant","painScore":4,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Google Calendar analytics for personal use","description":"Heatmaps, time breakdowns and progress tracking for personal calendar data","pain":"Google locks Time Insights behind paid Workspace; no free tool for individuals to understand how they spend their time","source":"Hacker News March 2026 (Calens project)","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"SEO Content Strategy Planner + Auditor","description":"Tool that plans content strategy based on search data and audits posts pre-publish against the strategy","pain":"Content teams lack a connected loop between SEO strategy and execution; they plan by intuition and publish without validating alignment with strategic goals","source":"Own idea (pivot from SEO Blog Writer)","painScore":4,"status":"Evaluated - ADVANCE","reportUrl":"idea-screening-seo-content-strategy-auditor.html","pivotHistory":[{"idea":"SEO Blog Writer with Brand Voice","status":"Evaluated - PIVOT","date":"2026-03-25","reportUrl":"idea-screening-seo-blog-writer.html"}]},
-    {"idea":"Validated idea marketplace","description":"Platform selling screened digital product ideas with full evaluation reports","pain":"Solopreneurs and indie hackers want validated ideas with data, not just brainstorming lists","source":"Own idea (ref: idearupt.ai)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Idea screening as a product","description":"Self-service tool for solopreneurs to evaluate digital product ideas through structured research","pain":"Founders validate ideas manually with scattered tools; no single product runs a complete screening","source":"Own idea (based on Forja screening skill)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Custom AI integration agency for SMBs","description":"Service/platform helping small companies implement AI tailored to their specific workflows","pain":"33M+ companies need AI customization but lack technical expertise","source":"Own idea (inspired by Mark Cuban)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Universal gift wishlist","description":"Platform where users create and share wish lists for friends and family","pain":"People struggle to find meaningful gifts; wishlists are scattered across stores","source":"Own idea (ref: wishprime.com)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Local insider travel connections","description":"Platform connecting travelers with verified locals for authentic experiences","pain":"Travelers want what locals actually do; guidebooks funnel everyone to tourist traps","source":"Own idea","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Claude Code training hub","description":"Curated repository of articles, courses and tutorials about Claude Code","pain":"Training resources for Claude Code are scattered; no single curated source exists","source":"Own idea (based on Learning scout skill)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Stoic philosophy content vertical","description":"Unified repository of stoic philosophy content combining original articles with curated external resources","pain":"Stoic philosophy content is fragmented across creators; no unified hub","source":"Own idea (relaunch productestoica.com)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Product strategy knowledge platform","description":"Curated collection of expert articles on product development and startup growth","pain":"Entrepreneurs lack consolidated, free, high-quality guidance on building ventures","source":"Own idea (relaunch productsavia.com)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Psychology matchmaker","description":"Tool that recommends the right type of psychologist based on symptoms","pain":"People don't know which psychology specialization fits their needs","source":"Own idea (real pattern observed)","painScore":null,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Recomendador de libros infantiles tipo Netflix","description":"Site de descubrimiento visual de libros infantiles/juveniles por edad y genero, con fichas curadas y afiliados Amazon","pain":"Padres no saben que libros recomendar a sus hijos por edad; el mercado lo sirven paginas de tienda con mala UX","source":"Own idea (pivot from Netflix de libros infantiles)","painScore":4,"status":"Evaluated - ADVANCE","reportUrl":"idea-screening-recomendador-libros-infantiles.html","pivotHistory":[{"idea":"Netflix de libros infantiles","status":"Evaluated - PIVOT","date":"2026-03-28","reportUrl":"idea-screening-netflix-libros-infantiles.html"}]}
+    {
+      "idea": "Trip scenario manager",
+      "description": "Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints",
+      "pain": "Existing tools (Rome2rio, Google Maps) search routes but don't help manage and compare multiple scenarios; users resort to spreadsheets and screenshots",
+      "source": "Indie Hackers post + multiple builders attempting solutions, none dominant",
+      "painScore": 4,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Google Calendar analytics for personal use",
+      "description": "Heatmaps, time breakdowns and progress tracking for personal calendar data",
+      "pain": "Google locks Time Insights behind paid Workspace; no free tool for individuals to understand how they spend their time",
+      "source": "Hacker News March 2026 (Calens project)",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "SEO Content Strategy Planner + Auditor",
+      "slug": "seo-content-strategy-auditor",
+      "description": "Tool that plans content strategy based on search data and audits posts pre-publish against the strategy",
+      "pain": "Content teams lack a connected loop between SEO strategy and execution; they plan by intuition and publish without validating alignment with strategic goals",
+      "source": "Own idea (pivot from SEO Blog Writer)",
+      "painScore": 4,
+      "status": "Evaluated - ADVANCE",
+      "reportUrl": "idea-screening-seo-content-strategy-auditor.html",
+      "pivotHistory": [
+        {
+          "idea": "SEO Blog Writer with Brand Voice",
+          "status": "Evaluated - PIVOT",
+          "date": "2026-03-25",
+          "reportUrl": "idea-screening-seo-blog-writer.html"
+        }
+      ],
+      "screeningData": {
+        "evaluatedDate": "2026-03-26",
+        "verdict": "ADVANCE",
+        "idea": {
+          "what": "SaaS tool combining two capabilities: (1) an SEO content strategy planner based on real search data, and (2) an auditor/optimizer that analyzes posts before publishing to ensure they meet the defined strategy. Does not generate content — manages strategy and validates execution.",
+          "audience": "Marketing teams and content managers at startups and SMBs who already produce content (internally or with freelancers/agencies) but lack a strategic SEO layer connecting planning with execution.",
+          "problem": "Companies creating content for SEO operate with a disconnect between strategy and execution: they choose topics by intuition, not data; and publish without validating that content meets the technical and strategic requirements to rank. Existing tools either generate generic content or are complex SEO suites requiring expertise to interpret.",
+          "solution": "Planner: analyzes real search data (volume, difficulty, intent, competitive gaps) to generate a prioritized content plan with clear objectives per piece. Auditor: before publishing, analyzes each draft against its strategic brief and evaluates alignment with target keyword, intent coverage, technical SEO structure, brand voice consistency — with actionable recommendations.",
+          "differentiation": "(1) vs generation tools (Jasper, Surfer, Koala): doesn't compete on writing, competes on thinking and validating — complements instead of replacing; (2) vs SEO suites (Ahrefs, SEMrush): translates complex data into concrete action plans for content managers without SEO expertise; (3) vs manual auditing/consulting: automates the strategy-validation loop at a fraction of the cost."
+        },
+        "assumptions": [
+          {
+            "assumption": "Content managers will pay for a separate strategy+auditing tool when existing tools (Surfer, Frase) already include partial features",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The 'connected loop' (strategy -> brief -> pre-publish audit) is valuable enough as a standalone product vs being a feature in existing suites",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs have someone to write the content (internally, freelancers or AI) and what they lack is the strategic layer + validation",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new tool can compete on price against Frase ($15-45/mo) offering greater strategic depth",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "MarketMuse",
+            "type": "Strategy + planning + content optimization",
+            "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'"
+          },
+          {
+            "name": "Frase",
+            "type": "SERP research + briefs + optimization + AI writing + GEO",
+            "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing"
+          },
+          {
+            "name": "Clearscope",
+            "type": "Content optimization + grading A-F + inventory",
+            "weakness": "Expensive, no strategic planning. Perceived as dated"
+          },
+          {
+            "name": "Surfer SEO",
+            "type": "Optimization + AI writer + audit",
+            "weakness": "Oriented to per-piece optimization, not global strategy. Complaints about irrelevant keywords"
+          },
+          {
+            "name": "Content Harmony",
+            "type": "Briefs + content grading",
+            "weakness": "Only briefs and scoring, no complete strategy"
+          },
+          {
+            "name": "Dashword",
+            "type": "Brief builder + optimization + monitoring",
+            "weakness": "More oriented to optimization than strategy"
+          },
+          {
+            "name": "Swiftbrief",
+            "type": "Content brief generator",
+            "weakness": "Only briefs, no auditing or strategy"
+          },
+          {
+            "name": "BriefSmith.ai",
+            "type": "SEO brief generator",
+            "weakness": "Very new, only briefs"
+          }
+        ],
+        "competitiveDensity": "Moderate (6-8 direct competitors vs 13+ in the AI writer space)",
+        "keywords": [
+          {
+            "keyword": "seo content audit",
+            "volume": 1900,
+            "kd": 39
+          },
+          {
+            "keyword": "seo and content strategy",
+            "volume": 1200,
+            "kd": 12
+          },
+          {
+            "keyword": "content audit tool",
+            "volume": 800,
+            "kd": 42
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "content brief template",
+            "volume": 500,
+            "kd": 5
+          },
+          {
+            "keyword": "seo content brief",
+            "volume": 450,
+            "kd": 6
+          },
+          {
+            "keyword": "ai content strategy",
+            "volume": 400,
+            "kd": 16
+          },
+          {
+            "keyword": "seo content optimization software",
+            "volume": 300,
+            "kd": 28
+          },
+          {
+            "keyword": "content brief generator",
+            "volume": 250,
+            "kd": 12
+          },
+          {
+            "keyword": "content planning tool",
+            "volume": 250,
+            "kd": 37
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "Reddit threads actively asking for content audit tools and budget-friendly alternatives: 'What content audit tool do you use?', 'What's your favorite budget-friendly content audit tool?'",
+            "source": "Reddit r/content_marketing, r/DigitalMarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "MarketMuse perceived as 'very expensive for what it offers' — pricing as recurring barrier",
+            "source": "Multiple comparisons, G2, Reddit"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'",
+            "source": "Comparisons 2026, Rankability, MarketBetter"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords, aggressive price increases, generic content",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Content Gap' in 2026 redefined as 'strategic deficit in Trust, Experience, Utility' — not just keyword gaps",
+            "source": "Industry reports 2026"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "2026 trend: 'AI for strategy, humans for voice' — aligned with this idea's positioning",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Linguistic convergence: brands using same AI tools produce statistically similar content — real need for differentiated strategy",
+            "source": "University of Washington study"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Pre-publish optimization emerging as differentiated workflow (Yoast in-editor, StoryChief real-time)",
+            "source": "HubSpot, StoryChief"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM — Keyword data API + LLM for analysis/strategy + web dashboard. No content generation pipeline (simpler than original idea).",
+          "timeline": "2-3 weeks with Claude Code — (1) Planner: keyword data -> prioritized plan with briefs, (2) Auditor: paste content -> score against strategic brief.",
+          "dependencies": "Keyword data API (DataForSEO $50-200/mo, much cheaper than Ahrefs/SEMrush), LLM API (moderate use — analysis, not massive generation).",
+          "risks": "Quality of strategic recommendations must match MarketMuse level (at fraction of cost); audit accuracy must be reliable pre-publish; API costs more manageable than original."
+        },
+        "verdict_detail": {
+          "decision": "ADVANCE",
+          "inFavor": [
+            "Radically better keyword landscape: KD 3-42 vs 70-87 of original idea. 7 keywords with KD < 15 offer immediate entry",
+            "SERP proves new entrants compete: BriefSmith.ai (DR 1) ranks #3, blog (DR 16) ranks #2 — don't need high authority",
+            "Unique positioning: no tool explicitly connects strategy -> briefs -> pre-publish audit as a closed loop",
+            "Validated price pain: MarketMuse ($99-499) and Clearscope ($129-399) are expensive for SMBs. Frase ($15-45) is accessible but doesn't cover complete strategy. Clear pricing space",
+            "Alignment with 2026 trend: 'AI for strategy, humans for voice' — the market is moving where this idea is positioned"
+          ],
+          "against": [
+            "Feature risk: incumbents could add this functionality as a feature. The 'connected loop' is more workflow than defensible technology",
+            "Frase is very competitive at $15-45/mo: covers briefs + optimization at low price",
+            "MarketMuse already covers the strategic layer for enterprise (though expensive)",
+            "Competition still strong in DR: incumbents with DR 62-84 make mid-term SEO difficult",
+            "Spanish market remains nonexistent: competition in US/global"
+          ]
+        }
+      }
+    },
+    {
+      "idea": "Validated idea marketplace",
+      "description": "Platform selling screened digital product ideas with full evaluation reports",
+      "pain": "Solopreneurs and indie hackers want validated ideas with data, not just brainstorming lists",
+      "source": "Own idea (ref: idearupt.ai)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Idea screening as a product",
+      "description": "Self-service tool for solopreneurs to evaluate digital product ideas through structured research",
+      "pain": "Founders validate ideas manually with scattered tools; no single product runs a complete screening",
+      "source": "Own idea (based on Forja screening skill)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Custom AI integration agency for SMBs",
+      "description": "Service/platform helping small companies implement AI tailored to their specific workflows",
+      "pain": "33M+ companies need AI customization but lack technical expertise",
+      "source": "Own idea (inspired by Mark Cuban)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Universal gift wishlist",
+      "description": "Platform where users create and share wish lists for friends and family",
+      "pain": "People struggle to find meaningful gifts; wishlists are scattered across stores",
+      "source": "Own idea (ref: wishprime.com)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Local insider travel connections",
+      "description": "Platform connecting travelers with verified locals for authentic experiences",
+      "pain": "Travelers want what locals actually do; guidebooks funnel everyone to tourist traps",
+      "source": "Own idea",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Claude Code training hub",
+      "description": "Curated repository of articles, courses and tutorials about Claude Code",
+      "pain": "Training resources for Claude Code are scattered; no single curated source exists",
+      "source": "Own idea (based on Learning scout skill)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Stoic philosophy content vertical",
+      "description": "Unified repository of stoic philosophy content combining original articles with curated external resources",
+      "pain": "Stoic philosophy content is fragmented across creators; no unified hub",
+      "source": "Own idea (relaunch productestoica.com)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Product strategy knowledge platform",
+      "description": "Curated collection of expert articles on product development and startup growth",
+      "pain": "Entrepreneurs lack consolidated, free, high-quality guidance on building ventures",
+      "source": "Own idea (relaunch productsavia.com)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Psychology matchmaker",
+      "description": "Tool that recommends the right type of psychologist based on symptoms",
+      "pain": "People don't know which psychology specialization fits their needs",
+      "source": "Own idea (real pattern observed)",
+      "painScore": null,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Recomendador de libros infantiles tipo Netflix",
+      "slug": "recomendador-libros-infantiles",
+      "description": "Site de descubrimiento visual de libros infantiles/juveniles por edad y genero, con fichas curadas y afiliados Amazon",
+      "pain": "Padres no saben que libros recomendar a sus hijos por edad; el mercado lo sirven paginas de tienda con mala UX",
+      "source": "Own idea (pivot from Netflix de libros infantiles)",
+      "painScore": 4,
+      "status": "Evaluated - ADVANCE",
+      "reportUrl": "idea-screening-recomendador-libros-infantiles.html",
+      "pivotHistory": [
+        {
+          "idea": "Netflix de libros infantiles",
+          "status": "Evaluated - PIVOT",
+          "date": "2026-03-28",
+          "reportUrl": "idea-screening-netflix-libros-infantiles.html"
+        }
+      ]
+    }
   ],
   "backlog": [
-    {"idea":"Small landlord toolkit","description":"Rent reminders, maintenance scheduling, digital lease storage for 1-10 unit landlords","pain":"Landlords manage everything in spreadsheets; enterprise tools too complex","source":"Reddit r/Landlord","painScore":4,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Government form filler","description":"Convert XFA PDF forms to modern web interfaces","pain":"XFA PDFs break in browsers; millions struggle with government forms","source":"Hacker News Jan 2026","painScore":4,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Content repurposing for creators","description":"Transform long-form content into platform-specific formats","pain":"Creators manually reformat content for each platform","source":"Multiple sources","painScore":4,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Visual routine builder for non-verbal children","description":"Digital replacement for laminated cards and velcro boards","pain":"Physical visual schedules don't leave the house","source":"Hacker News March 2026","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Tenant income verification","description":"Plaid-integrated pay stub verification for landlord screening","pain":"Landlords receive fake pay stubs; no affordable verification","source":"Reddit r/Landlord","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Secure quoting tool for contractors","description":"Auto-generate branded quotes with recipient validation","pain":"Trade professionals need simple, mistake-proof quoting","source":"Reddit r/Plumbing","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Mobile-first helpdesk for field technicians","description":"Offline ticket logging with minimal clicks","pain":"Existing helpdesk apps crash on mobile, require dozens of clicks","source":"Reddit r/sysadmin","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Review management for single-location businesses","description":"Unified monitoring for Google, Yelp, Facebook reviews","pain":"BrightLocal charges $44/month; single-location businesses priced out","source":"Multiple sources","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Freelancer approval & payment workflow","description":"Proofing, contracts and payment reminders in one tool","pain":"Freelancers spend hours chasing clients for approvals and payments","source":"Reddit r/freelance","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Airbnb turnover management","description":"Calendar sync with cleaner assignment and task tracking","pain":"Hosts use spreadsheets to schedule cleaners; coordination breaks down","source":"Reddit r/AirBnB","painScore":3,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Simple migraine trigger tracker","description":"Dot-based daily tracking that visualizes correlations","pain":"Existing migraine apps are overly complicated","source":"Hacker News Jan 2026","painScore":2,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Volunteer shift management","description":"Sign-ups, reminders and coverage swaps for nonprofits","pain":"Volunteer coordinators manage shifts manually","source":"Reddit r/Nonprofit","painScore":2,"status":"Pending","reportUrl":null,"pivotHistory":null},
-    {"idea":"Bloat-free developer tools","description":"Stripped-down notepad, REST client that never touch the network","pain":"Developers frustrated with feature creep and forced cloud sync","source":"Hacker News Jan 2026","painScore":2,"status":"Pending","reportUrl":null,"pivotHistory":null}
+    {
+      "idea": "Small landlord toolkit",
+      "description": "Rent reminders, maintenance scheduling, digital lease storage for 1-10 unit landlords",
+      "pain": "Landlords manage everything in spreadsheets; enterprise tools too complex",
+      "source": "Reddit r/Landlord",
+      "painScore": 4,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Government form filler",
+      "description": "Convert XFA PDF forms to modern web interfaces",
+      "pain": "XFA PDFs break in browsers; millions struggle with government forms",
+      "source": "Hacker News Jan 2026",
+      "painScore": 4,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Content repurposing for creators",
+      "description": "Transform long-form content into platform-specific formats",
+      "pain": "Creators manually reformat content for each platform",
+      "source": "Multiple sources",
+      "painScore": 4,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Visual routine builder for non-verbal children",
+      "description": "Digital replacement for laminated cards and velcro boards",
+      "pain": "Physical visual schedules don't leave the house",
+      "source": "Hacker News March 2026",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Tenant income verification",
+      "description": "Plaid-integrated pay stub verification for landlord screening",
+      "pain": "Landlords receive fake pay stubs; no affordable verification",
+      "source": "Reddit r/Landlord",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Secure quoting tool for contractors",
+      "description": "Auto-generate branded quotes with recipient validation",
+      "pain": "Trade professionals need simple, mistake-proof quoting",
+      "source": "Reddit r/Plumbing",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Mobile-first helpdesk for field technicians",
+      "description": "Offline ticket logging with minimal clicks",
+      "pain": "Existing helpdesk apps crash on mobile, require dozens of clicks",
+      "source": "Reddit r/sysadmin",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Review management for single-location businesses",
+      "description": "Unified monitoring for Google, Yelp, Facebook reviews",
+      "pain": "BrightLocal charges $44/month; single-location businesses priced out",
+      "source": "Multiple sources",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Freelancer approval & payment workflow",
+      "description": "Proofing, contracts and payment reminders in one tool",
+      "pain": "Freelancers spend hours chasing clients for approvals and payments",
+      "source": "Reddit r/freelance",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Airbnb turnover management",
+      "description": "Calendar sync with cleaner assignment and task tracking",
+      "pain": "Hosts use spreadsheets to schedule cleaners; coordination breaks down",
+      "source": "Reddit r/AirBnB",
+      "painScore": 3,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Simple migraine trigger tracker",
+      "description": "Dot-based daily tracking that visualizes correlations",
+      "pain": "Existing migraine apps are overly complicated",
+      "source": "Hacker News Jan 2026",
+      "painScore": 2,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Volunteer shift management",
+      "description": "Sign-ups, reminders and coverage swaps for nonprofits",
+      "pain": "Volunteer coordinators manage shifts manually",
+      "source": "Reddit r/Nonprofit",
+      "painScore": 2,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Bloat-free developer tools",
+      "description": "Stripped-down notepad, REST client that never touch the network",
+      "pain": "Developers frustrated with feature creep and forced cloud sync",
+      "source": "Hacker News Jan 2026",
+      "painScore": 2,
+      "status": "Pending",
+      "reportUrl": null,
+      "pivotHistory": null
+    }
+  ],
+  "screenedIdeas": [
+    {
+      "slug": "seo-blog-writer",
+      "idea": "SEO Blog Writer with Brand Voice",
+      "screeningData": {
+        "evaluatedDate": "2026-03-25",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "A product that writes blog content for businesses, optimized for search engine ranking through strategic keyword usage based on real searches and ranking potential.",
+          "audience": "SMBs, startups and marketing teams that need to improve their organic presence but don't have dedicated SEO writers or the expertise to create keyword-oriented content.",
+          "problem": "Creating blog content that actually ranks requires combining SEO expertise (keyword research, search intent analysis, competitive analysis) with writing skills. Most companies either write without SEO strategy (doesn't rank) or hire expensive agencies. The process of going from keyword data to a well-written, optimized article is slow and requires skills most teams don't have.",
+          "solution": "A product that analyzes real search data to identify high-potential keywords, and generates optimized blog articles designed to rank — but written following the client's custom style guide and proven structures that engage readers. Not generic AI content: each article sounds like the brand and is designed to retain.",
+          "differentiation": "(1) vs generic AI writers (ChatGPT, Jasper): starts from real search data + applies client style guide (not generic text that sounds the same across companies); (2) vs SEO tools (Ahrefs, SEMrush): doesn't just give data, writes the content; (3) vs SEO content agencies: automates the process while maintaining voice personalization and proven structure, at a fraction of the cost."
+        },
+        "assumptions": [
+          {
+            "assumption": "Companies want blog content written by AI (not just briefs/outlines)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Personalized writing style is a sufficient differentiator vs Jasper Brand IQ",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs will pay for another AI content tool when ChatGPT is almost free",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "AI-generated SEO content will continue ranking in 2026+",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Keyword data-based selection is a differentiator vs generic AI writers",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Surfer SEO",
+            "type": "Content optimizer + Surfer AI (native writer)",
+            "weakness": "Users report irrelevant keywords, ranking drops; aggressive price increases",
+            "dr": 78
+          },
+          {
+            "name": "Frase",
+            "type": "SERP research + AI writing + optimization + GEO",
+            "weakness": "Less powerful in AI writing than Jasper",
+            "dr": 68
+          },
+          {
+            "name": "Jasper",
+            "type": "AI writer with Brand IQ (learns brand tone)",
+            "weakness": "Less focused on pure SEO, more general marketing",
+            "dr": 82
+          },
+          {
+            "name": "Koala.sh",
+            "type": "AI SEO writer specialized in blog posts",
+            "weakness": "Less known, smaller ecosystem",
+            "dr": 45
+          },
+          {
+            "name": "SEO.ai",
+            "type": "Complete AI SEO platform",
+            "weakness": "Relatively new",
+            "dr": 52
+          },
+          {
+            "name": "GravityWrite",
+            "type": "AI content writer for blogs, SEO & copywriting",
+            "weakness": "Less sophisticated in SEO",
+            "dr": 48
+          },
+          {
+            "name": "NeuronWriter",
+            "type": "NLP optimization + generative AI",
+            "weakness": "Less generation capability than leaders",
+            "dr": 55
+          },
+          {
+            "name": "Clearscope",
+            "type": "Premium optimization with NLP, grading A-F",
+            "weakness": "Very expensive, enterprise-oriented",
+            "dr": 72
+          },
+          {
+            "name": "Rankability",
+            "type": "Dual NLP (IBM Watson + Google NLP)",
+            "weakness": "Expensive, niche",
+            "dr": 35
+          },
+          {
+            "name": "Writesonic",
+            "type": "Fully automated SEO platform (2026)",
+            "weakness": "Too generic",
+            "dr": 75
+          },
+          {
+            "name": "BlogSEO",
+            "type": "Hands-off content automation",
+            "weakness": "Questionable quality",
+            "dr": 38
+          }
+        ],
+        "competitiveDensity": "Saturated (13+ direct competitors, including players with $50M+ in funding)",
+        "keywords": [
+          {
+            "keyword": "ai seo content generator",
+            "volume": 1000,
+            "kd": 80
+          },
+          {
+            "keyword": "seo article writer",
+            "volume": 700,
+            "kd": 84
+          },
+          {
+            "keyword": "ai seo content writer",
+            "volume": 600,
+            "kd": 87
+          },
+          {
+            "keyword": "ai blog writer",
+            "volume": 600,
+            "kd": 61
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "seo ai writer",
+            "volume": 400,
+            "kd": 70
+          },
+          {
+            "keyword": "seo content generator",
+            "volume": 300,
+            "kd": 79
+          },
+          {
+            "keyword": "ai seo content strategy generator",
+            "volume": 250,
+            "kd": 27
+          },
+          {
+            "keyword": "best ai blog writer",
+            "volume": 150,
+            "kd": 32
+          },
+          {
+            "keyword": "best ai seo content writer",
+            "volume": 100,
+            "kd": 10
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords and forced phrases; users report ranking drops after applying recommendations",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer price increases + features blocked after paying (bait-and-switch perception)",
+            "source": "Reddit, reviews"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "AI content from Surfer/Jasper is 'very generic' and doesn't match user intent",
+            "source": "2026 comparisons"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "AI content lacks human emotion, is too verbose, doesn't speak to specific audiences",
+            "source": "Multiple reviews"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Linguistic convergence' — University of Washington study confirms brands using same AI tools produce statistically more similar content",
+            "source": "SearchIsEverywhere, CXL, Averi.ai"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Google January 2026 update aggressively filters generic AI content, prioritizes real human experience",
+            "source": "Indie Hackers"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "82% of content marketing professionals use AI, but less than 50% have brand voice frameworks",
+            "source": "Industry 2026"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Tools that preserve brand voice when using AI (multiple articles about this problem)",
+            "source": "Search Engine Land, Typeface, Averi.ai"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM-HIGH — Requires API integrations (keyword data: Ahrefs/SEMrush/DataForSEO), AI generation pipeline (LLM API), brand voice personalization system, user dashboard.",
+          "timeline": "3-4 weeks with Claude Code.",
+          "dependencies": "Keyword data API (Ahrefs/SEMrush/DataForSEO — all paid, $100-500/mo), LLM API for generation (token costs scale with usage).",
+          "risks": "Prohibitive API costs compressing margins; very high quality bar (users will compare against established tools); achieving measurably better brand voice than Jasper Brand IQ is a significant technical challenge."
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Real validated pain: generic AI content is a recognized problem (academic research + massive complaints on Reddit/reviews)",
+            "Growing demand for brand voice: 82% use AI but <50% have brand voice frameworks",
+            "Joseda has direct experience: Seoseda already executes this workflow successfully",
+            "Complaints against incumbents are specific: abusive pricing, generic content, forced keywords — there's room to do better"
+          ],
+          "against": [
+            "SATURATED market: 13+ direct competitors, including players with $50M+ in funding (Jasper DR88, Surfer DR92)",
+            "Jasper already has Brand IQ: the main differentiator (personalized brand voice) is already being executed by the leader",
+            "Macro SEO shift: AI Overviews reduce organic clicks by 34.5%. The 'blog -> SEO -> traffic' premise loses value",
+            "Prohibitive KD: core keywords have KD 70-87. Positioning the product itself would be extremely difficult",
+            "API costs compress margins: need keyword data APIs costing $100-500/mo",
+            "Spanish market nonexistent: zero volume. Would compete in US/global against established giants"
+          ],
+          "pivotSuggestions": [
+            "Auditor/Optimizer of existing content (not writer): keyword \"content optimization tool\" has 600 vol and KD 31. Instead of writing new content, audit and optimize existing blog posts for SEO + brand voice consistency. A blog with DR 16 is ranking #2 in this SERP — real space exists.",
+            "SEO content strategy planner (not writer): keyword \"ai seo content strategy generator\" has 250 vol and KD 27. Tool that creates content strategies based on data (which keywords to target, in what order, what structure) but does NOT write. Aligned with 2026 trend of \"AI for strategy, human for voice\". Lower API costs.",
+            "Productize Seoseda as a service (not SaaS): instead of competing as a SaaS platform against tools with millions in funding, offer the complete workflow as a productized service/consulting. Higher margin, lower competition, leverages expertise without building a platform."
+          ]
+        }
+      }
+    },
+    {
+      "slug": "seo-content-strategy-auditor",
+      "idea": "SEO Content Strategy Planner + Auditor",
+      "screeningData": {
+        "evaluatedDate": "2026-03-26",
+        "verdict": "ADVANCE",
+        "idea": {
+          "what": "SaaS tool combining two capabilities: (1) an SEO content strategy planner based on real search data, and (2) an auditor/optimizer that analyzes posts before publishing to ensure they meet the defined strategy. Does not generate content — manages strategy and validates execution.",
+          "audience": "Marketing teams and content managers at startups and SMBs who already produce content (internally or with freelancers/agencies) but lack a strategic SEO layer connecting planning with execution.",
+          "problem": "Companies creating content for SEO operate with a disconnect between strategy and execution: they choose topics by intuition, not data; and publish without validating that content meets the technical and strategic requirements to rank. Existing tools either generate generic content or are complex SEO suites requiring expertise to interpret.",
+          "solution": "Planner: analyzes real search data (volume, difficulty, intent, competitive gaps) to generate a prioritized content plan with clear objectives per piece. Auditor: before publishing, analyzes each draft against its strategic brief and evaluates alignment with target keyword, intent coverage, technical SEO structure, brand voice consistency — with actionable recommendations.",
+          "differentiation": "(1) vs generation tools (Jasper, Surfer, Koala): doesn't compete on writing, competes on thinking and validating — complements instead of replacing; (2) vs SEO suites (Ahrefs, SEMrush): translates complex data into concrete action plans for content managers without SEO expertise; (3) vs manual auditing/consulting: automates the strategy-validation loop at a fraction of the cost."
+        },
+        "assumptions": [
+          {
+            "assumption": "Content managers will pay for a separate strategy+auditing tool when existing tools (Surfer, Frase) already include partial features",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The 'connected loop' (strategy -> brief -> pre-publish audit) is valuable enough as a standalone product vs being a feature in existing suites",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs have someone to write the content (internally, freelancers or AI) and what they lack is the strategic layer + validation",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new tool can compete on price against Frase ($15-45/mo) offering greater strategic depth",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "MarketMuse",
+            "type": "Strategy + planning + content optimization",
+            "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'",
+            "dr": 72
+          },
+          {
+            "name": "Frase",
+            "type": "SERP research + briefs + optimization + AI writing + GEO",
+            "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing",
+            "dr": 68
+          },
+          {
+            "name": "Clearscope",
+            "type": "Content optimization + grading A-F + inventory",
+            "weakness": "Expensive, no strategic planning. Perceived as dated",
+            "dr": 72
+          },
+          {
+            "name": "Surfer SEO",
+            "type": "Optimization + AI writer + audit",
+            "weakness": "Oriented to per-piece optimization, not global strategy. Complaints about irrelevant keywords",
+            "dr": 78
+          },
+          {
+            "name": "Content Harmony",
+            "type": "Briefs + content grading",
+            "weakness": "Only briefs and scoring, no complete strategy",
+            "dr": 55
+          },
+          {
+            "name": "Dashword",
+            "type": "Brief builder + optimization + monitoring",
+            "weakness": "More oriented to optimization than strategy",
+            "dr": 48
+          },
+          {
+            "name": "Swiftbrief",
+            "type": "Content brief generator",
+            "weakness": "Only briefs, no auditing or strategy",
+            "dr": 35
+          },
+          {
+            "name": "BriefSmith.ai",
+            "type": "SEO brief generator",
+            "weakness": "Very new, only briefs",
+            "dr": 25
+          }
+        ],
+        "competitiveDensity": "Moderate (6-8 direct competitors vs 13+ in the AI writer space)",
+        "keywords": [
+          {
+            "keyword": "seo content audit",
+            "volume": 1900,
+            "kd": 39
+          },
+          {
+            "keyword": "seo and content strategy",
+            "volume": 1200,
+            "kd": 12
+          },
+          {
+            "keyword": "content audit tool",
+            "volume": 800,
+            "kd": 42
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "content brief template",
+            "volume": 500,
+            "kd": 5
+          },
+          {
+            "keyword": "seo content brief",
+            "volume": 450,
+            "kd": 6
+          },
+          {
+            "keyword": "ai content strategy",
+            "volume": 400,
+            "kd": 16
+          },
+          {
+            "keyword": "seo content optimization software",
+            "volume": 300,
+            "kd": 28
+          },
+          {
+            "keyword": "content brief generator",
+            "volume": 250,
+            "kd": 12
+          },
+          {
+            "keyword": "content planning tool",
+            "volume": 250,
+            "kd": 37
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "Reddit threads actively asking for content audit tools and budget-friendly alternatives: 'What content audit tool do you use?', 'What's your favorite budget-friendly content audit tool?'",
+            "source": "Reddit r/content_marketing, r/DigitalMarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "MarketMuse perceived as 'very expensive for what it offers' — pricing as recurring barrier",
+            "source": "Multiple comparisons, G2, Reddit"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'",
+            "source": "Comparisons 2026, Rankability, MarketBetter"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords, aggressive price increases, generic content",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Content Gap' in 2026 redefined as 'strategic deficit in Trust, Experience, Utility' — not just keyword gaps",
+            "source": "Industry reports 2026"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "2026 trend: 'AI for strategy, humans for voice' — aligned with this idea's positioning",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Linguistic convergence: brands using same AI tools produce statistically similar content — real need for differentiated strategy",
+            "source": "University of Washington study"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Pre-publish optimization emerging as differentiated workflow (Yoast in-editor, StoryChief real-time)",
+            "source": "HubSpot, StoryChief"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM — Keyword data API + LLM for analysis/strategy + web dashboard. No content generation pipeline (simpler than original idea).",
+          "timeline": "2-3 weeks with Claude Code — (1) Planner: keyword data -> prioritized plan with briefs, (2) Auditor: paste content -> score against strategic brief.",
+          "dependencies": "Keyword data API (DataForSEO $50-200/mo, much cheaper than Ahrefs/SEMrush), LLM API (moderate use — analysis, not massive generation).",
+          "risks": "Quality of strategic recommendations must match MarketMuse level (at fraction of cost); audit accuracy must be reliable pre-publish; API costs more manageable than original."
+        },
+        "verdict_detail": {
+          "decision": "ADVANCE",
+          "inFavor": [
+            "Radically better keyword landscape: KD 3-42 vs 70-87 of original idea. 7 keywords with KD < 15 offer immediate entry",
+            "SERP proves new entrants compete: BriefSmith.ai (DR 1) ranks #3, blog (DR 16) ranks #2 — don't need high authority",
+            "Unique positioning: no tool explicitly connects strategy -> briefs -> pre-publish audit as a closed loop",
+            "Validated price pain: MarketMuse ($99-499) and Clearscope ($129-399) are expensive for SMBs. Frase ($15-45) is accessible but doesn't cover complete strategy. Clear pricing space",
+            "Alignment with 2026 trend: 'AI for strategy, humans for voice' — the market is moving where this idea is positioned"
+          ],
+          "against": [
+            "Feature risk: incumbents could add this functionality as a feature. The 'connected loop' is more workflow than defensible technology",
+            "Frase is very competitive at $15-45/mo: covers briefs + optimization at low price",
+            "MarketMuse already covers the strategic layer for enterprise (though expensive)",
+            "Competition still strong in DR: incumbents with DR 62-84 make mid-term SEO difficult",
+            "Spanish market remains nonexistent: competition in US/global"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "netflix-libros-infantiles",
+      "idea": "Netflix de libros infantiles",
+      "screeningData": {
+        "evaluatedDate": "2026-03-28",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Netflix-style web platform specialized in children's and young adult literature for kids aged 6-16. Organizes books by thematic sections (Classics, Action, Fantasy, Comedy). Cards with synopsis, recommended age, and 'Why you'll love it'. Two CTAs: buy on Amazon (affiliate) and reading verification quiz (5 questions). After passing the quiz, the child chooses an avatar that appears in a shared social space with other readers.",
+          "audience": "Children and young people aged 6-16 (direct users) and their parents/guardians (purchase decision-makers and access gatekeepers).",
+          "problem": "Children don't have an attractive digital space to discover books based on their tastes. Current options are institutional (school-oriented) or for adults (Goodreads). Parents want their children to read more but don't know what to recommend or how to compete with screens.",
+          "solution": "Netflix-style visual discovery experience + gamification (verification quiz + avatar) + social component (shared avatar space), monetized through Amazon affiliates.",
+          "differentiation": "Combines curated discovery + gamification + social component, focused exclusively on children's/YA literature. Not a bookstore, not a school club, not Goodreads for kids. Affiliate model eliminates subscription friction."
+        },
+        "assumptions": [
+          {
+            "assumption": "Children want a digital platform to discover books (not just get recommendations from parents/teachers)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Parents will allow their children to create accounts on a new unknown platform",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The verification quiz is fun and not perceived as homework",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Amazon affiliate revenue covers costs",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The social avatar space generates engagement without creating safety issues",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Ranopla",
+            "type": "Reading verification quiz for primary school (Spain)",
+            "weakness": "Institutional design, school-oriented, no social component",
+            "dr": 30
+          },
+          {
+            "name": "Leoteca",
+            "type": "Children's social reading network managed by teachers (Spain)",
+            "weakness": "Requires teacher management, not autonomous for the child",
+            "dr": 35
+          },
+          {
+            "name": "Epic!",
+            "type": "40K+ books, badges, gamification. US leader",
+            "weakness": "English only, focused on <12 years",
+            "dr": 76
+          },
+          {
+            "name": "Beanstack",
+            "type": "Community reading challenges",
+            "weakness": "Oriented to libraries/schools",
+            "dr": 55
+          },
+          {
+            "name": "Readability",
+            "type": "AI reading tutor with gamification",
+            "weakness": "Focused on learning to read, not discovery",
+            "dr": 40
+          },
+          {
+            "name": "Bookroo",
+            "type": "Challenges, quizzes, digital rewards",
+            "weakness": "US market, no Spanish",
+            "dr": 45
+          },
+          {
+            "name": "Reading.com",
+            "type": "#1 in 2026 rankings, Direct Instruction",
+            "weakness": "Focused on reading skill",
+            "dr": 50
+          }
+        ],
+        "competitiveDensity": "Saturated",
+        "keywords": [
+          {
+            "keyword": "libros para adolescentes",
+            "volume": 6200,
+            "kd": 4
+          },
+          {
+            "keyword": "libros juveniles",
+            "volume": 2900,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para ninos de 10 a 12 anos",
+            "volume": 1800,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para ninos",
+            "volume": 1600,
+            "kd": 3
+          },
+          {
+            "keyword": "libros para ninos de 6 a 8 anos",
+            "volume": 1000,
+            "kd": 0
+          },
+          {
+            "keyword": "libros recomendados ninos 10-12",
+            "volume": 700,
+            "kd": 0
+          },
+          {
+            "keyword": "cuentos infantiles para leer",
+            "volume": 700,
+            "kd": 63
+          },
+          {
+            "keyword": "libros para ninos de 8 anos",
+            "volume": 600,
+            "kd": 0
+          },
+          {
+            "keyword": "children books",
+            "volume": 9000,
+            "kd": 20
+          },
+          {
+            "keyword": "reading apps for kids",
+            "volume": 2400,
+            "kd": 79
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "DISCUSSION",
+            "signal": "No pain signals found like 'I wish there was a gamified reading platform for kids'",
+            "source": "Reddit, forums"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Parents on Reddit discuss what books to recommend, not that they need a platform",
+            "source": "Reddit"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Educators value Ranopla and Leoteca positively — satisfied with current solutions",
+            "source": "Education forums"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Frustrations with reading apps: inadequate difficulty level and excessive complexity, not lack of gamification",
+            "source": "App reviews"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "The absence of demand signals is itself a signal",
+            "source": "Market analysis"
+          }
+        ],
+        "executability": {
+          "complexity": "HIGH",
+          "timeline": "4-6 weeks (web) + undetermined time for COPPA/GDPR legal compliance for minors.",
+          "dependencies": "Amazon Associates API, book metadata source (Open Library/Google Books API), COPPA/GDPR legal review, child protection advisory.",
+          "risks": "Legal exposure from minor data without compliance; social space multiplies responsibility (bullying, inappropriate contact); scaling quality quiz creation is a bottleneck."
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Gamification works to motivate children's reading (validated by Ranopla, Beanstack, Epic)",
+            "The Netflix-style concept is more attractive than institutional designs of current competitors",
+            "Spanish keyword cluster for books by age has KD 0-4 with significant volume (~13,200 vol total)",
+            "Affiliate model eliminates payment friction",
+            "'Libros para adolescentes' (6,200 vol, KD 4, global 33K) is opportunity without competition"
+          ],
+          "against": [
+            "Ranopla already implements the core concept in the Spanish market with educational adoption",
+            "COPPA/GDPR for minors under 16 creates disproportionate legal barrier for solopreneur",
+            "'Gamificacion lectura' has 0 search volume",
+            "Amazon affiliates on children's books: 0.24-0.75 EUR/sale — insufficient revenue without massive scale",
+            "Social component requires moderation and creates legal responsibility",
+            "Each book needs quiz + curated synopsis — content bottleneck"
+          ],
+          "pivotSuggestions": [
+            "Netflix-style recommendation site (no accounts): Web with Netflix aesthetic organizing books by age/genre with attractive cards and affiliate links. No user accounts, no quizzes, no COPPA. Keywords: \"libros para adolescentes\" (6,200/KD 4), \"libros para niños de 10 a 12 años\" (1,800/KD 0). MVP: 1-2 weeks.",
+            "Newsletter + SEO for parents: Combine discovery site with weekly recommendation newsletter. Capture parent emails (adults, no COPPA). Dual channel: SEO + email. MVP: 2-3 weeks."
+          ]
+        }
+      }
+    },
+    {
+      "slug": "recomendador-libros-infantiles",
+      "idea": "Recomendador de libros infantiles tipo Netflix",
+      "screeningData": {
+        "evaluatedDate": "2026-03-28",
+        "verdict": "ADVANCE",
+        "idea": {
+          "what": "Book recommendation site for children and young adults with Netflix-style aesthetics, targeting the Spanish market. Organizes books by age (6-16) and literary genre with attractive cards including synopsis, recommended age, and 'Why you'll love it'. Monetization through Amazon affiliates. No user accounts. Social media channels drive complementary traffic.",
+          "audience": "Parents of children aged 6-16 in Spain searching online for what books to recommend to their kids by age and interests. Secondary: teachers and librarians.",
+          "problem": "Parents want their children to read more but don't know what to recommend for their specific age. They search 'books for kids aged 10-12' and find generic Amazon listings, outdated blog posts with poor UX, or unattractive institutional websites. No visual, well-organized, comprehensive resource exists for discovering children's/YA books by age and genre in Spanish.",
+          "solution": "Website with Netflix-style visual navigation organizing children's and YA books by age range and literary genre. Each book has a curated card with synopsis, recommended age, and 'Why you'll love it', with Amazon purchase link (affiliate). No user accounts. Social media channels as complementary traffic source.",
+          "differentiation": "Unlike Amazon (overwhelming, not curated), generic blog posts (outdated, ugly), or Goodreads (for adults), this site offers a visual discovery experience designed for Spanish-speaking parents. No accounts, no friction — browse and buy. Netflix UX applied to a niche of curated content is the differentiator."
+        },
+        "assumptions": [
+          {
+            "assumption": "Parents search for and trust independent book recommendation sites",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "A new site with DR 0 can rank for keywords with KD 0-4",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "Revenue (affiliates + ads) generates sufficient return",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The Netflix-style UX is a real differentiator vs blog posts",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Casa del Libro",
+            "type": "Store category page",
+            "weakness": "Not curated, generic store UX",
+            "dr": 82
+          },
+          {
+            "name": "Amazon.es",
+            "type": "Marketplace",
+            "weakness": "Overwhelming, no curation",
+            "dr": 91
+          },
+          {
+            "name": "Planeta de Libros",
+            "type": "Publisher blog",
+            "weakness": "Biased toward own catalog",
+            "dr": 77
+          },
+          {
+            "name": "Bebes y Mas / Ser Padres",
+            "type": "Parenting portals",
+            "weakness": "Generic list-type articles",
+            "dr": 70
+          },
+          {
+            "name": "Educacion 3.0",
+            "type": "Education blog",
+            "weakness": "Sporadic posts, not a dedicated site",
+            "dr": 71
+          },
+          {
+            "name": "Orvalle.es",
+            "type": "School website",
+            "weakness": "Limited content, institutional",
+            "dr": 38
+          },
+          {
+            "name": "AdolescenciaPositiva",
+            "type": "Niche blog",
+            "weakness": "Individual posts, not a discovery experience",
+            "dr": 34
+          },
+          {
+            "name": "Diego Marin / Puerta de Tannhauser",
+            "type": "Small bookstores",
+            "weakness": "Sales pages, not curated recommendation",
+            "dr": 39
+          }
+        ],
+        "competitiveDensity": "Open",
+        "keywords": [
+          {
+            "keyword": "libros para adolescentes",
+            "volume": 6200,
+            "kd": 4
+          },
+          {
+            "keyword": "libros juveniles",
+            "volume": 2900,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para ninos de 10 a 12 anos",
+            "volume": 1800,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para ninos",
+            "volume": 1600,
+            "kd": 3
+          },
+          {
+            "keyword": "libros adolescentes",
+            "volume": 1400,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para ninos de 6 a 8 anos",
+            "volume": 1000,
+            "kd": 0
+          },
+          {
+            "keyword": "libros recomendados para adolescentes",
+            "volume": 900,
+            "kd": 1
+          },
+          {
+            "keyword": "literatura juvenil",
+            "volume": 800,
+            "kd": 4
+          },
+          {
+            "keyword": "libros recomendados ninos 10-12",
+            "volume": 700,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para adolescentes de 14 anos",
+            "volume": 700,
+            "kd": 12
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "DISCUSSION",
+            "signal": "Parents actively search for recommendations by age on Reddit, Quora and Spanish forums",
+            "source": "Reddit, Quora"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "'Parents don't get a crash course in books, the market, and reading levels' — documented frustration",
+            "source": "Parenting blogs, forums"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "'Libros para ninos de 12 anos que no les gusta leer' (30 vol, KD 0) — real specific pain",
+            "source": "Ahrefs keyword"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple Spanish portals (Bebes y Mas, Ser Padres, Hacer Familia) publish recommendation content = validated demand",
+            "source": "Spanish parenting websites"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "20+ specialized children's literature blogs in Spain — active community",
+            "source": "educaciontrespuntocero.com (compilation)"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW",
+          "timeline": "1-2 weekends with Claude Code (comparable to ValuePerFan MVP).",
+          "dependencies": "Google Books API / Open Library (metadata, free), Amazon Associates Spain (affiliates, free registration), Vercel/Netlify (free hosting).",
+          "risks": "Practically none. Main risk is content (curation quality), not technical."
+        },
+        "verdict_detail": {
+          "decision": "ADVANCE",
+          "inFavor": [
+            "Cluster of ~20,000+ vol/month with KD 0-4 in Spain — trivial positioning for new site",
+            "SERP confirms DR 31-40 sites on page 1 — a new site can compete",
+            "No direct competitor in the exact positioning",
+            "LOW technical complexity: static site, no accounts, MVP in 1-2 weekends",
+            "Multiple monetization paths: affiliates + display ads + newsletter sponsors",
+            "Leverages existing expertise in SEO (Seoseda) and content (Cronicas)",
+            "Natural expansion to LATAM (33K global vol vs 6,200 ES)"
+          ],
+          "against": [
+            "Thin book affiliate margins (0.24-0.75 EUR/sale) — needs volume or complementary revenue",
+            "Curation effort: need to research children's books for quality cards",
+            "Netflix UX as differentiator is yet to be validated",
+            "Low barrier to entry: replicable concept",
+            "Potentially seasonal traffic (Christmas, back to school)"
+          ]
+        }
+      }
+    }
   ]
 }

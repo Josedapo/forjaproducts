@@ -1,10 +1,9 @@
-import { getIdeasData, getAllProducts } from "@/lib/data";
+import { getFilteredIdeas, getAllProducts } from "@/lib/data";
 import StatsBar from "@/components/StatsBar";
-import ProductsTable from "@/components/ProductsTable";
-import IdeasTable from "@/components/IdeasTable";
+import DashboardTabs from "@/components/DashboardTabs";
 
 export default function DashboardPage() {
-  const { candidates, backlog } = getIdeasData();
+  const { candidates, backlog } = getFilteredIdeas();
   const products = getAllProducts();
 
   const allIdeas = [...candidates, ...backlog];
@@ -21,25 +20,20 @@ export default function DashboardPage() {
         ).toFixed(1)
       : "--";
 
-  const stats = [
-    { label: "Productos", value: products.length },
-    { label: "Ideas totales", value: allIdeas.length },
-    { label: "Advance", value: advanceCount },
-    { label: "Pendientes", value: pendingCount },
-    { label: "Pain medio", value: avgPain },
-  ];
-
   return (
     <div>
-      <StatsBar stats={stats} />
-
-      <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-text">Productos</h2>
-        <ProductsTable products={products} />
-      </section>
-
-      <IdeasTable ideas={candidates} title="Candidatas" />
-      <IdeasTable ideas={backlog} title="Backlog" />
+      <StatsBar
+        products={products.length}
+        totalIdeas={allIdeas.length}
+        advance={advanceCount}
+        pending={pendingCount}
+        avgPain={avgPain}
+      />
+      <DashboardTabs
+        products={products}
+        candidates={candidates}
+        backlog={backlog}
+      />
     </div>
   );
 }

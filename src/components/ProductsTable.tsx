@@ -12,9 +12,9 @@ export default function ProductsTable({ products }: ProductsTableProps) {
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-border bg-surface2 text-left">
-            <th className="px-4 py-3 font-medium text-text-dim">Nombre</th>
-            <th className="px-4 py-3 font-medium text-text-dim">Fase</th>
-            <th className="px-4 py-3 font-medium text-text-dim">Idea origen</th>
+            <th className="px-4 py-3 font-medium text-text-dim">Name</th>
+            <th className="px-4 py-3 font-medium text-text-dim">Phase</th>
+            <th className="px-4 py-3 font-medium text-text-dim">Origin idea</th>
             <th className="px-4 py-3 font-medium text-text-dim">URL</th>
           </tr>
         </thead>

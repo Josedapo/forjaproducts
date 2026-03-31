@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import Logo from "@/components/Logo";
 
 export default function LoginPage() {
   const [password, setPassword] = useState("");
@@ -25,10 +26,10 @@ export default function LoginPage() {
         router.push("/");
         router.refresh();
       } else {
-        setError("Contrasena incorrecta");
+        setError("Wrong password");
       }
     } catch {
-      setError("Error de conexion");
+      setError("Connection error");
     } finally {
       setLoading(false);
     }
@@ -36,16 +37,16 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-[60vh] items-center justify-center">
-      <div className="w-full max-w-sm rounded-lg border border-border bg-surface p-8">
-        <h2 className="mb-6 text-center text-2xl font-semibold text-text">
-          Forja Products
-        </h2>
+      <div className="card w-full max-w-sm p-8">
+        <div className="mb-6 flex justify-center">
+          <Logo size="large" />
+        </div>
         <form onSubmit={handleSubmit}>
           <label
             htmlFor="password"
             className="mb-2 block text-sm font-medium text-text-dim"
           >
-            Contrasena
+            Password
           </label>
           <input
             id="password"
@@ -64,7 +65,7 @@ export default function LoginPage() {
             disabled={loading}
             className="w-full rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent/90 disabled:opacity-50"
           >
-            {loading ? "Entrando..." : "Entrar"}
+            {loading ? "Signing in..." : "Sign in"}
           </button>
         </form>
       </div>

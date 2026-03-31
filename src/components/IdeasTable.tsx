@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import type { Idea } from "@/lib/types";
 import PainScore from "./PainScore";
 import StatusBadge from "./StatusBadge";
@@ -73,13 +74,13 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
   }
 
   return (
-    <div className="mb-8">
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+    <div>
+      <div className="flex flex-wrap items-center justify-between gap-3 px-5 pt-5 pb-3">
         <h2 className="text-lg font-semibold text-text">{title}</h2>
         <div className="flex items-center gap-2">
           <input
             type="text"
-            placeholder="Buscar..."
+            placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="rounded-md border border-border bg-surface2 px-3 py-1.5 text-sm text-text outline-none focus:border-accent focus:ring-1 focus:ring-accent"
@@ -89,7 +90,7 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
             onChange={(e) => setStatusFilter(e.target.value)}
             className="rounded-md border border-border bg-surface2 px-3 py-1.5 text-sm text-text outline-none focus:border-accent"
           >
-            <option value="all">Todos</option>
+            <option value="all">All</option>
             {statuses.map((s) => (
               <option key={s} value={s}>
                 {s}
@@ -107,10 +108,10 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                 className="cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text"
                 onClick={() => toggleSort("idea")}
               >
-                Idea{sortIndicator("idea")}
+                <span className="whitespace-nowrap">Idea{sortIndicator("idea")}</span>
               </th>
               <th className="px-4 py-3 font-medium text-text-dim">
-                Descripcion
+                Description
               </th>
               <th className="hidden px-4 py-3 font-medium text-text-dim lg:table-cell">
                 Pain
@@ -119,24 +120,23 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                 className="cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text"
                 onClick={() => toggleSort("painScore")}
               >
-                Score{sortIndicator("painScore")}
+                <span className="whitespace-nowrap">Score{sortIndicator("painScore")}</span>
               </th>
               <th className="hidden px-4 py-3 font-medium text-text-dim md:table-cell">
-                Fuente
+                Source
               </th>
               <th
                 className="cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text"
                 onClick={() => toggleSort("status")}
               >
-                Estado{sortIndicator("status")}
+                <span className="whitespace-nowrap">Status{sortIndicator("status")}</span>
               </th>
             </tr>
           </thead>
           <tbody>
             {filtered.map((idea) => (
-              <>
+              <React.Fragment key={idea.idea}>
                 <tr
-                  key={idea.idea}
                   className={`border-b border-border last:border-b-0 hover:bg-surface2/50 ${
                     idea.pivotHistory ? "cursor-pointer" : ""
                   }`}
@@ -155,7 +155,17 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                           {expandedIdea === idea.idea ? "▼" : "▶"}
                         </span>
                       )}
-                      <span className="font-medium text-text">{idea.idea}</span>
+                      {idea.slug ? (
+                        <Link
+                          href={`/idea/${idea.slug}`}
+                          className="font-medium text-accent hover:underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {idea.idea}
+                        </Link>
+                      ) : (
+                        <span className="font-medium text-text">{idea.idea}</span>
+                      )}
                     </div>
                   </td>
                   <td className="max-w-xs px-4 py-3 text-text-dim">
@@ -178,24 +188,39 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                   <tr key={`${idea.idea}-pivot`} className="border-b border-border">
                     <td colSpan={6} className="bg-surface2/30 px-8 py-3">
                       <p className="mb-2 text-xs font-medium text-text-dim">
-                        Historial de pivotes
+                        Pivot history
                       </p>
                       <div className="space-y-1.5">
-                        {idea.pivotHistory.map((pivot, i) => (
-                          <div
-                            key={i}
-                            className="flex items-center gap-2 text-sm"
-                          >
-                            <span className="text-text-dim">{pivot.date}</span>
-                            <span className="text-text">{pivot.idea}</span>
-                            <StatusBadge status={pivot.status} />
-                          </div>
-                        ))}
+                        {idea.pivotHistory.map((pivot, i) => {
+                          const pivotSlug = pivot.reportUrl
+                            ? pivot.reportUrl.replace("idea-screening-", "").replace(".html", "")
+                            : null;
+                          return (
+                            <div
+                              key={i}
+                              className="flex items-center gap-2 text-sm"
+                            >
+                              <span className="text-text-dim">{pivot.date}</span>
+                              {pivotSlug ? (
+                                <Link
+                                  href={`/idea/${pivotSlug}`}
+                                  className="text-accent hover:underline"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  {pivot.idea}
+                                </Link>
+                              ) : (
+                                <span className="text-text">{pivot.idea}</span>
+                              )}
+                              <StatusBadge status={pivot.status} />
+                            </div>
+                          );
+                        })}
                       </div>
                     </td>
                   </tr>
                 )}
-              </>
+              </React.Fragment>
             ))}
             {filtered.length === 0 && (
               <tr>
@@ -203,7 +228,7 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                   colSpan={6}
                   className="px-4 py-8 text-center text-sm text-text-dim"
                 >
-                  Sin resultados
+                  No results
                 </td>
               </tr>
             )}
