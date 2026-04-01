@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getScreenedIdeas, getScreenedIdea } from "@/lib/data";
+import { getScreenedIdeas, getScreenedIdea, getProductByIdeaSlug } from "@/lib/data";
 import StatusBadge from "@/components/StatusBadge";
 
 export function generateStaticParams() {
@@ -212,6 +212,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
   }
 
   const { screeningData: data } = screened;
+  const linkedProduct = getProductByIdeaSlug(screened.slug);
 
   return (
     <div>
@@ -239,6 +240,14 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
                     : data.verdict
             }
           />
+          {linkedProduct && (
+            <Link
+              href={`/product/${linkedProduct.slug}`}
+              className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-sm font-medium text-accent hover:bg-accent/20 transition-colors"
+            >
+              {linkedProduct.name} &rarr;
+            </Link>
+          )}
         </div>
         <p className="mt-1 text-sm text-text-dim">
           Evaluated {data.evaluatedDate}
@@ -370,6 +379,30 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
             </tbody>
           </table>
         </div>
+        {/* Weighted Average KD */}
+        {data.keywords.length > 0 && (() => {
+          const totalVolume = data.keywords.reduce((sum, k) => sum + k.volume, 0);
+          const weightedKd = totalVolume > 0
+            ? Math.round(data.keywords.reduce((sum, k) => sum + k.kd * k.volume, 0) / totalVolume)
+            : 0;
+          const kdColor = weightedKd <= 15 ? "#38a169" : weightedKd <= 40 ? "#d69e2e" : "#e53e3e";
+          const kdLabel = weightedKd <= 15 ? "Easy" : weightedKd <= 40 ? "Medium" : "Hard";
+          const kdColorClass = weightedKd <= 15 ? "text-green" : weightedKd <= 40 ? "text-yellow" : "text-red";
+          return (
+            <div className="mt-4 rounded-lg border-2 px-5 py-4" style={{ borderColor: `${kdColor}30`, backgroundColor: `${kdColor}08` }}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-accent">Weighted Avg KD</p>
+                  <p className="mt-0.5 text-xs text-text-dim">Weighted by search volume ({totalVolume.toLocaleString()} total vol)</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className={`text-3xl font-bold ${kdColorClass}`}>{weightedKd}</span>
+                  <span className="rounded-full px-2.5 py-0.5 text-xs font-medium" style={{ backgroundColor: `${kdColor}15`, color: kdColor }}>{kdLabel}</span>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
       </SectionCard>
 
       {/* 5. Community Signals */}
