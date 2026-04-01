@@ -91,7 +91,7 @@ function TimelineField({ value }: { value: string }) {
     <div className="rounded-md border border-border bg-surface2/50 px-4 py-3">
       <p className="mb-3 border-b border-border pb-2 text-xs font-bold uppercase tracking-wider text-accent">Timeline</p>
       <div className="flex items-center gap-2">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#4f6df5" strokeWidth="1.5">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#C07840" strokeWidth="1.5">
           <circle cx="10" cy="10" r="8" />
           <path d="M10 5v5l3 3" strokeLinecap="round" />
         </svg>

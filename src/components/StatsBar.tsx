@@ -59,7 +59,7 @@ function RingProgress({
         strokeDashoffset={offset}
         transform="rotate(-90 40 40)"
       />
-      <text x="40" y="44" textAnchor="middle" fontSize="18" fontWeight="700" fill="#1a1d27">
+      <text x="40" y="44" textAnchor="middle" fontSize="18" fontWeight="700" fill="#1c1a18">
         {value}
       </text>
     </svg>
@@ -103,7 +103,7 @@ export default function StatsBar({
       <div className="card px-5 py-4">
         <IconStat
           value={products}
-          color="#4f6df5"
+          color="#C07840"
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <rect x="3" y="3" width="7" height="7" rx="1" />

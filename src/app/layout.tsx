@@ -25,10 +25,10 @@ export default async function RootLayout({
         className="bg-bg text-text antialiased"
         style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
       >
-        <header style={{ background: 'linear-gradient(135deg, #1a1d27 0%, #2d3258 50%, #4f6df5 100%)' }}>
+        <header style={{ background: 'linear-gradient(135deg, #1c1a18 0%, #3a3330 50%, #C07840 100%)' }}>
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <Link href="/">
-              <Logo variant="light" />
+              <Logo />
             </Link>
             {isAuthenticated && <LogoutButton />}
           </div>

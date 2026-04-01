@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #f0f4ff;
+  --color-bg: #f5f3f0;
   --color-surface: #ffffff;
-  --color-surface2: #eef2fa;
-  --color-border: #dde3f0;
-  --color-text: #1a1d27;
-  --color-text-dim: #6b7280;
-  --color-accent: #4f6df5;
-  --color-accent-light: #eef1fe;
+  --color-surface2: #f0ece6;
+  --color-border: #e0dbd3;
+  --color-text: #1c1a18;
+  --color-text-dim: #6b6560;
+  --color-accent: #C07840;
+  --color-accent-light: #fdf5ef;
   --color-red: #e53e3e;
   --color-red-bg: #fef2f2;
   --color-green: #38a169;
@@ -35,7 +35,7 @@ body {
 }
 
 .card-hover:hover {
-  box-shadow: 0 4px 16px rgba(79,109,245,.1), 0 1px 3px rgba(0,0,0,.06);
+  box-shadow: 0 4px 16px rgba(192,120,64,.1), 0 1px 3px rgba(0,0,0,.06);
   transform: translateY(-1px);
 }
 
@@ -121,7 +121,7 @@ body {
 }
 
 .prose-forja tr:hover td {
-  background: rgba(79,109,245,.03);
+  background: rgba(192,120,64,.03);
 }
 
 .prose-forja code {

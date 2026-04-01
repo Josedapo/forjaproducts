@@ -26,7 +26,7 @@ export default function PipelineBar({ currentPhase }: PipelineBarProps) {
           className="absolute top-0 left-0 h-1 rounded-full transition-all duration-500"
           style={{
             width: activeIndex === 0 ? "0%" : `${(activeIndex / (PHASES.length - 1)) * 100}%`,
-            background: "linear-gradient(90deg, #38a169, #4f6df5)",
+            background: "linear-gradient(90deg, #38a169, #C07840)",
           }}
         />
       </div>
