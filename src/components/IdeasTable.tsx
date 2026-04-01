@@ -10,12 +10,13 @@ import IdeaDetailOverlay from "./IdeaDetailOverlay";
 interface IdeasTableProps {
   ideas: Idea[];
   title: string;
+  latestAdded: string | null;
 }
 
 type SortField = "idea" | "painScore" | "added" | "status";
 type SortDir = "asc" | "desc";
 
-export default function IdeasTable({ ideas, title }: IdeasTableProps) {
+export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProps) {
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [sortField, setSortField] = useState<SortField>("painScore");
@@ -26,12 +27,6 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
   const statuses = useMemo(() => {
     const set = new Set(ideas.map((i) => i.status));
     return Array.from(set).sort();
-  }, [ideas]);
-
-  const latestAdded = useMemo(() => {
-    const dates = ideas.map((i) => i.added).filter(Boolean) as string[];
-    if (dates.length === 0) return null;
-    return dates.sort().at(-1)!;
   }, [ideas]);
 
   const filtered = useMemo(() => {

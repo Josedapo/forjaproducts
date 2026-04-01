@@ -7,6 +7,8 @@ export default function DashboardPage() {
   const products = getAllProducts();
 
   const allIdeas = [...candidates, ...backlog];
+  const allDates = allIdeas.map((i) => i.added).filter(Boolean) as string[];
+  const latestAdded = allDates.length > 0 ? allDates.sort().at(-1)! : null;
   const advanceCount = allIdeas.filter((i) =>
     i.status.includes("ADVANCE")
   ).length;
@@ -35,6 +37,7 @@ export default function DashboardPage() {
         products={products}
         candidates={candidates}
         backlog={backlog}
+        latestAdded={latestAdded}
       />
     </div>
   );

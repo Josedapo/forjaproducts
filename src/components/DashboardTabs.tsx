@@ -9,6 +9,7 @@ interface DashboardTabsProps {
   products: Product[];
   candidates: Idea[];
   backlog: Idea[];
+  latestAdded: string | null;
 }
 
 const TABS = [
@@ -23,6 +24,7 @@ export default function DashboardTabs({
   products,
   candidates,
   backlog,
+  latestAdded,
 }: DashboardTabsProps) {
   const [active, setActive] = useState<TabKey>("products");
 
@@ -63,13 +65,13 @@ export default function DashboardTabs({
 
       {active === "candidates" && (
         <div className="card overflow-hidden">
-          <IdeasTable ideas={candidates} title="Candidates" />
+          <IdeasTable ideas={candidates} title="Candidates" latestAdded={latestAdded} />
         </div>
       )}
 
       {active === "backlog" && (
         <div className="card overflow-hidden">
-          <IdeasTable ideas={backlog} title="Backlog" />
+          <IdeasTable ideas={backlog} title="Backlog" latestAdded={latestAdded} />
         </div>
       )}
     </div>
