@@ -10,7 +10,9 @@ export default function DashboardPage() {
   const advanceCount = allIdeas.filter((i) =>
     i.status.includes("ADVANCE")
   ).length;
-  const pendingCount = allIdeas.filter((i) => i.status === "Pending").length;
+  const pendingCount = allIdeas.filter(
+    (i) => !i.status.includes("ADVANCE") && !i.status.includes("PIVOT") && !i.status.includes("DISCARD")
+  ).length;
   const scoredIdeas = allIdeas.filter((i) => i.painScore !== null);
   const avgPain =
     scoredIdeas.length > 0
