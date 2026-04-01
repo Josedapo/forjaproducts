@@ -70,6 +70,9 @@ export function getScreenedIdea(slug: string): ScreenedIdea | undefined {
   return getScreenedIdeas().find((i) => i.slug === slug);
 }
 
-export function getProductByIdeaSlug(ideaSlug: string): Product | undefined {
-  return getAllProducts().find((p) => p.origin.ideaSlug === ideaSlug);
+export function getProductByIdeaSlug(ideaSlug: string, ideaName?: string): Product | undefined {
+  return getAllProducts().find((p) =>
+    p.origin.ideaSlug === ideaSlug ||
+    (ideaName && p.origin.timeline.some((t) => t.idea.toLowerCase() === ideaName.toLowerCase()))
+  );
 }

@@ -212,7 +212,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
   }
 
   const { screeningData: data } = screened;
-  const linkedProduct = getProductByIdeaSlug(screened.slug);
+  const linkedProduct = getProductByIdeaSlug(screened.slug, screened.idea);
 
   return (
     <div>
