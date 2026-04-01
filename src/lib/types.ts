@@ -41,6 +41,7 @@ export interface Idea {
   pain: string;
   source: string;
   painScore: number | null;
+  added?: string;
   status: string;
   reportUrl: string | null;
   pivotHistory: PivotHistoryItem[] | null;

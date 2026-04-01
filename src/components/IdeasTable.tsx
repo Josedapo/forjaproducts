@@ -11,7 +11,7 @@ interface IdeasTableProps {
   title: string;
 }
 
-type SortField = "idea" | "painScore" | "status";
+type SortField = "idea" | "painScore" | "added" | "status";
 type SortDir = "asc" | "desc";
 
 export default function IdeasTable({ ideas, title }: IdeasTableProps) {
@@ -24,6 +24,12 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
   const statuses = useMemo(() => {
     const set = new Set(ideas.map((i) => i.status));
     return Array.from(set).sort();
+  }, [ideas]);
+
+  const latestAdded = useMemo(() => {
+    const dates = ideas.map((i) => i.added).filter(Boolean) as string[];
+    if (dates.length === 0) return null;
+    return dates.sort().at(-1)!;
   }, [ideas]);
 
   const filtered = useMemo(() => {
@@ -50,6 +56,8 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
         cmp = a.idea.localeCompare(b.idea);
       } else if (sortField === "painScore") {
         cmp = (a.painScore ?? -1) - (b.painScore ?? -1);
+      } else if (sortField === "added") {
+        cmp = (a.added ?? "").localeCompare(b.added ?? "");
       } else if (sortField === "status") {
         cmp = a.status.localeCompare(b.status);
       }
@@ -126,6 +134,12 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                 Source
               </th>
               <th
+                className="hidden cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text md:table-cell"
+                onClick={() => toggleSort("added")}
+              >
+                <span className="whitespace-nowrap">Added{sortIndicator("added")}</span>
+              </th>
+              <th
                 className="cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text"
                 onClick={() => toggleSort("status")}
               >
@@ -180,13 +194,23 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                   <td className="hidden px-4 py-3 text-text-dim md:table-cell">
                     <span className="line-clamp-1">{idea.source}</span>
                   </td>
+                  <td className="hidden px-4 py-3 md:table-cell">
+                    <div className="flex items-center gap-1.5">
+                      <span className="whitespace-nowrap text-text-dim">{idea.added ?? "—"}</span>
+                      {idea.added && idea.added === latestAdded && (
+                        <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent">
+                          new
+                        </span>
+                      )}
+                    </div>
+                  </td>
                   <td className="px-4 py-3">
                     <StatusBadge status={idea.status} />
                   </td>
                 </tr>
                 {idea.pivotHistory && expandedIdea === idea.idea && (
                   <tr key={`${idea.idea}-pivot`} className="border-b border-border">
-                    <td colSpan={6} className="bg-surface2/30 px-8 py-3">
+                    <td colSpan={7} className="bg-surface2/30 px-8 py-3">
                       <p className="mb-2 text-xs font-medium text-text-dim">
                         Pivot history
                       </p>
@@ -225,7 +249,7 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
             {filtered.length === 0 && (
               <tr>
                 <td
-                  colSpan={6}
+                  colSpan={7}
                   className="px-4 py-8 text-center text-sm text-text-dim"
                 >
                   No results
