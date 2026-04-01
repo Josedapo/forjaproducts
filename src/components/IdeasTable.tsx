@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Idea } from "@/lib/types";
 import PainScore from "./PainScore";
 import StatusBadge from "./StatusBadge";
+import IdeaDetailOverlay from "./IdeaDetailOverlay";
 
 interface IdeasTableProps {
   ideas: Idea[];
@@ -20,6 +21,7 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
   const [sortField, setSortField] = useState<SortField>("painScore");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [expandedIdea, setExpandedIdea] = useState<string | null>(null);
+  const [detailIdea, setDetailIdea] = useState<Idea | null>(null);
 
   const statuses = useMemo(() => {
     const set = new Set(ideas.map((i) => i.status));
@@ -169,6 +171,17 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
                           {expandedIdea === idea.idea ? "▼" : "▶"}
                         </span>
                       )}
+                      <button
+                        title="View details"
+                        onClick={(e) => { e.stopPropagation(); setDetailIdea(idea); }}
+                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-text-dim/60 transition-colors hover:bg-accent/10 hover:text-accent"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                          <circle cx="7" cy="7" r="6" />
+                          <path d="M7 6.5V10" />
+                          <circle cx="7" cy="4.5" r="0.5" fill="currentColor" stroke="none" />
+                        </svg>
+                      </button>
                       {idea.slug ? (
                         <Link
                           href={`/idea/${idea.slug}`}
@@ -259,6 +272,10 @@ export default function IdeasTable({ ideas, title }: IdeasTableProps) {
           </tbody>
         </table>
       </div>
+
+      {detailIdea && (
+        <IdeaDetailOverlay idea={detailIdea} onClose={() => setDetailIdea(null)} />
+      )}
     </div>
   );
 }
