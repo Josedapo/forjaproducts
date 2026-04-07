@@ -367,80 +367,106 @@
           {
             "name": "hesreallyhim/awesome-claude-code",
             "type": "direct",
-            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match"
+            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match (DR not applicable: lives on github.com)"
           },
           {
             "name": "Anthropic Claude Developer Newsletter",
             "type": "direct",
-            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand"
+            "dr": 90,
+            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand (claude.com)"
           },
           {
             "name": "Anthropic Claude Code in Action",
             "type": "direct",
-            "weakness": "Official free course on Anthropic's own learning platform (skilljar)"
+            "weakness": "Official free course on Anthropic's own learning platform (DR not applicable: lives on anthropic.skilljar.com)"
           },
           {
             "name": "claude-hub.com",
             "type": "direct",
+            "dr": 1,
             "weakness": "Free web hub with 264 categorized resources across 7 categories"
           },
           {
             "name": "awesomeclaude.ai",
             "type": "direct",
+            "dr": 55,
             "weakness": "Free visual directory with curated UX"
           },
           {
             "name": "awesome-skills.com",
             "type": "direct",
+            "dr": 43,
             "weakness": "Free skills hub with 146+ curated skills"
           },
           {
             "name": "claudelog.com",
             "type": "direct",
+            "dr": 8,
             "weakness": "Docs/guides hub covering overload, FAQs and best practices"
           },
           {
             "name": "ClaudeWorld Weekly",
             "type": "direct",
-            "weakness": "Established free weekly newsletter delivered Saturdays"
+            "dr": 7,
+            "weakness": "Established free weekly newsletter delivered Saturdays (claude-world.com)"
           },
           {
             "name": "Skills Weekly",
             "type": "direct",
-            "weakness": "Free weekly newsletter focused specifically on skills"
+            "dr": 6,
+            "weakness": "Free weekly newsletter focused specifically on skills (skillsweekly.com)"
           },
           {
             "name": "Florian Bruniaux Ultimate Guide",
             "type": "direct",
-            "weakness": "GitHub guide beginner→power user with templates and quizzes"
+            "weakness": "GitHub guide beginner→power user with templates and quizzes (DR not applicable: lives on github.com)"
+          },
+          {
+            "name": "luongnv89/claude-howto",
+            "type": "direct",
+            "weakness": "Visual guide with 10 modules and copy-paste templates (DR not applicable: lives on github.com)"
           },
           {
             "name": "Scrimba 'Learn to Code with AI'",
             "type": "indirect",
-            "weakness": "Free 4.5h interactive course on a recognized platform"
+            "weakness": "Free 4.5h interactive course on a recognized platform (DR not applicable: course lives within scrimba.com)"
+          },
+          {
+            "name": "CC for Everyone",
+            "type": "indirect",
+            "dr": 51,
+            "weakness": "Free no-coder course with clear niche positioning (ccforeveryone.com)"
           },
           {
             "name": "Frank Kane Udemy course",
             "type": "indirect",
-            "weakness": "Paid course distributed via Udemy"
+            "weakness": "Paid course distributed via Udemy (DR not applicable: lives on udemy.com)"
           },
           {
             "name": "aihero.dev 'CC for Real Engineers'",
             "type": "indirect",
+            "dr": 33,
             "weakness": "Premium cohort-based course"
           },
           {
             "name": "Composio awesome-claude-skills",
             "type": "direct",
-            "weakness": "Awesome list backed by Composio (well-funded company)"
+            "weakness": "Awesome list backed by Composio (DR not applicable: lives on github.com)"
+          },
+          {
+            "name": "morphllm.com",
+            "type": "indirect",
+            "dr": 57,
+            "weakness": "Reddit aggregator summarizing r/ClaudeCode discussions"
           },
           {
             "name": "builder.io blog",
             "type": "indirect",
+            "dr": 81,
             "weakness": "High-DR corporate blog already ranking for 'claude code tips'"
           }
         ],
-        "competitiveDensity": "Saturated (18+ direct alternatives identified, all free)",
+        "competitiveDensity": "Saturated (18 direct alternatives identified, all free)",
         "keywords": [
           {
             "keyword": "claude code",
@@ -548,38 +574,38 @@
           ]
         },
         "forjaScore": {
-          "total": 58,
+          "total": 63,
           "calculatedAt": "2026-04-07",
           "dimensions": {
             "seoEntry": {
-              "raw": 25,
-              "weighted": 6.25,
-              "reason": "Vol-weighted KD = 75 (head term 78 KD dominates 194K vol cluster)"
+              "raw": 27,
+              "weighted": 6.8,
+              "reason": "Weighted avg KD 73 across 201,110 volume (2 easy keywords)"
             },
             "competitivePressure": {
-              "raw": 20,
-              "weighted": 4,
-              "reason": "Saturated density (18+ free alternatives); DR coverage <50%, no reliable avg DR"
+              "raw": 40,
+              "weighted": 8,
+              "reason": "Saturated density, avg competitor DR 39 across 11 competitors"
             },
             "marketDemand": {
               "raw": 100,
               "weighted": 15,
-              "reason": "194K vol cluster (≥50K bucket → 100) + 3 strong signals → bonus +10"
+              "reason": "201,110 total search volume, 3 pain/request signals (+10 demand bonus)"
             },
             "marketSize": {
               "raw": 100,
               "weighted": 15,
-              "reason": "194K vol → maximum bucket"
+              "reason": "201,110 addressable monthly searches"
             },
             "executionFeasibility": {
               "raw": 100,
               "weighted": 15,
-              "reason": "LOW complexity (90) + 'weekend' (+10) + no deps (+10) → clamp 100"
+              "reason": "Complexity 90/100, timeline +10, deps +10"
             },
             "riskProfile": {
               "raw": 30,
               "weighted": 3,
-              "reason": "5 assumptions: 3 HIGH + 1 MEDIUM + 1 LOW → avg 30"
+              "reason": "5 assumptions, 3 HIGH-risk"
             }
           },
           "missingInputs": [],
@@ -1767,80 +1793,106 @@
           {
             "name": "hesreallyhim/awesome-claude-code",
             "type": "direct",
-            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match"
+            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match (DR not applicable: lives on github.com)"
           },
           {
             "name": "Anthropic Claude Developer Newsletter",
             "type": "direct",
-            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand"
+            "dr": 90,
+            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand (claude.com)"
           },
           {
             "name": "Anthropic Claude Code in Action",
             "type": "direct",
-            "weakness": "Official free course on Anthropic's own learning platform (skilljar)"
+            "weakness": "Official free course on Anthropic's own learning platform (DR not applicable: lives on anthropic.skilljar.com)"
           },
           {
             "name": "claude-hub.com",
             "type": "direct",
+            "dr": 1,
             "weakness": "Free web hub with 264 categorized resources across 7 categories"
           },
           {
             "name": "awesomeclaude.ai",
             "type": "direct",
+            "dr": 55,
             "weakness": "Free visual directory with curated UX"
           },
           {
             "name": "awesome-skills.com",
             "type": "direct",
+            "dr": 43,
             "weakness": "Free skills hub with 146+ curated skills"
           },
           {
             "name": "claudelog.com",
             "type": "direct",
+            "dr": 8,
             "weakness": "Docs/guides hub covering overload, FAQs and best practices"
           },
           {
             "name": "ClaudeWorld Weekly",
             "type": "direct",
-            "weakness": "Established free weekly newsletter delivered Saturdays"
+            "dr": 7,
+            "weakness": "Established free weekly newsletter delivered Saturdays (claude-world.com)"
           },
           {
             "name": "Skills Weekly",
             "type": "direct",
-            "weakness": "Free weekly newsletter focused specifically on skills"
+            "dr": 6,
+            "weakness": "Free weekly newsletter focused specifically on skills (skillsweekly.com)"
           },
           {
             "name": "Florian Bruniaux Ultimate Guide",
             "type": "direct",
-            "weakness": "GitHub guide beginner→power user with templates and quizzes"
+            "weakness": "GitHub guide beginner→power user with templates and quizzes (DR not applicable: lives on github.com)"
+          },
+          {
+            "name": "luongnv89/claude-howto",
+            "type": "direct",
+            "weakness": "Visual guide with 10 modules and copy-paste templates (DR not applicable: lives on github.com)"
           },
           {
             "name": "Scrimba 'Learn to Code with AI'",
             "type": "indirect",
-            "weakness": "Free 4.5h interactive course on a recognized platform"
+            "weakness": "Free 4.5h interactive course on a recognized platform (DR not applicable: course lives within scrimba.com)"
+          },
+          {
+            "name": "CC for Everyone",
+            "type": "indirect",
+            "dr": 51,
+            "weakness": "Free no-coder course with clear niche positioning (ccforeveryone.com)"
           },
           {
             "name": "Frank Kane Udemy course",
             "type": "indirect",
-            "weakness": "Paid course distributed via Udemy"
+            "weakness": "Paid course distributed via Udemy (DR not applicable: lives on udemy.com)"
           },
           {
             "name": "aihero.dev 'CC for Real Engineers'",
             "type": "indirect",
+            "dr": 33,
             "weakness": "Premium cohort-based course"
           },
           {
             "name": "Composio awesome-claude-skills",
             "type": "direct",
-            "weakness": "Awesome list backed by Composio (well-funded company)"
+            "weakness": "Awesome list backed by Composio (DR not applicable: lives on github.com)"
+          },
+          {
+            "name": "morphllm.com",
+            "type": "indirect",
+            "dr": 57,
+            "weakness": "Reddit aggregator summarizing r/ClaudeCode discussions"
           },
           {
             "name": "builder.io blog",
             "type": "indirect",
+            "dr": 81,
             "weakness": "High-DR corporate blog already ranking for 'claude code tips'"
           }
         ],
-        "competitiveDensity": "Saturated (18+ direct alternatives identified, all free)",
+        "competitiveDensity": "Saturated (18 direct alternatives identified, all free)",
         "keywords": [
           {
             "keyword": "claude code",
@@ -1948,38 +2000,38 @@
           ]
         },
         "forjaScore": {
-          "total": 58,
+          "total": 63,
           "calculatedAt": "2026-04-07",
           "dimensions": {
             "seoEntry": {
-              "raw": 25,
-              "weighted": 6.25,
-              "reason": "Vol-weighted KD = 75 (head term 78 KD dominates 194K vol cluster)"
+              "raw": 27,
+              "weighted": 6.8,
+              "reason": "Weighted avg KD 73 across 201,110 volume (2 easy keywords)"
             },
             "competitivePressure": {
-              "raw": 20,
-              "weighted": 4,
-              "reason": "Saturated density (18+ free alternatives); DR coverage <50%, no reliable avg DR"
+              "raw": 40,
+              "weighted": 8,
+              "reason": "Saturated density, avg competitor DR 39 across 11 competitors"
             },
             "marketDemand": {
               "raw": 100,
               "weighted": 15,
-              "reason": "194K vol cluster (≥50K bucket → 100) + 3 strong signals → bonus +10"
+              "reason": "201,110 total search volume, 3 pain/request signals (+10 demand bonus)"
             },
             "marketSize": {
               "raw": 100,
               "weighted": 15,
-              "reason": "194K vol → maximum bucket"
+              "reason": "201,110 addressable monthly searches"
             },
             "executionFeasibility": {
               "raw": 100,
               "weighted": 15,
-              "reason": "LOW complexity (90) + 'weekend' (+10) + no deps (+10) → clamp 100"
+              "reason": "Complexity 90/100, timeline +10, deps +10"
             },
             "riskProfile": {
               "raw": 30,
               "weighted": 3,
-              "reason": "5 assumptions: 3 HIGH + 1 MEDIUM + 1 LOW → avg 30"
+              "reason": "5 assumptions, 3 HIGH-risk"
             }
           },
           "missingInputs": [],
