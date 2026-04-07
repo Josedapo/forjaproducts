@@ -8,20 +8,28 @@ import StatusBadge from "./StatusBadge";
 import ForjaScoreBadge from "./ForjaScoreBadge";
 import IdeaDetailOverlay from "./IdeaDetailOverlay";
 
+type SortField = "idea" | "painScore" | "added" | "status" | "forjaScore";
+type SortDir = "asc" | "desc";
+
 interface IdeasTableProps {
   ideas: Idea[];
   title: string;
   latestAdded: string | null;
+  defaultSortField?: SortField;
+  defaultSortDir?: SortDir;
 }
 
-type SortField = "idea" | "painScore" | "added" | "status" | "forjaScore";
-type SortDir = "asc" | "desc";
-
-export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProps) {
+export default function IdeasTable({
+  ideas,
+  title,
+  latestAdded,
+  defaultSortField = "painScore",
+  defaultSortDir = "desc",
+}: IdeasTableProps) {
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
-  const [sortField, setSortField] = useState<SortField>("painScore");
-  const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [sortField, setSortField] = useState<SortField>(defaultSortField);
+  const [sortDir, setSortDir] = useState<SortDir>(defaultSortDir);
   const [expandedIdea, setExpandedIdea] = useState<string | null>(null);
   const [detailIdea, setDetailIdea] = useState<Idea | null>(null);
 

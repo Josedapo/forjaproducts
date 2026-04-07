@@ -65,7 +65,13 @@ export default function DashboardTabs({
 
       {active === "candidates" && (
         <div className="card overflow-hidden">
-          <IdeasTable ideas={candidates} title="Candidates" latestAdded={latestAdded} />
+          <IdeasTable
+            ideas={candidates}
+            title="Candidates"
+            latestAdded={latestAdded}
+            defaultSortField="forjaScore"
+            defaultSortDir="desc"
+          />
         </div>
       )}
 
