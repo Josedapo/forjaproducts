@@ -259,9 +259,6 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
         </p>
       </div>
 
-      {/* 0. Forja Score */}
-      {forjaScore && <ForjaScoreCard score={forjaScore} />}
-
       {/* 1. Idea */}
       <SectionCard title="Idea">
         <div className="grid gap-4 sm:grid-cols-2">
@@ -443,6 +440,9 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
           <InfoField label="Risks" value={data.executability.risks} />
         </div>
       </SectionCard>
+
+      {/* 6.5 Forja Score */}
+      {forjaScore && <ForjaScoreCard score={forjaScore} />}
 
       {/* 7. Verdict */}
       <SectionCard title="Verdict">
