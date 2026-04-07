@@ -3,11 +3,20 @@ import { FORJA_SCORE_THRESHOLDS } from "@/lib/forjaScoreConfig";
 interface StatsBarProps {
   products: number;
   totalIdeas: number;
-  advance: number;
   pending: number;
+  discard: number;
+  pivot: number;
+  advance: number;
   avgPain: string;
   avgForjaScore: string;
 }
+
+const PIPELINE_COLORS = {
+  pending: "#8b90a0",
+  discard: "#e53e3e",
+  pivot: "#d69e2e",
+  advance: "#38a169",
+} as const;
 
 function PainBar({ value, max = 5 }: { value: number; max?: number }) {
   const pct = Math.min(value / max, 1) * 100;
@@ -33,39 +42,55 @@ function PainBar({ value, max = 5 }: { value: number; max?: number }) {
   );
 }
 
-function RingProgress({
-  value,
-  max,
-  color,
+function PipelineStatus({
+  pending,
+  discard,
+  pivot,
+  advance,
 }: {
-  value: number;
-  max: number;
-  color: string;
+  pending: number;
+  discard: number;
+  pivot: number;
+  advance: number;
 }) {
-  const pct = max > 0 ? value / max : 0;
-  const r = 28;
-  const circ = 2 * Math.PI * r;
-  const offset = circ * (1 - pct);
+  const total = pending + discard + pivot + advance;
+  const pct = (n: number) => (total > 0 ? (n / total) * 100 : 0);
+
+  const segments = [
+    { key: "pending", value: pending, color: PIPELINE_COLORS.pending, label: "Pending" },
+    { key: "discard", value: discard, color: PIPELINE_COLORS.discard, label: "Discard" },
+    { key: "pivot", value: pivot, color: PIPELINE_COLORS.pivot, label: "Pivot" },
+    { key: "advance", value: advance, color: PIPELINE_COLORS.advance, label: "Advance" },
+  ];
 
   return (
-    <svg viewBox="0 0 80 80" className="w-full h-auto" style={{ maxWidth: 80 }}>
-      <circle cx="40" cy="40" r={r} fill="none" stroke="#e2e5ea" strokeWidth="6" />
-      <circle
-        cx="40"
-        cy="40"
-        r={r}
-        fill="none"
-        stroke={color}
-        strokeWidth="6"
-        strokeLinecap="round"
-        strokeDasharray={circ}
-        strokeDashoffset={offset}
-        transform="rotate(-90 40 40)"
-      />
-      <text x="40" y="44" textAnchor="middle" fontSize="18" fontWeight="700" fill="#1c1a18">
-        {value}
-      </text>
-    </svg>
+    <div className="w-full">
+      <p className="mb-3 text-sm text-text-dim">Pipeline status</p>
+      <div className="flex h-3 w-full overflow-hidden rounded-full bg-surface2">
+        {segments.map((s) =>
+          s.value > 0 ? (
+            <div
+              key={s.key}
+              title={`${s.label}: ${s.value}`}
+              className="h-full transition-all"
+              style={{ width: `${pct(s.value)}%`, background: s.color }}
+            />
+          ) : null
+        )}
+      </div>
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+        {segments.map((s) => (
+          <div key={s.key} className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ background: s.color }}
+            />
+            <span className="text-xs text-text-dim">{s.label}</span>
+            <span className="text-sm font-bold text-text">{s.value}</span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -114,8 +139,10 @@ function ForjaScoreStatBar({ value }: { value: number }) {
 export default function StatsBar({
   products,
   totalIdeas,
-  advance,
   pending,
+  discard,
+  pivot,
+  advance,
   avgPain,
   avgForjaScore,
 }: StatsBarProps) {
@@ -155,16 +182,14 @@ export default function StatsBar({
         <p className="mt-2 text-sm text-text-dim">Total ideas</p>
       </div>
 
-      {/* Advance */}
-      <div className="card flex flex-col items-center justify-center px-5 py-4">
-        <RingProgress value={advance} max={totalIdeas} color="#38a169" />
-        <p className="mt-1 text-sm text-text-dim">Advance</p>
-      </div>
-
-      {/* Pending */}
-      <div className="card flex flex-col items-center justify-center px-5 py-4">
-        <RingProgress value={pending} max={totalIdeas} color="#d69e2e" />
-        <p className="mt-1 text-sm text-text-dim">Pending</p>
+      {/* Pipeline Status (combined: pending / discard / pivot / advance) */}
+      <div className="card px-5 py-4 lg:col-span-2">
+        <PipelineStatus
+          pending={pending}
+          discard={discard}
+          pivot={pivot}
+          advance={advance}
+        />
       </div>
 
       {/* Avg Pain */}

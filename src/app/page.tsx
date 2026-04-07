@@ -12,6 +12,12 @@ export default function DashboardPage() {
   const advanceCount = allIdeas.filter((i) =>
     i.status.includes("ADVANCE")
   ).length;
+  const pivotCount = allIdeas.filter((i) =>
+    i.status.includes("PIVOT")
+  ).length;
+  const discardCount = allIdeas.filter((i) =>
+    i.status.includes("DISCARD")
+  ).length;
   const pendingCount = allIdeas.filter(
     (i) => !i.status.includes("ADVANCE") && !i.status.includes("PIVOT") && !i.status.includes("DISCARD")
   ).length;
@@ -40,8 +46,10 @@ export default function DashboardPage() {
       <StatsBar
         products={products.length}
         totalIdeas={allIdeas.length}
-        advance={advanceCount}
         pending={pendingCount}
+        discard={discardCount}
+        pivot={pivotCount}
+        advance={advanceCount}
         avgPain={avgPain}
         avgForjaScore={avgForjaScore}
       />
