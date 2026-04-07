@@ -322,14 +322,270 @@
     },
     {
       "idea": "Claude Code training hub",
+      "slug": "claude-code-training-hub",
       "description": "Curated repository of articles, courses and tutorials about Claude Code, organized as a newsletter, blog or resource site",
       "pain": "Training resources for Claude Code are scattered across blogs, YouTube, X threads; no single curated source exists",
       "source": "Own idea (based on Learning scout skill)",
-      "painScore": null,
+      "painScore": 3,
       "added": "2026-03-26",
-      "status": "Pending",
+      "status": "Evaluated - PIVOT",
       "reportUrl": null,
-      "pivotHistory": null
+      "pivotHistory": null,
+      "screeningData": {
+        "evaluatedDate": "2026-04-07",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Curated repository of articles, courses and tutorials about Claude Code, organized as a newsletter, blog or resource hub. Web hub with clear taxonomy: by level (beginner/intermediate/advanced), by type (article/video/course/skill/MCP), by use case (productivity/coding/automation/agents)",
+          "audience": "Developers and product builders, early/mid technical adopters who already know Claude Code superficially and want to go deeper. Three segments: experienced devs, founders/solopreneurs, and technical product managers",
+          "problem": "Claude Code resources are fragmented — random blogs, X threads, scattered YouTube videos, releases in docs.anthropic.com. There is no single curated point where someone can say 'here I find the best on Claude Code organized by level and use case'",
+          "solution": "Web hub with a card per resource (summary, estimated difficulty, prerequisites), grouped by learning path. Weekly newsletter as secondary channel. Opinionated human curation (no automatic scraping)",
+          "differentiation": "Opinionated human curation + structure by learning path (not chronological list) + exclusive Claude Code focus. Joseda brings credibility through real intensive use documented in his workspace"
+        },
+        "assumptions": [
+          {
+            "assumption": "Users will choose a third-party curated hub over Anthropic's official newsletter + GitHub awesome lists with 37k stars",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "'Opinionated human curation + learning path' is a sufficient differentiator to generate sustained traction",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "A solopreneur can keep up with the velocity of Claude Code releases (weekly changelog, MCP/skills/hooks evolving)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Interest in Claude Code will keep growing 12+ months to justify the investment",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "SEO is a viable distribution channel for this product",
+            "risk": "HIGH"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "hesreallyhim/awesome-claude-code",
+            "type": "direct",
+            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match"
+          },
+          {
+            "name": "Anthropic Claude Developer Newsletter",
+            "type": "direct",
+            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand"
+          },
+          {
+            "name": "Anthropic Claude Code in Action",
+            "type": "direct",
+            "weakness": "Official free course on Anthropic's own learning platform (skilljar)"
+          },
+          {
+            "name": "claude-hub.com",
+            "type": "direct",
+            "weakness": "Free web hub with 264 categorized resources across 7 categories"
+          },
+          {
+            "name": "awesomeclaude.ai",
+            "type": "direct",
+            "weakness": "Free visual directory with curated UX"
+          },
+          {
+            "name": "awesome-skills.com",
+            "type": "direct",
+            "weakness": "Free skills hub with 146+ curated skills"
+          },
+          {
+            "name": "claudelog.com",
+            "type": "direct",
+            "weakness": "Docs/guides hub covering overload, FAQs and best practices"
+          },
+          {
+            "name": "ClaudeWorld Weekly",
+            "type": "direct",
+            "weakness": "Established free weekly newsletter delivered Saturdays"
+          },
+          {
+            "name": "Skills Weekly",
+            "type": "direct",
+            "weakness": "Free weekly newsletter focused specifically on skills"
+          },
+          {
+            "name": "Florian Bruniaux Ultimate Guide",
+            "type": "direct",
+            "weakness": "GitHub guide beginner→power user with templates and quizzes"
+          },
+          {
+            "name": "Scrimba 'Learn to Code with AI'",
+            "type": "indirect",
+            "weakness": "Free 4.5h interactive course on a recognized platform"
+          },
+          {
+            "name": "Frank Kane Udemy course",
+            "type": "indirect",
+            "weakness": "Paid course distributed via Udemy"
+          },
+          {
+            "name": "aihero.dev 'CC for Real Engineers'",
+            "type": "indirect",
+            "weakness": "Premium cohort-based course"
+          },
+          {
+            "name": "Composio awesome-claude-skills",
+            "type": "direct",
+            "weakness": "Awesome list backed by Composio (well-funded company)"
+          },
+          {
+            "name": "builder.io blog",
+            "type": "indirect",
+            "weakness": "High-DR corporate blog already ranking for 'claude code tips'"
+          }
+        ],
+        "competitiveDensity": "Saturated (18+ direct alternatives identified, all free)",
+        "keywords": [
+          {
+            "keyword": "claude code",
+            "volume": 183000,
+            "kd": 78
+          },
+          {
+            "keyword": "claude code mcp",
+            "volume": 4000,
+            "kd": 17
+          },
+          {
+            "keyword": "claude code vs cursor",
+            "volume": 3700,
+            "kd": 4
+          },
+          {
+            "keyword": "claude code hooks",
+            "volume": 2700,
+            "kd": 12
+          },
+          {
+            "keyword": "claude code skills",
+            "volume": 2500,
+            "kd": 29
+          },
+          {
+            "keyword": "how to use claude code",
+            "volume": 2300,
+            "kd": 33
+          },
+          {
+            "keyword": "claude code subagents",
+            "volume": 1700,
+            "kd": 23
+          },
+          {
+            "keyword": "claude code course",
+            "volume": 600,
+            "kd": 26
+          },
+          {
+            "keyword": "claude code guide",
+            "volume": 600,
+            "kd": 39
+          },
+          {
+            "keyword": "claude code resources",
+            "volume": 10,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "COMPLAINT",
+            "signal": "Users feel overwhelmed by all the different Claude setup recommendations — too many MCP servers, productivity hacks, markdown systems, templates",
+            "source": "Latenode community thread"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Official docs describe features but don't show how to combine them, leaving learners without a clear learning path",
+            "source": "DEV community / claudelog FAQ 'claude code overloaded'"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Demand for 'guided learning paths' — multiple authors building guides to solve this (Florian Bruniaux, luongnv89, Daniel Avila)",
+            "source": "Multiple Medium / dev.to / GitHub"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Learn Claude Code by doing, not reading' — top HN post (id 47579229). Meta-signal that passive content (newsletter/blog) has less value than direct practice",
+            "source": "Hacker News"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "r/ClaudeCode has 4,200+ weekly contributors — very active community with constant discussions about workflow, multi-agent, CLAUDE.md",
+            "source": "morphllm.com Reddit aggregator"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW — Static Astro/Next site + markdown CMS + newsletter SaaS (Buttondown/ConvertKit). Joseda already has the stack",
+          "timeline": "1-2 weekends for site + first 10 cards + newsletter landing",
+          "dependencies": "None critical. Optional newsletter SaaS, possibly RSS aggregators for inputs",
+          "risks": "None technical. The risk is operational: continuous weekly curation competes with time dedicated to revenue-generating products. Velocity of Claude Code releases (weekly changelog) requires sustained discipline"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Massive growing macro demand: head term 183K→245K vol (+34% in 12m). Ecosystem in full adoption curve",
+            "Validated real pain: multiple COMPLAINT/REQUEST signals about being overwhelmed by setup options and lack of learning path",
+            "Joseda has demonstrable credibility: real intensive use documented in his workspace, multiple products built solo with CC. Unique asset vs generic curators",
+            "Trivial technical execution (LOW complexity, 1-2 weekends MVP)"
+          ],
+          "against": [
+            "Extreme saturation: 18+ direct alternatives identified, all free. A 37.1k-star awesome list already does breadth better than any solopreneur",
+            "Anthropic owns the center: official newsletter + free official course + official docs + blog + skilljar. Impossible to win the 'claude code' head term",
+            "Generic terms have no SEO demand: 'claude code resources' 10 vol, 'claude code newsletter' 10 vol. Real demand is in specific features, not 'hub'",
+            "No clear monetization path: all comparables are free. Monetized newsletter would require massive volume",
+            "High operational cost: weekly curation of an ecosystem that changes every week — competes with hours dedicated to products with direct revenue"
+          ],
+          "pivotSuggestions": [
+            "Pivot 1 (recommended) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
+            "Pivot 2 — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
+            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs"
+          ]
+        },
+        "forjaScore": {
+          "total": 58,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 25,
+              "weighted": 6.25,
+              "reason": "Vol-weighted KD = 75 (head term 78 KD dominates 194K vol cluster)"
+            },
+            "competitivePressure": {
+              "raw": 20,
+              "weighted": 4,
+              "reason": "Saturated density (18+ free alternatives); DR coverage <50%, no reliable avg DR"
+            },
+            "marketDemand": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "194K vol cluster (≥50K bucket → 100) + 3 strong signals → bonus +10"
+            },
+            "marketSize": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "194K vol → maximum bucket"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 'weekend' (+10) + no deps (+10) → clamp 100"
+            },
+            "riskProfile": {
+              "raw": 30,
+              "weighted": 3,
+              "reason": "5 assumptions: 3 HIGH + 1 MEDIUM + 1 LOW → avg 30"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
     },
     {
       "idea": "Stoic philosophy content vertical",
@@ -1465,6 +1721,265 @@
               "raw": 75,
               "weighted": 7.5,
               "reason": "4 assumptions, 0 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "claude-code-training-hub",
+      "idea": "Claude Code training hub",
+      "screeningData": {
+        "evaluatedDate": "2026-04-07",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Curated repository of articles, courses and tutorials about Claude Code, organized as a newsletter, blog or resource hub. Web hub with clear taxonomy: by level (beginner/intermediate/advanced), by type (article/video/course/skill/MCP), by use case (productivity/coding/automation/agents)",
+          "audience": "Developers and product builders, early/mid technical adopters who already know Claude Code superficially and want to go deeper. Three segments: experienced devs, founders/solopreneurs, and technical product managers",
+          "problem": "Claude Code resources are fragmented — random blogs, X threads, scattered YouTube videos, releases in docs.anthropic.com. There is no single curated point where someone can say 'here I find the best on Claude Code organized by level and use case'",
+          "solution": "Web hub with a card per resource (summary, estimated difficulty, prerequisites), grouped by learning path. Weekly newsletter as secondary channel. Opinionated human curation (no automatic scraping)",
+          "differentiation": "Opinionated human curation + structure by learning path (not chronological list) + exclusive Claude Code focus. Joseda brings credibility through real intensive use documented in his workspace"
+        },
+        "assumptions": [
+          {
+            "assumption": "Users will choose a third-party curated hub over Anthropic's official newsletter + GitHub awesome lists with 37k stars",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "'Opinionated human curation + learning path' is a sufficient differentiator to generate sustained traction",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "A solopreneur can keep up with the velocity of Claude Code releases (weekly changelog, MCP/skills/hooks evolving)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Interest in Claude Code will keep growing 12+ months to justify the investment",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "SEO is a viable distribution channel for this product",
+            "risk": "HIGH"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "hesreallyhim/awesome-claude-code",
+            "type": "direct",
+            "weakness": "37.1k stars GitHub awesome list, 12+ categories, active maintenance — dominates breadth no solopreneur can match"
+          },
+          {
+            "name": "Anthropic Claude Developer Newsletter",
+            "type": "direct",
+            "weakness": "Official newsletter from Anthropic — maximum authority, free, owns the brand"
+          },
+          {
+            "name": "Anthropic Claude Code in Action",
+            "type": "direct",
+            "weakness": "Official free course on Anthropic's own learning platform (skilljar)"
+          },
+          {
+            "name": "claude-hub.com",
+            "type": "direct",
+            "weakness": "Free web hub with 264 categorized resources across 7 categories"
+          },
+          {
+            "name": "awesomeclaude.ai",
+            "type": "direct",
+            "weakness": "Free visual directory with curated UX"
+          },
+          {
+            "name": "awesome-skills.com",
+            "type": "direct",
+            "weakness": "Free skills hub with 146+ curated skills"
+          },
+          {
+            "name": "claudelog.com",
+            "type": "direct",
+            "weakness": "Docs/guides hub covering overload, FAQs and best practices"
+          },
+          {
+            "name": "ClaudeWorld Weekly",
+            "type": "direct",
+            "weakness": "Established free weekly newsletter delivered Saturdays"
+          },
+          {
+            "name": "Skills Weekly",
+            "type": "direct",
+            "weakness": "Free weekly newsletter focused specifically on skills"
+          },
+          {
+            "name": "Florian Bruniaux Ultimate Guide",
+            "type": "direct",
+            "weakness": "GitHub guide beginner→power user with templates and quizzes"
+          },
+          {
+            "name": "Scrimba 'Learn to Code with AI'",
+            "type": "indirect",
+            "weakness": "Free 4.5h interactive course on a recognized platform"
+          },
+          {
+            "name": "Frank Kane Udemy course",
+            "type": "indirect",
+            "weakness": "Paid course distributed via Udemy"
+          },
+          {
+            "name": "aihero.dev 'CC for Real Engineers'",
+            "type": "indirect",
+            "weakness": "Premium cohort-based course"
+          },
+          {
+            "name": "Composio awesome-claude-skills",
+            "type": "direct",
+            "weakness": "Awesome list backed by Composio (well-funded company)"
+          },
+          {
+            "name": "builder.io blog",
+            "type": "indirect",
+            "weakness": "High-DR corporate blog already ranking for 'claude code tips'"
+          }
+        ],
+        "competitiveDensity": "Saturated (18+ direct alternatives identified, all free)",
+        "keywords": [
+          {
+            "keyword": "claude code",
+            "volume": 183000,
+            "kd": 78
+          },
+          {
+            "keyword": "claude code mcp",
+            "volume": 4000,
+            "kd": 17
+          },
+          {
+            "keyword": "claude code vs cursor",
+            "volume": 3700,
+            "kd": 4
+          },
+          {
+            "keyword": "claude code hooks",
+            "volume": 2700,
+            "kd": 12
+          },
+          {
+            "keyword": "claude code skills",
+            "volume": 2500,
+            "kd": 29
+          },
+          {
+            "keyword": "how to use claude code",
+            "volume": 2300,
+            "kd": 33
+          },
+          {
+            "keyword": "claude code subagents",
+            "volume": 1700,
+            "kd": 23
+          },
+          {
+            "keyword": "claude code course",
+            "volume": 600,
+            "kd": 26
+          },
+          {
+            "keyword": "claude code guide",
+            "volume": 600,
+            "kd": 39
+          },
+          {
+            "keyword": "claude code resources",
+            "volume": 10,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "COMPLAINT",
+            "signal": "Users feel overwhelmed by all the different Claude setup recommendations — too many MCP servers, productivity hacks, markdown systems, templates",
+            "source": "Latenode community thread"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Official docs describe features but don't show how to combine them, leaving learners without a clear learning path",
+            "source": "DEV community / claudelog FAQ 'claude code overloaded'"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Demand for 'guided learning paths' — multiple authors building guides to solve this (Florian Bruniaux, luongnv89, Daniel Avila)",
+            "source": "Multiple Medium / dev.to / GitHub"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Learn Claude Code by doing, not reading' — top HN post (id 47579229). Meta-signal that passive content (newsletter/blog) has less value than direct practice",
+            "source": "Hacker News"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "r/ClaudeCode has 4,200+ weekly contributors — very active community with constant discussions about workflow, multi-agent, CLAUDE.md",
+            "source": "morphllm.com Reddit aggregator"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW — Static Astro/Next site + markdown CMS + newsletter SaaS (Buttondown/ConvertKit). Joseda already has the stack",
+          "timeline": "1-2 weekends for site + first 10 cards + newsletter landing",
+          "dependencies": "None critical. Optional newsletter SaaS, possibly RSS aggregators for inputs",
+          "risks": "None technical. The risk is operational: continuous weekly curation competes with time dedicated to revenue-generating products. Velocity of Claude Code releases (weekly changelog) requires sustained discipline"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Massive growing macro demand: head term 183K→245K vol (+34% in 12m). Ecosystem in full adoption curve",
+            "Validated real pain: multiple COMPLAINT/REQUEST signals about being overwhelmed by setup options and lack of learning path",
+            "Joseda has demonstrable credibility: real intensive use documented in his workspace, multiple products built solo with CC. Unique asset vs generic curators",
+            "Trivial technical execution (LOW complexity, 1-2 weekends MVP)"
+          ],
+          "against": [
+            "Extreme saturation: 18+ direct alternatives identified, all free. A 37.1k-star awesome list already does breadth better than any solopreneur",
+            "Anthropic owns the center: official newsletter + free official course + official docs + blog + skilljar. Impossible to win the 'claude code' head term",
+            "Generic terms have no SEO demand: 'claude code resources' 10 vol, 'claude code newsletter' 10 vol. Real demand is in specific features, not 'hub'",
+            "No clear monetization path: all comparables are free. Monetized newsletter would require massive volume",
+            "High operational cost: weekly curation of an ecosystem that changes every week — competes with hours dedicated to products with direct revenue"
+          ],
+          "pivotSuggestions": [
+            "Pivot 1 (recommended) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
+            "Pivot 2 — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
+            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs"
+          ]
+        },
+        "forjaScore": {
+          "total": 58,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 25,
+              "weighted": 6.25,
+              "reason": "Vol-weighted KD = 75 (head term 78 KD dominates 194K vol cluster)"
+            },
+            "competitivePressure": {
+              "raw": 20,
+              "weighted": 4,
+              "reason": "Saturated density (18+ free alternatives); DR coverage <50%, no reliable avg DR"
+            },
+            "marketDemand": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "194K vol cluster (≥50K bucket → 100) + 3 strong signals → bonus +10"
+            },
+            "marketSize": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "194K vol → maximum bucket"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 'weekend' (+10) + no deps (+10) → clamp 100"
+            },
+            "riskProfile": {
+              "raw": 30,
+              "weighted": 3,
+              "reason": "5 assumptions: 3 HIGH + 1 MEDIUM + 1 LOW → avg 30"
             }
           },
           "missingInputs": [],
