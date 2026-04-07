@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getScreenedIdeas, getScreenedIdea, getProductByIdeaSlug } from "@/lib/data";
 import StatusBadge from "@/components/StatusBadge";
+import ForjaScoreBadge from "@/components/ForjaScoreBadge";
+import ForjaScoreCard from "@/components/ForjaScoreCard";
 
 export function generateStaticParams() {
   return getScreenedIdeas().map((i) => ({ slug: i.slug }));
@@ -213,6 +215,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
 
   const { screeningData: data } = screened;
   const linkedProduct = getProductByIdeaSlug(screened.slug, screened.idea);
+  const forjaScore = data.forjaScore;
 
   return (
     <div>
@@ -230,6 +233,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
           <h2 className="text-2xl font-semibold text-text">{screened.idea}</h2>
           <StatusBadge
             size="large"
+            alignment={forjaScore?.alignment}
             status={
               data.verdict === "ADVANCE"
                 ? "Evaluated - ADVANCE"
@@ -240,6 +244,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
                     : data.verdict
             }
           />
+          {forjaScore && <ForjaScoreBadge score={forjaScore.total} size="large" />}
           {linkedProduct && (
             <Link
               href={`/product/${linkedProduct.slug}`}
@@ -253,6 +258,9 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
           Evaluated {data.evaluatedDate}
         </p>
       </div>
+
+      {/* 0. Forja Score */}
+      {forjaScore && <ForjaScoreCard score={forjaScore} />}
 
       {/* 1. Idea */}
       <SectionCard title="Idea">
@@ -441,6 +449,7 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
         <div className="mb-5 text-center">
           <StatusBadge
             size="large"
+            alignment={forjaScore?.alignment}
             status={
               data.verdict_detail.decision === "ADVANCE"
                 ? "Evaluated - ADVANCE"

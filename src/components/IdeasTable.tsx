@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Idea } from "@/lib/types";
 import PainScore from "./PainScore";
 import StatusBadge from "./StatusBadge";
+import ForjaScoreBadge from "./ForjaScoreBadge";
 import IdeaDetailOverlay from "./IdeaDetailOverlay";
 
 interface IdeasTableProps {
@@ -13,7 +14,7 @@ interface IdeasTableProps {
   latestAdded: string | null;
 }
 
-type SortField = "idea" | "painScore" | "added" | "status";
+type SortField = "idea" | "painScore" | "added" | "status" | "forjaScore";
 type SortDir = "asc" | "desc";
 
 export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProps) {
@@ -57,6 +58,10 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
         cmp = (a.added ?? "").localeCompare(b.added ?? "");
       } else if (sortField === "status") {
         cmp = a.status.localeCompare(b.status);
+      } else if (sortField === "forjaScore") {
+        cmp =
+          (a.screeningData?.forjaScore?.total ?? -1) -
+          (b.screeningData?.forjaScore?.total ?? -1);
       }
       return sortDir === "asc" ? cmp : -cmp;
     });
@@ -69,7 +74,7 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
       setSortDir(sortDir === "asc" ? "desc" : "asc");
     } else {
       setSortField(field);
-      setSortDir(field === "painScore" ? "desc" : "asc");
+      setSortDir(field === "painScore" || field === "forjaScore" ? "desc" : "asc");
     }
   }
 
@@ -142,6 +147,12 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
               >
                 <span className="whitespace-nowrap">Status{sortIndicator("status")}</span>
               </th>
+              <th
+                className="cursor-pointer px-4 py-3 font-medium text-text-dim hover:text-text"
+                onClick={() => toggleSort("forjaScore")}
+              >
+                <span className="whitespace-nowrap">Forja{sortIndicator("forjaScore")}</span>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -213,12 +224,22 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
                     </div>
                   </td>
                   <td className="px-4 py-3">
-                    <StatusBadge status={idea.status} />
+                    <StatusBadge
+                      status={idea.status}
+                      alignment={idea.screeningData?.forjaScore?.alignment}
+                    />
+                  </td>
+                  <td className="px-4 py-3">
+                    {idea.screeningData?.forjaScore ? (
+                      <ForjaScoreBadge score={idea.screeningData.forjaScore.total} />
+                    ) : (
+                      <span className="text-text-dim">—</span>
+                    )}
                   </td>
                 </tr>
                 {idea.pivotHistory && expandedIdea === idea.idea && (
                   <tr key={`${idea.idea}-pivot`} className="border-b border-border">
-                    <td colSpan={7} className="bg-surface2/30 px-8 py-3">
+                    <td colSpan={8} className="bg-surface2/30 px-8 py-3">
                       <p className="mb-2 text-xs font-medium text-text-dim">
                         Pivot history
                       </p>
@@ -257,7 +278,7 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
             {filtered.length === 0 && (
               <tr>
                 <td
-                  colSpan={7}
+                  colSpan={8}
                   className="px-4 py-8 text-center text-sm text-text-dim"
                 >
                   No results

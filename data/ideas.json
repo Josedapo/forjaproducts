@@ -51,41 +51,157 @@
           "differentiation": "(1) vs generation tools (Jasper, Surfer, Koala): doesn't compete on writing, competes on thinking and validating — complements instead of replaces; (2) vs SEO suites (Ahrefs, SEMrush): translates complex data into concrete action plans for content managers without SEO expertise; (3) vs manual audit/consulting: automates the strategy-validation loop at a fraction of the cost"
         },
         "assumptions": [
-          {"assumption": "Content managers will pay for a separate strategy+audit tool when existing tools (Surfer, Frase) already include partial functions", "risk": "MEDIUM"},
-          {"assumption": "The 'connected loop' (strategy → brief → pre-publish audit) is valuable enough as a standalone product vs being another feature in existing suites", "risk": "HIGH"},
-          {"assumption": "SMBs have someone to write content (internally, freelancers or AI) and what they lack is the strategic + validation layer", "risk": "MEDIUM"},
-          {"assumption": "A new tool can compete on price against Frase ($15-45/mo) offering deeper strategic depth", "risk": "MEDIUM"}
+          {
+            "assumption": "Content managers will pay for a separate strategy+audit tool when existing tools (Surfer, Frase) already include partial functions",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The 'connected loop' (strategy → brief → pre-publish audit) is valuable enough as a standalone product vs being another feature in existing suites",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs have someone to write content (internally, freelancers or AI) and what they lack is the strategic + validation layer",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new tool can compete on price against Frase ($15-45/mo) offering deeper strategic depth",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          {"name": "MarketMuse", "type": "direct", "dr": 77, "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'"},
-          {"name": "Frase", "type": "direct", "dr": 79, "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing"},
-          {"name": "Clearscope", "type": "direct", "dr": 78, "weakness": "Expensive, no strategic planning. Perceived as dated"},
-          {"name": "Surfer SEO", "type": "direct", "dr": 84, "weakness": "Per-piece optimization, not global strategy. Complaints of irrelevant keywords"},
-          {"name": "Content Harmony", "type": "direct", "dr": 65, "weakness": "Only briefs and scoring, no complete strategy"},
-          {"name": "Dashword", "type": "direct", "dr": 62, "weakness": "More optimization-oriented than strategy"},
-          {"name": "Swiftbrief", "type": "indirect", "dr": 39, "weakness": "Only briefs, no audit or strategy"},
-          {"name": "BriefSmith.ai", "type": "indirect", "dr": 1, "weakness": "Very new, only briefs"}
+          {
+            "name": "MarketMuse",
+            "type": "direct",
+            "dr": 77,
+            "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'"
+          },
+          {
+            "name": "Frase",
+            "type": "direct",
+            "dr": 79,
+            "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing"
+          },
+          {
+            "name": "Clearscope",
+            "type": "direct",
+            "dr": 78,
+            "weakness": "Expensive, no strategic planning. Perceived as dated"
+          },
+          {
+            "name": "Surfer SEO",
+            "type": "direct",
+            "dr": 84,
+            "weakness": "Per-piece optimization, not global strategy. Complaints of irrelevant keywords"
+          },
+          {
+            "name": "Content Harmony",
+            "type": "direct",
+            "dr": 65,
+            "weakness": "Only briefs and scoring, no complete strategy"
+          },
+          {
+            "name": "Dashword",
+            "type": "direct",
+            "dr": 62,
+            "weakness": "More optimization-oriented than strategy"
+          },
+          {
+            "name": "Swiftbrief",
+            "type": "indirect",
+            "dr": 39,
+            "weakness": "Only briefs, no audit or strategy"
+          },
+          {
+            "name": "BriefSmith.ai",
+            "type": "indirect",
+            "dr": 1,
+            "weakness": "Very new, only briefs"
+          }
         ],
         "competitiveDensity": "Moderate (6-8 direct competitors vs 13+ in the AI writer space)",
         "keywords": [
-          {"keyword": "seo content audit", "volume": 1900, "kd": 39},
-          {"keyword": "seo and content strategy", "volume": 1200, "kd": 12},
-          {"keyword": "content audit tool", "volume": 800, "kd": 42},
-          {"keyword": "content optimization tool", "volume": 600, "kd": 31},
-          {"keyword": "content brief template", "volume": 500, "kd": 5},
-          {"keyword": "seo content brief", "volume": 450, "kd": 6},
-          {"keyword": "ai content strategy", "volume": 400, "kd": 16},
-          {"keyword": "content brief generator", "volume": 250, "kd": 12},
-          {"keyword": "content strategy planner", "volume": 100, "kd": 3},
-          {"keyword": "ai content planner", "volume": 60, "kd": 0}
+          {
+            "keyword": "seo content audit",
+            "volume": 1900,
+            "kd": 39
+          },
+          {
+            "keyword": "seo and content strategy",
+            "volume": 1200,
+            "kd": 12
+          },
+          {
+            "keyword": "content audit tool",
+            "volume": 800,
+            "kd": 42
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "content brief template",
+            "volume": 500,
+            "kd": 5
+          },
+          {
+            "keyword": "seo content brief",
+            "volume": 450,
+            "kd": 6
+          },
+          {
+            "keyword": "ai content strategy",
+            "volume": 400,
+            "kd": 16
+          },
+          {
+            "keyword": "content brief generator",
+            "volume": 250,
+            "kd": 12
+          },
+          {
+            "keyword": "content strategy planner",
+            "volume": 100,
+            "kd": 3
+          },
+          {
+            "keyword": "ai content planner",
+            "volume": 60,
+            "kd": 0
+          }
         ],
         "communitySignals": [
-          {"type": "REQUEST", "signal": "Reddit threads asking for content audit tools and budget-friendly alternatives", "source": "Reddit r/content_marketing, r/DigitalMarketing"},
-          {"type": "COMPLAINT", "signal": "MarketMuse perceived as 'very expensive for what it offers'", "source": "G2, Reddit, comparatives"},
-          {"type": "COMPLAINT", "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'", "source": "Comparatives 2026"},
-          {"type": "COMPLAINT", "signal": "Surfer SEO generates irrelevant keywords, aggressive price hikes, generic content", "source": "Reddit r/SEO, Trustpilot"},
-          {"type": "DISCUSSION", "signal": "Trend 2026: 'AI for strategy, humans for voice' — aligned with this idea's positioning", "source": "Multiple sources"},
-          {"type": "DISCUSSION", "signal": "Pre-publish optimization emerging as differentiated workflow", "source": "HubSpot, StoryChief"}
+          {
+            "type": "REQUEST",
+            "signal": "Reddit threads asking for content audit tools and budget-friendly alternatives",
+            "source": "Reddit r/content_marketing, r/DigitalMarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "MarketMuse perceived as 'very expensive for what it offers'",
+            "source": "G2, Reddit, comparatives"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'",
+            "source": "Comparatives 2026"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords, aggressive price hikes, generic content",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Trend 2026: 'AI for strategy, humans for voice' — aligned with this idea's positioning",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Pre-publish optimization emerging as differentiated workflow",
+            "source": "HubSpot, StoryChief"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM — Keyword data API + LLM for analysis/strategy + web dashboard. No content generation pipeline (simpler than original idea)",
@@ -108,6 +224,44 @@
             "MarketMuse already covers strategic layer for enterprise",
             "Competition still strong in DR: incumbents with DR 62-84 make mid-term SEO difficult"
           ]
+        },
+        "forjaScore": {
+          "total": 61,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 75,
+              "weighted": 18.8,
+              "reason": "Weighted avg KD 25 across 6260 volume (5 easy keywords)"
+            },
+            "competitivePressure": {
+              "raw": 50,
+              "weighted": 10,
+              "reason": "Moderate density, avg competitor DR 61 across 8 competitors"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "6260 total search volume, 4 pain/request signals (+10 demand bonus)"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "6260 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "Complexity 60/100, timeline +10, deps -10"
+            },
+            "riskProfile": {
+              "raw": 38,
+              "weighted": 3.8,
+              "reason": "4 assumptions, 1 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
         }
       }
     },
@@ -459,44 +613,171 @@
           "differentiation": "Triple differentiation: (1) vs generic AI writers (ChatGPT, Jasper): uses real search data + applies client style guide; (2) vs SEO tools (Ahrefs, SEMrush): doesn't just give data, writes the content; (3) vs SEO content agencies: automates the process while maintaining voice personalization"
         },
         "assumptions": [
-          {"assumption": "Businesses want AI-written blog content (not just briefs/outlines)", "risk": "HIGH"},
-          {"assumption": "Personalized writing style is a sufficient differentiator vs Jasper Brand IQ", "risk": "HIGH"},
-          {"assumption": "SMBs will pay for another AI content tool when ChatGPT is nearly free", "risk": "HIGH"},
-          {"assumption": "AI-generated SEO content will continue ranking in 2026+", "risk": "HIGH"},
-          {"assumption": "Keyword-data-based selection is a differentiator vs generic AI writers", "risk": "MEDIUM"}
+          {
+            "assumption": "Businesses want AI-written blog content (not just briefs/outlines)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Personalized writing style is a sufficient differentiator vs Jasper Brand IQ",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs will pay for another AI content tool when ChatGPT is nearly free",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "AI-generated SEO content will continue ranking in 2026+",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Keyword-data-based selection is a differentiator vs generic AI writers",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          {"name": "Surfer SEO", "type": "direct", "dr": 92, "weakness": "Users report irrelevant keywords and ranking drops"},
-          {"name": "Frase", "type": "direct", "dr": 79, "weakness": "Less powerful AI writing than Jasper"},
-          {"name": "Jasper", "type": "direct", "dr": 88, "weakness": "Less focused on pure SEO, more general marketing"},
-          {"name": "Koala.sh", "type": "direct", "dr": 72, "weakness": "Less known, smaller ecosystem"},
-          {"name": "SEO.ai", "type": "direct", "dr": 77, "weakness": "Relatively new"},
-          {"name": "GravityWrite", "type": "direct", "dr": 68, "weakness": "Less sophisticated SEO"},
-          {"name": "NeuronWriter", "type": "direct", "dr": 72, "weakness": "Less generation capability than leaders"},
-          {"name": "Clearscope", "type": "direct", "dr": 78, "weakness": "Very expensive, enterprise-oriented"},
-          {"name": "Writesonic", "type": "direct", "weakness": "Too generic"},
-          {"name": "BlogSEO", "type": "indirect", "weakness": "Questionable quality"}
+          {
+            "name": "Surfer SEO",
+            "type": "direct",
+            "dr": 92,
+            "weakness": "Users report irrelevant keywords and ranking drops"
+          },
+          {
+            "name": "Frase",
+            "type": "direct",
+            "dr": 79,
+            "weakness": "Less powerful AI writing than Jasper"
+          },
+          {
+            "name": "Jasper",
+            "type": "direct",
+            "dr": 88,
+            "weakness": "Less focused on pure SEO, more general marketing"
+          },
+          {
+            "name": "Koala.sh",
+            "type": "direct",
+            "dr": 72,
+            "weakness": "Less known, smaller ecosystem"
+          },
+          {
+            "name": "SEO.ai",
+            "type": "direct",
+            "dr": 77,
+            "weakness": "Relatively new"
+          },
+          {
+            "name": "GravityWrite",
+            "type": "direct",
+            "dr": 68,
+            "weakness": "Less sophisticated SEO"
+          },
+          {
+            "name": "NeuronWriter",
+            "type": "direct",
+            "dr": 72,
+            "weakness": "Less generation capability than leaders"
+          },
+          {
+            "name": "Clearscope",
+            "type": "direct",
+            "dr": 78,
+            "weakness": "Very expensive, enterprise-oriented"
+          },
+          {
+            "name": "Writesonic",
+            "type": "direct",
+            "weakness": "Too generic"
+          },
+          {
+            "name": "BlogSEO",
+            "type": "indirect",
+            "weakness": "Questionable quality"
+          }
         ],
         "competitiveDensity": "Saturated (13+ direct competitors, including players with $50M+ in funding)",
         "keywords": [
-          {"keyword": "ai seo content generator", "volume": 1000, "kd": 80},
-          {"keyword": "seo article writer", "volume": 700, "kd": 84},
-          {"keyword": "ai seo content writer", "volume": 600, "kd": 87},
-          {"keyword": "ai blog writer", "volume": 600, "kd": 61},
-          {"keyword": "content optimization tool", "volume": 600, "kd": 31},
-          {"keyword": "seo ai writer", "volume": 400, "kd": 70},
-          {"keyword": "seo content generator", "volume": 300, "kd": 79},
-          {"keyword": "ai seo content strategy generator", "volume": 250, "kd": 27},
-          {"keyword": "best ai blog writer", "volume": 150, "kd": 32},
-          {"keyword": "best ai seo content writer", "volume": 100, "kd": 10}
+          {
+            "keyword": "ai seo content generator",
+            "volume": 1000,
+            "kd": 80
+          },
+          {
+            "keyword": "seo article writer",
+            "volume": 700,
+            "kd": 84
+          },
+          {
+            "keyword": "ai seo content writer",
+            "volume": 600,
+            "kd": 87
+          },
+          {
+            "keyword": "ai blog writer",
+            "volume": 600,
+            "kd": 61
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "seo ai writer",
+            "volume": 400,
+            "kd": 70
+          },
+          {
+            "keyword": "seo content generator",
+            "volume": 300,
+            "kd": 79
+          },
+          {
+            "keyword": "ai seo content strategy generator",
+            "volume": 250,
+            "kd": 27
+          },
+          {
+            "keyword": "best ai blog writer",
+            "volume": 150,
+            "kd": 32
+          },
+          {
+            "keyword": "best ai seo content writer",
+            "volume": 100,
+            "kd": 10
+          }
         ],
         "communitySignals": [
-          {"type": "COMPLAINT", "signal": "Surfer SEO generates irrelevant keywords and forced phrases; users report ranking drops", "source": "Reddit r/SEO, Trustpilot"},
-          {"type": "COMPLAINT", "signal": "Surfer price hikes + features locked after paying (bait-and-switch perception)", "source": "Reddit, reviews"},
-          {"type": "COMPLAINT", "signal": "AI content from Surfer/Jasper is 'very generic' and doesn't match user intent", "source": "Comparatives 2026"},
-          {"type": "DISCUSSION", "signal": "Google Jan 2026 update aggressively filters generic AI content, prioritizes real human experience", "source": "Indie Hackers"},
-          {"type": "DISCUSSION", "signal": "82% of content marketing professionals use AI, but less than 50% have brand voice frameworks", "source": "Industry 2026"},
-          {"type": "REQUEST", "signal": "Tools that preserve brand voice when using AI (multiple articles on this problem)", "source": "Search Engine Land, Typeface, Averi.ai"}
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords and forced phrases; users report ranking drops",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer price hikes + features locked after paying (bait-and-switch perception)",
+            "source": "Reddit, reviews"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "AI content from Surfer/Jasper is 'very generic' and doesn't match user intent",
+            "source": "Comparatives 2026"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Google Jan 2026 update aggressively filters generic AI content, prioritizes real human experience",
+            "source": "Indie Hackers"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "82% of content marketing professionals use AI, but less than 50% have brand voice frameworks",
+            "source": "Industry 2026"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Tools that preserve brand voice when using AI (multiple articles on this problem)",
+            "source": "Search Engine Land, Typeface, Averi.ai"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM-HIGH — Requires API integrations (keyword data: Ahrefs/SEMrush/DataForSEO), AI generation pipeline (LLM API), brand voice personalization system, user dashboard",
@@ -525,6 +806,44 @@
             "Pivot 2 — SEO content strategy planner (not writer): 'ai seo content strategy generator' has 250 vol and KD 27. Tool that creates content strategies based on data but does NOT write. Aligned with 2026 trend of 'AI for strategy, human for voice'. Lower API costs",
             "Pivot 3 — Productize Seoseda as a service (not SaaS): instead of competing as a SaaS platform against tools with millions in funding, offer the complete workflow as a productized service/consultancy"
           ]
+        },
+        "forjaScore": {
+          "total": 38,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 34,
+              "weighted": 8.5,
+              "reason": "Weighted avg KD 66 across 4700 volume (1 easy keywords)"
+            },
+            "competitivePressure": {
+              "raw": 21,
+              "weighted": 4.2,
+              "reason": "Saturated density, avg competitor DR 78 across 8 competitors"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "4700 total search volume, 4 pain/request signals (+10 demand bonus)"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "4700 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 30,
+              "weighted": 4.5,
+              "reason": "Complexity 40/100, timeline +0, deps -10"
+            },
+            "riskProfile": {
+              "raw": 10,
+              "weighted": 1,
+              "reason": "5 assumptions, 4 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
         }
       }
     },
@@ -542,41 +861,157 @@
           "differentiation": "(1) vs generation tools (Jasper, Surfer, Koala): doesn't compete on writing, competes on thinking and validating — complements instead of replaces; (2) vs SEO suites (Ahrefs, SEMrush): translates complex data into concrete action plans for content managers without SEO expertise; (3) vs manual audit/consulting: automates the strategy-validation loop at a fraction of the cost"
         },
         "assumptions": [
-          {"assumption": "Content managers will pay for a separate strategy+audit tool when existing tools (Surfer, Frase) already include partial functions", "risk": "MEDIUM"},
-          {"assumption": "The 'connected loop' (strategy → brief → pre-publish audit) is valuable enough as a standalone product vs being another feature in existing suites", "risk": "HIGH"},
-          {"assumption": "SMBs have someone to write content (internally, freelancers or AI) and what they lack is the strategic + validation layer", "risk": "MEDIUM"},
-          {"assumption": "A new tool can compete on price against Frase ($15-45/mo) offering deeper strategic depth", "risk": "MEDIUM"}
+          {
+            "assumption": "Content managers will pay for a separate strategy+audit tool when existing tools (Surfer, Frase) already include partial functions",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The 'connected loop' (strategy → brief → pre-publish audit) is valuable enough as a standalone product vs being another feature in existing suites",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SMBs have someone to write content (internally, freelancers or AI) and what they lack is the strategic + validation layer",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new tool can compete on price against Frase ($15-45/mo) offering deeper strategic depth",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          {"name": "MarketMuse", "type": "direct", "dr": 77, "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'"},
-          {"name": "Frase", "type": "direct", "dr": 79, "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing"},
-          {"name": "Clearscope", "type": "direct", "dr": 78, "weakness": "Expensive, no strategic planning. Perceived as dated"},
-          {"name": "Surfer SEO", "type": "direct", "dr": 84, "weakness": "Per-piece optimization, not global strategy. Complaints of irrelevant keywords"},
-          {"name": "Content Harmony", "type": "direct", "dr": 65, "weakness": "Only briefs and scoring, no complete strategy"},
-          {"name": "Dashword", "type": "direct", "dr": 62, "weakness": "More optimization-oriented than strategy"},
-          {"name": "Swiftbrief", "type": "indirect", "dr": 39, "weakness": "Only briefs, no audit or strategy"},
-          {"name": "BriefSmith.ai", "type": "indirect", "dr": 1, "weakness": "Very new, only briefs"}
+          {
+            "name": "MarketMuse",
+            "type": "direct",
+            "dr": 77,
+            "weakness": "Very expensive, enterprise-only. Perceived as 'dated in AI-first world'"
+          },
+          {
+            "name": "Frase",
+            "type": "direct",
+            "dr": 79,
+            "weakness": "All-rounder but doesn't connect global strategy with individual piece auditing"
+          },
+          {
+            "name": "Clearscope",
+            "type": "direct",
+            "dr": 78,
+            "weakness": "Expensive, no strategic planning. Perceived as dated"
+          },
+          {
+            "name": "Surfer SEO",
+            "type": "direct",
+            "dr": 84,
+            "weakness": "Per-piece optimization, not global strategy. Complaints of irrelevant keywords"
+          },
+          {
+            "name": "Content Harmony",
+            "type": "direct",
+            "dr": 65,
+            "weakness": "Only briefs and scoring, no complete strategy"
+          },
+          {
+            "name": "Dashword",
+            "type": "direct",
+            "dr": 62,
+            "weakness": "More optimization-oriented than strategy"
+          },
+          {
+            "name": "Swiftbrief",
+            "type": "indirect",
+            "dr": 39,
+            "weakness": "Only briefs, no audit or strategy"
+          },
+          {
+            "name": "BriefSmith.ai",
+            "type": "indirect",
+            "dr": 1,
+            "weakness": "Very new, only briefs"
+          }
         ],
         "competitiveDensity": "Moderate (6-8 direct competitors vs 13+ in the AI writer space)",
         "keywords": [
-          {"keyword": "seo content audit", "volume": 1900, "kd": 39},
-          {"keyword": "seo and content strategy", "volume": 1200, "kd": 12},
-          {"keyword": "content audit tool", "volume": 800, "kd": 42},
-          {"keyword": "content optimization tool", "volume": 600, "kd": 31},
-          {"keyword": "content brief template", "volume": 500, "kd": 5},
-          {"keyword": "seo content brief", "volume": 450, "kd": 6},
-          {"keyword": "ai content strategy", "volume": 400, "kd": 16},
-          {"keyword": "content brief generator", "volume": 250, "kd": 12},
-          {"keyword": "content strategy planner", "volume": 100, "kd": 3},
-          {"keyword": "ai content planner", "volume": 60, "kd": 0}
+          {
+            "keyword": "seo content audit",
+            "volume": 1900,
+            "kd": 39
+          },
+          {
+            "keyword": "seo and content strategy",
+            "volume": 1200,
+            "kd": 12
+          },
+          {
+            "keyword": "content audit tool",
+            "volume": 800,
+            "kd": 42
+          },
+          {
+            "keyword": "content optimization tool",
+            "volume": 600,
+            "kd": 31
+          },
+          {
+            "keyword": "content brief template",
+            "volume": 500,
+            "kd": 5
+          },
+          {
+            "keyword": "seo content brief",
+            "volume": 450,
+            "kd": 6
+          },
+          {
+            "keyword": "ai content strategy",
+            "volume": 400,
+            "kd": 16
+          },
+          {
+            "keyword": "content brief generator",
+            "volume": 250,
+            "kd": 12
+          },
+          {
+            "keyword": "content strategy planner",
+            "volume": 100,
+            "kd": 3
+          },
+          {
+            "keyword": "ai content planner",
+            "volume": 60,
+            "kd": 0
+          }
         ],
         "communitySignals": [
-          {"type": "REQUEST", "signal": "Reddit threads asking for content audit tools and budget-friendly alternatives", "source": "Reddit r/content_marketing, r/DigitalMarketing"},
-          {"type": "COMPLAINT", "signal": "MarketMuse perceived as 'very expensive for what it offers'", "source": "G2, Reddit, comparatives"},
-          {"type": "COMPLAINT", "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'", "source": "Comparatives 2026"},
-          {"type": "COMPLAINT", "signal": "Surfer SEO generates irrelevant keywords, aggressive price hikes, generic content", "source": "Reddit r/SEO, Trustpilot"},
-          {"type": "DISCUSSION", "signal": "Trend 2026: 'AI for strategy, humans for voice' — aligned with this idea's positioning", "source": "Multiple sources"},
-          {"type": "DISCUSSION", "signal": "Pre-publish optimization emerging as differentiated workflow", "source": "HubSpot, StoryChief"}
+          {
+            "type": "REQUEST",
+            "signal": "Reddit threads asking for content audit tools and budget-friendly alternatives",
+            "source": "Reddit r/content_marketing, r/DigitalMarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "MarketMuse perceived as 'very expensive for what it offers'",
+            "source": "G2, Reddit, comparatives"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Clearscope and MarketMuse 'increasingly dated in an AI-first world'",
+            "source": "Comparatives 2026"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Surfer SEO generates irrelevant keywords, aggressive price hikes, generic content",
+            "source": "Reddit r/SEO, Trustpilot"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Trend 2026: 'AI for strategy, humans for voice' — aligned with this idea's positioning",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Pre-publish optimization emerging as differentiated workflow",
+            "source": "HubSpot, StoryChief"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM — Keyword data API + LLM for analysis/strategy + web dashboard. No content generation pipeline (simpler than original idea)",
@@ -599,6 +1034,44 @@
             "MarketMuse already covers strategic layer for enterprise",
             "Competition still strong in DR: incumbents with DR 62-84 make mid-term SEO difficult"
           ]
+        },
+        "forjaScore": {
+          "total": 61,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 75,
+              "weighted": 18.8,
+              "reason": "Weighted avg KD 25 across 6260 volume (5 easy keywords)"
+            },
+            "competitivePressure": {
+              "raw": 50,
+              "weighted": 10,
+              "reason": "Moderate density, avg competitor DR 61 across 8 competitors"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "6260 total search volume, 4 pain/request signals (+10 demand bonus)"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "6260 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "Complexity 60/100, timeline +10, deps -10"
+            },
+            "riskProfile": {
+              "raw": 38,
+              "weighted": 3.8,
+              "reason": "4 assumptions, 1 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
         }
       }
     },
@@ -616,33 +1089,108 @@
           "differentiation": "Combines curated discovery + gamification + social component, exclusively focused on children's/young adult literature. Not a bookstore, not a school club, not Goodreads for kids. Affiliate model eliminates subscription friction"
         },
         "assumptions": [
-          {"assumption": "Children want a digital platform to discover books (not just have parents/teachers recommend them)", "risk": "HIGH"},
-          {"assumption": "Parents will allow their children to create accounts on an unknown new platform", "risk": "HIGH"},
-          {"assumption": "The verification quiz is fun and not perceived as homework", "risk": "MEDIUM"},
-          {"assumption": "Amazon affiliate revenue covers costs", "risk": "HIGH"},
-          {"assumption": "The social avatar space generates engagement without creating safety issues", "risk": "MEDIUM"}
+          {
+            "assumption": "Children want a digital platform to discover books (not just have parents/teachers recommend them)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Parents will allow their children to create accounts on an unknown new platform",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The verification quiz is fun and not perceived as homework",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Amazon affiliate revenue covers costs",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The social avatar space generates engagement without creating safety issues",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          {"name": "Ranopla", "type": "direct", "weakness": "Institutional design, school-oriented, no social component"},
-          {"name": "Leoteca", "type": "direct", "weakness": "Requires teacher management, not autonomous for children"},
-          {"name": "Epic!", "type": "direct", "weakness": "English only, focused <12 years"},
-          {"name": "Beanstack", "type": "indirect", "weakness": "Library/school oriented"},
-          {"name": "Bookroo", "type": "indirect", "weakness": "US market, no Spanish"}
+          {
+            "name": "Ranopla",
+            "type": "direct",
+            "weakness": "Institutional design, school-oriented, no social component"
+          },
+          {
+            "name": "Leoteca",
+            "type": "direct",
+            "weakness": "Requires teacher management, not autonomous for children"
+          },
+          {
+            "name": "Epic!",
+            "type": "direct",
+            "weakness": "English only, focused <12 years"
+          },
+          {
+            "name": "Beanstack",
+            "type": "indirect",
+            "weakness": "Library/school oriented"
+          },
+          {
+            "name": "Bookroo",
+            "type": "indirect",
+            "weakness": "US market, no Spanish"
+          }
         ],
         "competitiveDensity": "Saturated",
         "keywords": [
-          {"keyword": "libros para adolescentes", "volume": 6200, "kd": 4},
-          {"keyword": "libros juveniles", "volume": 2900, "kd": 0},
-          {"keyword": "libros para niños de 10 a 12 años", "volume": 1800, "kd": 0},
-          {"keyword": "libros para niños", "volume": 1600, "kd": 3},
-          {"keyword": "libros para niños de 6 a 8 años", "volume": 1000, "kd": 0},
-          {"keyword": "libros recomendados niños 10-12", "volume": 700, "kd": 0},
-          {"keyword": "libros para niños de 8 años", "volume": 600, "kd": 0}
+          {
+            "keyword": "libros para adolescentes",
+            "volume": 6200,
+            "kd": 4
+          },
+          {
+            "keyword": "libros juveniles",
+            "volume": 2900,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños de 10 a 12 años",
+            "volume": 1800,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños",
+            "volume": 1600,
+            "kd": 3
+          },
+          {
+            "keyword": "libros para niños de 6 a 8 años",
+            "volume": 1000,
+            "kd": 0
+          },
+          {
+            "keyword": "libros recomendados niños 10-12",
+            "volume": 700,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños de 8 años",
+            "volume": 600,
+            "kd": 0
+          }
         ],
         "communitySignals": [
-          {"type": "DISCUSSION", "signal": "Parents actively seek recommendations by age on Reddit, Quora, and Spanish forums", "source": "Reddit, Quora"},
-          {"type": "COMPLAINT", "signal": "Parents don't get a crash course in books, the market, and reading levels", "source": "Parenting blogs, forums"},
-          {"type": "DISCUSSION", "signal": "Multiple Spanish portals publish recommendation content = validated demand", "source": "Spanish parenting websites"}
+          {
+            "type": "DISCUSSION",
+            "signal": "Parents actively seek recommendations by age on Reddit, Quora, and Spanish forums",
+            "source": "Reddit, Quora"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Parents don't get a crash course in books, the market, and reading levels",
+            "source": "Parenting blogs, forums"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple Spanish portals publish recommendation content = validated demand",
+            "source": "Spanish parenting websites"
+          }
         ],
         "executability": {
           "complexity": "HIGH",
@@ -669,6 +1217,44 @@
             "Pivot 1 — Netflix-style recommendation site (no accounts): Web with Netflix aesthetic organizing books by age/genre with attractive cards and affiliate links. No user accounts, no quizzes, no COPPA. MVP: 1-2 weeks",
             "Pivot 2 — Newsletter + SEO for parents: Combine discovery site with weekly recommendation newsletter. Capture parent emails (adults, no COPPA). Dual channel: SEO + email. MVP: 2-3 weeks"
           ]
+        },
+        "forjaScore": {
+          "total": 57,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 98,
+              "weighted": 24.5,
+              "reason": "Weighted avg KD 2 across 14.800 volume (2 easy keywords)"
+            },
+            "competitivePressure": {
+              "raw": 20,
+              "weighted": 4,
+              "reason": "Saturated density (DR data missing for >50% of competitors, using density only)"
+            },
+            "marketDemand": {
+              "raw": 80,
+              "weighted": 12,
+              "reason": "14.800 total search volume, 1 pain/request signals"
+            },
+            "marketSize": {
+              "raw": 80,
+              "weighted": 12,
+              "reason": "14.800 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 20,
+              "weighted": 3,
+              "reason": "Complexity 20/100, timeline +0, deps +0"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2,
+              "reason": "5 assumptions, 3 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
         }
       }
     },
@@ -686,38 +1272,140 @@
           "differentiation": "Unlike Amazon (overwhelming, uncurated), generic blog posts (outdated, ugly), or Goodreads (for adults), this site offers a visual discovery experience designed for Spanish-speaking parents. No accounts, no friction"
         },
         "assumptions": [
-          {"assumption": "Parents search and trust independent book recommendation sites", "risk": "LOW"},
-          {"assumption": "A new site with DR 0 can rank for KD 0-4 keywords", "risk": "LOW"},
-          {"assumption": "Revenue (affiliates + ads) generates sufficient return", "risk": "MEDIUM"},
-          {"assumption": "The Netflix-style UX is a real differentiator vs blog posts", "risk": "MEDIUM"}
+          {
+            "assumption": "Parents search and trust independent book recommendation sites",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "A new site with DR 0 can rank for KD 0-4 keywords",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "Revenue (affiliates + ads) generates sufficient return",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The Netflix-style UX is a real differentiator vs blog posts",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          {"name": "Casa del Libro", "type": "indirect", "dr": 82, "weakness": "Not curated, generic store UX"},
-          {"name": "Amazon.es", "type": "indirect", "dr": 91, "weakness": "Overwhelming, no curation"},
-          {"name": "Planeta de Libros", "type": "indirect", "dr": 77, "weakness": "Biased toward own catalog"},
-          {"name": "Educación 3.0", "type": "indirect", "dr": 71, "weakness": "Occasional posts, not dedicated site"},
-          {"name": "AdolescenciaPositiva", "type": "indirect", "dr": 34, "weakness": "Individual posts, no discovery experience"},
-          {"name": "Diego Marín", "type": "indirect", "dr": 39, "weakness": "Sales pages, not curated recommendation"}
+          {
+            "name": "Casa del Libro",
+            "type": "indirect",
+            "dr": 82,
+            "weakness": "Not curated, generic store UX"
+          },
+          {
+            "name": "Amazon.es",
+            "type": "indirect",
+            "dr": 91,
+            "weakness": "Overwhelming, no curation"
+          },
+          {
+            "name": "Planeta de Libros",
+            "type": "indirect",
+            "dr": 77,
+            "weakness": "Biased toward own catalog"
+          },
+          {
+            "name": "Educación 3.0",
+            "type": "indirect",
+            "dr": 71,
+            "weakness": "Occasional posts, not dedicated site"
+          },
+          {
+            "name": "AdolescenciaPositiva",
+            "type": "indirect",
+            "dr": 34,
+            "weakness": "Individual posts, no discovery experience"
+          },
+          {
+            "name": "Diego Marín",
+            "type": "indirect",
+            "dr": 39,
+            "weakness": "Sales pages, not curated recommendation"
+          }
         ],
         "competitiveDensity": "Open — No competitor offers a dedicated, visual, and complete discovery experience",
         "keywords": [
-          {"keyword": "libros para adolescentes", "volume": 6200, "kd": 4},
-          {"keyword": "libros juveniles", "volume": 2900, "kd": 0},
-          {"keyword": "libros para niños de 10 a 12 años", "volume": 1800, "kd": 0},
-          {"keyword": "libros para niños", "volume": 1600, "kd": 3},
-          {"keyword": "libros adolescentes", "volume": 1400, "kd": 0},
-          {"keyword": "libros para niños de 6 a 8 años", "volume": 1000, "kd": 0},
-          {"keyword": "libros recomendados para adolescentes", "volume": 900, "kd": 1},
-          {"keyword": "literatura juvenil", "volume": 800, "kd": 4},
-          {"keyword": "libros para adolescentes de 12 años", "volume": 600, "kd": 0},
-          {"keyword": "libros para niños de 8 años", "volume": 600, "kd": 0}
+          {
+            "keyword": "libros para adolescentes",
+            "volume": 6200,
+            "kd": 4
+          },
+          {
+            "keyword": "libros juveniles",
+            "volume": 2900,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños de 10 a 12 años",
+            "volume": 1800,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños",
+            "volume": 1600,
+            "kd": 3
+          },
+          {
+            "keyword": "libros adolescentes",
+            "volume": 1400,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños de 6 a 8 años",
+            "volume": 1000,
+            "kd": 0
+          },
+          {
+            "keyword": "libros recomendados para adolescentes",
+            "volume": 900,
+            "kd": 1
+          },
+          {
+            "keyword": "literatura juvenil",
+            "volume": 800,
+            "kd": 4
+          },
+          {
+            "keyword": "libros para adolescentes de 12 años",
+            "volume": 600,
+            "kd": 0
+          },
+          {
+            "keyword": "libros para niños de 8 años",
+            "volume": 600,
+            "kd": 0
+          }
         ],
         "communitySignals": [
-          {"type": "DISCUSSION", "signal": "Parents actively seek recommendations by age on Reddit, Quora and Spanish forums", "source": "Reddit, Quora"},
-          {"type": "COMPLAINT", "signal": "Parents don't get a crash course in books, the market, and reading levels — documented frustration", "source": "Parenting blogs, forums"},
-          {"type": "REQUEST", "signal": "Specific pain: 'libros para niños de 12 años que no les gusta leer' (30 vol, KD 0)", "source": "Ahrefs keyword"},
-          {"type": "DISCUSSION", "signal": "Multiple Spanish portals publish recommendation content = validated demand", "source": "Spanish parenting websites"},
-          {"type": "DISCUSSION", "signal": "20+ specialized children's literature blogs in Spain — active community", "source": "educaciontrespuntocero.com"}
+          {
+            "type": "DISCUSSION",
+            "signal": "Parents actively seek recommendations by age on Reddit, Quora and Spanish forums",
+            "source": "Reddit, Quora"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Parents don't get a crash course in books, the market, and reading levels — documented frustration",
+            "source": "Parenting blogs, forums"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Specific pain: 'libros para niños de 12 años que no les gusta leer' (30 vol, KD 0)",
+            "source": "Ahrefs keyword"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple Spanish portals publish recommendation content = validated demand",
+            "source": "Spanish parenting websites"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "20+ specialized children's literature blogs in Spain — active community",
+            "source": "educaciontrespuntocero.com"
+          }
         ],
         "executability": {
           "complexity": "LOW",
@@ -743,6 +1431,44 @@
             "Low barrier to entry: replicable concept",
             "Potentially seasonal traffic (Christmas, back to school)"
           ]
+        },
+        "forjaScore": {
+          "total": 83,
+          "calculatedAt": "2026-04-07",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 98,
+              "weighted": 24.5,
+              "reason": "Weighted avg KD 2 across 17.800 volume (4 easy keywords)"
+            },
+            "competitivePressure": {
+              "raw": 62,
+              "weighted": 12.4,
+              "reason": "Open density, avg competitor DR 66 across 6 competitors"
+            },
+            "marketDemand": {
+              "raw": 80,
+              "weighted": 12,
+              "reason": "17.800 total search volume, 2 pain/request signals"
+            },
+            "marketSize": {
+              "raw": 80,
+              "weighted": 12,
+              "reason": "17.800 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "Complexity 90/100, timeline +10, deps +0"
+            },
+            "riskProfile": {
+              "raw": 75,
+              "weighted": 7.5,
+              "reason": "4 assumptions, 0 HIGH-risk"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
         }
       }
     }

@@ -24,6 +24,17 @@ export default function DashboardPage() {
         ).toFixed(1)
       : "--";
 
+  const ideasWithForjaScore = allIdeas.filter((i) => i.screeningData?.forjaScore);
+  const avgForjaScore =
+    ideasWithForjaScore.length > 0
+      ? Math.round(
+          ideasWithForjaScore.reduce(
+            (sum, i) => sum + (i.screeningData!.forjaScore!.total ?? 0),
+            0
+          ) / ideasWithForjaScore.length
+        ).toString()
+      : "--";
+
   return (
     <div>
       <StatsBar
@@ -32,6 +43,7 @@ export default function DashboardPage() {
         advance={advanceCount}
         pending={pendingCount}
         avgPain={avgPain}
+        avgForjaScore={avgForjaScore}
       />
       <DashboardTabs
         products={products}

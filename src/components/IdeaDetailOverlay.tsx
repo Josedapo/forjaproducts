@@ -3,6 +3,7 @@
 import type { Idea } from "@/lib/types";
 import PainScore from "./PainScore";
 import StatusBadge from "./StatusBadge";
+import ForjaScoreBadge from "./ForjaScoreBadge";
 import Link from "next/link";
 
 interface IdeaDetailOverlayProps {
@@ -36,8 +37,14 @@ export default function IdeaDetailOverlay({ idea, onClose }: IdeaDetailOverlayPr
               )}
             </div>
             <div className="mt-2 flex flex-wrap items-center gap-2">
-              <StatusBadge status={idea.status} />
+              <StatusBadge
+                status={idea.status}
+                alignment={idea.screeningData?.forjaScore?.alignment}
+              />
               <PainScore score={idea.painScore} />
+              {idea.screeningData?.forjaScore && (
+                <ForjaScoreBadge score={idea.screeningData.forjaScore.total} />
+              )}
               {idea.added && (
                 <span className="text-xs text-text-dim">{idea.added}</span>
               )}

@@ -1,8 +1,36 @@
+export type ForjaScoreDimensionKey =
+  | "seoEntry"
+  | "competitivePressure"
+  | "marketDemand"
+  | "marketSize"
+  | "executionFeasibility"
+  | "riskProfile";
+
+export interface ForjaScoreDimension {
+  raw: number; // 0-100 before weight
+  weighted: number; // raw * weight / 100
+  reason: string; // one-sentence explanation
+}
+
+export type VerdictAlignment =
+  | "aligned"
+  | "divergent-optimistic" // score >= 70 with DISCARD verdict
+  | "divergent-pessimistic"; // score < 40 with ADVANCE verdict
+
+export interface ForjaScore {
+  total: number; // 0-100
+  calculatedAt: string; // YYYY-MM-DD
+  dimensions: Record<ForjaScoreDimensionKey, ForjaScoreDimension>;
+  missingInputs: ForjaScoreDimensionKey[];
+  alignment: VerdictAlignment;
+}
+
 export interface PivotHistoryItem {
   idea: string;
   status: string;
   date: string;
   reportUrl: string | null;
+  forjaScore?: number;
 }
 
 export interface ScreeningData {
@@ -32,6 +60,7 @@ export interface ScreeningData {
     against: string[];
     pivotSuggestions?: string[];
   };
+  forjaScore?: ForjaScore;
 }
 
 export interface Idea {

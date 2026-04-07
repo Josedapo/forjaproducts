@@ -1,6 +1,9 @@
+import type { VerdictAlignment } from "@/lib/types";
+
 interface StatusBadgeProps {
   status: string;
   size?: "default" | "large";
+  alignment?: VerdictAlignment;
 }
 
 function getStatusStyle(status: string, size: string): string {
@@ -24,16 +27,38 @@ function getStatusLabel(status: string): string {
   return "PENDING";
 }
 
-export default function StatusBadge({ status, size = "default" }: StatusBadgeProps) {
+function alignmentTooltip(alignment: VerdictAlignment): string {
+  if (alignment === "divergent-optimistic") {
+    return "Forja Score suggests ADVANCE but verdict is DISCARD. Worth reviewing.";
+  }
+  if (alignment === "divergent-pessimistic") {
+    return "Forja Score suggests DISCARD but verdict is ADVANCE. Strong conviction call — monitor closely.";
+  }
+  return "";
+}
+
+export default function StatusBadge({ status, size = "default", alignment }: StatusBadgeProps) {
   const sizeClass = size === "large"
     ? "px-4 py-1.5 text-sm font-bold tracking-wide"
     : "px-2.5 py-0.5 text-xs font-medium";
 
+  const isDivergent = alignment && alignment !== "aligned";
+  const dotSize = size === "large" ? "h-2.5 w-2.5" : "h-2 w-2";
+
   return (
-    <span
-      className={`inline-block rounded-full ${sizeClass} ${getStatusStyle(status, size)}`}
-    >
-      {getStatusLabel(status)}
+    <span className="relative inline-block">
+      <span
+        className={`inline-block rounded-full ${sizeClass} ${getStatusStyle(status, size)}`}
+      >
+        {getStatusLabel(status)}
+      </span>
+      {isDivergent && (
+        <span
+          title={alignmentTooltip(alignment)}
+          className={`absolute -top-0.5 -right-0.5 ${dotSize} rounded-full bg-red border-2 border-surface`}
+          aria-label="Score and verdict diverge"
+        />
+      )}
     </span>
   );
 }

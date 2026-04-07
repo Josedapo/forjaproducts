@@ -1,9 +1,12 @@
+import { FORJA_SCORE_THRESHOLDS } from "@/lib/forjaScoreConfig";
+
 interface StatsBarProps {
   products: number;
   totalIdeas: number;
   advance: number;
   pending: number;
   avgPain: string;
+  avgForjaScore: string;
 }
 
 function PainBar({ value, max = 5 }: { value: number; max?: number }) {
@@ -88,17 +91,39 @@ function IconStat({
   );
 }
 
+function ForjaScoreStatBar({ value }: { value: number }) {
+  const pct = Math.min(value / 100, 1) * 100;
+  let color = "#e53e3e";
+  if (value >= FORJA_SCORE_THRESHOLDS.excellent) color = "#38a169";
+  else if (value >= FORJA_SCORE_THRESHOLDS.good) color = "#65a30d";
+  else if (value >= FORJA_SCORE_THRESHOLDS.marginal) color = "#d69e2e";
+
+  return (
+    <div className="w-full">
+      <div className="h-3 w-full overflow-hidden rounded-full bg-border">
+        <div className="h-full rounded-full transition-all" style={{ width: `${pct}%`, background: color }} />
+      </div>
+      <div className="mt-2 flex justify-between text-[10px] text-text-dim">
+        <span>0</span>
+        <span>100</span>
+      </div>
+    </div>
+  );
+}
+
 export default function StatsBar({
   products,
   totalIdeas,
   advance,
   pending,
   avgPain,
+  avgForjaScore,
 }: StatsBarProps) {
   const painNum = parseFloat(avgPain) || 0;
+  const forjaNum = parseFloat(avgForjaScore) || 0;
 
   return (
-    <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-5">
+    <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-6">
       {/* Products */}
       <div className="card px-5 py-4">
         <IconStat
@@ -147,6 +172,13 @@ export default function StatsBar({
         <p className="text-3xl font-bold text-text">{avgPain}</p>
         <p className="mb-3 text-sm text-text-dim">Avg pain</p>
         <PainBar value={painNum} />
+      </div>
+
+      {/* Avg Forja Score */}
+      <div className="card px-5 py-4">
+        <p className="text-3xl font-bold text-text">{avgForjaScore}</p>
+        <p className="mb-3 text-sm text-text-dim">Avg Forja Score</p>
+        <ForjaScoreStatBar value={forjaNum} />
       </div>
     </div>
   );

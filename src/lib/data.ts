@@ -1,16 +1,42 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { Idea, IdeasData, ProductsData, Product, ProductDocument, ScreenedIdea } from "./types";
+import type { Idea, IdeasData, ProductsData, Product, ProductDocument, ScreenedIdea, ScreeningData } from "./types";
+import { calculateForjaScore } from "./forjaScore";
 
 const dataDir = join(process.cwd(), "data");
 
 let ideasCache: IdeasData | null = null;
 let productsCache: ProductsData | null = null;
 
+/**
+ * Ensure every screening payload has a forjaScore.
+ * If the JSON already includes one (written by /forja-dashboard from the
+ * markdown source of truth), keep it. Otherwise compute on the fly so legacy
+ * ideas never break the UI.
+ */
+function ensureForjaScore(screening: ScreeningData): ScreeningData {
+  if (screening.forjaScore) return screening;
+  return { ...screening, forjaScore: calculateForjaScore(screening) };
+}
+
 export function getIdeasData(): IdeasData {
   if (!ideasCache) {
     const raw = readFileSync(join(dataDir, "ideas.json"), "utf-8");
-    ideasCache = JSON.parse(raw) as IdeasData;
+    const parsed = JSON.parse(raw) as IdeasData;
+
+    // Hydrate forjaScore on every screening payload, both in candidates/backlog
+    // and in the dedicated screenedIdeas list.
+    const hydrateIdea = (i: Idea): Idea =>
+      i.screeningData ? { ...i, screeningData: ensureForjaScore(i.screeningData) } : i;
+
+    ideasCache = {
+      candidates: parsed.candidates.map(hydrateIdea),
+      backlog: parsed.backlog.map(hydrateIdea),
+      screenedIdeas: (parsed.screenedIdeas || []).map((s) => ({
+        ...s,
+        screeningData: ensureForjaScore(s.screeningData),
+      })),
+    };
   }
   return ideasCache;
 }
