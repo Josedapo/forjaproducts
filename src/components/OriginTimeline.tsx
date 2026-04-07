@@ -1,15 +1,18 @@
 import Link from "next/link";
-import type { TimelineItem } from "@/lib/types";
+import type { TimelineItem, VerdictAlignment } from "@/lib/types";
 import StatusBadge from "./StatusBadge";
+import ForjaScoreBadge from "./ForjaScoreBadge";
 
 interface OriginTimelineProps {
   timeline: TimelineItem[];
   ideaSlugMap?: Record<string, string>;
+  ideaScoreMap?: Record<string, { score: number; alignment: VerdictAlignment }>;
 }
 
 export default function OriginTimeline({
   timeline,
   ideaSlugMap,
+  ideaScoreMap,
 }: OriginTimelineProps) {
   return (
     <div className="relative pl-6">
@@ -18,7 +21,9 @@ export default function OriginTimeline({
 
       <div className="space-y-4">
         {timeline.map((item, i) => {
-          const slug = ideaSlugMap?.[item.idea.toLowerCase()];
+          const key = item.idea.toLowerCase();
+          const slug = ideaSlugMap?.[key];
+          const scoreEntry = ideaScoreMap?.[key];
 
           return (
             <div key={i} className="relative flex items-start gap-3">
@@ -44,6 +49,7 @@ export default function OriginTimeline({
                 <div className="mt-1 flex items-center gap-2">
                   <span className="text-xs text-text-dim">{item.date}</span>
                   <StatusBadge
+                    alignment={scoreEntry?.alignment}
                     status={
                       item.verdict === "ADVANCE"
                         ? "Evaluated - ADVANCE"
@@ -52,6 +58,7 @@ export default function OriginTimeline({
                           : item.verdict
                     }
                   />
+                  {scoreEntry && <ForjaScoreBadge score={scoreEntry.score} />}
                 </div>
               </div>
             </div>

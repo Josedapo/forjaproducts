@@ -128,6 +128,28 @@ export function getScreenedIdea(slug: string): ScreenedIdea | undefined {
   return getScreenedIdeas().find((i) => i.slug === slug);
 }
 
+/**
+ * Index screened ideas by lowercase idea name. Used by OriginTimeline (and
+ * any other view that receives only an idea name) to look up slug, Forja
+ * Score and verdict alignment in O(1).
+ */
+export function getScreenedIndex(): {
+  slugByName: Record<string, string>;
+  scoreByName: Record<string, { score: number; alignment: import("./types").VerdictAlignment }>;
+} {
+  const slugByName: Record<string, string> = {};
+  const scoreByName: Record<string, { score: number; alignment: import("./types").VerdictAlignment }> = {};
+  for (const si of getScreenedIdeas()) {
+    const key = si.idea.trim().toLowerCase();
+    slugByName[key] = si.slug;
+    const score = si.screeningData.forjaScore;
+    if (score) {
+      scoreByName[key] = { score: score.total, alignment: score.alignment };
+    }
+  }
+  return { slugByName, scoreByName };
+}
+
 export function getProductByIdeaSlug(ideaSlug: string, ideaName?: string): Product | undefined {
   return getAllProducts().find((p) =>
     p.origin.ideaSlug === ideaSlug ||

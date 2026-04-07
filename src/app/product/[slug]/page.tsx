@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllProducts, getProductBySlug, getScreenedIdeas } from "@/lib/data";
+import { getAllProducts, getProductBySlug, getScreenedIndex } from "@/lib/data";
 import PipelineBar from "@/components/PipelineBar";
 import OriginTimeline from "@/components/OriginTimeline";
 import PhaseSection from "@/components/PhaseSection";
@@ -188,16 +188,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       {/* Origin */}
       <PhaseSection title="Origin" icon="🌱">
-        <OriginTimeline
-          timeline={product.origin.timeline}
-          ideaSlugMap={(() => {
-            const map: Record<string, string> = {};
-            for (const si of getScreenedIdeas()) {
-              map[si.idea.toLowerCase()] = si.slug;
-            }
-            return map;
-          })()}
-        />
+        {(() => {
+          const { slugByName, scoreByName } = getScreenedIndex();
+          return (
+            <OriginTimeline
+              timeline={product.origin.timeline}
+              ideaSlugMap={slugByName}
+              ideaScoreMap={scoreByName}
+            />
+          );
+        })()}
       </PhaseSection>
 
       {/* Shape */}
