@@ -30,7 +30,9 @@ export interface PivotHistoryItem {
   status: string;
   date: string;
   reportUrl: string | null;
+  slug?: string;
   forjaScore?: number;
+  alignment?: VerdictAlignment;
 }
 
 export interface ScreeningData {

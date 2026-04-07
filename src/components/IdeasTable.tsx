@@ -245,9 +245,13 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
                       </p>
                       <div className="space-y-1.5">
                         {idea.pivotHistory.map((pivot, i) => {
-                          const pivotSlug = pivot.reportUrl
-                            ? pivot.reportUrl.replace("idea-screening-", "").replace(".html", "")
-                            : null;
+                          const pivotSlug =
+                            pivot.slug ??
+                            (pivot.reportUrl
+                              ? pivot.reportUrl
+                                  .replace("idea-screening-", "")
+                                  .replace(".html", "")
+                              : null);
                           return (
                             <div
                               key={i}
@@ -265,7 +269,13 @@ export default function IdeasTable({ ideas, title, latestAdded }: IdeasTableProp
                               ) : (
                                 <span className="text-text">{pivot.idea}</span>
                               )}
-                              <StatusBadge status={pivot.status} />
+                              <StatusBadge
+                                status={pivot.status}
+                                alignment={pivot.alignment}
+                              />
+                              {pivot.forjaScore != null && (
+                                <ForjaScoreBadge score={pivot.forjaScore} />
+                              )}
                             </div>
                           );
                         })}
