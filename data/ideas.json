@@ -309,12 +309,13 @@
     },
     {
       "idea": "Local insider travel connections",
+      "slug": "local-insider-travel-connections",
       "description": "Platform connecting travelers with verified locals who help plan authentic experiences beyond tourist guides",
       "pain": "Travelers want to eat, visit and do what locals actually do; guidebooks and review sites funnel everyone to the same tourist traps",
       "source": "Own idea",
-      "painScore": null,
+      "painScore": 4,
       "added": "2026-03-26",
-      "status": "Pending",
+      "status": "Evaluated - PIVOT",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -2507,6 +2508,120 @@
               "raw": 10,
               "weighted": 1,
               "reason": "5 assumptions: 4 HIGH + 1 MEDIUM → average 10"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "local-insider-travel-connections",
+      "idea": "Local insider travel connections",
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Platform connecting travelers with verified locals who act as 'always-available friends' via async chat (in-app), before and during the trip. Travelers pay a small matching fee at booking + voluntary tip at the end of the trip.",
+          "audience": "Independent travelers 28-50 with disposable income who already moved past the 'top 10 sights' stage and want authentic cultural experiences. NOT backpackers or group-tour customers.",
+          "problem": "Travel recommendations are homogenized: TripAdvisor, Google Maps and guidebooks funnel everyone to the same restaurants, neighborhoods and attractions, degrading the experience (queues, inflated prices, tourist-targeted food). Travelers know the 'real side' of every city exists but lack access without knowing someone who lives there.",
+          "solution": "In-app async chat with a verified local on call for the duration of the trip. The local acts as a trusted friend answering real-time questions before the trip and during it. No mandatory video call, no physical tour. Karma/review system to filter locals.",
+          "differentiation": "Vs static guides → real-time contextual knowledge. Vs physical tour marketplaces (Withlocals, ToursByLocals) → cheaper, no scheduling, async, scalable on the supply side. Vs Reddit/forums → instant answer from one person who already knows your trip plan. Tip-based revenue model aligns local incentives with traveler satisfaction."
+        },
+        "assumptions": [
+          { "assumption": "Travelers will pay 5-10€ + tip for a verified local instead of using Reddit for free", "risk": "HIGH" },
+          { "assumption": "Locals will register accepting a tip-only revenue model (no salary base)", "risk": "HIGH" },
+          { "assumption": "Trust/verification can be solved manually for the first 30 locals", "risk": "LOW" },
+          { "assumption": "Conversations stay inside the app instead of migrating to WhatsApp in the first week", "risk": "MEDIUM" },
+          { "assumption": "CAC via SEO content or paid acquisition can stay below LTV (matching fee + tip commission)", "risk": "HIGH" }
+        ],
+        "competitors": [
+          { "name": "ToursByLocals", "type": "Marketplace of paid physical tours guided by locals", "dr": 72, "weakness": "Physical tours only, no continuous async chat" },
+          { "name": "EatWith", "type": "Shared meals at locals' homes", "dr": 71, "weakness": "Food-only, no general advisory" },
+          { "name": "Withlocals", "type": "Private tours with locals", "dr": 66, "weakness": "Physical tours, chat only pre-booking" },
+          { "name": "RentAFriend", "type": "Generic friend rental (not travel-specific)", "dr": 52, "weakness": "Not travel-focused, in-person model" },
+          { "name": "ShowAround", "type": "Casual local meetups", "dr": 42, "weakness": "Mostly amateur locals, no service structure" }
+        ],
+        "competitiveDensity": "Moderate. Established marketplaces with strong SEO (avg DR 60.6) dominate the physical-tour angle. No competitor offers exactly the 'always-available local friend via async chat for the trip duration' model — real white space, but the reason matters: free community workarounds (Reddit + city subreddits + ChatGPT) already satisfy most latent demand.",
+        "keywords": [
+          { "keyword": "travel concierge service", "volume": 150, "kd": 6 },
+          { "keyword": "rent a local friend", "volume": 100, "kd": 31 },
+          { "keyword": "go ask a local", "volume": 100, "kd": 0 },
+          { "keyword": "chat with locals", "volume": 70, "kd": 39 },
+          { "keyword": "travel like a local", "volume": 60, "kd": 3 },
+          { "keyword": "local guide app", "volume": 50, "kd": 42 },
+          { "keyword": "local travel advisor", "volume": 50, "kd": 0 },
+          { "keyword": "ask a local", "volume": 40, "kd": 0 },
+          { "keyword": "personal travel guide", "volume": 30, "kd": 77 },
+          { "keyword": "local insider tips", "volume": 10, "kd": 0 }
+        ],
+        "communitySignals": [
+          { "type": "COMPLAINT", "signal": "Tourist trap fatigue is massively documented. TripAdvisor blocked/removed 2.7M fake reviews in 2024 (+34% YoY). Famous case: Oobah Butler's 'The Shed at Dulwich' — non-existent restaurant taken to #1 in London via fake reviews", "source": "https://en.wikipedia.org/wiki/Tripadvisor" },
+          { "type": "COMPLAINT", "signal": "TripAdvisor and Yelp reviews are unreliable, overwhelmed by fake reviews and pay-to-play algorithms", "source": "https://www.tripologiste.com/blog/why-we-no-longer-trust-tripadvisor-or-yelp-for-travel-reviews" },
+          { "type": "REQUEST", "signal": "Travelers want recommendations from real locals, but the default solution they reach for is free Reddit — city-specific subreddits (r/askTO, r/Madrid), r/travel, r/solotravel", "source": "https://www.travelingmitch.com/mostrecent/travel-subreddits-tour-the-world" },
+          { "type": "DISCUSSION", "signal": "Dozens of SEO articles on 'how to avoid tourist traps' and 'how to find authentic experiences' confirm informational search demand but not willingness-to-pay", "source": "https://comealongwithpong.com/how-to-find-authentic-travel-experiences-not-just-tourist-traps/" }
+        ],
+        "executability": {
+          "complexity": "MEDIUM",
+          "timeline": "~2 weeks with Claude Code",
+          "dependencies": "Stripe (payments), Supabase or similar (auth + DB + realtime chat), email/push notification service",
+          "risks": "Reliable realtime notifications (critical for 'always available' UX); in-app moderation to discourage WhatsApp migration (anti-disintermediation); trust & safety on both sides; cold-start challenges on both sides of the marketplace"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Pain is emotionally documented at scale: 2.7M fake reviews removed by TripAdvisor in 2024, viral cases like 'The Shed at Dulwich'",
+            "Real white space in the 'always-available async chat' model — no incumbent does this exactly",
+            "Build is feasible and cheap for a solopreneur (~2 weeks)",
+            "KD on some terms is attainable (travel concierge service KD 6, travel like a local KD 3)",
+            "Tip-based pricing model is genuinely original and aligns local incentives"
+          ],
+          "against": [
+            "Search volume is essentially nonexistent: ~660 monthly searches US across all relevant terms — SEO can hardly be the acquisition engine",
+            "Free workaround already established: r/travel, r/solotravel, city subreddits and ChatGPT already satisfy most travelers without payment",
+            "Structural disintermediation: once trust is built with a local, the user has zero incentive to come back through the platform",
+            "Double cold-start: not just locals (solvable via Joseda's network) but especially travelers, who don't search for this category",
+            "The SERP for 'personal travel guide' belongs to physical tours (parent topic = 'tours by locals') — Google understands this intent very differently from the proposed product"
+          ],
+          "pivotSuggestions": [
+            "Pivot 1 (recommended) — AI-first with human backup: AI travel planner handles 90% of queries instantly + 1 human local as backup. Each local serves 200 travelers instead of 15. Frontally attacks the 'Reddit is free' objection because AI delivers instant, contextual, in-language answers Reddit can't.",
+            "Pivot 2 — B2B for boutique hotels and Airbnb hosts: Customer becomes the host, not the traveler. Sell 'local concierge by chat' as a property amenity. Distribution solved, high willingness-to-pay, no need for B2C SEO.",
+            "Pivot 3 — Non-English destinations niche: Focus on Japan, Korea, Vietnam, China, Thailand, Morocco. Language barrier real, English Reddit less helpful, willingness-to-pay rises significantly. Smaller market but much higher ARPU."
+          ]
+        },
+        "forjaScore": {
+          "total": 55,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 75,
+              "weighted": 19,
+              "reason": "Volume-weighted avg KD ≈24.6 — low because 'travel concierge service' KD 6 and 'travel like a local' KD 3 anchor it down. Misleadingly attainable: KD is OK but volume is microscopic"
+            },
+            "competitivePressure": {
+              "raw": 50,
+              "weighted": 10,
+              "reason": "Density Moderate (60) + 5/5 competitors with DR averaging 60.6 → drScore 39, blended raw 50"
+            },
+            "marketDemand": {
+              "raw": 40,
+              "weighted": 6,
+              "reason": "Total volume ~900/month → bucket '500-1,999'. No bonus: COMPLAINT signals exist but not 3+ direct REQUESTs for this specific service"
+            },
+            "marketSize": {
+              "raw": 40,
+              "weighted": 6,
+              "reason": "Same volume bucket (500-1,999), no bonus"
+            },
+            "executionFeasibility": {
+              "raw": 70,
+              "weighted": 11,
+              "reason": "MEDIUM complexity (60) + 2-week timeline (+10) + neutral dependencies (0)"
+            },
+            "riskProfile": {
+              "raw": 30,
+              "weighted": 3,
+              "reason": "3 HIGH (willingness to pay, locals adoption, CAC<LTV) + 1 MEDIUM (in-app retention) + 1 LOW (manual verification) → average 30"
             }
           },
           "missingInputs": [],
