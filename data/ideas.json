@@ -623,12 +623,12 @@
       "source": "Own idea (real pattern observed: partner is a psychologist constantly asked for referrals)",
       "painScore": 4,
       "added": "2026-03-26",
-      "status": "Evaluated - PIVOT",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null,
       "screeningData": {
         "evaluatedDate": "2026-04-08",
-        "verdict": "PIVOT",
+        "verdict": "DISCARD",
         "idea": {
           "what": "Tool that recommends the right type of psychologist based on the user's symptoms, matching specialization, approach (cognitive-behavioral, psychoanalytic, systemic, EMDR, gestalt, etc.) and personal preferences (gender, age, modality)",
           "audience": "Spanish-speaking adults 25-50 considering therapy for the first time (or retrying after a bad experience), paralyzed by not knowing what type of professional to look for",
@@ -785,7 +785,7 @@
           "risks": "Content accuracy in describing therapeutic approaches — mitigated by Joseda's partner as in-house clinical reviewer (unique unfair advantage). No AI required (decision tree logic is sufficient)"
         },
         "verdict_detail": {
-          "decision": "PIVOT",
+          "decision": "DISCARD",
           "inFavor": [
             "Pain is real and emotionally documented in community signals (Forocoches recurring threads, observed pattern from psychologist partner)",
             "KD is essentially zero on matchmaker-intent queries (0-1 across the cluster) — no SEO competition for the intent",
@@ -799,15 +799,8 @@
             "High-DR psychology content (Avance Psicólogos, Top Doctors) actively tells users that the matchmaker is unnecessary, contradicting the product premise from inside the SERP",
             "Average DR of 8 incumbents is ~60 — directory and educational content space is saturated with topical authority sites (10+ years old)",
             "Monetization is structurally weak: directories don't need lead-gen from a small site; online therapy platforms have their own funnels",
-            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products"
-          ],
-          "pivotSuggestions": [
-            "Pivot 1 (data-strongest pivot) — SEO content site about therapy types and approaches with affiliate to online therapy platforms. Target the educational cluster: 'terapia cognitivo conductual' (4500/6), 'tipos de terapia psicológica' (80/1), 'psicólogo o psiquiatra' (70/0), 'psicólogo infantil' (700/0), 'psicólogo online ansiedad' (900/3). Monetization: affiliate to Buencoco/Unobravo/TherapyChat (all need leads). The matchmaker becomes a feature (a quiz at the end of articles), not the product. Differentiation vs Psicología y Mente: clinically validated content (Joseda's partner) and conversion-oriented (clear CTA to platforms), not ad-supported traffic farming",
-            "Pivot 3 — B2B tool for psychologists. Flip the model: tool that helps psychologists explain to potential clients which approach fits their problem. Audience changes radically (psychologists, not patients) — needs full re-screening to validate B2B distribution and willingness to pay"
-          ],
-          "pivotScores": [
-            { "status": "improvement", "score": 64, "band": "Good", "delta": 8, "bottleneck": "Topical authority of Psicología y Mente (DR 77, 10+ years) on the educational cluster" },
-            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (B2B vs B2C) — competitor set, signals and channel completely change. Full screening required" }
+            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products",
+            "Best-case pivot (SEO content site about therapy types) only scores ~64, not enough lift to justify months fighting Psicología y Mente DR 77 topical authority"
           ]
         },
         "forjaScore": {
@@ -2881,7 +2874,7 @@
       "idea": "Psychology matchmaker",
       "screeningData": {
         "evaluatedDate": "2026-04-08",
-        "verdict": "PIVOT",
+        "verdict": "DISCARD",
         "idea": {
           "what": "Tool that recommends the right type of psychologist based on the user's symptoms, matching specialization, approach (cognitive-behavioral, psychoanalytic, systemic, EMDR, gestalt, etc.) and personal preferences (gender, age, modality)",
           "audience": "Spanish-speaking adults 25-50 considering therapy for the first time (or retrying after a bad experience), paralyzed by not knowing what type of professional to look for",
@@ -3038,7 +3031,7 @@
           "risks": "Content accuracy in describing therapeutic approaches — mitigated by Joseda's partner as in-house clinical reviewer (unique unfair advantage). No AI required (decision tree logic is sufficient)"
         },
         "verdict_detail": {
-          "decision": "PIVOT",
+          "decision": "DISCARD",
           "inFavor": [
             "Pain is real and emotionally documented in community signals (Forocoches recurring threads, observed pattern from psychologist partner)",
             "KD is essentially zero on matchmaker-intent queries (0-1 across the cluster) — no SEO competition for the intent",
@@ -3052,15 +3045,8 @@
             "High-DR psychology content (Avance Psicólogos, Top Doctors) actively tells users that the matchmaker is unnecessary, contradicting the product premise from inside the SERP",
             "Average DR of 8 incumbents is ~60 — directory and educational content space is saturated with topical authority sites (10+ years old)",
             "Monetization is structurally weak: directories don't need lead-gen from a small site; online therapy platforms have their own funnels",
-            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products"
-          ],
-          "pivotSuggestions": [
-            "Pivot 1 (data-strongest pivot) — SEO content site about therapy types and approaches with affiliate to online therapy platforms. Target the educational cluster: 'terapia cognitivo conductual' (4500/6), 'tipos de terapia psicológica' (80/1), 'psicólogo o psiquiatra' (70/0), 'psicólogo infantil' (700/0), 'psicólogo online ansiedad' (900/3). Monetization: affiliate to Buencoco/Unobravo/TherapyChat (all need leads). The matchmaker becomes a feature (a quiz at the end of articles), not the product. Differentiation vs Psicología y Mente: clinically validated content (Joseda's partner) and conversion-oriented (clear CTA to platforms), not ad-supported traffic farming",
-            "Pivot 3 — B2B tool for psychologists. Flip the model: tool that helps psychologists explain to potential clients which approach fits their problem. Audience changes radically (psychologists, not patients) — needs full re-screening to validate B2B distribution and willingness to pay"
-          ],
-          "pivotScores": [
-            { "status": "improvement", "score": 64, "band": "Good", "delta": 8, "bottleneck": "Topical authority of Psicología y Mente (DR 77, 10+ years) on the educational cluster" },
-            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (B2B vs B2C) — competitor set, signals and channel completely change. Full screening required" }
+            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products",
+            "Best-case pivot (SEO content site about therapy types) only scores ~64, not enough lift to justify months fighting Psicología y Mente DR 77 topical authority"
           ]
         },
         "forjaScore": {
