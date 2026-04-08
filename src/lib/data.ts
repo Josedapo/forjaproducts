@@ -45,16 +45,27 @@ export function getIdeasData(): IdeasData {
     const raw = readFileSync(join(dataDir, "ideas.json"), "utf-8");
     const parsed = JSON.parse(raw) as IdeasData;
 
-    // Build a name → screenedIdea index so we can enrich pivot history rows
-    // (which only carry idea name + date in the source data) with their slug
-    // and Forja Score in a single O(n) pass.
+    // Build name → screenedIdea index for pivot history enrichment, and a
+    // slug → screenedIdea index so candidate/backlog rows can pull their
+    // screeningData from the screenedIdeas array instead of duplicating it
+    // inline. Future ideas only need to set `slug` on the candidate row.
     const screenedByName = new Map<string, ScreenedIdea>();
+    const screenedBySlug = new Map<string, ScreenedIdea>();
     for (const s of parsed.screenedIdeas || []) {
       screenedByName.set(s.idea.trim().toLowerCase(), s);
+      screenedBySlug.set(s.slug, s);
     }
 
     const hydrateIdea = (i: Idea): Idea => {
-      const screening = i.screeningData ? ensureForjaScore(i.screeningData) : undefined;
+      // Prefer inline screeningData (legacy duplication pattern); fall back
+      // to lookup by slug in screenedIdeas so new ideas don't need to repeat
+      // the full screening payload in two places.
+      let rawScreening = i.screeningData;
+      if (!rawScreening && i.slug) {
+        const match = screenedBySlug.get(i.slug);
+        if (match) rawScreening = match.screeningData;
+      }
+      const screening = rawScreening ? ensureForjaScore(rawScreening) : undefined;
       const pivots = i.pivotHistory
         ? i.pivotHistory.map((p) => enrichPivot(p, screenedByName))
         : i.pivotHistory;
