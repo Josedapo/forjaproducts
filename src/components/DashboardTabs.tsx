@@ -9,6 +9,8 @@ interface DashboardTabsProps {
   products: Product[];
   ideas: Idea[];
   productLookup: Record<string, { name: string; slug: string }>;
+  predecessorByLeaf: Record<string, { name: string; slug?: string }>;
+  leafByPredecessor: Record<string, { name: string; slug?: string }>;
   latestAdded: string | null;
 }
 
@@ -23,6 +25,8 @@ export default function DashboardTabs({
   products,
   ideas,
   productLookup,
+  predecessorByLeaf,
+  leafByPredecessor,
   latestAdded,
 }: DashboardTabsProps) {
   const [active, setActive] = useState<TabKey>("products");
@@ -65,6 +69,8 @@ export default function DashboardTabs({
             title="Ideas"
             latestAdded={latestAdded}
             productLookup={productLookup}
+            predecessorByLeaf={predecessorByLeaf}
+            leafByPredecessor={leafByPredecessor}
             defaultSortField="forjaScore"
             defaultSortDir="desc"
           />

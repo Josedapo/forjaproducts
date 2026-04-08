@@ -83,25 +83,22 @@ export function getIdeasData(): IdeasData {
 }
 
 /**
- * Returns the unified list of all ideas, including:
- * - Every row from `ideas.json` `ideas` array (raw backlog + screened)
- * - "Ghost" rows synthesized from `screenedIdeas` entries that have no
- *   matching slug in the main array (typically pivot predecessors and
- *   product-linked ideas that were never canonically added to the source)
+ * Internal: build the unified pool of ideas BEFORE the predecessor collapse.
+ * Includes raw `ideas` array rows + ghost rows synthesized from `screenedIdeas`
+ * that have no matching slug in the main array (e.g. pivot predecessors).
  *
- * Product-linked ideas are NOT filtered out — the IdeasTable receives the
- * full set and renders an inline pill linking to the product instead.
+ * Used by getAllIdeas() (which then collapses chains by hiding predecessors)
+ * AND by buildPivotIndex() (which needs to see the full graph including
+ * predecessors to build the chain links).
  */
-export function getAllIdeas(): Idea[] {
+function getAllIdeasRaw(): Idea[] {
   const { ideas, screenedIdeas } = getIdeasData();
 
-  // Index existing rows by slug to detect missing screened ideas
   const ideasBySlug = new Set<string>();
   for (const idea of ideas) {
     if (idea.slug) ideasBySlug.add(idea.slug);
   }
 
-  // Synthesize a ghost row for any screened idea not represented above
   const ghostRows: Idea[] = [];
   for (const screened of screenedIdeas) {
     if (ideasBySlug.has(screened.slug)) continue;
@@ -122,6 +119,106 @@ export function getAllIdeas(): Idea[] {
   }
 
   return [...ideas, ...ghostRows];
+}
+
+export interface PivotPredecessor {
+  name: string;
+  slug?: string;
+}
+
+export interface PivotIndex {
+  /** lowercased leaf idea name → its immediate predecessor (most recent) */
+  predecessorByLeaf: Map<string, PivotPredecessor>;
+  /** set of lowercased idea names that ARE predecessors (will be hidden from the listing) */
+  predecessorNames: Set<string>;
+  /** lowercased predecessor name → the leaf it pivoted into (used to redirect search hits) */
+  leafByPredecessor: Map<string, PivotPredecessor>;
+}
+
+/**
+ * Build the pivot graph from the two existing sources of pivot information:
+ *
+ * 1. `pivotHistory` field on any idea — entries are predecessors of that idea
+ * 2. Pairs in `product.origin.timeline` — every item except the last is a
+ *    predecessor of the next item in the chain
+ *
+ * Hopping convention for chains of length > 2: each leaf only points to its
+ * IMMEDIATE predecessor. Longer chains are navigated by hopping (clicking
+ * the pill on a leaf takes you to the predecessor, which itself shows its
+ * predecessor's pill on the detail page).
+ */
+export function buildPivotIndex(): PivotIndex {
+  const predecessorByLeaf = new Map<string, PivotPredecessor>();
+  const predecessorNames = new Set<string>();
+  const leafByPredecessor = new Map<string, PivotPredecessor>();
+
+  const findSlugForName = (name: string): string | undefined => {
+    const key = name.trim().toLowerCase();
+    for (const s of getScreenedIdeas()) {
+      if (s.idea.trim().toLowerCase() === key) return s.slug;
+    }
+    return undefined;
+  };
+
+  // Source 1: pivotHistory on raw ideas (e.g. seo-content-strategy-auditor)
+  for (const idea of getAllIdeasRaw()) {
+    if (!idea.pivotHistory || idea.pivotHistory.length === 0) continue;
+    const leafKey = idea.idea.trim().toLowerCase();
+    const immediatePred = idea.pivotHistory[idea.pivotHistory.length - 1];
+    predecessorByLeaf.set(leafKey, {
+      name: immediatePred.idea,
+      slug: immediatePred.slug ?? findSlugForName(immediatePred.idea),
+    });
+    for (const p of idea.pivotHistory) {
+      const predKey = p.idea.trim().toLowerCase();
+      predecessorNames.add(predKey);
+      leafByPredecessor.set(predKey, {
+        name: idea.idea,
+        slug: idea.slug,
+      });
+    }
+  }
+
+  // Source 2: product origin.timeline pairs (e.g. Bookata: Netflix → Recomendador)
+  for (const product of getAllProducts()) {
+    const timeline = product.origin.timeline;
+    if (timeline.length < 2) continue;
+    const leafItem = timeline[timeline.length - 1];
+    const leafKey = leafItem.idea.trim().toLowerCase();
+    const immediatePred = timeline[timeline.length - 2];
+    predecessorByLeaf.set(leafKey, {
+      name: immediatePred.idea,
+      slug: findSlugForName(immediatePred.idea),
+    });
+    for (let i = 0; i < timeline.length - 1; i++) {
+      const predKey = timeline[i].idea.trim().toLowerCase();
+      predecessorNames.add(predKey);
+      leafByPredecessor.set(predKey, {
+        name: leafItem.idea,
+        slug: findSlugForName(leafItem.idea),
+      });
+    }
+  }
+
+  return { predecessorByLeaf, predecessorNames, leafByPredecessor };
+}
+
+/**
+ * Returns the unified list of ideas with pivot chains COLLAPSED to their leaf.
+ *
+ * - Each pivot chain (e.g. Netflix de libros infantiles → Recomendador de libros
+ *   infantiles tipo Netflix) renders as a single row: the leaf (most recent
+ *   iteration). Predecessors are hidden from the listing but stay reachable
+ *   via the `↩ Evolved from: X` pill rendered on the leaf row.
+ * - Product-linked ideas remain visible with their `→ Product Name` pill.
+ * - Ghost rows from `screenedIdeas` (pivot predecessors and product-linked
+ *   ideas without canonical rows) are still synthesized so leaves are never
+ *   missing.
+ */
+export function getAllIdeas(): Idea[] {
+  const raw = getAllIdeasRaw();
+  const { predecessorNames } = buildPivotIndex();
+  return raw.filter((idea) => !predecessorNames.has(idea.idea.trim().toLowerCase()));
 }
 
 /**

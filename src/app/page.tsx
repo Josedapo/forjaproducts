@@ -1,4 +1,4 @@
-import { getAllIdeas, getAllProducts, getProductLookupByIdeaName } from "@/lib/data";
+import { getAllIdeas, getAllProducts, getProductLookupByIdeaName, buildPivotIndex } from "@/lib/data";
 import StatsBar from "@/components/StatsBar";
 import DashboardTabs from "@/components/DashboardTabs";
 
@@ -6,6 +6,7 @@ export default function DashboardPage() {
   const ideas = getAllIdeas();
   const products = getAllProducts();
   const productLookup = getProductLookupByIdeaName();
+  const pivotIndex = buildPivotIndex();
 
   const allDates = ideas.map((i) => i.added).filter(Boolean) as string[];
   const latestAdded = allDates.length > 0 ? allDates.sort().at(-1)! : null;
@@ -41,6 +42,17 @@ export default function DashboardPage() {
     productLookupObj[key] = { name: p.name, slug: p.slug };
   }
 
+  // Serialize the pivot index for the client component. Maps cannot be passed
+  // across the server/client boundary as-is, so flatten to plain objects.
+  const predecessorByLeafObj: Record<string, { name: string; slug?: string }> = {};
+  for (const [key, pred] of pivotIndex.predecessorByLeaf.entries()) {
+    predecessorByLeafObj[key] = pred;
+  }
+  const leafByPredecessorObj: Record<string, { name: string; slug?: string }> = {};
+  for (const [key, leaf] of pivotIndex.leafByPredecessor.entries()) {
+    leafByPredecessorObj[key] = leaf;
+  }
+
   return (
     <div>
       <StatsBar
@@ -57,6 +69,8 @@ export default function DashboardPage() {
         products={products}
         ideas={ideas}
         productLookup={productLookupObj}
+        predecessorByLeaf={predecessorByLeafObj}
+        leafByPredecessor={leafByPredecessorObj}
         latestAdded={latestAdded}
       />
     </div>

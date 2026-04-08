@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { Idea } from "@/lib/types";
 import PainScore from "./PainScore";
@@ -17,6 +17,10 @@ interface IdeasTableProps {
   title: string;
   latestAdded: string | null;
   productLookup?: Record<string, { name: string; slug: string }>;
+  /** lowercased leaf idea name → its immediate predecessor in the pivot chain */
+  predecessorByLeaf?: Record<string, { name: string; slug?: string }>;
+  /** lowercased predecessor idea name → the leaf it pivoted into (used to redirect search hits) */
+  leafByPredecessor?: Record<string, { name: string; slug?: string }>;
   defaultSortField?: SortField;
   defaultSortDir?: SortDir;
 }
@@ -41,6 +45,8 @@ export default function IdeasTable({
   title,
   latestAdded,
   productLookup = {},
+  predecessorByLeaf = {},
+  leafByPredecessor = {},
   defaultSortField = "painScore",
   defaultSortDir = "desc",
 }: IdeasTableProps) {
@@ -48,11 +54,13 @@ export default function IdeasTable({
   const [lifecycle, setLifecycle] = useState<LifecycleFilter>("all");
   const [sortField, setSortField] = useState<SortField>(defaultSortField);
   const [sortDir, setSortDir] = useState<SortDir>(defaultSortDir);
-  const [expandedIdea, setExpandedIdea] = useState<string | null>(null);
   const [detailIdea, setDetailIdea] = useState<Idea | null>(null);
 
   const linkedProductFor = (idea: Idea) =>
     productLookup[idea.idea.trim().toLowerCase()];
+
+  const evolvedFromFor = (idea: Idea) =>
+    predecessorByLeaf[idea.idea.trim().toLowerCase()];
 
   const lifecycleCounts = useMemo(() => {
     const counts: Record<LifecycleFilter, number> = {
@@ -75,13 +83,24 @@ export default function IdeasTable({
 
     if (search) {
       const q = search.toLowerCase();
+      // Build the set of leaf names that match the query indirectly because
+      // one of their hidden predecessors matches. This way searching for
+      // "Netflix de libros" surfaces the Recomendador row even though
+      // Netflix itself isn't in the visible list anymore.
+      const indirectLeafKeys = new Set<string>();
+      for (const [predKey, leaf] of Object.entries(leafByPredecessor)) {
+        if (predKey.includes(q)) {
+          indirectLeafKeys.add(leaf.name.trim().toLowerCase());
+        }
+      }
       result = result.filter(
         (i) =>
           i.idea.toLowerCase().includes(q) ||
           i.description.toLowerCase().includes(q) ||
           i.pain.toLowerCase().includes(q) ||
           i.source.toLowerCase().includes(q) ||
-          i.status.toLowerCase().includes(q)
+          i.status.toLowerCase().includes(q) ||
+          indirectLeafKeys.has(i.idea.trim().toLowerCase())
       );
     }
 
@@ -113,7 +132,7 @@ export default function IdeasTable({
 
     return result;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ideas, search, lifecycle, sortField, sortDir, productLookup]);
+  }, [ideas, search, lifecycle, sortField, sortDir, productLookup, leafByPredecessor]);
 
   function toggleSort(field: SortField) {
     if (sortField === field) {
@@ -207,27 +226,16 @@ export default function IdeasTable({
             </tr>
           </thead>
           <tbody>
-            {filtered.map((idea) => (
-              <React.Fragment key={idea.idea}>
+            {filtered.map((idea) => {
+              const linked = linkedProductFor(idea);
+              const evolvedFrom = evolvedFromFor(idea);
+              return (
                 <tr
-                  className={`border-b border-border last:border-b-0 hover:bg-surface2/50 ${
-                    idea.pivotHistory ? "cursor-pointer" : ""
-                  }`}
-                  onClick={() => {
-                    if (idea.pivotHistory) {
-                      setExpandedIdea(
-                        expandedIdea === idea.idea ? null : idea.idea
-                      );
-                    }
-                  }}
+                  key={idea.idea}
+                  className="border-b border-border last:border-b-0 hover:bg-surface2/50"
                 >
                   <td className="px-4 py-3">
                     <div className="flex flex-wrap items-center gap-1.5">
-                      {idea.pivotHistory && (
-                        <span className="text-xs text-text-dim">
-                          {expandedIdea === idea.idea ? "▼" : "▶"}
-                        </span>
-                      )}
                       <button
                         title="View details"
                         onClick={(e) => { e.stopPropagation(); setDetailIdea(idea); }}
@@ -243,26 +251,38 @@ export default function IdeasTable({
                         <Link
                           href={`/idea/${idea.slug}`}
                           className="font-medium text-accent hover:underline"
-                          onClick={(e) => e.stopPropagation()}
                         >
                           {idea.idea}
                         </Link>
                       ) : (
                         <span className="font-medium text-text">{idea.idea}</span>
                       )}
-                      {(() => {
-                        const linked = linkedProductFor(idea);
-                        if (!linked) return null;
-                        return (
+                      {linked && (
+                        <Link
+                          href={`/product/${linked.slug}`}
+                          className="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent hover:bg-accent/20"
+                        >
+                          → {linked.name}
+                        </Link>
+                      )}
+                      {evolvedFrom && (
+                        evolvedFrom.slug ? (
                           <Link
-                            href={`/product/${linked.slug}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent hover:bg-accent/20"
+                            href={`/idea/${evolvedFrom.slug}`}
+                            title={`Evolved from: ${evolvedFrom.name}`}
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-surface2 px-2 py-0.5 text-[11px] font-medium text-text-dim hover:border-text-dim hover:text-text"
                           >
-                            → {linked.name}
+                            ↩ from: {evolvedFrom.name}
                           </Link>
-                        );
-                      })()}
+                        ) : (
+                          <span
+                            title={`Evolved from: ${evolvedFrom.name}`}
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-surface2 px-2 py-0.5 text-[11px] font-medium text-text-dim"
+                          >
+                            ↩ from: {evolvedFrom.name}
+                          </span>
+                        )
+                      )}
                     </div>
                   </td>
                   <td className="max-w-xs px-4 py-3 text-text-dim">
@@ -301,54 +321,8 @@ export default function IdeasTable({
                     )}
                   </td>
                 </tr>
-                {idea.pivotHistory && expandedIdea === idea.idea && (
-                  <tr key={`${idea.idea}-pivot`} className="border-b border-border">
-                    <td colSpan={8} className="bg-surface2/30 px-8 py-3">
-                      <p className="mb-2 text-xs font-medium text-text-dim">
-                        Pivot history
-                      </p>
-                      <div className="space-y-1.5">
-                        {idea.pivotHistory.map((pivot, i) => {
-                          const pivotSlug =
-                            pivot.slug ??
-                            (pivot.reportUrl
-                              ? pivot.reportUrl
-                                  .replace("idea-screening-", "")
-                                  .replace(".html", "")
-                              : null);
-                          return (
-                            <div
-                              key={i}
-                              className="flex items-center gap-2 text-sm"
-                            >
-                              <span className="text-text-dim">{pivot.date}</span>
-                              {pivotSlug ? (
-                                <Link
-                                  href={`/idea/${pivotSlug}`}
-                                  className="text-accent hover:underline"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  {pivot.idea}
-                                </Link>
-                              ) : (
-                                <span className="text-text">{pivot.idea}</span>
-                              )}
-                              <StatusBadge
-                                status={pivot.status}
-                                alignment={pivot.alignment}
-                              />
-                              {pivot.forjaScore != null && (
-                                <ForjaScoreBadge score={pivot.forjaScore} />
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </td>
-                  </tr>
-                )}
-              </React.Fragment>
-            ))}
+              );
+            })}
             {filtered.length === 0 && (
               <tr>
                 <td
