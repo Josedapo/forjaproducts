@@ -885,6 +885,18 @@
       "status": "Pending",
       "reportUrl": null,
       "pivotHistory": null
+    },
+    {
+      "idea": "Recomendador de libros infantiles tipo Netflix",
+      "slug": "recomendador-libros-infantiles",
+      "description": "Site de descubrimiento visual de libros infantiles/juveniles por edad y género, con fichas curadas y afiliados Amazon",
+      "pain": "Padres no saben qué libros recomendar a sus hijos por edad; el mercado lo sirven páginas de tienda con mala UX y posts de blog esporádicos",
+      "source": "Own idea (pivot from Netflix de libros infantiles)",
+      "painScore": 4,
+      "added": "2026-03-30",
+      "status": "Evaluated - ADVANCE",
+      "reportUrl": null,
+      "pivotHistory": null
     }
   ],
   "screenedIdeas": [
