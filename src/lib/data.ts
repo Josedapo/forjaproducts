@@ -46,9 +46,8 @@ export function getIdeasData(): IdeasData {
     const parsed = JSON.parse(raw) as IdeasData;
 
     // Build name → screenedIdea index for pivot history enrichment, and a
-    // slug → screenedIdea index so candidate/backlog rows can pull their
-    // screeningData from the screenedIdeas array instead of duplicating it
-    // inline. Future ideas only need to set `slug` on the candidate row.
+    // slug → screenedIdea index so idea rows can pull their screeningData
+    // from the screenedIdeas array instead of duplicating it inline.
     const screenedByName = new Map<string, ScreenedIdea>();
     const screenedBySlug = new Map<string, ScreenedIdea>();
     for (const s of parsed.screenedIdeas || []) {
@@ -73,8 +72,7 @@ export function getIdeasData(): IdeasData {
     };
 
     ideasCache = {
-      candidates: parsed.candidates.map(hydrateIdea),
-      backlog: parsed.backlog.map(hydrateIdea),
+      ideas: parsed.ideas.map(hydrateIdea),
       screenedIdeas: (parsed.screenedIdeas || []).map((s) => ({
         ...s,
         screeningData: ensureForjaScore(s.screeningData),
@@ -85,29 +83,62 @@ export function getIdeasData(): IdeasData {
 }
 
 /**
- * Returns ideas filtered to exclude those that have become products.
- * Ideas linked to a product are historical data shown in the product dashboard,
- * not in the ideas tables.
+ * Returns the unified list of all ideas, including:
+ * - Every row from `ideas.json` `ideas` array (raw backlog + screened)
+ * - "Ghost" rows synthesized from `screenedIdeas` entries that have no
+ *   matching slug in the main array (typically pivot predecessors and
+ *   product-linked ideas that were never canonically added to the source)
+ *
+ * Product-linked ideas are NOT filtered out — the IdeasTable receives the
+ * full set and renders an inline pill linking to the product instead.
  */
-export function getFilteredIdeas(): { candidates: Idea[]; backlog: Idea[] } {
-  const { candidates, backlog } = getIdeasData();
-  const products = getAllProducts();
+export function getAllIdeas(): Idea[] {
+  const { ideas, screenedIdeas } = getIdeasData();
 
-  // Collect all idea names linked to products (from origin timelines)
-  const productIdeaNames = new Set<string>();
-  for (const product of products) {
-    for (const item of product.origin.timeline) {
-      productIdeaNames.add(item.idea.toLowerCase());
-    }
+  // Index existing rows by slug to detect missing screened ideas
+  const ideasBySlug = new Set<string>();
+  for (const idea of ideas) {
+    if (idea.slug) ideasBySlug.add(idea.slug);
   }
 
-  const isLinkedToProduct = (idea: Idea) =>
-    productIdeaNames.has(idea.idea.toLowerCase());
+  // Synthesize a ghost row for any screened idea not represented above
+  const ghostRows: Idea[] = [];
+  for (const screened of screenedIdeas) {
+    if (ideasBySlug.has(screened.slug)) continue;
+    const sd = screened.screeningData;
+    ghostRows.push({
+      idea: screened.idea,
+      slug: screened.slug,
+      description: sd.idea.what,
+      pain: sd.idea.problem,
+      source: "From screening",
+      painScore: null,
+      added: sd.evaluatedDate,
+      status: `Evaluated - ${sd.verdict}`,
+      reportUrl: null,
+      pivotHistory: null,
+      screeningData: sd,
+    });
+  }
 
-  return {
-    candidates: candidates.filter((i) => !isLinkedToProduct(i)),
-    backlog: backlog.filter((i) => !isLinkedToProduct(i)),
-  };
+  return [...ideas, ...ghostRows];
+}
+
+/**
+ * Returns a Map<lowercase idea name, Product> for O(1) lookups when
+ * rendering the "→ Product Name" pill in the ideas table.
+ *
+ * Match rule: any idea name appearing in any product's origin.timeline
+ * resolves to that product (case-insensitive).
+ */
+export function getProductLookupByIdeaName(): Map<string, Product> {
+  const lookup = new Map<string, Product>();
+  for (const product of getAllProducts()) {
+    for (const item of product.origin.timeline) {
+      lookup.set(item.idea.trim().toLowerCase(), product);
+    }
+  }
+  return lookup;
 }
 
 export function getProductsData(): ProductsData {

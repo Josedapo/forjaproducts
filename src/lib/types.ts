@@ -86,8 +86,7 @@ export interface ScreenedIdea {
 }
 
 export interface IdeasData {
-  candidates: Idea[];
-  backlog: Idea[];
+  ideas: Idea[];
   screenedIdeas: ScreenedIdea[];
 }
 

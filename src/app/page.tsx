@@ -1,27 +1,21 @@
-import { getFilteredIdeas, getAllProducts } from "@/lib/data";
+import { getAllIdeas, getAllProducts, getProductLookupByIdeaName } from "@/lib/data";
 import StatsBar from "@/components/StatsBar";
 import DashboardTabs from "@/components/DashboardTabs";
 
 export default function DashboardPage() {
-  const { candidates, backlog } = getFilteredIdeas();
+  const ideas = getAllIdeas();
   const products = getAllProducts();
+  const productLookup = getProductLookupByIdeaName();
 
-  const allIdeas = [...candidates, ...backlog];
-  const allDates = allIdeas.map((i) => i.added).filter(Boolean) as string[];
+  const allDates = ideas.map((i) => i.added).filter(Boolean) as string[];
   const latestAdded = allDates.length > 0 ? allDates.sort().at(-1)! : null;
-  const advanceCount = allIdeas.filter((i) =>
-    i.status.includes("ADVANCE")
-  ).length;
-  const pivotCount = allIdeas.filter((i) =>
-    i.status.includes("PIVOT")
-  ).length;
-  const discardCount = allIdeas.filter((i) =>
-    i.status.includes("DISCARD")
-  ).length;
-  const pendingCount = allIdeas.filter(
+  const advanceCount = ideas.filter((i) => i.status.includes("ADVANCE")).length;
+  const pivotCount = ideas.filter((i) => i.status.includes("PIVOT")).length;
+  const discardCount = ideas.filter((i) => i.status.includes("DISCARD")).length;
+  const pendingCount = ideas.filter(
     (i) => !i.status.includes("ADVANCE") && !i.status.includes("PIVOT") && !i.status.includes("DISCARD")
   ).length;
-  const scoredIdeas = allIdeas.filter((i) => i.painScore !== null);
+  const scoredIdeas = ideas.filter((i) => i.painScore !== null);
   const avgPain =
     scoredIdeas.length > 0
       ? (
@@ -30,7 +24,7 @@ export default function DashboardPage() {
         ).toFixed(1)
       : "--";
 
-  const ideasWithForjaScore = allIdeas.filter((i) => i.screeningData?.forjaScore);
+  const ideasWithForjaScore = ideas.filter((i) => i.screeningData?.forjaScore);
   const avgForjaScore =
     ideasWithForjaScore.length > 0
       ? Math.round(
@@ -41,11 +35,17 @@ export default function DashboardPage() {
         ).toString()
       : "--";
 
+  // Serialize the product lookup as a plain object for the client component
+  const productLookupObj: Record<string, { name: string; slug: string }> = {};
+  for (const [key, p] of productLookup.entries()) {
+    productLookupObj[key] = { name: p.name, slug: p.slug };
+  }
+
   return (
     <div>
       <StatsBar
         products={products.length}
-        totalIdeas={allIdeas.length}
+        totalIdeas={ideas.length}
         pending={pendingCount}
         discard={discardCount}
         pivot={pivotCount}
@@ -55,8 +55,8 @@ export default function DashboardPage() {
       />
       <DashboardTabs
         products={products}
-        candidates={candidates}
-        backlog={backlog}
+        ideas={ideas}
+        productLookup={productLookupObj}
         latestAdded={latestAdded}
       />
     </div>

@@ -1,5 +1,5 @@
 {
-  "candidates": [
+  "ideas": [
     {
       "idea": "Trip scenario manager",
       "description": "Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints",
@@ -647,9 +647,7 @@
       "status": "Pending",
       "reportUrl": null,
       "pivotHistory": null
-    }
-  ],
-  "backlog": [
+    },
     {
       "idea": "ADHD-specific workflow manager",
       "description": "Task and focus tool designed around neurodivergent thinking patterns, not neurotypical productivity assumptions",
@@ -2255,12 +2253,12 @@
             },
             "marketDemand": {
               "raw": 60,
-              "weighted": 9.0,
+              "weighted": 9,
               "reason": "3,860 total volume (bucket 2K-10K=60), 2 strong COMPLAINT/REQUEST signals (no bonus, needs 3+)"
             },
             "marketSize": {
               "raw": 60,
-              "weighted": 9.0,
+              "weighted": 9,
               "reason": "3,860 addressable monthly searches"
             },
             "executionFeasibility": {
@@ -2270,7 +2268,7 @@
             },
             "riskProfile": {
               "raw": 20,
-              "weighted": 2.0,
+              "weighted": 2,
               "reason": "5 assumptions: 3 HIGH + 2 MEDIUM → average 20"
             }
           },
@@ -2511,7 +2509,7 @@
             },
             "marketSize": {
               "raw": 60,
-              "weighted": 9.0,
+              "weighted": 9,
               "reason": "~2,950 addressable monthly searches"
             },
             "executionFeasibility": {
@@ -2521,7 +2519,7 @@
             },
             "riskProfile": {
               "raw": 10,
-              "weighted": 1.0,
+              "weighted": 1,
               "reason": "5 assumptions: 4 HIGH + 1 MEDIUM → average 10"
             }
           },

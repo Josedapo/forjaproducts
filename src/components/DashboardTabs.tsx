@@ -7,23 +7,22 @@ import IdeasTable from "./IdeasTable";
 
 interface DashboardTabsProps {
   products: Product[];
-  candidates: Idea[];
-  backlog: Idea[];
+  ideas: Idea[];
+  productLookup: Record<string, { name: string; slug: string }>;
   latestAdded: string | null;
 }
 
 const TABS = [
   { key: "products", label: "Products" },
-  { key: "candidates", label: "Candidates" },
-  { key: "backlog", label: "Backlog" },
+  { key: "ideas", label: "Ideas" },
 ] as const;
 
 type TabKey = (typeof TABS)[number]["key"];
 
 export default function DashboardTabs({
   products,
-  candidates,
-  backlog,
+  ideas,
+  productLookup,
   latestAdded,
 }: DashboardTabsProps) {
   const [active, setActive] = useState<TabKey>("products");
@@ -47,11 +46,7 @@ export default function DashboardTabs({
                 active === tab.key ? "text-accent/70" : "text-text-dim/60"
               }`}
             >
-              {tab.key === "products"
-                ? products.length
-                : tab.key === "candidates"
-                ? candidates.length
-                : backlog.length}
+              {tab.key === "products" ? products.length : ideas.length}
             </span>
           </button>
         ))}
@@ -63,21 +58,16 @@ export default function DashboardTabs({
         </div>
       )}
 
-      {active === "candidates" && (
+      {active === "ideas" && (
         <div className="card overflow-hidden">
           <IdeasTable
-            ideas={candidates}
-            title="Candidates"
+            ideas={ideas}
+            title="Ideas"
             latestAdded={latestAdded}
+            productLookup={productLookup}
             defaultSortField="forjaScore"
             defaultSortDir="desc"
           />
-        </div>
-      )}
-
-      {active === "backlog" && (
-        <div className="card overflow-hidden">
-          <IdeasTable ideas={backlog} title="Backlog" latestAdded={latestAdded} />
         </div>
       )}
     </div>
