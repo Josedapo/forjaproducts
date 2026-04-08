@@ -308,17 +308,6 @@
       "pivotHistory": null
     },
     {
-      "idea": "Universal gift wishlist",
-      "description": "Platform where users create and share wish lists so friends and family have reliable gift references (ref: wishprime.com but generalized)",
-      "pain": "People struggle to find meaningful gifts; wishlists are scattered across stores or don't exist; recipients get unwanted gifts",
-      "source": "Own idea",
-      "painScore": null,
-      "added": "2026-03-26",
-      "status": "Pending",
-      "reportUrl": null,
-      "pivotHistory": null
-    },
-    {
       "idea": "Local insider travel connections",
       "description": "Platform connecting travelers with verified locals who help plan authentic experiences beyond tourist guides",
       "pain": "Travelers want to eat, visit and do what locals actually do; guidebooks and review sites funnel everyone to the same tourist traps",
@@ -621,28 +610,6 @@
           "alignment": "aligned"
         }
       }
-    },
-    {
-      "idea": "Stoic philosophy content vertical",
-      "description": "Unified repository of stoic philosophy content combining original articles with curated external resources (relaunch of productestoica.com with new approach)",
-      "pain": "Stoic philosophy content is fragmented across creators; no unified hub that combines original + curated content with proper SEO strategy",
-      "source": "Own idea (previous attempt with productestoica.com failed to rank)",
-      "painScore": null,
-      "added": "2026-03-26",
-      "status": "Pending",
-      "reportUrl": null,
-      "pivotHistory": null
-    },
-    {
-      "idea": "Product strategy knowledge platform",
-      "description": "Curated collection of expert articles on product development, entrepreneurship and startup growth, freely accessible (relaunch of productsavia.com)",
-      "pain": "Entrepreneurs and product professionals lack consolidated, free, high-quality guidance on building and scaling ventures",
-      "source": "Own idea (previous project productsavia.com, built with Softr)",
-      "painScore": null,
-      "added": "2026-03-26",
-      "status": "Pending",
-      "reportUrl": null,
-      "pivotHistory": null
     },
     {
       "idea": "Psychology matchmaker",
