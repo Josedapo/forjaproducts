@@ -2,12 +2,13 @@
   "ideas": [
     {
       "idea": "Trip scenario manager",
+      "slug": "trip-scenario-manager",
       "description": "Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints",
       "pain": "Existing tools (Rome2rio, Google Maps) search routes but don't help manage and compare multiple scenarios; users resort to spreadsheets and screenshots",
       "source": "Indie Hackers post + multiple builders attempting solutions, none dominant",
-      "painScore": 4,
+      "painScore": 3,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1077,6 +1078,249 @@
     }
   ],
   "screenedIdeas": [
+    {
+      "slug": "trip-scenario-manager",
+      "idea": "Trip scenario manager",
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints between segments. Workspace where the user defines a trip as a sequence of nodes (cities/dates) and edges (segments connecting each pair), pastes options for each segment, and the app validates the chain (timing/connections), calculates total cost and time, and lets the user duplicate scenarios for comparison",
+          "audience": "Independent travelers planning complex multi-destination trips (not packaged tours): backpackers, long-haul travelers, family multi-stop trips, and travel hackers. Likely skewed to a technical/analytical persona who already uses spreadsheets",
+          "problem": "When a trip has 4-8 segments with temporal dependencies (the ferry runs only Mon/Thu, the cheap flight is on the 12th, the night train saves a hotel), existing tools solve each segment in isolation but don't allow seeing the trip as a system. Users end up with 6-10 browser tabs, screenshots from Google Flights, and a manual spreadsheet where every change forces full recalculation",
+          "solution": "Workspace for defining a trip as nodes + segments. For each segment the user pastes/imports several options with price, departure/arrival times, duration. The app validates the temporal chain, calculates total cost and time of each scenario, and allows duplicating the scenario to compare variants. NOT a search engine — a planner/comparator fed by the user's own data",
+          "differentiation": "Rome2rio/Google Flights/Skyscanner search individual routes. Wanderlog/TripIt organize already-decided itineraries. None allow having 3-4 parallel scenarios, each with chained segments, and comparing total cost + total time + experience. The gap is exactly the multi-variable decision moment, which today is solved with Excel"
+        },
+        "assumptions": [
+          {
+            "assumption": "The 'scenario comparison' pain is frequent enough to justify a dedicated tool",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Users with this need will NOT use existing AI multi-city tools (Layla, TripPlanner.ai, KAYAK Multi-City) which already do partial scenario comparison",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "SEO acquisition is viable (the only feasible channel for a solopreneur)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Manual input is a feature, not a bug (users prefer control vs autosearch)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "The TAM of complex travelers is large enough to sustain a niche product",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Layla.ai",
+            "type": "direct",
+            "dr": 65,
+            "weakness": "AI hallucinations on dates/schedules; recalculates dynamically but no parallel scenario comparison"
+          },
+          {
+            "name": "TripPlanner.ai",
+            "type": "direct",
+            "dr": 40,
+            "weakness": "Generalist AI planner with integrated booking; no scenario forking"
+          },
+          {
+            "name": "Wanderlog",
+            "type": "indirect",
+            "dr": 76,
+            "weakness": "Itinerary organizer dominating SERP for 'trip itinerary planner'; post-decision management, no comparison"
+          },
+          {
+            "name": "TripIt",
+            "type": "indirect",
+            "dr": 77,
+            "weakness": "Itinerary management only ($49/yr Pro); no planning or comparison"
+          },
+          {
+            "name": "Rome2rio",
+            "type": "indirect",
+            "dr": 80,
+            "weakness": "Multi-modal route search at the segment level; no scenario aggregation"
+          },
+          {
+            "name": "Stippl.io",
+            "type": "direct",
+            "dr": 35,
+            "weakness": "All-in-one adventure planner; weak on multi-modal and scenario forking"
+          },
+          {
+            "name": "Triptile",
+            "type": "direct",
+            "dr": 36,
+            "weakness": "Multi-city design plus booking commission; more booking front-end than planning tool"
+          },
+          {
+            "name": "PanFlights",
+            "type": "direct",
+            "dr": 10,
+            "weakness": "Combines flights + trains + bus into single routes; niche but exists, no scenario forking"
+          },
+          {
+            "name": "CombiTrip",
+            "type": "direct",
+            "dr": 3.2,
+            "weakness": "Door-to-door multi-modal compare; basically zero traction, validates the difficulty of the category"
+          },
+          {
+            "name": "iMean.ai Flight Planner",
+            "type": "direct",
+            "weakness": "Recent AI multi-leg specialist with pragmatic notes ('avoid overnight layover'); small but growing; covers part of the same angle"
+          },
+          {
+            "name": "AirTreks TripPlanner",
+            "type": "indirect",
+            "weakness": "Multi-stop research + expert booking; more travel agency than software tool"
+          }
+        ],
+        "competitiveDensity": "Saturated",
+        "keywords": [
+          {
+            "keyword": "trip cost calculator",
+            "volume": 1500,
+            "kd": 47
+          },
+          {
+            "keyword": "trip itinerary planner",
+            "volume": 900,
+            "kd": 79
+          },
+          {
+            "keyword": "travel itinerary planner",
+            "volume": 900,
+            "kd": 83
+          },
+          {
+            "keyword": "multi city trip planner",
+            "volume": 100,
+            "kd": 57
+          },
+          {
+            "keyword": "multi city flight planner",
+            "volume": 100,
+            "kd": 64
+          },
+          {
+            "keyword": "multi destination trip planner",
+            "volume": 90,
+            "kd": 65
+          },
+          {
+            "keyword": "multi stop flight planner",
+            "volume": 90,
+            "kd": 19
+          },
+          {
+            "keyword": "multi leg trip planner",
+            "volume": 10,
+            "kd": 66
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "'any tips for creating a travel spreadsheet?' — direct REQUEST for spreadsheet workaround for multi-leg planning",
+            "source": "Rick Steves Travel Forum"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'When Travel Geeks Get Bored — Fun With Google Sheets!' long thread building manual planners in Sheets",
+            "source": "Rick Steves Travel Forum"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Paid Etsy templates ($5-15) 'Travel Comparison Template' for comparing airlines/trains across scenarios — proves DIY-tolerant audience with low willingness to pay",
+            "source": "Etsy marketplace"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Extensive complaints about AI travel planners hallucinating dates and schedules — pain against existing AI tools, not a request for non-AI scenario comparison",
+            "source": "HuffPost, CNBC, Reddit r/travel"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple Show HN trip planners (Itineraries.io, multi-destination planners) with medium engagement and no dominant winner — consistent with 'many builders, no traction'",
+            "source": "Hacker News"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM",
+          "timeline": "2-3 weeks with Claude Code",
+          "dependencies": "None for v1 (manual input). Optional: IATA airport dataset for autocomplete (free, OpenFlights)",
+          "risks": "Low. Hardest part is UX (how to display 4 scenarios with 6 segments each without overwhelming), not code"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "Pain is validated by paid Etsy templates plus long Rick Steves threads plus repeated Show HN attempts",
+            "Build is cheap: 2-3 weeks, no external dependencies, no technical risk",
+            "Cost calculator angle has the only SEO-viable opportunity detected (1500 vol, KD 47)"
+          ],
+          "against": [
+            "Direct demand is essentially nonexistent: keywords specific to the problem have 10-100 vol/month — the pain exists but isn't searched for",
+            "High competitive saturation: 9+ competitors cover overlapping angles; Layla and TripPlanner.ai already do dynamic recalculation when changing legs",
+            "Distribution is impossible for a solopreneur: generic terms are dominated by DR 76-80 (Wanderlog, TripIt, Rome2rio) plus the new AI players",
+            "Low willingness to pay: market accepts $5-15 Etsy templates → no appetite for recurring SaaS",
+            "Terrible usage frequency: 1-2 complex trips per year → zero retention, zero network effect, unrecoverable acquisition costs",
+            "All explored pivots are marginal — none transforms the score; the cost calculator angle is essentially a different product, not a pivot"
+          ],
+          "pivotSuggestions": [],
+          "pivotScores": [
+            {
+              "status": "downgrade",
+              "score": 45,
+              "band": "Marginal",
+              "delta": -3,
+              "bottleneck": "TAM microscopic (200 vol/month total) — low KD does not compensate"
+            }
+          ]
+        },
+        "forjaScore": {
+          "total": 48,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 36,
+              "weighted": 9,
+              "reason": "Volume-weighted avg KD ≈64 across 8 keywords with non-zero volume; high-volume terms (trip itinerary planner, travel itinerary planner) are KD 79-83 and dominated by Wanderlog"
+            },
+            "competitivePressure": {
+              "raw": 37,
+              "weighted": 7.4,
+              "reason": "Saturated density (20) + 9/9 competitors with DR averaging 46.9 → drScore 53, blended raw 37"
+            },
+            "marketDemand": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "Total volume 3,690/month → bucket 2,000-9,999 (60). Only 2 strong COMPLAINT/REQUEST signals → no bonus"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "Same volume bucket, no bonus"
+            },
+            "executionFeasibility": {
+              "raw": 80,
+              "weighted": 12,
+              "reason": "MEDIUM complexity (60) + 2-3 week timeline (+10) + zero dependencies (+10) → 80"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2,
+              "reason": "3 HIGH (pain → tool adoption, won't use existing AI alternatives, SEO acquisition viability) + 2 MEDIUM (manual input as feature, TAM size) → average 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
     {
       "slug": "seo-blog-writer",
       "idea": "SEO Blog Writer with Brand Voice",
