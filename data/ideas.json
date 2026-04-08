@@ -617,14 +617,238 @@
     },
     {
       "idea": "Psychology matchmaker",
+      "slug": "psychology-matchmaker",
       "description": "Tool that recommends the right type of psychologist based on the user's symptoms, matching specialization, approach, and even therapist profile preferences (age, gender)",
       "pain": "People don't know which psychology specialization fits their needs; the field has many branches invisible to non-experts, so they rely on word-of-mouth from whoever happens to know a psychologist",
       "source": "Own idea (real pattern observed: partner is a psychologist constantly asked for referrals)",
-      "painScore": null,
+      "painScore": 4,
       "added": "2026-03-26",
-      "status": "Pending",
+      "status": "Evaluated - PIVOT",
       "reportUrl": null,
-      "pivotHistory": null
+      "pivotHistory": null,
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Tool that recommends the right type of psychologist based on the user's symptoms, matching specialization, approach (cognitive-behavioral, psychoanalytic, systemic, EMDR, gestalt, etc.) and personal preferences (gender, age, modality)",
+          "audience": "Spanish-speaking adults 25-50 considering therapy for the first time (or retrying after a bad experience), paralyzed by not knowing what type of professional to look for",
+          "problem": "The current 'find a therapist' system runs on word-of-mouth or generic directories that list professionals without orienting the user. Most people don't know the difference between a psychoanalyst, cognitive-behavioral therapist, systemic therapist, EMDR practitioner, gestalt therapist, psychiatrist, coach, etc. Result: either they never start therapy, or they end up with a professional who doesn't fit their problem and abandon, reinforcing the belief that 'therapy doesn't work'",
+          "solution": "Guided 10-15 question quiz capturing symptoms, life context, prior therapy experience, and personal preferences. Output: clear explanation of which specialization fits (with reasoning), 2-3 compatible therapeutic approaches, and optional filters for directory search. Possible monetization: affiliate to Doctoralia, Buencoco, Unobravo, TherapyChat",
+          "differentiation": "Existing sites (Doctoralia, Psicología y Mente, TopDoctors) are directories without orientation. This would be orientation BEFORE the directory: first explain what to look for, then help find it. Analogous to 'what tire do I need' before a tire comparator"
+        },
+        "assumptions": [
+          {
+            "assumption": "Users will look for an orientation tool BEFORE going to a directory (search 'qué tipo necesito' instead of 'psicólogo madrid')",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Directories or online therapy platforms (Buencoco, Unobravo, TherapyChat) will accept lead-gen partnerships from a small site",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The 'matching' output is good enough to differentiate from existing tests (R&A, Terapify, Psicoactiva, Cuidadosamente)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new site can rank against DR 70+ incumbents (Psicología y Mente DR 77, Doctoralia DR 83) for the relevant queries",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The professional consensus ('don't worry, the psychologist will figure it out') doesn't kill demand",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Doctoralia ES",
+            "type": "indirect",
+            "dr": 83,
+            "weakness": "Generic medical directory — no orientation before search, assumes user knows what to look for"
+          },
+          {
+            "name": "Psicología y Mente",
+            "type": "indirect",
+            "dr": 77,
+            "weakness": "High-traffic SEO content site about psychology — educational content, not a structured matching tool. Owns the informational SERP"
+          },
+          {
+            "name": "Mundopsicologos",
+            "type": "indirect",
+            "dr": 71,
+            "weakness": "Spain-focused directory with specialty filters — same as Doctoralia: directory without orientation"
+          },
+          {
+            "name": "Unobravo",
+            "type": "direct",
+            "dr": 68,
+            "weakness": "Closed ecosystem with internal 'we propose 3 psychologists' matching — only matches with their own roster"
+          },
+          {
+            "name": "Psicoactiva",
+            "type": "indirect",
+            "dr": 67,
+            "weakness": "High-DR Spanish content site with psychology tests — generic tests, not specifically about choosing therapist type"
+          },
+          {
+            "name": "Terapify",
+            "type": "direct",
+            "dr": 48,
+            "weakness": "Mexican online therapy with 'test de afinidad' — lead-gen for own psychologists, not neutral matching"
+          },
+          {
+            "name": "TherapyChat",
+            "type": "direct",
+            "dr": 34,
+            "weakness": "Online therapy Spain — first-come-first-served psychologist assignment, not real matching"
+          },
+          {
+            "name": "Buencoco",
+            "type": "direct",
+            "dr": 29,
+            "weakness": "Spanish online therapy platform — closed ecosystem"
+          }
+        ],
+        "competitiveDensity": "Saturated",
+        "keywords": [
+          {
+            "keyword": "como elegir un psicologo",
+            "volume": 100,
+            "kd": 0
+          },
+          {
+            "keyword": "tipos de terapia psicológica",
+            "volume": 80,
+            "kd": 1
+          },
+          {
+            "keyword": "psicólogo o psiquiatra",
+            "volume": 70,
+            "kd": 0
+          },
+          {
+            "keyword": "como elegir psicologo",
+            "volume": 60,
+            "kd": 0
+          },
+          {
+            "keyword": "tipos de terapeutas",
+            "volume": 40,
+            "kd": 1
+          },
+          {
+            "keyword": "tipos de psicólogos",
+            "volume": 30,
+            "kd": 0
+          },
+          {
+            "keyword": "como elegir un buen psicologo",
+            "volume": 20,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "'Necesito ayuda psicológica pero no sé cómo escoger' — direct REQUEST for orientation",
+            "source": "Forocoches thread 9772084"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'psicólogo, cómo elegir y cuánto pagar?' — recurring multi-page discussion on selection criteria",
+            "source": "Forocoches thread 8827555"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'En qué se diferencia una terapia con un psicólogo y un psiquiatra?' — direct expression of the matchmaker intent",
+            "source": "Forocoches thread 8257435"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Encontrar psicólogo online vs seguro' — debate about acquisition channels",
+            "source": "Forocoches thread 8599985"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Joseda's psychologist partner is constantly asked for referrals by friends/acquaintances who don't know which type to look for — private offline pain pattern",
+            "source": "Direct observation"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Existence of 10+ 'tests para elegir psicólogo' built by Spanish clinics (R&A Psicólogos, Psicoactiva, Cuidadosamente, Terapify, Mis15Minutos, Psicoazuaga, Alcea) — proves professionals invest in lead-gen against this pain",
+            "source": "Multiple Spanish psychology clinics"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW",
+          "timeline": "1-2 weeks with Claude Code",
+          "dependencies": "None for MLP. Optional: directory affiliate APIs (likely manual links)",
+          "risks": "Content accuracy in describing therapeutic approaches — mitigated by Joseda's partner as in-house clinical reviewer (unique unfair advantage). No AI required (decision tree logic is sufficient)"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Pain is real and emotionally documented in community signals (Forocoches recurring threads, observed pattern from psychologist partner)",
+            "KD is essentially zero on matchmaker-intent queries (0-1 across the cluster) — no SEO competition for the intent",
+            "Build is trivial: 1-2 weeks LOW complexity, no external dependencies, no AI required",
+            "Unique unfair advantage: in-house clinical reviewer (psychologist partner) for content validation",
+            "10+ existing clinic-built 'tests' prove the pain is real enough for professionals to invest in lead-gen against it"
+          ],
+          "against": [
+            "Matchmaker-intent search volume is microscopic: ~420 monthly searches across all variants in Spain (vs 10K+ for direct directory queries)",
+            "Users do NOT search for orientation — they go directly to 'psicólogo + ciudad' or 'psicólogo online + symptom'",
+            "High-DR psychology content (Avance Psicólogos, Top Doctors) actively tells users that the matchmaker is unnecessary, contradicting the product premise from inside the SERP",
+            "Average DR of 8 incumbents is ~60 — directory and educational content space is saturated with topical authority sites (10+ years old)",
+            "Monetization is structurally weak: directories don't need lead-gen from a small site; online therapy platforms have their own funnels",
+            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products"
+          ],
+          "pivotSuggestions": [
+            "Pivot 1 (data-strongest pivot) — SEO content site about therapy types and approaches with affiliate to online therapy platforms. Target the educational cluster: 'terapia cognitivo conductual' (4500/6), 'tipos de terapia psicológica' (80/1), 'psicólogo o psiquiatra' (70/0), 'psicólogo infantil' (700/0), 'psicólogo online ansiedad' (900/3). Monetization: affiliate to Buencoco/Unobravo/TherapyChat (all need leads). The matchmaker becomes a feature (a quiz at the end of articles), not the product. Differentiation vs Psicología y Mente: clinically validated content (Joseda's partner) and conversion-oriented (clear CTA to platforms), not ad-supported traffic farming",
+            "Pivot 3 — B2B tool for psychologists. Flip the model: tool that helps psychologists explain to potential clients which approach fits their problem. Audience changes radically (psychologists, not patients) — needs full re-screening to validate B2B distribution and willingness to pay"
+          ],
+          "pivotScores": [
+            { "status": "improvement", "score": 64, "band": "Good", "delta": 8, "bottleneck": "Topical authority of Psicología y Mente (DR 77, 10+ years) on the educational cluster" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (B2B vs B2C) — competitor set, signals and channel completely change. Full screening required" }
+          ]
+        },
+        "forjaScore": {
+          "total": 56,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 100,
+              "weighted": 25,
+              "reason": "Volume-weighted avg KD ≈0.3 across the matchmaker-intent cluster (8 keywords, all KD 0-1). Misleadingly attainable: KD is genuinely zero but volume is microscopic"
+            },
+            "competitivePressure": {
+              "raw": 30,
+              "weighted": 6,
+              "reason": "Saturated density (20) + 8/8 competitors with DR averaging 59.6 → drScore 40, blended raw 30"
+            },
+            "marketDemand": {
+              "raw": 30,
+              "weighted": 4.5,
+              "reason": "Total matchmaker-intent volume ~420/month → bucket 0-499 (20). +10 bonus for 3+ strong Forocoches REQUEST/DISCUSSION signals → 30"
+            },
+            "marketSize": {
+              "raw": 20,
+              "weighted": 3,
+              "reason": "Same volume bucket (0-499), no bonus"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 1-2 week timeline (+10) + zero dependencies (+10) → clamped at 100"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2,
+              "reason": "3 HIGH (intent invisible to search, monetization vs entrenched directories, ranking against DR 60+ incumbents) + 2 MEDIUM (matching quality, professional consensus) → average 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
     },
     {
       "idea": "ADHD-specific workflow manager",
@@ -2645,6 +2869,233 @@
               "raw": 30,
               "weighted": 3,
               "reason": "3 HIGH (willingness to pay, locals adoption, CAC<LTV) + 1 MEDIUM (in-app retention) + 1 LOW (manual verification) → average 30"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "psychology-matchmaker",
+      "idea": "Psychology matchmaker",
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Tool that recommends the right type of psychologist based on the user's symptoms, matching specialization, approach (cognitive-behavioral, psychoanalytic, systemic, EMDR, gestalt, etc.) and personal preferences (gender, age, modality)",
+          "audience": "Spanish-speaking adults 25-50 considering therapy for the first time (or retrying after a bad experience), paralyzed by not knowing what type of professional to look for",
+          "problem": "The current 'find a therapist' system runs on word-of-mouth or generic directories that list professionals without orienting the user. Most people don't know the difference between a psychoanalyst, cognitive-behavioral therapist, systemic therapist, EMDR practitioner, gestalt therapist, psychiatrist, coach, etc. Result: either they never start therapy, or they end up with a professional who doesn't fit their problem and abandon, reinforcing the belief that 'therapy doesn't work'",
+          "solution": "Guided 10-15 question quiz capturing symptoms, life context, prior therapy experience, and personal preferences. Output: clear explanation of which specialization fits (with reasoning), 2-3 compatible therapeutic approaches, and optional filters for directory search. Possible monetization: affiliate to Doctoralia, Buencoco, Unobravo, TherapyChat",
+          "differentiation": "Existing sites (Doctoralia, Psicología y Mente, TopDoctors) are directories without orientation. This would be orientation BEFORE the directory: first explain what to look for, then help find it. Analogous to 'what tire do I need' before a tire comparator"
+        },
+        "assumptions": [
+          {
+            "assumption": "Users will look for an orientation tool BEFORE going to a directory (search 'qué tipo necesito' instead of 'psicólogo madrid')",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Directories or online therapy platforms (Buencoco, Unobravo, TherapyChat) will accept lead-gen partnerships from a small site",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The 'matching' output is good enough to differentiate from existing tests (R&A, Terapify, Psicoactiva, Cuidadosamente)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A new site can rank against DR 70+ incumbents (Psicología y Mente DR 77, Doctoralia DR 83) for the relevant queries",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The professional consensus ('don't worry, the psychologist will figure it out') doesn't kill demand",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Doctoralia ES",
+            "type": "indirect",
+            "dr": 83,
+            "weakness": "Generic medical directory — no orientation before search, assumes user knows what to look for"
+          },
+          {
+            "name": "Psicología y Mente",
+            "type": "indirect",
+            "dr": 77,
+            "weakness": "High-traffic SEO content site about psychology — educational content, not a structured matching tool. Owns the informational SERP"
+          },
+          {
+            "name": "Mundopsicologos",
+            "type": "indirect",
+            "dr": 71,
+            "weakness": "Spain-focused directory with specialty filters — same as Doctoralia: directory without orientation"
+          },
+          {
+            "name": "Unobravo",
+            "type": "direct",
+            "dr": 68,
+            "weakness": "Closed ecosystem with internal 'we propose 3 psychologists' matching — only matches with their own roster"
+          },
+          {
+            "name": "Psicoactiva",
+            "type": "indirect",
+            "dr": 67,
+            "weakness": "High-DR Spanish content site with psychology tests — generic tests, not specifically about choosing therapist type"
+          },
+          {
+            "name": "Terapify",
+            "type": "direct",
+            "dr": 48,
+            "weakness": "Mexican online therapy with 'test de afinidad' — lead-gen for own psychologists, not neutral matching"
+          },
+          {
+            "name": "TherapyChat",
+            "type": "direct",
+            "dr": 34,
+            "weakness": "Online therapy Spain — first-come-first-served psychologist assignment, not real matching"
+          },
+          {
+            "name": "Buencoco",
+            "type": "direct",
+            "dr": 29,
+            "weakness": "Spanish online therapy platform — closed ecosystem"
+          }
+        ],
+        "competitiveDensity": "Saturated",
+        "keywords": [
+          {
+            "keyword": "como elegir un psicologo",
+            "volume": 100,
+            "kd": 0
+          },
+          {
+            "keyword": "tipos de terapia psicológica",
+            "volume": 80,
+            "kd": 1
+          },
+          {
+            "keyword": "psicólogo o psiquiatra",
+            "volume": 70,
+            "kd": 0
+          },
+          {
+            "keyword": "como elegir psicologo",
+            "volume": 60,
+            "kd": 0
+          },
+          {
+            "keyword": "tipos de terapeutas",
+            "volume": 40,
+            "kd": 1
+          },
+          {
+            "keyword": "tipos de psicólogos",
+            "volume": 30,
+            "kd": 0
+          },
+          {
+            "keyword": "como elegir un buen psicologo",
+            "volume": 20,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "'Necesito ayuda psicológica pero no sé cómo escoger' — direct REQUEST for orientation",
+            "source": "Forocoches thread 9772084"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'psicólogo, cómo elegir y cuánto pagar?' — recurring multi-page discussion on selection criteria",
+            "source": "Forocoches thread 8827555"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'En qué se diferencia una terapia con un psicólogo y un psiquiatra?' — direct expression of the matchmaker intent",
+            "source": "Forocoches thread 8257435"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Encontrar psicólogo online vs seguro' — debate about acquisition channels",
+            "source": "Forocoches thread 8599985"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Joseda's psychologist partner is constantly asked for referrals by friends/acquaintances who don't know which type to look for — private offline pain pattern",
+            "source": "Direct observation"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Existence of 10+ 'tests para elegir psicólogo' built by Spanish clinics (R&A Psicólogos, Psicoactiva, Cuidadosamente, Terapify, Mis15Minutos, Psicoazuaga, Alcea) — proves professionals invest in lead-gen against this pain",
+            "source": "Multiple Spanish psychology clinics"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW",
+          "timeline": "1-2 weeks with Claude Code",
+          "dependencies": "None for MLP. Optional: directory affiliate APIs (likely manual links)",
+          "risks": "Content accuracy in describing therapeutic approaches — mitigated by Joseda's partner as in-house clinical reviewer (unique unfair advantage). No AI required (decision tree logic is sufficient)"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Pain is real and emotionally documented in community signals (Forocoches recurring threads, observed pattern from psychologist partner)",
+            "KD is essentially zero on matchmaker-intent queries (0-1 across the cluster) — no SEO competition for the intent",
+            "Build is trivial: 1-2 weeks LOW complexity, no external dependencies, no AI required",
+            "Unique unfair advantage: in-house clinical reviewer (psychologist partner) for content validation",
+            "10+ existing clinic-built 'tests' prove the pain is real enough for professionals to invest in lead-gen against it"
+          ],
+          "against": [
+            "Matchmaker-intent search volume is microscopic: ~420 monthly searches across all variants in Spain (vs 10K+ for direct directory queries)",
+            "Users do NOT search for orientation — they go directly to 'psicólogo + ciudad' or 'psicólogo online + symptom'",
+            "High-DR psychology content (Avance Psicólogos, Top Doctors) actively tells users that the matchmaker is unnecessary, contradicting the product premise from inside the SERP",
+            "Average DR of 8 incumbents is ~60 — directory and educational content space is saturated with topical authority sites (10+ years old)",
+            "Monetization is structurally weak: directories don't need lead-gen from a small site; online therapy platforms have their own funnels",
+            "Multiple lead-gen 'tests' already exist owned by clinics — the matchmaker tool category is itself crowded by captive lead-gen products"
+          ],
+          "pivotSuggestions": [
+            "Pivot 1 (data-strongest pivot) — SEO content site about therapy types and approaches with affiliate to online therapy platforms. Target the educational cluster: 'terapia cognitivo conductual' (4500/6), 'tipos de terapia psicológica' (80/1), 'psicólogo o psiquiatra' (70/0), 'psicólogo infantil' (700/0), 'psicólogo online ansiedad' (900/3). Monetization: affiliate to Buencoco/Unobravo/TherapyChat (all need leads). The matchmaker becomes a feature (a quiz at the end of articles), not the product. Differentiation vs Psicología y Mente: clinically validated content (Joseda's partner) and conversion-oriented (clear CTA to platforms), not ad-supported traffic farming",
+            "Pivot 3 — B2B tool for psychologists. Flip the model: tool that helps psychologists explain to potential clients which approach fits their problem. Audience changes radically (psychologists, not patients) — needs full re-screening to validate B2B distribution and willingness to pay"
+          ],
+          "pivotScores": [
+            { "status": "improvement", "score": 64, "band": "Good", "delta": 8, "bottleneck": "Topical authority of Psicología y Mente (DR 77, 10+ years) on the educational cluster" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (B2B vs B2C) — competitor set, signals and channel completely change. Full screening required" }
+          ]
+        },
+        "forjaScore": {
+          "total": 56,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 100,
+              "weighted": 25,
+              "reason": "Volume-weighted avg KD ≈0.3 across the matchmaker-intent cluster (8 keywords, all KD 0-1). Misleadingly attainable: KD is genuinely zero but volume is microscopic"
+            },
+            "competitivePressure": {
+              "raw": 30,
+              "weighted": 6,
+              "reason": "Saturated density (20) + 8/8 competitors with DR averaging 59.6 → drScore 40, blended raw 30"
+            },
+            "marketDemand": {
+              "raw": 30,
+              "weighted": 4.5,
+              "reason": "Total matchmaker-intent volume ~420/month → bucket 0-499 (20). +10 bonus for 3+ strong Forocoches REQUEST/DISCUSSION signals → 30"
+            },
+            "marketSize": {
+              "raw": 20,
+              "weighted": 3,
+              "reason": "Same volume bucket (0-499), no bonus"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 1-2 week timeline (+10) + zero dependencies (+10) → clamped at 100"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2,
+              "reason": "3 HIGH (intent invisible to search, monetization vs entrenched directories, ranking against DR 60+ incumbents) + 2 MEDIUM (matching quality, professional consensus) → average 20"
             }
           },
           "missingInputs": [],
