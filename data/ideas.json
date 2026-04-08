@@ -568,13 +568,11 @@
           ],
           "pivotSuggestions": [
             "Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
-            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
-            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists"
           ],
           "pivotScores": [
             { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
-            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" },
-            { "status": "downgrade", "score": 49, "band": "Marginal", "delta": -14, "bottleneck": "Marketplace cold-start, UGC dynamics very hard for solopreneur" }
+            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" }
           ]
         },
         "forjaScore": {
@@ -1996,13 +1994,11 @@
           ],
           "pivotSuggestions": [
             "Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
-            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
-            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists"
           ],
           "pivotScores": [
             { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
-            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" },
-            { "status": "downgrade", "score": 49, "band": "Marginal", "delta": -14, "bottleneck": "Marketplace cold-start, UGC dynamics very hard for solopreneur" }
+            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" }
           ]
         },
         "forjaScore": {
@@ -2608,12 +2604,10 @@
             "The SERP for 'personal travel guide' belongs to physical tours (parent topic = 'tours by locals') — Google understands this intent very differently from the proposed product"
           ],
           "pivotSuggestions": [
-            "Pivot 1 (originally recommended qualitatively, but data contradicts it) — AI-first with human backup: AI travel planner handles 90% of queries instantly + 1 human local as backup. Each local serves 200 travelers instead of 15. The AI travel space is dominated by VC-funded players (Wonderplan, Layla, Mindtrip) — 'ai trip planner' KD 80, 'ai travel planner' KD 77, 'ai itinerary planner' KD 78. The pivot inherits all original risks plus a brutal SEO ceiling and a commoditization war against free ChatGPT.",
             "Pivot 2 — B2B for boutique hotels and Airbnb hosts: Customer becomes the host, not the traveler. Sell 'local concierge by chat' as a property amenity. Distribution solved, high willingness-to-pay, no need for B2C SEO.",
             "Pivot 3 (data-strongest pivot) — Non-English destinations niche: Focus on Japan, Korea, Vietnam, China, Thailand, Morocco. KD averages 26 across keywords with combined volume ~6,000 ('japan travel guide' 2200/38, 'japan travel tips' 900/6, 'thailand travel guide' 800/12, 'morocco travel guide' 600/7). Language barrier creates a real moat against the free Reddit workaround."
           ],
           "pivotScores": [
-            { "status": "downgrade", "score": 42, "band": "Marginal", "delta": -13, "bottleneck": "SEO blocked (KD 70-80 across all AI travel keywords), AI commoditized vs free ChatGPT" },
             { "status": "needs_screening", "score": null, "bottleneck": "Different audience (host, not traveler) — competitor set, signals and channel completely change" },
             { "status": "improvement", "score": 62, "band": "Good", "delta": 7, "bottleneck": "Smaller addressable market, harder local recruitment in non-Western cultures" }
           ]
