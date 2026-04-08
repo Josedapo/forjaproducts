@@ -3,7 +3,64 @@ import Link from "next/link";
 import { getScreenedIdeas, getScreenedIdea, getProductByIdeaSlug } from "@/lib/data";
 import StatusBadge from "@/components/StatusBadge";
 import ForjaScoreBadge from "@/components/ForjaScoreBadge";
-import ForjaScoreCard from "@/components/ForjaScoreCard";
+import { FORJA_SCORE_WEIGHTS, FORJA_SCORE_THRESHOLDS } from "@/lib/forjaScoreConfig";
+import type { ForjaScore, ForjaScoreDimensionKey, VerdictAlignment } from "@/lib/types";
+
+const DIMENSION_LABELS: Record<ForjaScoreDimensionKey, string> = {
+  seoEntry: "SEO Entry Feasibility",
+  competitivePressure: "Competitive Pressure",
+  marketDemand: "Market Demand",
+  marketSize: "Market Size",
+  executionFeasibility: "Execution Feasibility",
+  riskProfile: "Risk Profile",
+};
+
+function scoreBand(score: number): { label: string; color: string } {
+  if (score >= FORJA_SCORE_THRESHOLDS.excellent) return { label: "Excellent", color: "#38a169" };
+  if (score >= FORJA_SCORE_THRESHOLDS.good) return { label: "Good", color: "#65a30d" };
+  if (score >= FORJA_SCORE_THRESHOLDS.marginal) return { label: "Marginal — Watchlist", color: "#d69e2e" };
+  if (score >= FORJA_SCORE_THRESHOLDS.weak) return { label: "Weak", color: "#e53e3e" };
+  return { label: "Very weak", color: "#9b1c1c" };
+}
+
+function alignmentNote(alignment: VerdictAlignment): { text: string; color: string } | null {
+  if (alignment === "divergent-optimistic") {
+    return {
+      text: "Score suggests ADVANCE but verdict is DISCARD. The data disagrees with the qualitative call — review when revisiting.",
+      color: "#e53e3e",
+    };
+  }
+  if (alignment === "divergent-pessimistic") {
+    return {
+      text: "Score suggests DISCARD but verdict is ADVANCE. Strong conviction call — monitor closely as you build.",
+      color: "#e53e3e",
+    };
+  }
+  return null;
+}
+
+function verdictPresentation(decision: string): { color: string; subtitle: string } {
+  const d = decision.toUpperCase();
+  if (d === "ADVANCE") {
+    return {
+      color: "#38a169",
+      subtitle: "La idea tiene potencial suficiente para definir estrategia y construirla",
+    };
+  }
+  if (d === "PIVOT") {
+    return {
+      color: "#d69e2e",
+      subtitle: "La idea tiene valor pero necesita reposicionamiento para ser viable",
+    };
+  }
+  if (d === "DISCARD") {
+    return {
+      color: "#e53e3e",
+      subtitle: "La idea no tiene potencial suficiente como está planteada",
+    };
+  }
+  return { color: "#6b6560", subtitle: "" };
+}
 
 export function generateStaticParams() {
   return getScreenedIdeas().map((i) => ({ slug: i.slug }));
@@ -441,74 +498,184 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
         </div>
       </SectionCard>
 
-      {/* 6.5 Forja Score */}
-      {forjaScore && <ForjaScoreCard score={forjaScore} />}
-
-      {/* 7. Verdict */}
+      {/* 7. Verdict & Score (combined) */}
       <SectionCard title="Verdict">
-        <div className="mb-5 text-center">
-          <StatusBadge
-            size="large"
-            alignment={forjaScore?.alignment}
-            status={
-              data.verdict_detail.decision === "ADVANCE"
-                ? "Evaluated - ADVANCE"
-                : data.verdict_detail.decision === "PIVOT"
-                  ? "Evaluated - PIVOT"
-                  : data.verdict_detail.decision === "DISCARD"
-                    ? "Evaluated - DISCARD"
-                    : data.verdict_detail.decision
-            }
-          />
-        </div>
+        {(() => {
+          const decision = data.verdict_detail.decision;
+          const presentation = verdictPresentation(decision);
+          const band = forjaScore ? scoreBand(forjaScore.total) : null;
+          const note = forjaScore ? alignmentNote(forjaScore.alignment) : null;
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {/* In Favor */}
-          <div className="rounded-md border border-green/20 bg-green-bg px-4 py-3">
-            <p className="mb-2 text-xs font-medium text-green">In Favor</p>
-            <ul className="space-y-1.5">
-              {data.verdict_detail.inFavor.map((item, i) => (
-                <li key={i} className="flex gap-2 text-sm text-text">
-                  <span className="mt-0.5 shrink-0 text-green">+</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          return (
+            <>
+              {/* Big centered verdict title */}
+              <div className="pt-2 pb-2 text-center">
+                <h2
+                  className="text-5xl font-extrabold tracking-tight"
+                  style={{ color: presentation.color }}
+                >
+                  {decision.toUpperCase()}
+                </h2>
+                {presentation.subtitle && (
+                  <p className="mx-auto mt-3 max-w-2xl text-sm text-text-dim">
+                    {presentation.subtitle}
+                  </p>
+                )}
+              </div>
 
-          {/* Against */}
-          <div className="rounded-md border border-red/20 bg-red-bg px-4 py-3">
-            <p className="mb-2 text-xs font-medium text-red">Against</p>
-            <ul className="space-y-1.5">
-              {data.verdict_detail.against.map((item, i) => (
-                <li key={i} className="flex gap-2 text-sm text-text">
-                  <span className="mt-0.5 shrink-0 text-red">-</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+              {/* Score grid: big score card + dimensions table */}
+              {forjaScore && band && (
+                <div className="mt-8 grid gap-4 md:grid-cols-[minmax(180px,1fr)_2fr]">
+                  {/* Big score card */}
+                  <div className="flex flex-col items-center justify-center rounded-lg border border-border bg-surface2/50 px-6 py-8 text-center">
+                    <div
+                      className="text-6xl font-extrabold leading-none"
+                      style={{ color: band.color }}
+                    >
+                      {forjaScore.total}
+                    </div>
+                    <div className="mt-1 text-base text-text-dim">/ 100</div>
+                    <div
+                      className="mt-4 text-xs font-bold uppercase tracking-wider"
+                      style={{ color: band.color }}
+                    >
+                      {band.label}
+                    </div>
+                  </div>
 
-        {/* Pivot Suggestions */}
-        {data.verdict_detail.pivotSuggestions && data.verdict_detail.pivotSuggestions.length > 0 && (
-          <div className="mt-4 rounded-lg border-2 border-yellow/30 bg-yellow-bg px-5 py-4">
-            <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-yellow">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-yellow text-[10px] text-white">↗</span>
-              Pivot Suggestions
-            </p>
-            <div className="space-y-3">
-              {data.verdict_detail.pivotSuggestions.map((suggestion, i) => (
-                <div key={i} className="flex gap-3 rounded-md border border-yellow/15 bg-surface px-4 py-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-yellow/15 text-xs font-bold text-yellow">
-                    {i + 1}
-                  </span>
-                  <p className="text-sm text-text leading-relaxed">{suggestion}</p>
+                  {/* Dimensions table */}
+                  <div className="overflow-x-auto rounded-lg border border-border bg-surface2/50">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-border">
+                          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-accent">
+                            Dimensión
+                          </th>
+                          <th className="px-4 py-3 text-right text-xs font-bold uppercase tracking-wider text-accent">
+                            Raw
+                          </th>
+                          <th className="px-4 py-3 text-right text-xs font-bold uppercase tracking-wider text-accent">
+                            Weighted
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(Object.keys(FORJA_SCORE_WEIGHTS) as ForjaScoreDimensionKey[]).map((key) => {
+                          const dim = forjaScore.dimensions[key];
+                          const weight = FORJA_SCORE_WEIGHTS[key];
+                          const isMissing = forjaScore.missingInputs.includes(key);
+                          return (
+                            <tr
+                              key={key}
+                              className="border-b border-border last:border-b-0"
+                            >
+                              <td className="px-4 py-3 text-text">
+                                {DIMENSION_LABELS[key]}{" "}
+                                <span className="text-xs text-text-dim">({weight})</span>
+                              </td>
+                              <td className="px-4 py-3 text-right font-mono text-text">
+                                {isMissing ? (
+                                  <span className="text-text-dim">N/A</span>
+                                ) : (
+                                  `${dim.raw}/100`
+                                )}
+                              </td>
+                              <td className="px-4 py-3 text-right font-mono text-text">
+                                {isMissing ? (
+                                  <span className="text-text-dim">N/A</span>
+                                ) : (
+                                  `${dim.weighted}/${weight}`
+                                )}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+              )}
+
+              {/* Alignment note (if divergent) */}
+              {note && (
+                <div
+                  className="mt-4 rounded-md border px-4 py-2 text-sm"
+                  style={{
+                    borderColor: `${note.color}40`,
+                    backgroundColor: `${note.color}08`,
+                    color: note.color,
+                  }}
+                >
+                  {note.text}
+                </div>
+              )}
+
+              {/* Pros / Cons with top colored borders */}
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {/* In Favor */}
+                <div className="rounded-md border border-border border-t-4 border-t-green bg-surface2/50 px-5 py-4">
+                  <p className="mb-3 text-xs font-bold uppercase tracking-wider text-green">
+                    + A favor
+                  </p>
+                  <ul className="space-y-2">
+                    {data.verdict_detail.inFavor.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-2 border-b border-border pb-2 text-sm text-text last:border-b-0 last:pb-0"
+                      >
+                        <span className="mt-0.5 shrink-0 text-green">+</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Against */}
+                <div className="rounded-md border border-border border-t-4 border-t-red bg-surface2/50 px-5 py-4">
+                  <p className="mb-3 text-xs font-bold uppercase tracking-wider text-red">
+                    − En contra
+                  </p>
+                  <ul className="space-y-2">
+                    {data.verdict_detail.against.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-2 border-b border-border pb-2 text-sm text-text last:border-b-0 last:pb-0"
+                      >
+                        <span className="mt-0.5 shrink-0 text-red">−</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Pivot suggestions as grid cards */}
+              {data.verdict_detail.pivotSuggestions &&
+                data.verdict_detail.pivotSuggestions.length > 0 && (
+                  <div className="mt-8">
+                    <p className="mb-4 text-xs font-bold uppercase tracking-wider text-accent">
+                      Sugerencias de Pivote
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {data.verdict_detail.pivotSuggestions.map((suggestion, i) => (
+                        <div
+                          key={i}
+                          className="rounded-md border border-border bg-surface2/50 px-5 py-4"
+                        >
+                          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-accent">
+                            Pivote {i + 1}
+                          </p>
+                          <p className="text-sm leading-relaxed text-text">
+                            {suggestion}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+            </>
+          );
+        })()}
       </SectionCard>
     </div>
   );
