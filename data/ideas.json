@@ -287,7 +287,14 @@
       "added": "2026-03-26",
       "status": "Evaluated - DISCARD",
       "reportUrl": null,
-      "pivotHistory": null
+      "pivotHistory": [
+        {
+          "idea": "Validated idea marketplace",
+          "status": "Evaluated - PIVOT",
+          "date": "2026-04-08",
+          "reportUrl": null
+        }
+      ]
     },
     {
       "idea": "Custom AI integration agency for SMBs",

@@ -223,6 +223,7 @@ export default function IdeasTable({
               >
                 <span className="whitespace-nowrap">Forja{sortIndicator("forjaScore")}</span>
               </th>
+              <th className="w-8 px-2 py-3"></th>
             </tr>
           </thead>
           <tbody>
@@ -236,17 +237,6 @@ export default function IdeasTable({
                 >
                   <td className="px-4 py-3">
                     <div className="flex flex-wrap items-center gap-1.5">
-                      <button
-                        title="View details"
-                        onClick={(e) => { e.stopPropagation(); setDetailIdea(idea); }}
-                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-text-dim/60 transition-colors hover:bg-accent/10 hover:text-accent"
-                      >
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-                          <circle cx="7" cy="7" r="6" />
-                          <path d="M7 6.5V10" />
-                          <circle cx="7" cy="4.5" r="0.5" fill="currentColor" stroke="none" />
-                        </svg>
-                      </button>
                       {idea.slug ? (
                         <Link
                           href={`/idea/${idea.slug}`}
@@ -320,13 +310,26 @@ export default function IdeasTable({
                       <span className="text-text-dim">—</span>
                     )}
                   </td>
+                  <td className="w-8 px-2 py-3">
+                    <button
+                      title="View details"
+                      onClick={() => setDetailIdea(idea)}
+                      className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-text-dim/60 transition-colors hover:bg-accent/10 hover:text-accent"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                        <circle cx="7" cy="7" r="6" />
+                        <path d="M7 6.5V10" />
+                        <circle cx="7" cy="4.5" r="0.5" fill="currentColor" stroke="none" />
+                      </svg>
+                    </button>
+                  </td>
                 </tr>
               );
             })}
             {filtered.length === 0 && (
               <tr>
                 <td
-                  colSpan={8}
+                  colSpan={9}
                   className="px-4 py-8 text-center text-sm text-text-dim"
                 >
                   No results
