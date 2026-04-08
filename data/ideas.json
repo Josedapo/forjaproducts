@@ -279,12 +279,13 @@
     },
     {
       "idea": "Idea screening as a product",
-      "description": "Self-service tool for solopreneurs to evaluate digital product ideas through structured research (ref: prevue.ai)",
+      "slug": "idea-screening-as-a-product",
+      "description": "Self-service tool for solopreneurs to evaluate digital product ideas through structured research (ref: preuve.ai)",
       "pain": "Founders validate ideas manually with scattered tools; no single product runs a complete screening for digital solopreneurs",
       "source": "Own idea (based on Forja screening skill)",
-      "painScore": null,
+      "painScore": 3,
       "added": "2026-03-26",
-      "status": "Pending",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -2271,6 +2272,257 @@
               "raw": 20,
               "weighted": 2.0,
               "reason": "5 assumptions: 3 HIGH + 2 MEDIUM → average 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "idea-screening-as-a-product",
+      "idea": "Idea screening as a product",
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Self-service web app where solopreneurs input their idea and the tool runs an automated end-to-end screening (Ahrefs API for keywords, scraping of Reddit/HN/Indie Hackers for community signals, competitor identification with DR data, executability assessment) and returns a complete report with verdict (ADVANCE/PIVOT/DISCARD) and Forja Score 0-100. Reference: preuve.ai (originally noted as 'prevue.ai' in backlog, corrected after research). Pricing model: pay-per-screening (~$29-49) or monthly subscription (~$19/mo)",
+          "audience": "Solopreneurs and indie hackers in pre-build phase with a concrete idea who want to validate before investing weeks building. Secondary niche: early-stage founders or angel investors needing fast due diligence on an idea before committing time/capital. Profile: technical/semi-technical, knows validation matters but lacks time/tools",
+          "problem": "Validating an idea today requires combining 4-5 scattered tools (Ahrefs for keywords, manual Reddit/HN searches, competitor research, technical viability) and reading guides on how to connect everything. Most founders skip this step or do it badly: pure intuition, or a superficial pass with ChatGPT generating 'theatrical validation' without real data. Result: months building on broken assumptions",
+          "solution": "Web app where the user inputs their idea (free text or structured 5 dimensions) and the tool runs an automated complete screening: Ahrefs API for real keywords, scrapes community sources for pain signals, identifies competitors with DR data, evaluates executability and returns a report with verdict and Forja Score. Model: pay-per-screening or monthly subscription",
+          "differentiation": "Versus DimeADozen ($49 AI reports without real sources), ValidatorAI (free superficial), preuve.ai (similar but with...), the Forja angle would be reproducible real data. After research, this angle proved not defensible: preuve.ai already occupies it with the literal slogan 'Validate Your Idea With Real Data, Not Opinions'"
+        },
+        "assumptions": [
+          {
+            "assumption": "Founders will trust an automated screening enough to use it instead of doing DIY research or using Preuve AI/IdeaProof",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Forja's output is perceived as differentiated vs Preuve AI (40+ sources, citations) and IdeaProof (50+ sources, '89% accuracy')",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Pricing $29-49/screening or $19/mo is sustainable vs free (FounderPal, ValidatorAI, NxCode) and vs $499 lifetime (Preuve)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Automation can match the depth of the 2h manual screening (API orchestration + community scraping + LLM analysis in 60s-2min)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Distribution viable when transactional terms have 10-50 vol/mo and incumbents win via Product Hunt / brand / blog comparisons",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Preuve AI",
+            "type": "direct",
+            "dr": 36,
+            "weakness": "Free 60s scan / $29 founder report / $9-499 lifetime / $9/mo Radar. 40+ live sources (Crunchbase, GTrends, Reddit, PH, G2). 13-section reports with TAM/SAM/SOM citations. Slogan identical to Forja's planned positioning: 'Validate Your Idea With Real Data, Not Opinions'"
+          },
+          {
+            "name": "IdeaProof.io",
+            "type": "direct",
+            "dr": 22,
+            "weakness": "Free 90 credits / €19 / €49 / €99. 50+ sources, '89% accuracy', 18 languages, brand pack + ad creatives + ICP + GTM strategy"
+          },
+          {
+            "name": "PrometAI",
+            "type": "direct",
+            "dr": 57,
+            "weakness": "Free + paid validator with full framework. Higher DR than most"
+          },
+          {
+            "name": "FounderPal.ai",
+            "type": "direct",
+            "dr": 53,
+            "weakness": "Free, no email required. Instant validation with no friction, strong brand"
+          },
+          {
+            "name": "ValidatorAI",
+            "type": "direct",
+            "dr": 42,
+            "weakness": "Free + paid. 'Val' AI advisor, 300K+ users, established brand"
+          },
+          {
+            "name": "NxCode",
+            "type": "direct",
+            "dr": 40,
+            "weakness": "Free 7-step validator: SWOT + competitor research + market size in 10 min"
+          },
+          {
+            "name": "DimeADozen.ai",
+            "type": "direct",
+            "dr": 36,
+            "weakness": "$49/report ($39 single credit). 40+ page reports, 85K+ users"
+          },
+          {
+            "name": "UserIntuition.ai",
+            "type": "direct",
+            "dr": 20,
+            "weakness": "Paid. Positioned as 'premium real validation with humans' — different angle but adjacent"
+          },
+          {
+            "name": "BigIdeasDB",
+            "type": "direct",
+            "dr": 20,
+            "weakness": "Paid. Hybrid marketplace + validator from Reddit pain points"
+          },
+          {
+            "name": "Inodash",
+            "type": "direct",
+            "dr": 18,
+            "weakness": "Free AI validator, no barrier"
+          }
+        ],
+        "competitiveDensity": "Saturated brutally — 10+ direct competitors covering full pricing spectrum (free / freemium / lifetime / subscription) with established leader (Preuve AI) occupying exactly the angle planned for Forja. Average DR 34.4 across 10/10 competitors with DR data",
+        "keywords": [
+          {
+            "keyword": "product idea validation methods",
+            "volume": 350,
+            "kd": 2
+          },
+          {
+            "keyword": "how to validate a business idea",
+            "volume": 300,
+            "kd": 12
+          },
+          {
+            "keyword": "idea validation",
+            "volume": 250,
+            "kd": 7
+          },
+          {
+            "keyword": "how to validate your business idea",
+            "volume": 200,
+            "kd": 8
+          },
+          {
+            "keyword": "validate business idea",
+            "volume": 200,
+            "kd": 16
+          },
+          {
+            "keyword": "market validation of idea",
+            "volume": 200,
+            "kd": 0
+          },
+          {
+            "keyword": "how to validate a startup idea",
+            "volume": 150,
+            "kd": 12
+          },
+          {
+            "keyword": "business idea validation",
+            "volume": 150,
+            "kd": 31
+          },
+          {
+            "keyword": "how to validate a product idea",
+            "volume": 100,
+            "kd": 4
+          },
+          {
+            "keyword": "idea validation tool",
+            "volume": 50,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "COMPLAINT",
+            "signal": "'AI insisted everyone wanted feature X, but real users didn't care' — false confidence generated by AI validators",
+            "source": "Medium reviews, Reddit"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "'ChatGPT hallucinates competitor names, market sizes, and pricing that don't exist' — well-documented hallucination problem",
+            "source": "Multiple reviews and comparatives"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "'AI validation tools are only as good as their training data, which is often outdated, skewed, or wrong'",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'If a tool says yes to every idea, it's a marketing funnel pretending to be a research tool'",
+            "source": "Trend Seeker validators comparative"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'3 types of validators: chatbots (fast unsourced), scorecards (black-box), sourced data tools (slower verifiable)' — Forja would be the third type, but Preuve AI already dominates that slot",
+            "source": "Preuve AI blog comparative"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple Show HN posts of solopreneurs building validators ('Show HN: I accidentally built a startup idea validation tool', id 44881440)",
+            "source": "Hacker News"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM — Requires end-to-end orchestration (Ahrefs API + Reddit/HN scraping + LLM analysis + async job queue for 60s-2min processing + per-user accounts + paywall + rate limiting)",
+          "timeline": "3-4 weeks with Claude Code",
+          "dependencies": "Ahrefs API (paid, $250+/mo committed + per-query costs), LLM API (tokens per screening, ~$0.50-2 each), Reddit API or scraping (rate limited), Stripe (free until selling)",
+          "risks": "Per-screening API costs can destroy margin: $29 - LLM (~$1.50) - Ahrefs (~$2) - Stripe (~$1) = ~$24 net before hosting/support/marketing. Replicating depth of 2h manual screening (human judgment + huge context window) in 60s-2min automated process is non-trivial. Each failing or confusing screening creates support tickets that don't scale for a solopreneur"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "SEO entry for educational content is excellent (volume-weighted KD ≈9.2 across ~2,950 vol total)",
+            "Joseda already has the research engine built (skill /forja-idea-screening)",
+            "Real pain documented (hallucination, false confidence, validators that say yes to everything)",
+            "Joseda IS the ICP — already uses the tool for himself in Forja"
+          ],
+          "against": [
+            "Preuve AI already occupies exactly the 'real data, not opinions' angle with 40+ live sources, citations, brand and full pricing tier — no possible differentiation",
+            "IdeaProof even more aggressive: 50+ sources, '89% accuracy', brand pack + ad creatives, 18 languages, €19/mo",
+            "10+ direct competitors with average DR 34.4, covering full free → freemium → lifetime → subscription spectrum",
+            "Transactional terms have 10-50 vol/mo — distribution via transactional SEO doesn't work; founders find tools via Product Hunt, Reddit recommendations, blog comparatives, brand",
+            "API costs destroy margin: $24 net per screening before hosting/support/marketing/time",
+            "Replicating the 2h manual screening (human judgment + context window) in 60s-2min automation is non-trivial",
+            "The 'pivot' from the marketplace screening turns out not to be a pivot — it's the same market with another wrapper"
+          ],
+          "pivotSuggestions": [
+            "Educational content play — Newsletter/blog SEO on 'how to validate a business idea' (300 vol KD 12), 'idea validation' (250 vol KD 7), 'product idea validation methods' (350 vol KD 2). Capturable ~2,000 vol/mo with KD ≤15. Works as content marketing for something else (Forja brand, Cronicas), not as a product itself. Zero API cost, zero support",
+            "Punctual service to close circle — Forja-as-a-service for specific founders/VCs via personal network. 1-2 screenings/month at $300-500 each. No SaaS, no paywall, no support. Honest side income without a project",
+            "Open source — Release the /forja-idea-screening skill (markdown + assets) on GitHub as 'Forja: idea screening framework'. Zero monetization, builds reputation + traffic. Risk: gives away competitive advantage"
+          ]
+        },
+        "forjaScore": {
+          "total": 59,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 91,
+              "weighted": 22.75,
+              "reason": "Volume-weighted KD ≈9.2 across 2,630 vol with valid KD — excellent for educational content, NOT for tool purchase intent"
+            },
+            "competitivePressure": {
+              "raw": 43,
+              "weighted": 8.6,
+              "reason": "Saturated density (20) + avg competitor DR 34.4 across 10/10 competitors (66) → average 43"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "~2,950 total volume (bucket 2K-10K=60), 3 strong COMPLAINT/REQUEST signals (+10 demand bonus)"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9.0,
+              "reason": "~2,950 addressable monthly searches"
+            },
+            "executionFeasibility": {
+              "raw": 50,
+              "weighted": 7.5,
+              "reason": "MEDIUM complexity (60) + 3-4 weeks timeline (0) − Ahrefs API paid (-10)"
+            },
+            "riskProfile": {
+              "raw": 10,
+              "weighted": 1.0,
+              "reason": "5 assumptions: 4 HIGH + 1 MEDIUM → average 10"
             }
           },
           "missingInputs": [],
