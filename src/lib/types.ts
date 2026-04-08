@@ -35,6 +35,20 @@ export interface PivotHistoryItem {
   alignment?: VerdictAlignment;
 }
 
+export type PivotScoreStatus =
+  | "improvement"
+  | "downgrade"
+  | "needs_screening"
+  | "already_screened";
+
+export interface PivotScoreEntry {
+  status: PivotScoreStatus;
+  score: number | null; // null when status === "needs_screening"
+  band?: string; // "Good", "Marginal", etc. omitted when not applicable
+  delta?: number | null; // delta vs original; omitted/null when not applicable
+  bottleneck: string; // one-line bottleneck label
+}
+
 export interface ScreeningData {
   evaluatedDate: string;
   verdict: string;
@@ -61,6 +75,7 @@ export interface ScreeningData {
     inFavor: string[];
     against: string[];
     pivotSuggestions?: string[];
+    pivotScores?: PivotScoreEntry[]; // parallel array to pivotSuggestions, populated by Step 3.6 of forja-idea-screening
   };
   forjaScore?: ForjaScore;
 }

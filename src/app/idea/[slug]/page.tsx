@@ -657,19 +657,76 @@ export default async function IdeaPage({ params }: IdeaPageProps) {
                       Sugerencias de Pivote
                     </p>
                     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                      {data.verdict_detail.pivotSuggestions.map((suggestion, i) => (
-                        <div
-                          key={i}
-                          className="rounded-md border border-border bg-surface2/50 px-5 py-4"
-                        >
-                          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-accent">
-                            Pivote {i + 1}
-                          </p>
-                          <p className="text-sm leading-relaxed text-text">
-                            {suggestion}
-                          </p>
-                        </div>
-                      ))}
+                      {data.verdict_detail.pivotSuggestions.map((suggestion, i) => {
+                        const score = data.verdict_detail.pivotScores?.[i];
+                        const badgeStyles =
+                          score?.status === "improvement"
+                            ? "bg-green-bg text-green border-green/20"
+                            : score?.status === "downgrade"
+                              ? "bg-red-bg text-red border-red/20"
+                              : score?.status === "already_screened"
+                                ? "bg-yellow-bg text-yellow border-yellow/20"
+                                : "bg-surface2 text-text-dim border-border";
+                        return (
+                          <div
+                            key={i}
+                            className="rounded-md border border-border bg-surface2/50 px-5 py-4"
+                          >
+                            <p className="mb-2 text-xs font-bold uppercase tracking-wider text-accent">
+                              Pivote {i + 1}
+                            </p>
+                            {score && (
+                              <div
+                                className={`mb-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 rounded border px-2.5 py-1.5 text-xs font-semibold ${badgeStyles}`}
+                              >
+                                {score.status === "needs_screening" ? (
+                                  <span className="uppercase tracking-wider">
+                                    Needs full re-screening
+                                  </span>
+                                ) : (
+                                  <>
+                                    <span className="text-sm font-bold">
+                                      {score.status === "already_screened"
+                                        ? score.score
+                                        : `~${score.score}`}
+                                    </span>
+                                    {score.band && (
+                                      <span className="uppercase tracking-wider">
+                                        {score.band}
+                                      </span>
+                                    )}
+                                    {score.delta !== null &&
+                                      score.delta !== undefined && (
+                                        <span>
+                                          {score.delta >= 0 ? "+" : ""}
+                                          {score.delta} vs current
+                                        </span>
+                                      )}
+                                    {score.status === "downgrade" && (
+                                      <span className="font-bold uppercase tracking-wider">
+                                        · Downgrade
+                                      </span>
+                                    )}
+                                    {score.status === "already_screened" && (
+                                      <span className="uppercase tracking-wider">
+                                        · Already screened
+                                      </span>
+                                    )}
+                                  </>
+                                )}
+                                {score.bottleneck && (
+                                  <span className="basis-full font-normal text-text-dim">
+                                    Bottleneck: {score.bottleneck}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+                            <p className="text-sm leading-relaxed text-text">
+                              {suggestion}
+                            </p>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}

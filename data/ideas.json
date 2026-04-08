@@ -567,9 +567,14 @@
             "High operational cost: weekly curation of an ecosystem that changes every week — competes with hours dedicated to products with direct revenue"
           ],
           "pivotSuggestions": [
-            "**[needs full re-screening] · Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven** — Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
-            "**~77 / Good · +14 vs current · Bottleneck: differentiation vs free GitHub awesome lists with 37k stars** — Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
-            "**~49 / Marginal · −14 vs current · DOWNGRADE — Bottleneck: marketplace cold-start, UGC dynamics very hard for solopreneur** — Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+            "Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
+            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
+            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+          ],
+          "pivotScores": [
+            { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
+            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" },
+            { "status": "downgrade", "score": 49, "band": "Marginal", "delta": -14, "bottleneck": "Marketplace cold-start, UGC dynamics very hard for solopreneur" }
           ]
         },
         "forjaScore": {
@@ -1071,9 +1076,14 @@
             "Spanish market nonexistent: zero volume. Would compete in US/global against established giants"
           ],
           "pivotSuggestions": [
-            "**~59 / Marginal (top of band) · +21 vs current · Bottleneck: still saturated category, borderline Good** — Pivot 1 — Content auditor/optimizer (not writer): 'content optimization tool' has 600 vol and KD 31. Instead of writing new content, audit and optimize existing blog posts for SEO + brand voice consistency. A blog with DR 16 is ranking #2 in this SERP. Best pivot data-wise: 'content audit tool' (800/12) and 'content gap analysis' (1100/9) bring weighted-avg KD to ≈16.6",
-            "**~49 / Marginal · +11 vs current · Bottleneck: smaller addressable market (~810 vol) than auditor pivot** — Pivot 2 — SEO content strategy planner (not writer): 'ai seo content strategy generator' has 250 vol and KD 27. Tool that creates content strategies based on data but does NOT write. Aligned with 2026 trend of 'AI for strategy, human for voice'. Lower API costs",
-            "**[needs full re-screening] · Service, not SaaS — SEO/competitor framework does not apply** — Pivot 3 — Productize Seoseda as a service (not SaaS): instead of competing as a SaaS platform against tools with millions in funding, offer the complete workflow as a productized service/consultancy"
+            "Pivot 1 — Content auditor/optimizer (not writer): 'content optimization tool' has 600 vol and KD 31. Instead of writing new content, audit and optimize existing blog posts for SEO + brand voice consistency. A blog with DR 16 is ranking #2 in this SERP. Best pivot data-wise: 'content audit tool' (800/12) and 'content gap analysis' (1100/9) bring weighted-avg KD to ≈16.6",
+            "Pivot 2 — SEO content strategy planner (not writer): 'ai seo content strategy generator' has 250 vol and KD 27. Tool that creates content strategies based on data but does NOT write. Aligned with 2026 trend of 'AI for strategy, human for voice'. Lower API costs",
+            "Pivot 3 — Productize Seoseda as a service (not SaaS): instead of competing as a SaaS platform against tools with millions in funding, offer the complete workflow as a productized service/consultancy"
+          ],
+          "pivotScores": [
+            { "status": "improvement", "score": 59, "band": "Marginal", "delta": 21, "bottleneck": "Still saturated category, borderline Good band" },
+            { "status": "improvement", "score": 49, "band": "Marginal", "delta": 11, "bottleneck": "Smaller addressable market (~810 vol) than auditor pivot" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Service, not SaaS — SEO/competitor framework does not apply" }
           ]
         },
         "forjaScore": {
@@ -1483,8 +1493,12 @@
             "Social component requires moderation and creates legal liability"
           ],
           "pivotSuggestions": [
-            "**~77 / Good · +20 vs current · Bottleneck: Amazon affiliate margins (€0.24-0.75/sale) require massive scale** — Pivot 1 — Netflix-style recommendation site (no accounts): Web with Netflix aesthetic organizing books by age/genre with attractive cards and affiliate links. No user accounts, no quizzes, no COPPA. The score jump comes from eliminating COPPA risks (Risk Profile 20→33) and account/social complexity (Execution 20→100). Keywords already at KD 0-4 with 15K vol — bottleneck was the product model, not demand. MVP: 1-2 weeks",
-            "**~76 / Good · +19 vs current · Bottleneck: newsletter retention + monetization** — Pivot 2 — Newsletter + SEO for parents: Combine discovery site with weekly recommendation newsletter. Capture parent emails (adults, no COPPA). Dual channel: SEO + email. MVP: 2-3 weeks"
+            "Pivot 1 — Netflix-style recommendation site (no accounts): Web with Netflix aesthetic organizing books by age/genre with attractive cards and affiliate links. No user accounts, no quizzes, no COPPA. The score jump comes from eliminating COPPA risks (Risk Profile 20→33) and account/social complexity (Execution 20→100). Keywords already at KD 0-4 with 15K vol — bottleneck was the product model, not demand. MVP: 1-2 weeks",
+            "Pivot 2 — Newsletter + SEO for parents: Combine discovery site with weekly recommendation newsletter. Capture parent emails (adults, no COPPA). Dual channel: SEO + email. MVP: 2-3 weeks"
+          ],
+          "pivotScores": [
+            { "status": "improvement", "score": 77, "band": "Good", "delta": 20, "bottleneck": "Amazon affiliate margins (€0.24-0.75/sale) require massive scale" },
+            { "status": "improvement", "score": 76, "band": "Good", "delta": 19, "bottleneck": "Newsletter retention + monetization" }
           ]
         },
         "forjaScore": {
@@ -1981,9 +1995,14 @@
             "High operational cost: weekly curation of an ecosystem that changes every week — competes with hours dedicated to products with direct revenue"
           ],
           "pivotSuggestions": [
-            "**[needs full re-screening] · Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven** — Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
-            "**~77 / Good · +14 vs current · Bottleneck: differentiation vs free GitHub awesome lists with 37k stars** — Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
-            "**~49 / Marginal · −14 vs current · DOWNGRADE — Bottleneck: marketplace cold-start, UGC dynamics very hard for solopreneur** — Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+            "Pivot 1 (originally recommended qualitatively) — Claude Code Solopreneur Playbook: Newsletter + ebook/course about USING Claude Code as the single stack of a multi-product solopreneur. Audience: founders/solopreneurs, NOT devs. Differentiation: Joseda is the real documented case (Cronicas, Forja, ValuePerFan built solely with CC) — no identified competitor has this angle. Distribution does not depend on SEO of 'claude code resources' (10 vol). Monetization: course/ebook/premium cohort",
+            "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists",
+            "Pivot 3 — Skills marketplace + premium tutorials: Skills/plugins marketplace with opinionated tutorials and premium tier. 'claude code skills' 2.5K vol KD 29. Higher risk: UGC/marketplace dynamics are difficult for solopreneurs. Quantitative confirmation that marketplace is a trap for solopreneur"
+          ],
+          "pivotScores": [
+            { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
+            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" },
+            { "status": "downgrade", "score": 49, "band": "Marginal", "delta": -14, "bottleneck": "Marketplace cold-start, UGC dynamics very hard for solopreneur" }
           ]
         },
         "forjaScore": {
@@ -2219,9 +2238,14 @@
             "Distribution is the central problem, not product quality — and Joseda doesn't have Greg Isenberg's personal brand"
           ],
           "pivotSuggestions": [
-            "**59 / Marginal (already screened) · 0 vs current · Bottleneck: already screened as standalone idea → DISCARD** — Pivot 1 — Idea Screening as a self-service product (not marketplace): sell the tool that Forja uses, not pre-cooked ideas. The buyer brings their idea and the tool runs the full screening. Data: 'how to validate a startup idea' 150 vol KD 12 (real SEO entry), 'business idea validation' 150 vol KD 31. Competes against DimeADozen ($49) instead of against Greg Isenberg. **Already evaluated as `idea-screening-as-a-product` — same Forja Score 59/100, verdict DISCARD. Preuve.ai occupies exactly this angle with the identical slogan. Does NOT improve over the original.**",
-            "**[needs full re-screening] · Newsletter content marketing — not a SEO product** — Pivot 2 — 'Claude Code-buildable ideas' newsletter for technical solopreneurs: micro-segment that Half Baked doesn't serve. Each idea includes a build plan with Claude Code in X hours. Distribution: SEO content about 'build with Claude Code'. Becomes content marketing for something else, not a product itself",
-            "**[needs full re-screening] · Service, not scalable product — SEO/competitor framework does not apply** — Pivot 3 — Forja-as-a-service (consultancy) instead of catalog: deep screening service for founders/VCs who want analysis of their concrete idea. High margin, no catalog bottleneck. Works as side income, not a scalable product"
+            "Pivot 1 — Idea Screening as a self-service product (not marketplace): sell the tool that Forja uses, not pre-cooked ideas. The buyer brings their idea and the tool runs the full screening. Data: 'how to validate a startup idea' 150 vol KD 12 (real SEO entry), 'business idea validation' 150 vol KD 31. Competes against DimeADozen ($49) instead of against Greg Isenberg. Already evaluated as 'idea-screening-as-a-product' — same Forja Score 59/100, verdict DISCARD. Preuve.ai occupies exactly this angle with the identical slogan. Does NOT improve over the original.",
+            "Pivot 2 — 'Claude Code-buildable ideas' newsletter for technical solopreneurs: micro-segment that Half Baked doesn't serve. Each idea includes a build plan with Claude Code in X hours. Distribution: SEO content about 'build with Claude Code'. Becomes content marketing for something else, not a product itself",
+            "Pivot 3 — Forja-as-a-service (consultancy) instead of catalog: deep screening service for founders/VCs who want analysis of their concrete idea. High margin, no catalog bottleneck. Works as side income, not a scalable product"
+          ],
+          "pivotScores": [
+            { "status": "already_screened", "score": 59, "band": "Marginal", "delta": 0, "bottleneck": "Already screened as standalone idea-screening-as-a-product → DISCARD" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Newsletter content marketing — not an SEO product" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Service, not scalable product — SEO/competitor framework does not apply" }
           ]
         },
         "forjaScore": {
@@ -2584,9 +2608,14 @@
             "The SERP for 'personal travel guide' belongs to physical tours (parent topic = 'tours by locals') — Google understands this intent very differently from the proposed product"
           ],
           "pivotSuggestions": [
-            "**~42 / Marginal · −13 vs current · DOWNGRADE — Bottleneck: SEO blocked (KD 70-80 across all AI travel keywords), AI commoditized vs free ChatGPT** — Pivot 1 (originally recommended qualitatively, but data contradicts it) — AI-first with human backup: AI travel planner handles 90% of queries instantly + 1 human local as backup. Each local serves 200 travelers instead of 15. The AI travel space is dominated by VC-funded players (Wonderplan, Layla, Mindtrip) — 'ai trip planner' KD 80, 'ai travel planner' KD 77, 'ai itinerary planner' KD 78. The pivot inherits all original risks plus a brutal SEO ceiling and a commoditization war against free ChatGPT.",
-            "**[needs full re-screening] · Different audience (host, not traveler) — competitor set, signals and channel completely change** — Pivot 2 — B2B for boutique hotels and Airbnb hosts: Customer becomes the host, not the traveler. Sell 'local concierge by chat' as a property amenity. Distribution solved, high willingness-to-pay, no need for B2C SEO.",
-            "**~62 / Good · +7 vs current · Bottleneck: smaller addressable market, harder local recruitment in non-Western cultures** — Pivot 3 (data-strongest pivot) — Non-English destinations niche: Focus on Japan, Korea, Vietnam, China, Thailand, Morocco. KD averages 26 across keywords with combined volume ~6,000 ('japan travel guide' 2200/38, 'japan travel tips' 900/6, 'thailand travel guide' 800/12, 'morocco travel guide' 600/7). Language barrier creates a real moat against the free Reddit workaround."
+            "Pivot 1 (originally recommended qualitatively, but data contradicts it) — AI-first with human backup: AI travel planner handles 90% of queries instantly + 1 human local as backup. Each local serves 200 travelers instead of 15. The AI travel space is dominated by VC-funded players (Wonderplan, Layla, Mindtrip) — 'ai trip planner' KD 80, 'ai travel planner' KD 77, 'ai itinerary planner' KD 78. The pivot inherits all original risks plus a brutal SEO ceiling and a commoditization war against free ChatGPT.",
+            "Pivot 2 — B2B for boutique hotels and Airbnb hosts: Customer becomes the host, not the traveler. Sell 'local concierge by chat' as a property amenity. Distribution solved, high willingness-to-pay, no need for B2C SEO.",
+            "Pivot 3 (data-strongest pivot) — Non-English destinations niche: Focus on Japan, Korea, Vietnam, China, Thailand, Morocco. KD averages 26 across keywords with combined volume ~6,000 ('japan travel guide' 2200/38, 'japan travel tips' 900/6, 'thailand travel guide' 800/12, 'morocco travel guide' 600/7). Language barrier creates a real moat against the free Reddit workaround."
+          ],
+          "pivotScores": [
+            { "status": "downgrade", "score": 42, "band": "Marginal", "delta": -13, "bottleneck": "SEO blocked (KD 70-80 across all AI travel keywords), AI commoditized vs free ChatGPT" },
+            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (host, not traveler) — competitor set, signals and channel completely change" },
+            { "status": "improvement", "score": 62, "band": "Good", "delta": 7, "bottleneck": "Smaller addressable market, harder local recruitment in non-Western cultures" }
           ]
         },
         "forjaScore": {
