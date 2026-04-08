@@ -14,12 +14,13 @@
     },
     {
       "idea": "Google Calendar analytics for personal use",
+      "slug": "google-calendar-analytics-personal",
       "description": "Heatmaps, time breakdowns and progress tracking for personal calendar data",
       "pain": "Google locks Time Insights behind paid Workspace; no free tool for individuals to understand how they spend their time",
       "source": "Hacker News March 2026 (Calens project, built to scratch own itch)",
-      "painScore": 3,
+      "painScore": 2,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -3315,6 +3316,260 @@
               "raw": 20,
               "weighted": 2,
               "reason": "3 HIGH (intent invisible to search, monetization vs entrenched directories, ranking against DR 60+ incumbents) + 2 MEDIUM (matching quality, professional consensus) → average 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "google-calendar-analytics-personal",
+      "idea": "Google Calendar analytics for personal use",
+      "screeningData": {
+        "evaluatedDate": "2026-04-08",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Free personal analytics tool for Google Calendar — heatmaps, time breakdowns by category/project, week-over-week comparisons, and goal tracking — for individuals on free Gmail accounts who don't have access to Workspace's Time Insights",
+          "audience": "Knowledge workers, freelancers, students and productivity enthusiasts who use Google Calendar as their personal time OS and want self-knowledge about how they actually spend their time. Not businesses (already covered by paid Workspace + Time Insights)",
+          "problem": "Heavy Google Calendar users can't answer basic questions like 'how much deep work did I do this month?', 'which client eats most of my hours?', 'am I making progress on personal goals?'. Google Time Insights exists but is locked behind paid Workspace, and tools like Toggl/Clockify require manual time entry from scratch — the data is already in the calendar, nobody is leveraging it",
+          "solution": "Google login, calendar read via API, automatic event categorization (by keywords, colors, separate calendars or user rules) and a visual dashboard with heatmaps, category breakdowns, week-over-week comparisons and goal tracking ('I want 10h/week on X'). Freemium model: free for basic data, pro (~$5-9/month) for long history, exports and unlimited categories",
+          "differentiation": "Three angles: (1) Free or very cheap vs Workspace (~$7/user/month bundled); (2) No manual entry vs Toggl/Clockify — uses data that already exists; (3) Personal analytics focus, not client billing or team management — simpler UX designed for self-reflection"
+        },
+        "assumptions": [
+          {
+            "assumption": "Real demand exists for personal calendar analytics beyond hobbyist 'scratch own itch' niche",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Free Gmail users will grant OAuth to an unknown tool to see analytics that aren't critical",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "They will pay when free alternatives exist (Toggl/Clockify free, 'Google Calendar Time Spent' Chrome extension free, google-calendar-hours.com free)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The user's calendar contains enough structured data to make analytics worthwhile (many users only put meetings, leaving most blocks empty)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "SEO can drive enough traffic when total US demand is ~640 searches/month across all relevant keywords",
+            "risk": "HIGH"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "Tackle (TimeTackle)",
+            "type": "direct",
+            "dr": 54,
+            "weakness": "Most direct competitor — calendar analytics + tags + reports, but team-focused freemium with paid analytics tier"
+          },
+          {
+            "name": "Reclaim.ai",
+            "type": "indirect",
+            "dr": 81,
+            "weakness": "AI calendar with built-in stats, well-funded — broader play, analytics is a side feature"
+          },
+          {
+            "name": "Toggl",
+            "type": "indirect",
+            "dr": 84,
+            "weakness": "Manual time tracking with calendar integration — requires manual entry, doesn't leverage existing calendar data"
+          },
+          {
+            "name": "Clockify",
+            "type": "indirect",
+            "dr": 79,
+            "weakness": "Free unlimited tier with calendar integration — but manual entry required, business-billing focused"
+          },
+          {
+            "name": "Memtime",
+            "type": "indirect",
+            "dr": 57,
+            "weakness": "Automatic tracking but paid (~$11/mo), desktop app focused, not calendar-native"
+          },
+          {
+            "name": "Timing app",
+            "type": "indirect",
+            "dr": 70,
+            "weakness": "Mac-only, paid (~$12/mo), automatic tracker but not calendar-driven"
+          },
+          {
+            "name": "Rize",
+            "type": "indirect",
+            "dr": 58,
+            "weakness": "Focus + analytics paid app — different angle (focus tracking, not calendar analysis)"
+          },
+          {
+            "name": "google-calendar-hours.com",
+            "type": "direct",
+            "dr": 30,
+            "weakness": "Free open source competitor that already exists — covers the basic value prop with day/week/month/year filters but no heatmaps. Validates that the value prop is buildable AND that the market hasn't rewarded it"
+          },
+          {
+            "name": "Google Calendar Time Spent (Chrome extension)",
+            "type": "direct",
+            "weakness": "Free Chrome extension showing time per calendar color directly in the Calendar UI — covers the simplest case for free without OAuth flow"
+          },
+          {
+            "name": "Coupler.io templates",
+            "type": "indirect",
+            "weakness": "Free Google Sheets templates for calendar reports — DIY route for users willing to set it up"
+          },
+          {
+            "name": "Coda calendar template",
+            "type": "indirect",
+            "weakness": "DIY analytics with Coda + automation — captures the technical-user segment for free"
+          },
+          {
+            "name": "Worklytics",
+            "type": "indirect",
+            "weakness": "Enterprise calendar analytics, completely outside personal segment"
+          },
+          {
+            "name": "Google Time Insights (built-in)",
+            "type": "direct",
+            "weakness": "The 'incumbent' the idea wants to displace — paid Workspace only ($7+/mo bundled), but for users who care enough to pay, Workspace bundles way more value than just Time Insights"
+          }
+        ],
+        "competitiveDensity": "Saturated",
+        "keywords": [
+          {
+            "keyword": "google calendar analytics",
+            "volume": 150,
+            "kd": 3
+          },
+          {
+            "keyword": "time insights google calendar",
+            "volume": 150,
+            "kd": 0
+          },
+          {
+            "keyword": "calendar heatmap",
+            "volume": 150,
+            "kd": 1
+          },
+          {
+            "keyword": "google calendar dashboard",
+            "volume": 80,
+            "kd": 58
+          },
+          {
+            "keyword": "calendar time tracking",
+            "volume": 50,
+            "kd": 0
+          },
+          {
+            "keyword": "google calendar time tracker",
+            "volume": 40,
+            "kd": 8
+          },
+          {
+            "keyword": "best time tracker to sync with google calendar",
+            "volume": 30,
+            "kd": 0
+          },
+          {
+            "keyword": "google calendar reports",
+            "volume": 10,
+            "kd": 1
+          },
+          {
+            "keyword": "google calendar statistics",
+            "volume": 10,
+            "kd": 6
+          },
+          {
+            "keyword": "time tracker google calendar",
+            "volume": 10,
+            "kd": 5
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "'Is getting insights from calendar data something you'd want?' — validation post asking if cross-calendar time analytics is wanted. Only 1 comment in the thread (indifference, not demand)",
+            "source": "Hacker News thread 44283478 (June 2025)"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Calens project' — single dev built personal calendar analytics tool to scratch own itch, no traction visible",
+            "source": "Hacker News March 2026 (referenced in scout source)"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Multiple blog posts teaching DIY calendar analytics with Coda, Coupler.io, Google Sheets templates — indicates mild want exists but solved with DIY templates instead of dedicated products",
+            "source": "Coda.io, Coupler.io blogs"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "'Free time tracking apps with Google Calendar integration' — generic Quora question, no strong frustration signal",
+            "source": "Quora"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "'Google Calendar is a very bad app' — single isolated mention, not category signal",
+            "source": "Quora"
+          }
+        ],
+        "executability": {
+          "complexity": "LOW",
+          "timeline": "1-2 weeks (calibrated for Claude Code velocity); could be a single weekend for a basic version",
+          "dependencies": "Google OAuth (free), Google Calendar API (free), hosting",
+          "risks": "Google OAuth verification process for new apps with calendar.read scope can take weeks; API rate limits if user base grows; auto-categorization quality depends entirely on event titles/colors — garbage in, garbage out"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "KD extremely low (0-8 across on-topic keywords) — SEO entry is technically feasible",
+            "Construction is trivial (LOW complexity, weekend-scale build)",
+            "The 'free personal' gap vs Google Workspace Time Insights is real and verifiable",
+            "Established UX patterns (GitHub-style heatmaps) make design decisions easy"
+          ],
+          "against": [
+            "Tiny TAM: ~640 US searches/month total across all relevant keywords. Even capturing 100% of search yields negligible organic traffic for a SaaS business",
+            "Saturated category with high-DR incumbents: Toggl (DR 84), Clockify (DR 79), Reclaim.ai (DR 81) dominate the broader time-tracking conversation",
+            "Free direct competitor already exists: google-calendar-hours.com is free, open source, and covers the basic value prop. Plus a free Chrome extension shows time per calendar color",
+            "Free alternatives in adjacent category: Toggl/Clockify offer free tiers with calendar integration",
+            "Weak community signals: best signal found was an HN post with 1 comment. Indifference, not demand",
+            "Personal segment has low willingness to pay for non-critical analytics, especially when free alternatives exist",
+            "Distribution path is broken: with 640 searches/month and KD low, SEO can't support meaningful customer acquisition; no viral mechanism; no community wedge"
+          ]
+        },
+        "forjaScore": {
+          "total": 56,
+          "calculatedAt": "2026-04-08",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 90,
+              "weighted": 22.5,
+              "reason": "Volume-weighted avg KD ≈9.5 across 7 keywords with both volume and KD; very low difficulty across all on-topic keywords"
+            },
+            "competitivePressure": {
+              "raw": 28,
+              "weighted": 5.6,
+              "reason": "Saturated density (20) + 8/8 competitors with DR averaging 64.1 → drScore 36 → blended raw 28"
+            },
+            "marketDemand": {
+              "raw": 40,
+              "weighted": 6,
+              "reason": "Total volume ~640 → bucket 500-1999 → 40; only 1 strong REQUEST signal, no bonus applied"
+            },
+            "marketSize": {
+              "raw": 40,
+              "weighted": 6,
+              "reason": "Same volume bucket (500-1999) → 40"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 1-2 weeks timeline (+10) + free APIs (+0) → clamped at 100"
+            },
+            "riskProfile": {
+              "raw": 10,
+              "weighted": 1,
+              "reason": "4 of 5 critical assumptions are HIGH risk (0 each), 1 is MEDIUM (50) → average 10"
             }
           },
           "missingInputs": [],
