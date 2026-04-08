@@ -15,8 +15,8 @@ interface DashboardTabsProps {
 }
 
 const TABS = [
-  { key: "products", label: "Products" },
   { key: "ideas", label: "Ideas" },
+  { key: "products", label: "Products" },
 ] as const;
 
 type TabKey = (typeof TABS)[number]["key"];
@@ -29,7 +29,7 @@ export default function DashboardTabs({
   leafByPredecessor,
   latestAdded,
 }: DashboardTabsProps) {
-  const [active, setActive] = useState<TabKey>("products");
+  const [active, setActive] = useState<TabKey>("ideas");
 
   return (
     <div>

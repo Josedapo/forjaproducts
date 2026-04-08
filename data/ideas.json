@@ -297,17 +297,6 @@
       ]
     },
     {
-      "idea": "Custom AI integration agency for SMBs",
-      "description": "Service/platform helping small and midsized companies implement AI tailored to their specific workflows",
-      "pain": "33M+ companies in the US alone need AI customization but lack technical expertise; generic software won't fit unique business processes",
-      "source": "Own idea (inspired by Mark Cuban commentary)",
-      "painScore": null,
-      "added": "2026-03-26",
-      "status": "Pending",
-      "reportUrl": null,
-      "pivotHistory": null
-    },
-    {
       "idea": "Local insider travel connections",
       "slug": "local-insider-travel-connections",
       "description": "Platform connecting travelers with verified locals who help plan authentic experiences beyond tourist guides",
