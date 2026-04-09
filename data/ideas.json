@@ -847,7 +847,7 @@
       "source": "Reddit r/ADHD (detailed broken workflow descriptions, multiple threads)",
       "painScore": 4,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -858,7 +858,7 @@
       "source": "Reddit r/RealEstate, r/Realtors (recurring complaints)",
       "painScore": 4,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -869,7 +869,7 @@
       "source": "Reddit r/Landlord (multiple threads)",
       "painScore": 4,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -935,7 +935,7 @@
       "source": "Reddit r/msp (multiple threads)",
       "painScore": 3,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
