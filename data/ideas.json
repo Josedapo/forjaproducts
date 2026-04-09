@@ -953,12 +953,13 @@
     },
     {
       "idea": "Ad-free recipe organizer",
+      "slug": "ad-free-recipe-organizer",
       "description": "Minimalist recipe app with fast loading, no ads, meal planning, and import from URLs",
       "pain": "Recipe websites are the most frustrating category in Reddit analysis; highest frustration scores and longest complaint posts",
       "source": "Reddit Cooking and Recipes subreddits (223 avg post length, highest frustration)",
-      "painScore": 3,
+      "painScore": 4,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -3729,6 +3730,124 @@
               "raw": 30,
               "weighted": 3,
               "reason": "5 assumptions: 2 HIGH + 3 MEDIUM → avg 30"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "ad-free-recipe-organizer",
+      "idea": "Ad-free recipe organizer",
+      "screeningData": {
+        "evaluatedDate": "2026-04-09",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Minimalist web app for home cooks to save recipes from URLs, organize them, and do meal planning. No ads, fast loading, clean UX.",
+          "audience": "Home cooks frustrated with recipe websites — people who cook regularly and save recipes from blogs, fed up with slow-loading, ad-infested recipe sites.",
+          "problem": "Recipe websites are universally hated: pop-ups, autoplay videos, 2,000 words of life story before ingredients, slow loading, aggressive ads. Saved recipes scattered across bookmarks, screenshots, and apps.",
+          "solution": "Clean web app where users paste a URL and the recipe is automatically extracted (ingredients, steps, times). Organized personal collection with search and tags. Meal planning calendar. No ads, no bloat.",
+          "differentiation": "vs recipe blogs: no ads, instant loading. vs Paprika/CopyMeThat: modern web-first, cleaner UX. vs Notion/screenshots: structured data with auto-scaling. vs Apple-only apps (Mela, Pestle): works on any platform."
+        },
+        "assumptions": [
+          { "assumption": "Users will switch from established apps (Paprika $5, Mela $6 one-time) to a new web app", "risk": "HIGH" },
+          { "assumption": "A new web app can compete for SEO terms dominated by DR 52-67 incumbents", "risk": "HIGH" },
+          { "assumption": "The 'Mela for web' gap is real and not already being filled by Mealie, RecipeSage, or Cooked.wiki", "risk": "MEDIUM" },
+          { "assumption": "Recipe URL extraction (scraping) won't face legal/ethical pushback or systematic breakage", "risk": "MEDIUM" },
+          { "assumption": "Users will pay for yet another recipe app in a market with 25+ options", "risk": "HIGH" }
+        ],
+        "competitors": [
+          { "name": "Samsung Food", "type": "direct", "dr": 67, "weakness": "Intrusive ads in free tier, complex UX, persistent bugs" },
+          { "name": "Plan to Eat", "type": "direct", "dr": 64, "weakness": "$49/year, no own recipe library, not minimalist" },
+          { "name": "Paprika", "type": "direct", "dr": 63, "weakness": "Dated UI, no web version, per-platform purchase, no video import" },
+          { "name": "Mealime", "type": "indirect", "dr": 63, "weakness": "Limited recipe pool, web import hard to edit" },
+          { "name": "AnyList", "type": "indirect", "dr": 60, "weakness": "Recipes are secondary feature, limited import" },
+          { "name": "Mealie", "type": "direct", "dr": 55, "weakness": "Requires Docker, not for normal users" },
+          { "name": "CopyMeThat", "type": "direct", "dr": 52, "weakness": "Ads, dated UI, limited functionality" },
+          { "name": "Recipe Keeper", "type": "direct", "dr": 41, "weakness": "Per-platform purchase, functional but not elegant UI" }
+        ],
+        "competitiveDensity": "Saturated — 25+ competitors across native apps, web apps, meal planners, self-hosted solutions, and clippers. The most saturated category evaluated in Forja.",
+        "keywords": [
+          { "keyword": "recipe keeper", "volume": 2300, "kd": 15 },
+          { "keyword": "meal planner app", "volume": 1000, "kd": 24 },
+          { "keyword": "recipe organizer", "volume": 800, "kd": 26 },
+          { "keyword": "recipe organizer app", "volume": 450, "kd": 52 },
+          { "keyword": "meal planner app free", "volume": 400, "kd": 2 },
+          { "keyword": "recipe saver", "volume": 150, "kd": 40 },
+          { "keyword": "recipe book app", "volume": 150, "kd": 57 },
+          { "keyword": "recipe manager app", "volume": 70, "kd": 41 },
+          { "keyword": "recipe collector", "volume": 30, "kd": 26 }
+        ],
+        "communitySignals": [
+          { "type": "COMPLAINT", "signal": "Would pay for a clean recipe database without filler content — recipe sites nearly unusable for non-technical users", "source": "Hacker News (item #29795879)" },
+          { "type": "COMPLAINT", "signal": "I have yet to encounter a recipe site I don't hate — only AllRecipes tolerated for its print button", "source": "Hacker News (item #25360025)" },
+          { "type": "COMPLAINT", "signal": "Recipe blogs serve 15-30 display ads per page, 8.6s average mobile load time vs 3s recommended", "source": "Multiple sources" },
+          { "type": "COMPLAINT", "signal": "RecipeBook app removed from App Store — users lost recipes painstakingly entered over many years", "source": "App Store reviews" },
+          { "type": "COMPLAINT", "signal": "Food blogger: I hate it — the current system forces you to choose between good user experience and paying your mortgage", "source": "eathealthy365" },
+          { "type": "REQUEST", "signal": "Someone should make a text-only recipe search website — a user immediately built one", "source": "Hacker News (item #25360025)" },
+          { "type": "REQUEST", "signal": "Jump to Recipe Chrome extension with thousands of users — only 92 lines of JavaScript", "source": "Chrome Web Store" },
+          { "type": "REQUEST", "signal": "Demand for apps without subscriptions — subscription fatigue is a defining 2025-2026 trend", "source": "Adapty blog, DrizzleLemons" },
+          { "type": "REQUEST", "signal": "Requested features: unit conversion, recipe scaling, automatic grocery lists", "source": "Multiple Hacker News threads" },
+          { "type": "DISCUSSION", "signal": "RecipeAsly creator received personal threats and legal problems for scraping recipes", "source": "Hacker News (item #29795482)" },
+          { "type": "DISCUSSION", "signal": "Google AI Overviews generate recipe slop — mixed steps and impossible instructions", "source": "Fortune, Search Engine Land" },
+          { "type": "DISCUSSION", "signal": "Show HN: I built a recipe app is practically a meme — dozens have tried, most common indie project", "source": "Hacker News (recurring pattern)" }
+        ],
+        "executability": {
+          "complexity": "MEDIUM",
+          "timeline": "2-3 weeks with Claude Code",
+          "dependencies": "Recipe parsing (recipe-scrapers lib or schema.org), hosting with DB (Supabase or similar)",
+          "risks": "Scraping reliability varies wildly across sites; RecipeAsly legal precedent; anti-scraping increasingly common"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "Most documented pain point on the internet — frustration with recipe websites is universal and genuine",
+            "Real volume: ~5,350 vol/month on product keywords, ~12K+ including meal planner cluster",
+            "'Mela for web' gap identified: no minimalist, cross-platform, ad-free, affordable web app exists",
+            "Growing market: $6.4B in 2025 → $14.3B by 2033"
+          ],
+          "against": [
+            "Most saturated category evaluated in Forja: 25+ competitors across native apps, web apps, self-hosted, clippers, VC-funded newcomers",
+            "Incumbents are cheap and established: Paprika $5, Mela $6 one-time with years of product-market fit",
+            "SEO is hard: KD 15-57 with DR 52-67 incumbents. Not the trivial KD 0 entry a solopreneur needs",
+            "'Show HN: I built a recipe app' is a meme — most common indie project. If dozens tried without breaking the market, the barrier is distribution not tech",
+            "Scraping is fragile and legally gray: RecipeAsly precedent. Compressed monetization: users expect free or very cheap"
+          ]
+        },
+        "forjaScore": {
+          "total": 58,
+          "calculatedAt": "2026-04-09",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 77,
+              "weighted": 19.3,
+              "reason": "Volume-weighted avg KD ~23 across 5,350 vol — moderate difficulty, not the KD 0 walkover needed"
+            },
+            "competitivePressure": {
+              "raw": 31,
+              "weighted": 6.2,
+              "reason": "Saturated density (20), avg DR 58.1 across 8 competitors (drScore 42), blended 31"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "5,350 total vol (bucket 60), 10+ strong COMPLAINT/REQUEST signals → bonus +10"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "5,350 addressable monthly searches → bucket 60"
+            },
+            "executionFeasibility": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "MEDIUM complexity (60) + 2-3 week timeline (+10) + no paid dependencies"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2,
+              "reason": "5 assumptions: 3 HIGH + 2 MEDIUM → avg 20"
             }
           },
           "missingInputs": [],
