@@ -919,12 +919,13 @@
     },
     {
       "idea": "Influencer sponsorship tracker",
+      "slug": "influencer-sponsorship-tracker",
       "description": "Lightweight CRM for micro-influencers to manage deals, deadlines, and payment tracking",
       "pain": "Micro-influencers (5K-50K followers) constantly miss deadlines for sponsored posts; deal terms scattered across DMs and email",
       "source": "Reddit r/Influencer, r/YouTube (recurring complaints)",
-      "painScore": 3,
+      "painScore": 4,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -3610,6 +3611,124 @@
               "raw": 10,
               "weighted": 1,
               "reason": "4 of 5 critical assumptions are HIGH risk (0 each), 1 is MEDIUM (50) → average 10"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "influencer-sponsorship-tracker",
+      "idea": "Influencer sponsorship tracker",
+      "screeningData": {
+        "evaluatedDate": "2026-04-09",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Lightweight CRM for micro-influencers to manage deals, deadlines, and payment tracking. Web app where the creator logs each brand deal with key details (brand, deliverables, deadlines, payment terms, status). Calendar view, automated reminders, payment tracking.",
+          "audience": "Micro-influencers (5K-50K followers) and small content creators who manage sponsored post deals without a manager or agency. Active on Instagram, TikTok, YouTube.",
+          "problem": "Sponsored post deals arrive via DMs and email, terms get scattered across platforms, deadlines are missed, payments are late or forgotten. No lightweight tool designed for individual creators to track deals end-to-end.",
+          "solution": "Simple web app where creators log each brand deal with key details. Calendar view for deadlines, automated reminders, payment tracking with pending/paid status. Not a full CRM — a lightweight deal tracker purpose-built for creator partnerships.",
+          "differentiation": "vs Notion/spreadsheets: purpose-built with creator-specific fields. vs Brand-side CRMs (Grin, AspireIQ): wrong direction, too expensive. vs All-in-one platforms (Beacons, Passionfroot): deal management is secondary feature, not core."
+        },
+        "assumptions": [
+          { "assumption": "Micro-influencers will pay $9-15/month for a dedicated CRM when Notion templates cost $5-25 one-time", "risk": "HIGH" },
+          { "assumption": "A new entrant can gain traction where 8-10 tools are already attempting without success", "risk": "MEDIUM" },
+          { "assumption": "SEO can be a viable acquisition channel with ~910 vol/month in transactional product keywords", "risk": "HIGH" },
+          { "assumption": "The 'messy middle' segment (10K-200K followers, 3-10 active deals) is large enough to sustain a niche product", "risk": "MEDIUM" },
+          { "assumption": "Creators will keep deal management in the app instead of reverting to DMs/WhatsApp", "risk": "MEDIUM" }
+        ],
+        "competitors": [
+          { "name": "Beacons", "type": "indirect", "dr": 91, "weakness": "All-in-one creator platform — deal management is a secondary feature, not core" },
+          { "name": "Collabstr", "type": "indirect", "dr": 72, "weakness": "Marketplace for transactions, not CRM. 15% commission on payouts" },
+          { "name": "Passionfroot", "type": "indirect", "dr": 66, "weakness": "Focused on B2B/newsletter creators. 5-15% commission" },
+          { "name": "Rella", "type": "direct", "dr": 37, "weakness": "No free plan. Per-seat pricing. More content management than deal CRM" },
+          { "name": "July", "type": "indirect", "dr": 36, "weakness": "For agencies, not individual creators. $50/month + $6/creator" },
+          { "name": "Kitly", "type": "indirect", "dr": 0, "weakness": "More media kit than deal CRM. Limited pipeline management" }
+        ],
+        "competitiveDensity": "Saturated — 6+ creator-side tools, 8-10 emerging tools found in Reddit, multiple DIY solutions (Notion/Sheets). No one has won, but many are trying.",
+        "keywords": [
+          { "keyword": "influencer crm", "volume": 800, "kd": 0 },
+          { "keyword": "sponsorship proposal template", "volume": 700, "kd": 5 },
+          { "keyword": "influencer contract template", "volume": 500, "kd": 0 },
+          { "keyword": "influencer media kit", "volume": 450, "kd": 12 },
+          { "keyword": "influencer rate calculator", "volume": 150, "kd": 7 },
+          { "keyword": "influencer invoice template", "volume": 150, "kd": 0 },
+          { "keyword": "creator economy tools", "volume": 150, "kd": 13 },
+          { "keyword": "freelance crm", "volume": 80, "kd": 4 },
+          { "keyword": "sponsorship tracker", "volume": 70, "kd": 0 },
+          { "keyword": "influencer sponsorship", "volume": 30, "kd": 47 }
+        ],
+        "communitySignals": [
+          { "type": "COMPLAINT", "signal": "Managing brand deals is actual hell — creator with 47K, organizing deals at 2am. Invoices named final_final_frfr_THISONE.pdf", "source": "Reddit r/influencermarketing (29 upvotes, 41 comments)" },
+          { "type": "COMPLAINT", "signal": "I lost $50 by forgetting part of sponsor deal — missed Instagram Story deadline", "source": "Reddit r/NewTubers" },
+          { "type": "COMPLAINT", "signal": "My friend waited 3 months to get paid $4,200 — most creators don't track payments vs pending", "source": "Reddit r/influencermarketing" },
+          { "type": "COMPLAINT", "signal": "Keep track of brand collabs - my system is a mess — DMs + email + Google Sheet from 2023", "source": "Reddit r/InstagramMarketing" },
+          { "type": "COMPLAINT", "signal": "Google Sheet starting to fall apart, nearly missed a deliverable because brand's email got buried", "source": "Reddit r/PartneredYoutube" },
+          { "type": "COMPLAINT", "signal": "Fastest way creators lose brand deals — operational disorganization kills deals, confirmed from brand side", "source": "Reddit r/influencermarketing (14 upvotes)" },
+          { "type": "REQUEST", "signal": "How do you actually manage your brand deals? Would you pay $20-30/month? — responses NOT enthusiastic about paying", "source": "Reddit r/PartneredYoutube (12 comments)" },
+          { "type": "REQUEST", "signal": "How are you actually managing brand deals as a creator? — everything spread across email, DMs, WhatsApp, Notion", "source": "Reddit r/UGCcreators" },
+          { "type": "REQUEST", "signal": "Creators & Agencies - How do you manage brand deals? — agency manager: still spreadsheets and email chains", "source": "Reddit r/influencermarketing" },
+          { "type": "REQUEST", "signal": "If you're a small creator, what would make getting brand deals easier?", "source": "Reddit r/influencermarketing" },
+          { "type": "DISCUSSION", "signal": "How are agencies tracking brand deal status across multiple creators? — confirms market fragmentation", "source": "Reddit r/influencermarketing (19 comments)" },
+          { "type": "DISCUSSION", "signal": "Developer building sponsorship tracker for micro-influencers — supply-side signal of emerging competition", "source": "Reddit r/InstagramMarketing" }
+        ],
+        "executability": {
+          "complexity": "LOW",
+          "timeline": "1-2 weeks with Claude Code",
+          "dependencies": "Stripe (free until revenue), email service for reminders",
+          "risks": "None technical. The risk is market viability, not technical."
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "Pain is genuinely strong and well-documented (12+ Reddit signals, real stories of money lost)",
+            "KD is essentially 0 across the entire keyword cluster — SEO entry is trivially easy",
+            "No incumbent has won the market — all existing tools are pre-traction",
+            "Build is trivial (LOW complexity, 1-2 weeks)",
+            "Real asymmetry: brands have $200-1,500/month tools, creators have nothing purpose-built"
+          ],
+          "against": [
+            "Transactional search volume is microscopic: ~1,000 searches/month for product keywords. KD is 0 because nobody competes for crumbs",
+            "8-10 tools already attempting without success: classic 'many builders, zero traction' pattern — the market doesn't convert",
+            "WTP is demonstrably low: micro-influencers have irregular income, resist paying for tools, Notion templates cover 70% of the problem",
+            "Feature risk from Beacons (DR 91): if they add robust deal management, any small competitor is crushed",
+            "Distribution is broken: with 1,000 vol/month in transactional SEO and no viral channel, CAC doesn't close"
+          ]
+        },
+        "forjaScore": {
+          "total": 68,
+          "calculatedAt": "2026-04-09",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 96,
+              "weighted": 23.9,
+              "reason": "Volume-weighted avg KD ~4.4 across 3,100 vol — almost everything KD 0"
+            },
+            "competitivePressure": {
+              "raw": 35,
+              "weighted": 7,
+              "reason": "Saturated density (20), avg DR 50.3 across 6 competitors (drScore 50), blended 35"
+            },
+            "marketDemand": {
+              "raw": 70,
+              "weighted": 10.5,
+              "reason": "3,100 total vol (bucket 60), 12+ strong COMPLAINT/REQUEST signals → bonus +10"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9,
+              "reason": "3,100 addressable monthly searches → bucket 60"
+            },
+            "executionFeasibility": {
+              "raw": 100,
+              "weighted": 15,
+              "reason": "LOW complexity (90) + 1-2 week timeline (+10) + no paid dependencies"
+            },
+            "riskProfile": {
+              "raw": 30,
+              "weighted": 3,
+              "reason": "5 assumptions: 2 HIGH + 3 MEDIUM → avg 30"
             }
           },
           "missingInputs": [],
