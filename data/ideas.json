@@ -39,7 +39,10 @@
           "idea": "SEO Blog Writer with Brand Voice",
           "status": "Evaluated - PIVOT",
           "date": "2026-03-25",
-          "reportUrl": null
+          "reportUrl": null,
+          "slug": "seo-blog-writer",
+          "forjaScore": 38,
+          "alignment": "aligned"
         }
       ],
       "screeningData": {
@@ -294,7 +297,10 @@
           "idea": "Validated idea marketplace",
           "status": "Evaluated - PIVOT",
           "date": "2026-04-08",
-          "reportUrl": null
+          "reportUrl": null,
+          "slug": "validated-idea-marketplace",
+          "forjaScore": 59,
+          "alignment": "aligned"
         }
       ]
     },
@@ -874,7 +880,7 @@
       "source": "Hacker News Jan 2026 (Fillvisa project for USCIS forms)",
       "painScore": 4,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -896,7 +902,7 @@
       "source": "Reddit (multiple health/skincare subreddits, validated by bigideasdb analysis)",
       "painScore": 3,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -907,7 +913,7 @@
       "source": "Reddit r/LawFirm (nightmare descriptions of manual intake)",
       "painScore": 3,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -940,7 +946,7 @@
       "source": "Reddit r/Etsy (fear-based motivation, strong engagement)",
       "painScore": 3,
       "added": "2026-04-01",
-      "status": "NEW",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -962,7 +968,7 @@
       "source": "Hacker News March 2026 (MyVisualRoutine project)",
       "painScore": 3,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -973,7 +979,7 @@
       "source": "Reddit r/Landlord",
       "painScore": 3,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -995,7 +1001,7 @@
       "source": "Reddit r/sysadmin",
       "painScore": 3,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1028,7 +1034,7 @@
       "source": "Reddit r/AirBnB",
       "painScore": 3,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1039,7 +1045,7 @@
       "source": "Hacker News Jan 2026 (user built own solution)",
       "painScore": 2,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1050,7 +1056,7 @@
       "source": "Reddit r/Nonprofit",
       "painScore": 2,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1061,7 +1067,7 @@
       "source": "Hacker News Jan 2026 (coffeecoders building suite of replacements)",
       "painScore": 2,
       "added": "2026-03-09",
-      "status": "Pending",
+      "status": "DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1074,6 +1080,40 @@
       "painScore": 4,
       "added": "2026-03-30",
       "status": "Evaluated - ADVANCE",
+      "reportUrl": null,
+      "pivotHistory": [
+        {
+          "idea": "Netflix de libros infantiles",
+          "status": "Evaluated - PIVOT",
+          "date": "2026-03-28",
+          "reportUrl": null,
+          "slug": "netflix-libros-infantiles",
+          "forjaScore": 57,
+          "alignment": "aligned"
+        }
+      ]
+    },
+    {
+      "idea": "Netflix de libros infantiles",
+      "slug": "netflix-libros-infantiles",
+      "description": "Plataforma gamificada de descubrimiento de libros para niños 6-16 con quizzes de verificación, avatares y espacio social",
+      "pain": "Los niños no tienen un espacio digital atractivo para descubrir libros por gustos; las opciones actuales son institucionales o para adultos",
+      "source": "Own idea",
+      "painScore": 2,
+      "added": "2026-03-30",
+      "status": "Evaluated - PIVOT",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "SEO Blog Writer with Brand Voice",
+      "slug": "seo-blog-writer",
+      "description": "Product that writes SEO-optimized blog content with personalized brand voice",
+      "pain": "Creating content that ranks requires combining SEO expertise with writing skills; most companies either write without SEO strategy or hire expensive agencies",
+      "source": "Own idea (based on Seoseda experience)",
+      "painScore": 4,
+      "added": "2026-03-25",
+      "status": "Evaluated - PIVOT",
       "reportUrl": null,
       "pivotHistory": null
     }
