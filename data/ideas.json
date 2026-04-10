@@ -568,8 +568,18 @@
             "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists"
           ],
           "pivotScores": [
-            { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
-            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" }
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven"
+            },
+            {
+              "status": "improvement",
+              "score": 77,
+              "band": "Good",
+              "delta": 14,
+              "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars"
+            }
           ]
         },
         "forjaScore": {
@@ -982,6 +992,18 @@
       "painScore": 3,
       "added": "2026-03-09",
       "status": "DISCARD",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Restaurant price estimator",
+      "slug": "restaurant-price-estimator",
+      "description": "Buscador de restaurantes que combina reseñas públicas con cálculo real de precio por persona basado en datos de la carta, creando un menú tipo comparable",
+      "pain": "Los canales actuales (Google Maps, TripAdvisor) usan rangos vagos ($/$$/$$$) que no permiten saber cuánto costará realmente comer; sorpresas en la cuenta",
+      "source": "Own idea",
+      "painScore": 3,
+      "added": "2026-04-10",
+      "status": "Evaluated - DISCARD",
       "reportUrl": null,
       "pivotHistory": null
     },
@@ -1572,9 +1594,25 @@
             "Pivot 3 — Productize Seoseda as a service (not SaaS): instead of competing as a SaaS platform against tools with millions in funding, offer the complete workflow as a productized service/consultancy"
           ],
           "pivotScores": [
-            { "status": "improvement", "score": 59, "band": "Marginal", "delta": 21, "bottleneck": "Still saturated category, borderline Good band" },
-            { "status": "improvement", "score": 49, "band": "Marginal", "delta": 11, "bottleneck": "Smaller addressable market (~810 vol) than auditor pivot" },
-            { "status": "needs_screening", "score": null, "bottleneck": "Service, not SaaS — SEO/competitor framework does not apply" }
+            {
+              "status": "improvement",
+              "score": 59,
+              "band": "Marginal",
+              "delta": 21,
+              "bottleneck": "Still saturated category, borderline Good band"
+            },
+            {
+              "status": "improvement",
+              "score": 49,
+              "band": "Marginal",
+              "delta": 11,
+              "bottleneck": "Smaller addressable market (~810 vol) than auditor pivot"
+            },
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Service, not SaaS — SEO/competitor framework does not apply"
+            }
           ]
         },
         "forjaScore": {
@@ -1988,8 +2026,20 @@
             "Pivot 2 — Newsletter + SEO for parents: Combine discovery site with weekly recommendation newsletter. Capture parent emails (adults, no COPPA). Dual channel: SEO + email. MVP: 2-3 weeks"
           ],
           "pivotScores": [
-            { "status": "improvement", "score": 77, "band": "Good", "delta": 20, "bottleneck": "Amazon affiliate margins (€0.24-0.75/sale) require massive scale" },
-            { "status": "improvement", "score": 76, "band": "Good", "delta": 19, "bottleneck": "Newsletter retention + monetization" }
+            {
+              "status": "improvement",
+              "score": 77,
+              "band": "Good",
+              "delta": 20,
+              "bottleneck": "Amazon affiliate margins (€0.24-0.75/sale) require massive scale"
+            },
+            {
+              "status": "improvement",
+              "score": 76,
+              "band": "Good",
+              "delta": 19,
+              "bottleneck": "Newsletter retention + monetization"
+            }
           ]
         },
         "forjaScore": {
@@ -2490,8 +2540,18 @@
             "Pivot 2 (data-strongest pivot) — Claude Code feature deep-dive site: SEO site with deep, opinionated guides per feature. Data: 'claude code hooks' 2.7K vol KD 12, 'claude code mcp' 4K vol KD 17, 'claude code subagents' 1.7K vol KD 23, 'claude code skills' 2.5K vol KD 29, 'claude code vs cursor' 3.7K vol KD 4. Total ~28K vol/mo winnable (KD<30). Differentiation: opinionated depth vs awesome lists"
           ],
           "pivotScores": [
-            { "status": "needs_screening", "score": null, "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven" },
-            { "status": "improvement", "score": 77, "band": "Good", "delta": 14, "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars" }
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Course/cohort/newsletter — not an SEO product. Distribution audience-driven, not SEO-driven"
+            },
+            {
+              "status": "improvement",
+              "score": 77,
+              "band": "Good",
+              "delta": 14,
+              "bottleneck": "Differentiation vs free GitHub awesome lists with 37k stars"
+            }
           ]
         },
         "forjaScore": {
@@ -2732,9 +2792,23 @@
             "Pivot 3 — Forja-as-a-service (consultancy) instead of catalog: deep screening service for founders/VCs who want analysis of their concrete idea. High margin, no catalog bottleneck. Works as side income, not a scalable product"
           ],
           "pivotScores": [
-            { "status": "already_screened", "score": 59, "band": "Marginal", "delta": 0, "bottleneck": "Already screened as standalone idea-screening-as-a-product → DISCARD" },
-            { "status": "needs_screening", "score": null, "bottleneck": "Newsletter content marketing — not an SEO product" },
-            { "status": "needs_screening", "score": null, "bottleneck": "Service, not scalable product — SEO/competitor framework does not apply" }
+            {
+              "status": "already_screened",
+              "score": 59,
+              "band": "Marginal",
+              "delta": 0,
+              "bottleneck": "Already screened as standalone idea-screening-as-a-product → DISCARD"
+            },
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Newsletter content marketing — not an SEO product"
+            },
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Service, not scalable product — SEO/competitor framework does not apply"
+            }
           ]
         },
         "forjaScore": {
@@ -3042,37 +3116,133 @@
           "differentiation": "Vs static guides → real-time contextual knowledge. Vs physical tour marketplaces (Withlocals, ToursByLocals) → cheaper, no scheduling, async, scalable on the supply side. Vs Reddit/forums → instant answer from one person who already knows your trip plan. Tip-based revenue model aligns local incentives with traveler satisfaction."
         },
         "assumptions": [
-          { "assumption": "Travelers will pay 5-10€ + tip for a verified local instead of using Reddit for free", "risk": "HIGH" },
-          { "assumption": "Locals will register accepting a tip-only revenue model (no salary base)", "risk": "HIGH" },
-          { "assumption": "Trust/verification can be solved manually for the first 30 locals", "risk": "LOW" },
-          { "assumption": "Conversations stay inside the app instead of migrating to WhatsApp in the first week", "risk": "MEDIUM" },
-          { "assumption": "CAC via SEO content or paid acquisition can stay below LTV (matching fee + tip commission)", "risk": "HIGH" }
+          {
+            "assumption": "Travelers will pay 5-10€ + tip for a verified local instead of using Reddit for free",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Locals will register accepting a tip-only revenue model (no salary base)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Trust/verification can be solved manually for the first 30 locals",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "Conversations stay inside the app instead of migrating to WhatsApp in the first week",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "CAC via SEO content or paid acquisition can stay below LTV (matching fee + tip commission)",
+            "risk": "HIGH"
+          }
         ],
         "competitors": [
-          { "name": "ToursByLocals", "type": "Marketplace of paid physical tours guided by locals", "dr": 72, "weakness": "Physical tours only, no continuous async chat" },
-          { "name": "EatWith", "type": "Shared meals at locals' homes", "dr": 71, "weakness": "Food-only, no general advisory" },
-          { "name": "Withlocals", "type": "Private tours with locals", "dr": 66, "weakness": "Physical tours, chat only pre-booking" },
-          { "name": "RentAFriend", "type": "Generic friend rental (not travel-specific)", "dr": 52, "weakness": "Not travel-focused, in-person model" },
-          { "name": "ShowAround", "type": "Casual local meetups", "dr": 42, "weakness": "Mostly amateur locals, no service structure" }
+          {
+            "name": "ToursByLocals",
+            "type": "Marketplace of paid physical tours guided by locals",
+            "dr": 72,
+            "weakness": "Physical tours only, no continuous async chat"
+          },
+          {
+            "name": "EatWith",
+            "type": "Shared meals at locals' homes",
+            "dr": 71,
+            "weakness": "Food-only, no general advisory"
+          },
+          {
+            "name": "Withlocals",
+            "type": "Private tours with locals",
+            "dr": 66,
+            "weakness": "Physical tours, chat only pre-booking"
+          },
+          {
+            "name": "RentAFriend",
+            "type": "Generic friend rental (not travel-specific)",
+            "dr": 52,
+            "weakness": "Not travel-focused, in-person model"
+          },
+          {
+            "name": "ShowAround",
+            "type": "Casual local meetups",
+            "dr": 42,
+            "weakness": "Mostly amateur locals, no service structure"
+          }
         ],
         "competitiveDensity": "Moderate. Established marketplaces with strong SEO (avg DR 60.6) dominate the physical-tour angle. No competitor offers exactly the 'always-available local friend via async chat for the trip duration' model — real white space, but the reason matters: free community workarounds (Reddit + city subreddits + ChatGPT) already satisfy most latent demand.",
         "keywords": [
-          { "keyword": "travel concierge service", "volume": 150, "kd": 6 },
-          { "keyword": "rent a local friend", "volume": 100, "kd": 31 },
-          { "keyword": "go ask a local", "volume": 100, "kd": 0 },
-          { "keyword": "chat with locals", "volume": 70, "kd": 39 },
-          { "keyword": "travel like a local", "volume": 60, "kd": 3 },
-          { "keyword": "local guide app", "volume": 50, "kd": 42 },
-          { "keyword": "local travel advisor", "volume": 50, "kd": 0 },
-          { "keyword": "ask a local", "volume": 40, "kd": 0 },
-          { "keyword": "personal travel guide", "volume": 30, "kd": 77 },
-          { "keyword": "local insider tips", "volume": 10, "kd": 0 }
+          {
+            "keyword": "travel concierge service",
+            "volume": 150,
+            "kd": 6
+          },
+          {
+            "keyword": "rent a local friend",
+            "volume": 100,
+            "kd": 31
+          },
+          {
+            "keyword": "go ask a local",
+            "volume": 100,
+            "kd": 0
+          },
+          {
+            "keyword": "chat with locals",
+            "volume": 70,
+            "kd": 39
+          },
+          {
+            "keyword": "travel like a local",
+            "volume": 60,
+            "kd": 3
+          },
+          {
+            "keyword": "local guide app",
+            "volume": 50,
+            "kd": 42
+          },
+          {
+            "keyword": "local travel advisor",
+            "volume": 50,
+            "kd": 0
+          },
+          {
+            "keyword": "ask a local",
+            "volume": 40,
+            "kd": 0
+          },
+          {
+            "keyword": "personal travel guide",
+            "volume": 30,
+            "kd": 77
+          },
+          {
+            "keyword": "local insider tips",
+            "volume": 10,
+            "kd": 0
+          }
         ],
         "communitySignals": [
-          { "type": "COMPLAINT", "signal": "Tourist trap fatigue is massively documented. TripAdvisor blocked/removed 2.7M fake reviews in 2024 (+34% YoY). Famous case: Oobah Butler's 'The Shed at Dulwich' — non-existent restaurant taken to #1 in London via fake reviews", "source": "https://en.wikipedia.org/wiki/Tripadvisor" },
-          { "type": "COMPLAINT", "signal": "TripAdvisor and Yelp reviews are unreliable, overwhelmed by fake reviews and pay-to-play algorithms", "source": "https://www.tripologiste.com/blog/why-we-no-longer-trust-tripadvisor-or-yelp-for-travel-reviews" },
-          { "type": "REQUEST", "signal": "Travelers want recommendations from real locals, but the default solution they reach for is free Reddit — city-specific subreddits (r/askTO, r/Madrid), r/travel, r/solotravel", "source": "https://www.travelingmitch.com/mostrecent/travel-subreddits-tour-the-world" },
-          { "type": "DISCUSSION", "signal": "Dozens of SEO articles on 'how to avoid tourist traps' and 'how to find authentic experiences' confirm informational search demand but not willingness-to-pay", "source": "https://comealongwithpong.com/how-to-find-authentic-travel-experiences-not-just-tourist-traps/" }
+          {
+            "type": "COMPLAINT",
+            "signal": "Tourist trap fatigue is massively documented. TripAdvisor blocked/removed 2.7M fake reviews in 2024 (+34% YoY). Famous case: Oobah Butler's 'The Shed at Dulwich' — non-existent restaurant taken to #1 in London via fake reviews",
+            "source": "https://en.wikipedia.org/wiki/Tripadvisor"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "TripAdvisor and Yelp reviews are unreliable, overwhelmed by fake reviews and pay-to-play algorithms",
+            "source": "https://www.tripologiste.com/blog/why-we-no-longer-trust-tripadvisor-or-yelp-for-travel-reviews"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Travelers want recommendations from real locals, but the default solution they reach for is free Reddit — city-specific subreddits (r/askTO, r/Madrid), r/travel, r/solotravel",
+            "source": "https://www.travelingmitch.com/mostrecent/travel-subreddits-tour-the-world"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Dozens of SEO articles on 'how to avoid tourist traps' and 'how to find authentic experiences' confirm informational search demand but not willingness-to-pay",
+            "source": "https://comealongwithpong.com/how-to-find-authentic-travel-experiences-not-just-tourist-traps/"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM",
@@ -3101,8 +3271,18 @@
             "Pivot 3 (data-strongest pivot) — Non-English destinations niche: Focus on Japan, Korea, Vietnam, China, Thailand, Morocco. KD averages 26 across keywords with combined volume ~6,000 ('japan travel guide' 2200/38, 'japan travel tips' 900/6, 'thailand travel guide' 800/12, 'morocco travel guide' 600/7). Language barrier creates a real moat against the free Reddit workaround."
           ],
           "pivotScores": [
-            { "status": "needs_screening", "score": null, "bottleneck": "Different audience (host, not traveler) — competitor set, signals and channel completely change" },
-            { "status": "improvement", "score": 62, "band": "Good", "delta": 7, "bottleneck": "Smaller addressable market, harder local recruitment in non-Western cultures" }
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Different audience (host, not traveler) — competitor set, signals and channel completely change"
+            },
+            {
+              "status": "improvement",
+              "score": 62,
+              "band": "Good",
+              "delta": 7,
+              "bottleneck": "Smaller addressable market, harder local recruitment in non-Western cultures"
+            }
           ]
         },
         "forjaScore": {
@@ -3633,46 +3813,179 @@
           "differentiation": "vs Notion/spreadsheets: purpose-built with creator-specific fields. vs Brand-side CRMs (Grin, AspireIQ): wrong direction, too expensive. vs All-in-one platforms (Beacons, Passionfroot): deal management is secondary feature, not core."
         },
         "assumptions": [
-          { "assumption": "Micro-influencers will pay $9-15/month for a dedicated CRM when Notion templates cost $5-25 one-time", "risk": "HIGH" },
-          { "assumption": "A new entrant can gain traction where 8-10 tools are already attempting without success", "risk": "MEDIUM" },
-          { "assumption": "SEO can be a viable acquisition channel with ~910 vol/month in transactional product keywords", "risk": "HIGH" },
-          { "assumption": "The 'messy middle' segment (10K-200K followers, 3-10 active deals) is large enough to sustain a niche product", "risk": "MEDIUM" },
-          { "assumption": "Creators will keep deal management in the app instead of reverting to DMs/WhatsApp", "risk": "MEDIUM" }
+          {
+            "assumption": "Micro-influencers will pay $9-15/month for a dedicated CRM when Notion templates cost $5-25 one-time",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "A new entrant can gain traction where 8-10 tools are already attempting without success",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "SEO can be a viable acquisition channel with ~910 vol/month in transactional product keywords",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The 'messy middle' segment (10K-200K followers, 3-10 active deals) is large enough to sustain a niche product",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Creators will keep deal management in the app instead of reverting to DMs/WhatsApp",
+            "risk": "MEDIUM"
+          }
         ],
         "competitors": [
-          { "name": "Beacons", "type": "indirect", "dr": 91, "weakness": "All-in-one creator platform — deal management is a secondary feature, not core" },
-          { "name": "Collabstr", "type": "indirect", "dr": 72, "weakness": "Marketplace for transactions, not CRM. 15% commission on payouts" },
-          { "name": "Passionfroot", "type": "indirect", "dr": 66, "weakness": "Focused on B2B/newsletter creators. 5-15% commission" },
-          { "name": "Rella", "type": "direct", "dr": 37, "weakness": "No free plan. Per-seat pricing. More content management than deal CRM" },
-          { "name": "July", "type": "indirect", "dr": 36, "weakness": "For agencies, not individual creators. $50/month + $6/creator" },
-          { "name": "Kitly", "type": "indirect", "dr": 0, "weakness": "More media kit than deal CRM. Limited pipeline management" }
+          {
+            "name": "Beacons",
+            "type": "indirect",
+            "dr": 91,
+            "weakness": "All-in-one creator platform — deal management is a secondary feature, not core"
+          },
+          {
+            "name": "Collabstr",
+            "type": "indirect",
+            "dr": 72,
+            "weakness": "Marketplace for transactions, not CRM. 15% commission on payouts"
+          },
+          {
+            "name": "Passionfroot",
+            "type": "indirect",
+            "dr": 66,
+            "weakness": "Focused on B2B/newsletter creators. 5-15% commission"
+          },
+          {
+            "name": "Rella",
+            "type": "direct",
+            "dr": 37,
+            "weakness": "No free plan. Per-seat pricing. More content management than deal CRM"
+          },
+          {
+            "name": "July",
+            "type": "indirect",
+            "dr": 36,
+            "weakness": "For agencies, not individual creators. $50/month + $6/creator"
+          },
+          {
+            "name": "Kitly",
+            "type": "indirect",
+            "dr": 0,
+            "weakness": "More media kit than deal CRM. Limited pipeline management"
+          }
         ],
         "competitiveDensity": "Saturated — 6+ creator-side tools, 8-10 emerging tools found in Reddit, multiple DIY solutions (Notion/Sheets). No one has won, but many are trying.",
         "keywords": [
-          { "keyword": "influencer crm", "volume": 800, "kd": 0 },
-          { "keyword": "sponsorship proposal template", "volume": 700, "kd": 5 },
-          { "keyword": "influencer contract template", "volume": 500, "kd": 0 },
-          { "keyword": "influencer media kit", "volume": 450, "kd": 12 },
-          { "keyword": "influencer rate calculator", "volume": 150, "kd": 7 },
-          { "keyword": "influencer invoice template", "volume": 150, "kd": 0 },
-          { "keyword": "creator economy tools", "volume": 150, "kd": 13 },
-          { "keyword": "freelance crm", "volume": 80, "kd": 4 },
-          { "keyword": "sponsorship tracker", "volume": 70, "kd": 0 },
-          { "keyword": "influencer sponsorship", "volume": 30, "kd": 47 }
+          {
+            "keyword": "influencer crm",
+            "volume": 800,
+            "kd": 0
+          },
+          {
+            "keyword": "sponsorship proposal template",
+            "volume": 700,
+            "kd": 5
+          },
+          {
+            "keyword": "influencer contract template",
+            "volume": 500,
+            "kd": 0
+          },
+          {
+            "keyword": "influencer media kit",
+            "volume": 450,
+            "kd": 12
+          },
+          {
+            "keyword": "influencer rate calculator",
+            "volume": 150,
+            "kd": 7
+          },
+          {
+            "keyword": "influencer invoice template",
+            "volume": 150,
+            "kd": 0
+          },
+          {
+            "keyword": "creator economy tools",
+            "volume": 150,
+            "kd": 13
+          },
+          {
+            "keyword": "freelance crm",
+            "volume": 80,
+            "kd": 4
+          },
+          {
+            "keyword": "sponsorship tracker",
+            "volume": 70,
+            "kd": 0
+          },
+          {
+            "keyword": "influencer sponsorship",
+            "volume": 30,
+            "kd": 47
+          }
         ],
         "communitySignals": [
-          { "type": "COMPLAINT", "signal": "Managing brand deals is actual hell — creator with 47K, organizing deals at 2am. Invoices named final_final_frfr_THISONE.pdf", "source": "Reddit r/influencermarketing (29 upvotes, 41 comments)" },
-          { "type": "COMPLAINT", "signal": "I lost $50 by forgetting part of sponsor deal — missed Instagram Story deadline", "source": "Reddit r/NewTubers" },
-          { "type": "COMPLAINT", "signal": "My friend waited 3 months to get paid $4,200 — most creators don't track payments vs pending", "source": "Reddit r/influencermarketing" },
-          { "type": "COMPLAINT", "signal": "Keep track of brand collabs - my system is a mess — DMs + email + Google Sheet from 2023", "source": "Reddit r/InstagramMarketing" },
-          { "type": "COMPLAINT", "signal": "Google Sheet starting to fall apart, nearly missed a deliverable because brand's email got buried", "source": "Reddit r/PartneredYoutube" },
-          { "type": "COMPLAINT", "signal": "Fastest way creators lose brand deals — operational disorganization kills deals, confirmed from brand side", "source": "Reddit r/influencermarketing (14 upvotes)" },
-          { "type": "REQUEST", "signal": "How do you actually manage your brand deals? Would you pay $20-30/month? — responses NOT enthusiastic about paying", "source": "Reddit r/PartneredYoutube (12 comments)" },
-          { "type": "REQUEST", "signal": "How are you actually managing brand deals as a creator? — everything spread across email, DMs, WhatsApp, Notion", "source": "Reddit r/UGCcreators" },
-          { "type": "REQUEST", "signal": "Creators & Agencies - How do you manage brand deals? — agency manager: still spreadsheets and email chains", "source": "Reddit r/influencermarketing" },
-          { "type": "REQUEST", "signal": "If you're a small creator, what would make getting brand deals easier?", "source": "Reddit r/influencermarketing" },
-          { "type": "DISCUSSION", "signal": "How are agencies tracking brand deal status across multiple creators? — confirms market fragmentation", "source": "Reddit r/influencermarketing (19 comments)" },
-          { "type": "DISCUSSION", "signal": "Developer building sponsorship tracker for micro-influencers — supply-side signal of emerging competition", "source": "Reddit r/InstagramMarketing" }
+          {
+            "type": "COMPLAINT",
+            "signal": "Managing brand deals is actual hell — creator with 47K, organizing deals at 2am. Invoices named final_final_frfr_THISONE.pdf",
+            "source": "Reddit r/influencermarketing (29 upvotes, 41 comments)"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "I lost $50 by forgetting part of sponsor deal — missed Instagram Story deadline",
+            "source": "Reddit r/NewTubers"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "My friend waited 3 months to get paid $4,200 — most creators don't track payments vs pending",
+            "source": "Reddit r/influencermarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Keep track of brand collabs - my system is a mess — DMs + email + Google Sheet from 2023",
+            "source": "Reddit r/InstagramMarketing"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Google Sheet starting to fall apart, nearly missed a deliverable because brand's email got buried",
+            "source": "Reddit r/PartneredYoutube"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Fastest way creators lose brand deals — operational disorganization kills deals, confirmed from brand side",
+            "source": "Reddit r/influencermarketing (14 upvotes)"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "How do you actually manage your brand deals? Would you pay $20-30/month? — responses NOT enthusiastic about paying",
+            "source": "Reddit r/PartneredYoutube (12 comments)"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "How are you actually managing brand deals as a creator? — everything spread across email, DMs, WhatsApp, Notion",
+            "source": "Reddit r/UGCcreators"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Creators & Agencies - How do you manage brand deals? — agency manager: still spreadsheets and email chains",
+            "source": "Reddit r/influencermarketing"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "If you're a small creator, what would make getting brand deals easier?",
+            "source": "Reddit r/influencermarketing"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "How are agencies tracking brand deal status across multiple creators? — confirms market fragmentation",
+            "source": "Reddit r/influencermarketing (19 comments)"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Developer building sponsorship tracker for micro-influencers — supply-side signal of emerging competition",
+            "source": "Reddit r/InstagramMarketing"
+          }
         ],
         "executability": {
           "complexity": "LOW",
@@ -3751,47 +4064,186 @@
           "differentiation": "vs recipe blogs: no ads, instant loading. vs Paprika/CopyMeThat: modern web-first, cleaner UX. vs Notion/screenshots: structured data with auto-scaling. vs Apple-only apps (Mela, Pestle): works on any platform."
         },
         "assumptions": [
-          { "assumption": "Users will switch from established apps (Paprika $5, Mela $6 one-time) to a new web app", "risk": "HIGH" },
-          { "assumption": "A new web app can compete for SEO terms dominated by DR 52-67 incumbents", "risk": "HIGH" },
-          { "assumption": "The 'Mela for web' gap is real and not already being filled by Mealie, RecipeSage, or Cooked.wiki", "risk": "MEDIUM" },
-          { "assumption": "Recipe URL extraction (scraping) won't face legal/ethical pushback or systematic breakage", "risk": "MEDIUM" },
-          { "assumption": "Users will pay for yet another recipe app in a market with 25+ options", "risk": "HIGH" }
+          {
+            "assumption": "Users will switch from established apps (Paprika $5, Mela $6 one-time) to a new web app",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "A new web app can compete for SEO terms dominated by DR 52-67 incumbents",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "The 'Mela for web' gap is real and not already being filled by Mealie, RecipeSage, or Cooked.wiki",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Recipe URL extraction (scraping) won't face legal/ethical pushback or systematic breakage",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Users will pay for yet another recipe app in a market with 25+ options",
+            "risk": "HIGH"
+          }
         ],
         "competitors": [
-          { "name": "Samsung Food", "type": "direct", "dr": 67, "weakness": "Intrusive ads in free tier, complex UX, persistent bugs" },
-          { "name": "Plan to Eat", "type": "direct", "dr": 64, "weakness": "$49/year, no own recipe library, not minimalist" },
-          { "name": "Paprika", "type": "direct", "dr": 63, "weakness": "Dated UI, no web version, per-platform purchase, no video import" },
-          { "name": "Mealime", "type": "indirect", "dr": 63, "weakness": "Limited recipe pool, web import hard to edit" },
-          { "name": "AnyList", "type": "indirect", "dr": 60, "weakness": "Recipes are secondary feature, limited import" },
-          { "name": "Mealie", "type": "direct", "dr": 55, "weakness": "Requires Docker, not for normal users" },
-          { "name": "CopyMeThat", "type": "direct", "dr": 52, "weakness": "Ads, dated UI, limited functionality" },
-          { "name": "Recipe Keeper", "type": "direct", "dr": 41, "weakness": "Per-platform purchase, functional but not elegant UI" }
+          {
+            "name": "Samsung Food",
+            "type": "direct",
+            "dr": 67,
+            "weakness": "Intrusive ads in free tier, complex UX, persistent bugs"
+          },
+          {
+            "name": "Plan to Eat",
+            "type": "direct",
+            "dr": 64,
+            "weakness": "$49/year, no own recipe library, not minimalist"
+          },
+          {
+            "name": "Paprika",
+            "type": "direct",
+            "dr": 63,
+            "weakness": "Dated UI, no web version, per-platform purchase, no video import"
+          },
+          {
+            "name": "Mealime",
+            "type": "indirect",
+            "dr": 63,
+            "weakness": "Limited recipe pool, web import hard to edit"
+          },
+          {
+            "name": "AnyList",
+            "type": "indirect",
+            "dr": 60,
+            "weakness": "Recipes are secondary feature, limited import"
+          },
+          {
+            "name": "Mealie",
+            "type": "direct",
+            "dr": 55,
+            "weakness": "Requires Docker, not for normal users"
+          },
+          {
+            "name": "CopyMeThat",
+            "type": "direct",
+            "dr": 52,
+            "weakness": "Ads, dated UI, limited functionality"
+          },
+          {
+            "name": "Recipe Keeper",
+            "type": "direct",
+            "dr": 41,
+            "weakness": "Per-platform purchase, functional but not elegant UI"
+          }
         ],
         "competitiveDensity": "Saturated — 25+ competitors across native apps, web apps, meal planners, self-hosted solutions, and clippers. The most saturated category evaluated in Forja.",
         "keywords": [
-          { "keyword": "recipe keeper", "volume": 2300, "kd": 15 },
-          { "keyword": "meal planner app", "volume": 1000, "kd": 24 },
-          { "keyword": "recipe organizer", "volume": 800, "kd": 26 },
-          { "keyword": "recipe organizer app", "volume": 450, "kd": 52 },
-          { "keyword": "meal planner app free", "volume": 400, "kd": 2 },
-          { "keyword": "recipe saver", "volume": 150, "kd": 40 },
-          { "keyword": "recipe book app", "volume": 150, "kd": 57 },
-          { "keyword": "recipe manager app", "volume": 70, "kd": 41 },
-          { "keyword": "recipe collector", "volume": 30, "kd": 26 }
+          {
+            "keyword": "recipe keeper",
+            "volume": 2300,
+            "kd": 15
+          },
+          {
+            "keyword": "meal planner app",
+            "volume": 1000,
+            "kd": 24
+          },
+          {
+            "keyword": "recipe organizer",
+            "volume": 800,
+            "kd": 26
+          },
+          {
+            "keyword": "recipe organizer app",
+            "volume": 450,
+            "kd": 52
+          },
+          {
+            "keyword": "meal planner app free",
+            "volume": 400,
+            "kd": 2
+          },
+          {
+            "keyword": "recipe saver",
+            "volume": 150,
+            "kd": 40
+          },
+          {
+            "keyword": "recipe book app",
+            "volume": 150,
+            "kd": 57
+          },
+          {
+            "keyword": "recipe manager app",
+            "volume": 70,
+            "kd": 41
+          },
+          {
+            "keyword": "recipe collector",
+            "volume": 30,
+            "kd": 26
+          }
         ],
         "communitySignals": [
-          { "type": "COMPLAINT", "signal": "Would pay for a clean recipe database without filler content — recipe sites nearly unusable for non-technical users", "source": "Hacker News (item #29795879)" },
-          { "type": "COMPLAINT", "signal": "I have yet to encounter a recipe site I don't hate — only AllRecipes tolerated for its print button", "source": "Hacker News (item #25360025)" },
-          { "type": "COMPLAINT", "signal": "Recipe blogs serve 15-30 display ads per page, 8.6s average mobile load time vs 3s recommended", "source": "Multiple sources" },
-          { "type": "COMPLAINT", "signal": "RecipeBook app removed from App Store — users lost recipes painstakingly entered over many years", "source": "App Store reviews" },
-          { "type": "COMPLAINT", "signal": "Food blogger: I hate it — the current system forces you to choose between good user experience and paying your mortgage", "source": "eathealthy365" },
-          { "type": "REQUEST", "signal": "Someone should make a text-only recipe search website — a user immediately built one", "source": "Hacker News (item #25360025)" },
-          { "type": "REQUEST", "signal": "Jump to Recipe Chrome extension with thousands of users — only 92 lines of JavaScript", "source": "Chrome Web Store" },
-          { "type": "REQUEST", "signal": "Demand for apps without subscriptions — subscription fatigue is a defining 2025-2026 trend", "source": "Adapty blog, DrizzleLemons" },
-          { "type": "REQUEST", "signal": "Requested features: unit conversion, recipe scaling, automatic grocery lists", "source": "Multiple Hacker News threads" },
-          { "type": "DISCUSSION", "signal": "RecipeAsly creator received personal threats and legal problems for scraping recipes", "source": "Hacker News (item #29795482)" },
-          { "type": "DISCUSSION", "signal": "Google AI Overviews generate recipe slop — mixed steps and impossible instructions", "source": "Fortune, Search Engine Land" },
-          { "type": "DISCUSSION", "signal": "Show HN: I built a recipe app is practically a meme — dozens have tried, most common indie project", "source": "Hacker News (recurring pattern)" }
+          {
+            "type": "COMPLAINT",
+            "signal": "Would pay for a clean recipe database without filler content — recipe sites nearly unusable for non-technical users",
+            "source": "Hacker News (item #29795879)"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "I have yet to encounter a recipe site I don't hate — only AllRecipes tolerated for its print button",
+            "source": "Hacker News (item #25360025)"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Recipe blogs serve 15-30 display ads per page, 8.6s average mobile load time vs 3s recommended",
+            "source": "Multiple sources"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "RecipeBook app removed from App Store — users lost recipes painstakingly entered over many years",
+            "source": "App Store reviews"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Food blogger: I hate it — the current system forces you to choose between good user experience and paying your mortgage",
+            "source": "eathealthy365"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Someone should make a text-only recipe search website — a user immediately built one",
+            "source": "Hacker News (item #25360025)"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Jump to Recipe Chrome extension with thousands of users — only 92 lines of JavaScript",
+            "source": "Chrome Web Store"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Demand for apps without subscriptions — subscription fatigue is a defining 2025-2026 trend",
+            "source": "Adapty blog, DrizzleLemons"
+          },
+          {
+            "type": "REQUEST",
+            "signal": "Requested features: unit conversion, recipe scaling, automatic grocery lists",
+            "source": "Multiple Hacker News threads"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "RecipeAsly creator received personal threats and legal problems for scraping recipes",
+            "source": "Hacker News (item #29795482)"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Google AI Overviews generate recipe slop — mixed steps and impossible instructions",
+            "source": "Fortune, Search Engine Land"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Show HN: I built a recipe app is practically a meme — dozens have tried, most common indie project",
+            "source": "Hacker News (recurring pattern)"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM",
@@ -3848,6 +4300,215 @@
               "raw": 20,
               "weighted": 2,
               "reason": "5 assumptions: 3 HIGH + 2 MEDIUM → avg 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "restaurant-price-estimator",
+      "idea": "Restaurant price estimator",
+      "screeningData": {
+        "evaluatedDate": "2026-04-10",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Buscador de restaurantes que combina reseñas públicas con un cálculo real de precio por persona, obtenido mediante un agente que accede a las cartas de los restaurantes y construye un menú tipo comparable (ensalada + plato principal + postre + bebida).",
+          "audience": "Viajeros y comensales que buscan restaurantes en ciudades que no conocen bien, especialmente los que quieren controlar presupuesto sin sacrificar calidad.",
+          "problem": "Los canales actuales (Google Maps, TripAdvisor) usan rangos de precio vagos ($/$$/$$$) que no permiten saber cuánto costará realmente comer. Esto lleva a sorpresas en la cuenta o a descartar buenos restaurantes por miedo al precio.",
+          "solution": "Un agente analiza las cartas de los restaurantes (disponibles online en la mayoría de casos), calcula un \"menú tipo\" estandarizado y presenta un precio estimado real por persona. Combinado con datos de reseñas existentes, permite búsquedas tipo: \"Italianos en Alicante, 4+ estrellas, 100+ reseñas, menos de 20 EUR/persona\".",
+          "differentiation": "Nadie ofrece un precio real calculado a partir de la carta. Los competidores se quedan en el rango $/$$/$$$. Esto convierte una decisión basada en intuición en una comparación cuantitativa justa entre restaurantes."
+        },
+        "assumptions": [
+          {
+            "assumption": "Las cartas de los restaurantes están disponibles online y son scrapeables a escala (HTML, PDF, imágenes)",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Un \"menú tipo\" estandarizado (ensalada + principal + postre + bebida) es comparable entre restaurantes y cocinas distintas",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Los usuarios adoptarán una herramienta nueva en lugar de usar Google Maps/TripAdvisor donde ya buscan",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Los precios de los menús se pueden mantener actualizados a escala sin degradación de datos",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "La frustración con $/$$/$$ es suficiente para motivar el uso de una herramienta dedicada",
+            "risk": "MEDIUM"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "FastFoodMenuPrices.com",
+            "type": "direct",
+            "dr": 51,
+            "weakness": "Solo cadenas de fast food, no restaurantes locales/independientes"
+          },
+          {
+            "name": "RealMenuPrices.com",
+            "type": "direct",
+            "dr": 21,
+            "weakness": "Solo cadenas, sin estimación por persona"
+          },
+          {
+            "name": "MenuXP.com",
+            "type": "direct",
+            "dr": 7,
+            "weakness": "Pocos restaurantes, cálculo básico de eat-for-2 estimate"
+          },
+          {
+            "name": "TheFoodPrices.com",
+            "type": "direct",
+            "dr": 2,
+            "weakness": "Solo fast food, solo cadenas"
+          },
+          {
+            "name": "Google Maps",
+            "type": "incumbent",
+            "weakness": "$/$$/$$ filter vago, domina búsqueda local de restaurantes"
+          },
+          {
+            "name": "TripAdvisor",
+            "type": "incumbent",
+            "weakness": "$/$$/$$$, rangos de precio confunden formalidad con coste"
+          },
+          {
+            "name": "TheFork/ElTenedor",
+            "type": "incumbent",
+            "weakness": "Muestra precio medio por restaurante en España, reservas con descuentos"
+          }
+        ],
+        "competitiveDensity": "Moderate",
+        "keywords": [
+          {
+            "keyword": "cheap eats near me",
+            "volume": 6900,
+            "kd": 0
+          },
+          {
+            "keyword": "donde comer cerca de mi ubicación barato",
+            "volume": 5500,
+            "kd": 0
+          },
+          {
+            "keyword": "menu del dia",
+            "volume": 3500,
+            "kd": 3
+          },
+          {
+            "keyword": "best cheap eats near me",
+            "volume": 1800,
+            "kd": 0
+          },
+          {
+            "keyword": "affordable restaurants near me",
+            "volume": 1600,
+            "kd": 0
+          },
+          {
+            "keyword": "restaurant cost calculator",
+            "volume": 80,
+            "kd": 5
+          },
+          {
+            "keyword": "restaurant menu prices",
+            "volume": 30,
+            "kd": 64
+          },
+          {
+            "keyword": "compare restaurant prices",
+            "volume": 20,
+            "kd": 0
+          },
+          {
+            "keyword": "restaurant price comparison",
+            "volume": 10,
+            "kd": 0
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "COMPLAINT",
+            "signal": "TripAdvisor forum thread 'Restaurant cost rating misleading' — users frustrated that $/$$/$$ conflates price with dining formality, request separate real price rating system",
+            "source": "TripAdvisor Forum"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Google Maps Community threads asking 'what does $$ mean?' — confusion about price indicator meaning",
+            "source": "Google Maps Community"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Quora questions about what restaurant price indicators actually mean",
+            "source": "Quora"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Travel blogs noting dining costs are the biggest budget surprise when traveling",
+            "source": "Travel blogs"
+          }
+        ],
+        "executability": {
+          "complexity": "HIGH",
+          "timeline": "4-6 weeks for limited scope, months for scale",
+          "dependencies": "Google Places API (paid, $0.02-0.04/request), restaurant menu data source (no reliable free API), review platform APIs (restrictive terms)",
+          "risks": "Fragile scraping (format changes, anti-scraping), data quality and freshness at scale, legal risks of scraping review platforms, Google could add real price estimates at any time"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "The pain is real — $/$$/$$ is genuinely confusing with documented complaints on TripAdvisor, Google Maps, and Quora",
+            "Weak direct competitors — consumer-facing price sites are small (DR 2-51) and focused only on chains",
+            "\"Cheap eats [city]\" cluster has high volume (6,900+/mo US, 40K+/mo Spain) with KD 0-3",
+            "Clear differentiation — nobody offers real per-person price estimates from actual menu data",
+            "Spain's \"menú del día\" creates a uniquely standardized price comparison opportunity"
+          ],
+          "against": [
+            "Near-zero search demand for the core concept — \"restaurant price comparison\" = 10/mo, total core ~140/mo",
+            "Tech complexity is HIGH — menu scraping, OCR, standardization, data freshness. Not a weekend MVP; requires significant ongoing infrastructure",
+            "Google Maps owns the local restaurant search space — competing means competing against Google Maps itself",
+            "Zero community signals asking for a dedicated tool — frustration exists but nobody seeks a separate solution",
+            "Existential platform risk — Google could add real price estimates at any time using their existing data"
+          ]
+        },
+        "forjaScore": {
+          "total": 61,
+          "calculatedAt": "2026-04-10",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 100,
+              "weighted": 25.0,
+              "reason": "Volume-weighted avg KD ~0.36, dominated by 'cheap eats near me' (KD 0, vol 6,900) — score inflated because these are local intent queries captured by Google Maps"
+            },
+            "competitivePressure": {
+              "raw": 70,
+              "weighted": 14.0,
+              "reason": "Moderate density; avg DR of direct competitors = 20.25 (TheFoodPrices 2, MenuXP 7, RealMenuPrices 21, FastFoodMenuPrices 51)"
+            },
+            "marketDemand": {
+              "raw": 60,
+              "weighted": 9.0,
+              "reason": "Total keyword volume ~7,320 (bucket 2K-10K = 60); 2 COMPLAINT signals (below 3 threshold for bonus)"
+            },
+            "marketSize": {
+              "raw": 60,
+              "weighted": 9.0,
+              "reason": "Same volume bucket as Market Demand (2K-10K = 60)"
+            },
+            "executionFeasibility": {
+              "raw": 10,
+              "weighted": 1.5,
+              "reason": "HIGH complexity (20) + paid dependencies with $ cost (-10) = 10"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2.0,
+              "reason": "3 HIGH risk assumptions (0 pts each) + 2 MEDIUM (50 pts each) = avg 20"
             }
           },
           "missingInputs": [],
