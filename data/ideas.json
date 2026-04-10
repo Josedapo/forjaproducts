@@ -1008,6 +1008,18 @@
       "pivotHistory": null
     },
     {
+      "idea": "World pain directory",
+      "slug": "world-pain-directory",
+      "description": "Directorio navegable de dolores y necesidades no resueltas del mundo, extraídos de comunidades, con pain score y discriminación geográfica",
+      "pain": "No existe una forma estructurada de entender qué preocupa a las personas del mundo, dónde y con qué intensidad; los datos existen dispersos en miles de comunidades",
+      "source": "Own idea",
+      "painScore": 2,
+      "added": "2026-04-10",
+      "status": "Evaluated - DISCARD",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
       "idea": "Secure quoting tool for contractors",
       "description": "Auto-generate branded quotes with recipient validation and SMS/email delivery",
       "pain": "A plumber's quoting app emailed a bid to the wrong client; trade professionals need simple, mistake-proof quoting",
@@ -4509,6 +4521,208 @@
               "raw": 20,
               "weighted": 2.0,
               "reason": "3 HIGH risk assumptions (0 pts each) + 2 MEDIUM (50 pts each) = avg 20"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "world-pain-directory",
+      "idea": "World pain directory",
+      "screeningData": {
+        "evaluatedDate": "2026-04-10",
+        "verdict": "DISCARD",
+        "idea": {
+          "what": "Un directorio web de necesidades no resueltas que tienen las personas en todos los ámbitos de la vida (salud, finanzas, vivienda, trabajo, crianza, etc.), investigadas desde múltiples fuentes comunitarias (Reddit, foros, reseñas, redes sociales). Cada pain point tiene un score de intensidad de dolor y está categorizado por dominio vital, con discriminación geográfica (problema local vs global).",
+          "audience": "Personas curiosas por entender el mundo, periodistas, investigadores, ONGs, think tanks, policy makers, y también emprendedores — pero estos últimos son un caso de uso, no EL caso de uso.",
+          "problem": "No existe una forma estructurada de entender qué preocupa realmente a las personas del mundo, dónde, y con qué intensidad. Los datos existen dispersos en miles de comunidades, pero nadie los agrega, categoriza ni puntúa de forma accesible. Los informes existentes (World Happiness Report, Gallup) son macro y basados en encuestas, no en dolor expresado espontáneamente.",
+          "solution": "Una plataforma que investiga fuentes comunitarias globales, extrae pain points reales, los categoriza por dominio vital, los puntúa por intensidad de dolor (frecuencia, engagement, esfuerzo en workarounds, intensidad emocional), y los etiqueta geográficamente. Un mapa navegable de lo que duele en el mundo.",
+          "differentiation": "A diferencia de informes macro (World Happiness Report, Gallup, Ipsos), este se basa en dolor expresado espontáneamente en comunidades reales, no en encuestas. A diferencia de herramientas para emprendedores (BigIdeasDB, PainOnSocial), no filtra por 'solucionable con producto' — incluye dolores sistémicos, culturales, o estructurales que simplemente merecen ser visibilizados."
+        },
+        "assumptions": [
+          {
+            "assumption": "Las personas quieren un directorio de pain points en lugar de contenido temático sobre problemas específicos",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Los pain points comunitarios se pueden extraer, puntuar y etiquetar geográficamente de forma fiable a escala",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Existe una audiencia viable más allá de emprendedores que visitaría regularmente un directorio de dolores",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "El producto puede diferenciarse significativamente de Our World in Data (DR 90, gratis, open source)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Existe un modelo de negocio sostenible para este tipo de producto",
+            "risk": "HIGH"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "BigIdeasDB",
+            "type": "direct",
+            "dr": 20,
+            "weakness": "Solo para entrepreneurs, solo digital/SaaS products, no discriminación geográfica"
+          },
+          {
+            "name": "StartupIdeasDB",
+            "type": "direct",
+            "dr": 18,
+            "weakness": "Solo para founders, enfoque en ideas de negocio, no en dolor humano general"
+          },
+          {
+            "name": "PainOnSocial",
+            "type": "direct",
+            "dr": 32,
+            "weakness": "Solo Reddit, solo para founders, sin contexto geográfico"
+          },
+          {
+            "name": "Trend Seeker",
+            "type": "direct",
+            "dr": 1,
+            "weakness": "Muy nuevo, scope muy limitado"
+          },
+          {
+            "name": "Our World in Data",
+            "type": "incumbent",
+            "dr": 90,
+            "weakness": "Institucional, no community-sourced, basado en datos macro no en dolor expresado"
+          },
+          {
+            "name": "Ipsos What Worries the World",
+            "type": "incumbent",
+            "dr": 89,
+            "weakness": "Solo encuestas en 30 países, no dolor expresado espontáneamente"
+          }
+        ],
+        "competitiveDensity": "Moderate",
+        "keywords": [
+          {
+            "keyword": "problems in the world",
+            "volume": 9100,
+            "kd": 61
+          },
+          {
+            "keyword": "social problems",
+            "volume": 8900,
+            "kd": 7
+          },
+          {
+            "keyword": "first world problems",
+            "volume": 5900,
+            "kd": 4
+          },
+          {
+            "keyword": "world problems",
+            "volume": 4800,
+            "kd": 52
+          },
+          {
+            "keyword": "global issues",
+            "volume": 3800,
+            "kd": 55
+          },
+          {
+            "keyword": "real world problems",
+            "volume": 2500,
+            "kd": 5
+          },
+          {
+            "keyword": "social problems examples",
+            "volume": 1400,
+            "kd": 8
+          },
+          {
+            "keyword": "problems in society",
+            "volume": 1300,
+            "kd": 4
+          },
+          {
+            "keyword": "biggest problems in the world",
+            "volume": 1000,
+            "kd": 34
+          },
+          {
+            "keyword": "unmet needs",
+            "volume": 700,
+            "kd": 4
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "DISCUSSION",
+            "signal": "HN thread about StartupIdeasDB 'Early Founders Using This to Avoid Idea Paralysis' — 1 point, 1 comment, minimal engagement",
+            "source": "Hacker News"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "r/dataisbeautiful (16M members) shows high interest in world problem visualizations as content consumption, not as product demand",
+            "source": "Reddit r/dataisbeautiful"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM-HIGH",
+          "timeline": "3-4 weeks for limited scope (English-only, manual curation, basic scoring)",
+          "dependencies": "Reddit API (paid, restricted — GummySearch shut down over commercial license issues), translation APIs for multi-language, potentially Google Trends API",
+          "risks": "Reddit API access restrictions (#1 risk, GummySearch precedent), geographic attribution accuracy fundamentally unreliable from community data, multi-language NLP complexity, data freshness at scale"
+        },
+        "verdict_detail": {
+          "decision": "DISCARD",
+          "inFavor": [
+            "Growing search demand for 'world problems' content (~39,400/mo, trending up)",
+            "Genuine white space between entrepreneur tools (BigIdeasDB) and institutional data (OWID) — nobody does community-sourced pain points for a general audience",
+            "Low-KD entry points exist: 'social problems' (8,900/mo, KD 7), 'real world problems' (2,500/mo, KD 5), 'problems in society' (1,300/mo, KD 4)",
+            "Geographic discrimination angle is unique — Ipsos does it via surveys, but nobody does it from community-sourced data",
+            "High viral/shareable potential — 'what hurts people in India vs Spain' is inherently interesting content"
+          ],
+          "against": [
+            "Zero search demand for the core concept — nobody searches for 'world pain database' or 'global pain directory'. Adjacent traffic is informational/educational, not product-seeking",
+            "Dominant incumbents in 'world problems' space: Our World in Data (DR 90, free, open source, 297 topics) captures the informational traffic",
+            "Reddit API restrictions killed GummySearch in 2025 — the primary community data source is unreliable at scale",
+            "No monetization path — general public won't pay when OWID is free; entrepreneurs have cheaper focused tools; researchers use institutional databases",
+            "Geographic attribution from community data is fundamentally unreliable — Reddit is 50%+ US, most forums don't tag location",
+            "Zero community signals — nobody is asking for this product in Reddit, HN, or any other community searched"
+          ]
+        },
+        "forjaScore": {
+          "total": 61,
+          "calculatedAt": "2026-04-10",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 70,
+              "weighted": 17.5,
+              "reason": "Volume-weighted avg KD ~30; low-KD terms exist but informational intent dominated by OWID/Wikipedia"
+            },
+            "competitivePressure": {
+              "raw": 71,
+              "weighted": 14.2,
+              "reason": "Moderate density; avg DR direct competitors = 17.6. Institutional incumbents (OWID DR 90, Ipsos DR 89) dominate informational space"
+            },
+            "marketDemand": {
+              "raw": 80,
+              "weighted": 12.0,
+              "reason": "Total keyword volume ~39,400 (bucket 10K-50K = 80); 0 COMPLAINT/REQUEST signals"
+            },
+            "marketSize": {
+              "raw": 80,
+              "weighted": 12.0,
+              "reason": "Same volume bucket as Market Demand"
+            },
+            "executionFeasibility": {
+              "raw": 30,
+              "weighted": 4.5,
+              "reason": "MEDIUM-HIGH complexity (40) + paid/restricted API dependency (-10) + 3-4 weeks timeline (0)"
+            },
+            "riskProfile": {
+              "raw": 10,
+              "weighted": 1.0,
+              "reason": "4 HIGH risk assumptions (0 pts each) + 1 MEDIUM (50 pts) = avg 10"
             }
           },
           "missingInputs": [],
