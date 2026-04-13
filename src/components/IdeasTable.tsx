@@ -10,7 +10,7 @@ import IdeaDetailOverlay from "./IdeaDetailOverlay";
 
 type SortField = "idea" | "painScore" | "added" | "status" | "forjaScore";
 type SortDir = "asc" | "desc";
-type LifecycleFilter = "all" | "pending" | "discard" | "pivot" | "advance" | "products";
+type LifecycleFilter = "all" | "pending" | "discard" | "pivot" | "advance";
 
 interface IdeasTableProps {
   ideas: Idea[];
@@ -31,7 +31,6 @@ const LIFECYCLE_TABS: { key: LifecycleFilter; label: string }[] = [
   { key: "discard", label: "Discard" },
   { key: "pivot", label: "Pivot" },
   { key: "advance", label: "Advance" },
-  { key: "products", label: "Products" },
 ];
 
 function isPending(idea: Idea): boolean {
@@ -79,14 +78,12 @@ export default function IdeasTable({
       discard: 0,
       pivot: 0,
       advance: 0,
-      products: 0,
     };
     for (const i of ideas) {
       if (isPending(i)) counts.pending++;
       if (isDiscard(i)) counts.discard++;
       if (isPivot(i)) counts.pivot++;
       if (isAdvance(i)) counts.advance++;
-      if (linkedProductFor(i)) counts.products++;
     }
     return counts;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -126,8 +123,6 @@ export default function IdeasTable({
       result = result.filter(isPivot);
     } else if (lifecycle === "advance") {
       result = result.filter(isAdvance);
-    } else if (lifecycle === "products") {
-      result = result.filter((i) => linkedProductFor(i));
     }
 
     result = [...result].sort((a, b) => {
