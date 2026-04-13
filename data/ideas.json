@@ -1175,7 +1175,17 @@
       "added": "2026-04-13",
       "status": "Evaluated - ADVANCE",
       "reportUrl": null,
-      "pivotHistory": ["investment-intelligence-agent"]
+      "pivotHistory": [
+        {
+          "idea": "Investment intelligence agent",
+          "status": "Evaluated - PIVOT",
+          "date": "2026-04-13",
+          "reportUrl": null,
+          "slug": "investment-intelligence-agent",
+          "forjaScore": 58,
+          "alignment": "aligned"
+        }
+      ]
     }
   ],
   "screenedIdeas": [
@@ -5090,22 +5100,16 @@
         ],
         "competitiveDensity": "Open",
         "keywords": [
-          { "keyword": "dcf calculator", "volume": 1300, "kd": 6, "tp": 1900, "global": 4600 },
-          { "keyword": "intrinsic value calculator", "volume": 600, "kd": 3, "tp": 1000, "global": 3300 },
-          { "keyword": "what is intrinsic value", "volume": 2700, "kd": 11, "tp": 2200, "global": 5600 },
-          { "keyword": "value investing", "volume": 4800, "kd": 43, "tp": 1300, "global": 17000 },
-          { "keyword": "fundamental analysis", "volume": 3400, "kd": 26, "tp": 2700, "global": 22000 },
-          { "keyword": "stock valuation", "volume": 900, "kd": 40, "tp": 500, "global": 3000 },
-          { "keyword": "reverse dcf calculator", "volume": 100, "kd": 1, "tp": 2200, "global": 400 },
-          { "keyword": "wide moat stocks", "volume": 150, "kd": 8, "tp": 250, "global": 250 },
-          { "keyword": "how to calculate intrinsic value", "volume": 200, "kd": 12, "tp": 600, "global": 600 },
-          { "keyword": "portfolio review tool", "volume": 150, "kd": 13, "tp": 2000, "global": 200 },
-          { "keyword": "moat investing", "volume": 150, "kd": 17, "tp": 1300, "global": 300 },
-          { "keyword": "stock fundamental analysis", "volume": 100, "kd": 13, "tp": 2700, "global": 700 },
-          { "keyword": "buy and hold investing", "volume": 100, "kd": 20, "tp": 300, "global": 200 },
-          { "keyword": "quality stocks", "volume": 100, "kd": 11, "tp": 2700, "global": 400 },
-          { "keyword": "investment checklist", "volume": 50, "kd": 0, "tp": 20, "global": 150 },
-          { "keyword": "stock watchlist", "volume": 700, "kd": 0, "tp": 12000, "global": 1300 }
+          { "keyword": "dcf calculator", "volume": 1300, "kd": 6 },
+          { "keyword": "intrinsic value calculator", "volume": 600, "kd": 3 },
+          { "keyword": "what is intrinsic value", "volume": 2700, "kd": 11 },
+          { "keyword": "value investing", "volume": 4800, "kd": 43 },
+          { "keyword": "fundamental analysis", "volume": 3400, "kd": 26 },
+          { "keyword": "stock valuation", "volume": 900, "kd": 40 },
+          { "keyword": "reverse dcf calculator", "volume": 100, "kd": 1 },
+          { "keyword": "wide moat stocks", "volume": 150, "kd": 8 },
+          { "keyword": "how to calculate intrinsic value", "volume": 200, "kd": 12 },
+          { "keyword": "portfolio review tool", "volume": 150, "kd": 13 }
         ],
         "communitySignals": [
           { "signal": "Finclaw: AI agent with thesis tracking, Show HN March 2026", "type": "REQUEST", "source": "Hacker News" },
@@ -5125,6 +5129,7 @@
           "risks": "Data freshness (quarterly vs daily), stock coverage scope (start with 50-100 quality companies)"
         },
         "verdict_detail": {
+          "decision": "ADVANCE",
           "inFavor": [
             "The direct niche is empty — all direct competitors are DR 0-5. No tool combines thesis tracking + quality scorecard + anti-trading philosophy",
             "Validated playbook — replicates exactly the ValuePerFan strategy (SEO calculators → programmatic pages → differentiated tool)",
@@ -5144,7 +5149,7 @@
         },
         "forjaScore": {
           "total": 77,
-          "calculated": "2026-04-13",
+          "calculatedAt": "2026-04-13",
           "dimensions": {
             "seoEntry": {
               "raw": 74,
