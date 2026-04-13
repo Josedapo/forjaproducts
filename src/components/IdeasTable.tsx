@@ -10,7 +10,7 @@ import IdeaDetailOverlay from "./IdeaDetailOverlay";
 
 type SortField = "idea" | "painScore" | "added" | "status" | "forjaScore";
 type SortDir = "asc" | "desc";
-type LifecycleFilter = "all" | "discovered" | "evaluated" | "in-production";
+type LifecycleFilter = "all" | "pending" | "discard" | "pivot" | "advance" | "products";
 
 interface IdeasTableProps {
   ideas: Idea[];
@@ -27,17 +27,27 @@ interface IdeasTableProps {
 
 const LIFECYCLE_TABS: { key: LifecycleFilter; label: string }[] = [
   { key: "all", label: "All" },
-  { key: "discovered", label: "Discovered" },
-  { key: "evaluated", label: "Evaluated" },
-  { key: "in-production", label: "In production" },
+  { key: "pending", label: "Pending" },
+  { key: "discard", label: "Discard" },
+  { key: "pivot", label: "Pivot" },
+  { key: "advance", label: "Advance" },
+  { key: "products", label: "Products" },
 ];
 
-function isEvaluated(idea: Idea): boolean {
-  return idea.status.includes("ADVANCE") || idea.status.includes("PIVOT") || idea.status.includes("DISCARD");
+function isPending(idea: Idea): boolean {
+  return !idea.status.includes("ADVANCE") && !idea.status.includes("PIVOT") && !idea.status.includes("DISCARD");
 }
 
-function isDiscovered(idea: Idea): boolean {
-  return !isEvaluated(idea);
+function isDiscard(idea: Idea): boolean {
+  return idea.status.includes("DISCARD");
+}
+
+function isPivot(idea: Idea): boolean {
+  return idea.status.includes("PIVOT");
+}
+
+function isAdvance(idea: Idea): boolean {
+  return idea.status.includes("ADVANCE");
 }
 
 export default function IdeasTable({
@@ -65,14 +75,18 @@ export default function IdeasTable({
   const lifecycleCounts = useMemo(() => {
     const counts: Record<LifecycleFilter, number> = {
       all: ideas.length,
-      discovered: 0,
-      evaluated: 0,
-      "in-production": 0,
+      pending: 0,
+      discard: 0,
+      pivot: 0,
+      advance: 0,
+      products: 0,
     };
     for (const i of ideas) {
-      if (isDiscovered(i)) counts.discovered++;
-      if (isEvaluated(i)) counts.evaluated++;
-      if (linkedProductFor(i)) counts["in-production"]++;
+      if (isPending(i)) counts.pending++;
+      if (isDiscard(i)) counts.discard++;
+      if (isPivot(i)) counts.pivot++;
+      if (isAdvance(i)) counts.advance++;
+      if (linkedProductFor(i)) counts.products++;
     }
     return counts;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -104,11 +118,15 @@ export default function IdeasTable({
       );
     }
 
-    if (lifecycle === "discovered") {
-      result = result.filter(isDiscovered);
-    } else if (lifecycle === "evaluated") {
-      result = result.filter(isEvaluated);
-    } else if (lifecycle === "in-production") {
+    if (lifecycle === "pending") {
+      result = result.filter(isPending);
+    } else if (lifecycle === "discard") {
+      result = result.filter(isDiscard);
+    } else if (lifecycle === "pivot") {
+      result = result.filter(isPivot);
+    } else if (lifecycle === "advance") {
+      result = result.filter(isAdvance);
+    } else if (lifecycle === "products") {
       result = result.filter((i) => linkedProductFor(i));
     }
 
