@@ -1152,6 +1152,18 @@
       "status": "Evaluated - PIVOT",
       "reportUrl": null,
       "pivotHistory": null
+    },
+    {
+      "idea": "Investment intelligence agent",
+      "slug": "investment-intelligence-agent",
+      "description": "AI agent that monitors your stock portfolio, contextualizes earnings/news for your specific positions, tracks investment theses, and provides curated weekly briefings",
+      "pain": "Retail investors are blind between portfolio checks; tools work in silos (news, earnings, tracking) but none contextualizes information for YOUR holdings",
+      "source": "Own idea (from Horizm sponsorship intelligence prototype exploration)",
+      "painScore": 4,
+      "added": "2026-04-13",
+      "status": "Evaluated - PIVOT",
+      "reportUrl": null,
+      "pivotHistory": null
     }
   ],
   "screenedIdeas": [
@@ -4723,6 +4735,307 @@
               "raw": 10,
               "weighted": 1.0,
               "reason": "4 HIGH risk assumptions (0 pts each) + 1 MEDIUM (50 pts) = avg 10"
+            }
+          },
+          "missingInputs": [],
+          "alignment": "aligned"
+        }
+      }
+    },
+    {
+      "slug": "investment-intelligence-agent",
+      "idea": "Investment intelligence agent",
+      "screeningData": {
+        "evaluatedDate": "2026-04-13",
+        "verdict": "PIVOT",
+        "idea": {
+          "what": "Vigil — AI agent that monitors your stock portfolio holdings and watchlist, filters market noise, and presents curated briefings that explain what happened and what it means for YOUR specific positions. Includes thesis tracking, conviction scoring, and portfolio-contextualized analysis.",
+          "audience": "The Disciplined Amateur — professional aged 35-55, not in finance, $50-100K portfolio, 5-10 holdings, checks 2-4x/month. Understands earnings and P/E but lacks time to synthesize multiple sources.",
+          "problem": "Retail investors are mostly flying blind between active portfolio checks. When something happens with their companies, they find out late, don't understand the implications for their specific portfolio, or panic-react based on incomplete information. Existing tools work in silos but none contextualizes information relative to the user's holdings.",
+          "solution": "An AI agent that continuously monitors SEC filings, earnings, news, and analyst updates for your specific portfolio, then presents a curated weekly briefing answering \"is everything OK?\" with thesis-tracking, conviction scoring, and portfolio-contextualized analysis.",
+          "differentiation": "(1) Investment thesis tracking — no competitor connects \"why you bought\" with \"what happened since.\" (2) Portfolio-contextualized intelligence — every insight answers \"so what for MY specific position.\" (3) Designed for calm, not engagement — anti-trading philosophy with no charts, no notifications, no gamification."
+        },
+        "assumptions": [
+          {
+            "assumption": "Retail investors want proactive intelligence (briefings), not just on-demand tools",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Users will trust an AI agent with portfolio-level financial context",
+            "risk": "HIGH"
+          },
+          {
+            "assumption": "Thesis tracking is valued enough to pay for",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "SEO can drive acquisition for this category",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A solopreneur can compete in fintech without team or funding",
+            "risk": "HIGH"
+          }
+        ],
+        "competitors": [
+          {
+            "name": "AInvest (ainvest.com)",
+            "type": "indirect",
+            "dr": 77,
+            "weakness": "Active trading focus, no thesis tracking"
+          },
+          {
+            "name": "Simply Wall St (simplywall.st)",
+            "type": "indirect",
+            "dr": 74,
+            "weakness": "Narratives are manual/community, not automated"
+          },
+          {
+            "name": "Fiscal.ai",
+            "type": "indirect",
+            "dr": 63,
+            "weakness": "On-demand research, no portfolio monitoring"
+          },
+          {
+            "name": "Meyka (meyka.com)",
+            "type": "indirect",
+            "dr": 54,
+            "weakness": "No thesis tracking, no personalized briefings"
+          },
+          {
+            "name": "Kavout (kavout.com)",
+            "type": "indirect",
+            "dr": 52,
+            "weakness": "On-demand agents, not proactive on portfolio"
+          },
+          {
+            "name": "Danelfin (danelfin.com)",
+            "type": "indirect",
+            "dr": 40,
+            "weakness": "Pro-trading philosophy, opposite design"
+          },
+          {
+            "name": "PortfolioPilot (portfoliopilot.com)",
+            "type": "indirect",
+            "dr": 37,
+            "weakness": "Robo-advisor (allocation), not intelligence/thesis"
+          },
+          {
+            "name": "LevelFields (levelfields.ai)",
+            "type": "indirect",
+            "dr": 36,
+            "weakness": "Event-driven for traders, too expensive for casual retail"
+          },
+          {
+            "name": "Gainify (gainify.io)",
+            "type": "indirect",
+            "dr": 34,
+            "weakness": "Screener/discovery, not portfolio monitoring"
+          },
+          {
+            "name": "StockInsights (stockinsights.ai)",
+            "type": "indirect",
+            "dr": 23,
+            "weakness": "Professional-oriented, not retail"
+          },
+          {
+            "name": "useThesis (usethesis.com)",
+            "type": "direct",
+            "dr": 1,
+            "weakness": "Closest to concept but no active intelligence, barely launched"
+          }
+        ],
+        "competitiveDensity": "Moderate",
+        "keywords": [
+          {
+            "keyword": "stock portfolio tracker",
+            "volume": 9200,
+            "kd": 41
+          },
+          {
+            "keyword": "ai investing",
+            "volume": 5000,
+            "kd": 37
+          },
+          {
+            "keyword": "investing in ai",
+            "volume": 1400,
+            "kd": 52
+          },
+          {
+            "keyword": "ai investing app",
+            "volume": 900,
+            "kd": 25
+          },
+          {
+            "keyword": "ai stock analysis",
+            "volume": 700,
+            "kd": 59
+          },
+          {
+            "keyword": "ai for investing",
+            "volume": 700,
+            "kd": 31
+          },
+          {
+            "keyword": "portfolio analysis tool",
+            "volume": 450,
+            "kd": 4
+          },
+          {
+            "keyword": "ai investing tools",
+            "volume": 400,
+            "kd": 50
+          },
+          {
+            "keyword": "stock analysis tool",
+            "volume": 400,
+            "kd": 64
+          },
+          {
+            "keyword": "best ai investing app",
+            "volume": 250,
+            "kd": 33
+          }
+        ],
+        "communitySignals": [
+          {
+            "type": "REQUEST",
+            "signal": "HN Ask: \"What would you want a daily AI portfolio briefing to tell you?\" — describes EXACT concept",
+            "source": "Hacker News Feb 2026"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Bloomberg AI Portfolio Commentary launched for institutional PORT Enterprise",
+            "source": "Bloomberg press release Sept 2025"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "eToro: 46% of US investors want AI to save time on research (+75% adoption YoY)",
+            "source": "eToro press release Oct 2025"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Seeking Alpha: wants fewer ads personalized to investment style based on data backtrack",
+            "source": "Capterra review"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Alert fatigue documented as industry problem",
+            "source": "InvestorsObserver"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Simply Wall St portfolio sync broken, upcoming events module non-functional",
+            "source": "Trustpilot"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Koyfin portfolio tracking very limited, no brokerage integrations",
+            "source": "G2/Slashdot"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Yahoo Finance UI regression — less info visible per screen",
+            "source": "Apple App Store"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Snowball Analytics broker sync issues, manual data entry frustration",
+            "source": "Trustpilot"
+          },
+          {
+            "type": "COMPLAINT",
+            "signal": "Seeking Alpha subscription underutilized",
+            "source": "Capterra"
+          },
+          {
+            "type": "DISCUSSION",
+            "signal": "Vanguard Expert Insights launched for advisors only, not retail",
+            "source": "PRNewswire"
+          }
+        ],
+        "executability": {
+          "complexity": "MEDIUM-HIGH",
+          "timeline": "4-6 weeks",
+          "dependencies": "Financial data API (Polygon/FMP, $30-100/mo), SEC EDGAR (free), News API ($50-200/mo), LLM API (variable per user), Plaid for broker integration ($500+/mo production)",
+          "risks": "LLM cost per user at scale, financial data quality/freshness, regulatory compliance overhead, Plaid integration complexity and cost"
+        },
+        "verdict_detail": {
+          "decision": "PIVOT",
+          "inFavor": [
+            "Demand validated from multiple angles: HN thread describes exact concept, Bloomberg built it for institutional, eToro confirms research time savings as #1 AI adoption driver",
+            "No direct competitor in specific niche: usethesis.com (DR 1) closest but no active intelligence",
+            "Growing keyword trends: stock portfolio tracker +81%, ai investing +27%",
+            "SEO entry feasible: portfolio analysis tool KD 4/TP 25K is wide open"
+          ],
+          "against": [
+            "Execution complexity too high for solopreneur first product: multiple paid APIs, backend pipeline, auth, per-user LLM costs",
+            "3 of 5 critical assumptions are HIGH risk: proactive demand, user trust, fintech competitiveness",
+            "Funded competitors in adjacent space: PortfolioPilot ($30B assets), Fiscal.ai ($13M), Simply Wall St (DR 74)",
+            "Unit economics uncertain: processing earnings + news + filings per user per week is expensive",
+            "Regulatory overhead: financial products require compliance other verticals don't"
+          ],
+          "pivotSuggestions": [
+            "Portfolio Analysis Tool (SEO-first free tool) — Build a free web tool where users paste tickers and get instant analysis: thesis suggestions, risk assessment, sector exposure. Keyword \"portfolio analysis tool\" KD 4, TP 25K. Replicates ValuePerFan playbook.",
+            "AI Investing Newsletter/Briefing — Weekly email briefing where subscribers submit portfolio via simple form. Claude API generates personalized briefing. LOW complexity, no auth, no Plaid, proven newsletter model.",
+            "Investment Thesis Tracker (simple SaaS) — usethesis.com has DR 1 and is in waitlist. Build clean web app for logging theses, simple alerts on earnings/news, conviction dashboard. No heavy LLM processing in v1."
+          ],
+          "pivotScores": [
+            {
+              "status": "improvement",
+              "score": 74,
+              "band": "Good",
+              "delta": 16,
+              "bottleneck": "Competitive Pressure — funded players in adjacent space"
+            },
+            {
+              "status": "needs_screening",
+              "score": null,
+              "bottleneck": "Newsletter content marketing — different acquisition model, no SEO motion"
+            },
+            {
+              "status": "improvement",
+              "score": 71,
+              "band": "Good",
+              "delta": 13,
+              "bottleneck": "SEO Entry — thesis tracker has near-zero search volume"
+            }
+          ]
+        },
+        "forjaScore": {
+          "total": 58,
+          "calculatedAt": "2026-04-13",
+          "dimensions": {
+            "seoEntry": {
+              "raw": 58,
+              "weighted": 14.5,
+              "reason": "Weighted avg KD 42.3. Viable entry at portfolio analysis tool (KD 4) and ai investing app (KD 25), but main keywords moderate"
+            },
+            "competitivePressure": {
+              "raw": 58,
+              "weighted": 11.6,
+              "reason": "Moderate density. DR avg 44.6. No direct competitor but many strong adjacent players"
+            },
+            "marketDemand": {
+              "raw": 90,
+              "weighted": 13.5,
+              "reason": "22K total volume (bucket 80) + 11 strong community signals (+10 bonus). Real demand confirmed"
+            },
+            "marketSize": {
+              "raw": 80,
+              "weighted": 12.0,
+              "reason": "22K total volume. Broad market (67K global on stock portfolio tracker alone)"
+            },
+            "executionFeasibility": {
+              "raw": 30,
+              "weighted": 4.5,
+              "reason": "MEDIUM-HIGH complexity + paid dependencies. Multiple APIs, backend pipeline, LLM costs per user"
+            },
+            "riskProfile": {
+              "raw": 20,
+              "weighted": 2.0,
+              "reason": "3 of 5 assumptions HIGH risk. Fintech barriers, trust, proactive vs on-demand demand"
             }
           },
           "missingInputs": [],
