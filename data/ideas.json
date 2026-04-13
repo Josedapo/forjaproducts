@@ -1166,7 +1166,7 @@
       "pivotHistory": null
     },
     {
-      "idea": "Vigil — Business quality dashboard",
+      "idea": "Moatboard — Business quality dashboard",
       "slug": "vigil-business-quality-dashboard",
       "description": "Web dashboard for buy-and-hold investors. Quality scorecards (ROIC, FCF, moat), thesis tracking, anti-trading philosophy with punch card discipline. Calculators as SEO entry",
       "pain": "Value investors don't have tools designed for business-quality thinking; everything is built for traders (alerts, charts, real-time). No tool answers 'are my businesses still good?'",
@@ -4771,7 +4771,7 @@
         "evaluatedDate": "2026-04-13",
         "verdict": "PIVOT",
         "idea": {
-          "what": "Vigil — AI agent that monitors your stock portfolio holdings and watchlist, filters market noise, and presents curated briefings that explain what happened and what it means for YOUR specific positions. Includes thesis tracking, conviction scoring, and portfolio-contextualized analysis.",
+          "what": "AI agent that monitors your stock portfolio holdings and watchlist, filters market noise, and presents curated briefings that explain what happened and what it means for YOUR specific positions. Includes thesis tracking, conviction scoring, and portfolio-contextualized analysis.",
           "audience": "The Disciplined Amateur — professional aged 35-55, not in finance, $50-100K portfolio, 5-10 holdings, checks 2-4x/month. Understands earnings and P/E but lacks time to synthesize multiple sources.",
           "problem": "Retail investors are mostly flying blind between active portfolio checks. When something happens with their companies, they find out late, don't understand the implications for their specific portfolio, or panic-react based on incomplete information. Existing tools work in silos but none contextualizes information relative to the user's holdings.",
           "solution": "An AI agent that continuously monitors SEC filings, earnings, news, and analyst updates for your specific portfolio, then presents a curated weekly briefing answering \"is everything OK?\" with thesis-tracking, conviction scoring, and portfolio-contextualized analysis.",
@@ -5067,60 +5067,206 @@
     },
     {
       "slug": "vigil-business-quality-dashboard",
-      "idea": "Vigil — Business quality dashboard",
+      "idea": "Moatboard — Business quality dashboard",
       "screeningData": {
         "evaluatedDate": "2026-04-13",
         "verdict": "ADVANCE",
         "idea": {
-          "what": "Vigil — web dashboard for investors who treat their positions as businesses they own, not stocks they trade. Monitors business quality (ROIC, FCF, moat, investment thesis) instead of prices. Monthly review cadence, not daily alerts. Anti-trading philosophy: few decisions, well thought out.",
+          "what": "Moatboard — web dashboard for investors who treat their positions as businesses they own, not stocks they trade. Monitors business quality (ROIC, FCF, moat, investment thesis) instead of prices. Monthly review cadence, not daily alerts. Anti-trading philosophy: few decisions, well thought out.",
           "audience": "The 'business owner investor' — person aged 35-55 with a portfolio of 5-15 buy-and-hold positions, who thinks about business quality and competitive advantages, not charts or momentum. Invests like Buffett/Munger but without the tools.",
           "problem": "Investment tools are designed for traders (alerts, charts, real-time news). The 'business owner' investor doesn't have a place that helps answer 'are my businesses still good?' without diving into earnings calls, 10-Ks, and news.",
           "solution": "A 'monthly review' dashboard where each position has a quality scorecard (ROIC, FCF, moat status, thesis), alerts only when something affects the thesis (not the price), and a 'punch card' that limits annual moves as behavioral discipline.",
           "differentiation": "(1) Built for NOT trading — unique anti-engagement philosophy. (2) Business quality scorecard, not price charts. (3) Integrated thesis tracking: 'why you bought' connected with 'what happened since.' (4) Punch card as behavioral discipline mechanism."
         },
         "assumptions": [
-          { "assumption": "Value investors want a dedicated quality-first tool (not another screener)", "risk": "MEDIUM" },
-          { "assumption": "Calculator-driven SEO can attract the target audience", "risk": "LOW" },
-          { "assumption": "Anti-trading philosophy resonates enough to differentiate", "risk": "MEDIUM" },
-          { "assumption": "Users will return monthly for thesis review", "risk": "MEDIUM" },
-          { "assumption": "A solopreneur can maintain quality data for 100+ stocks", "risk": "LOW" }
+          {
+            "assumption": "Value investors want a dedicated quality-first tool (not another screener)",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Calculator-driven SEO can attract the target audience",
+            "risk": "LOW"
+          },
+          {
+            "assumption": "Anti-trading philosophy resonates enough to differentiate",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "Users will return monthly for thesis review",
+            "risk": "MEDIUM"
+          },
+          {
+            "assumption": "A solopreneur can maintain quality data for 100+ stocks",
+            "risk": "LOW"
+          }
         ],
         "competitors": [
-          { "name": "useThesis", "type": "direct", "dr": 1, "weakness": "No active intelligence, no quality scorecard, no philosophy" },
-          { "name": "ThesesWatch Pro", "type": "direct", "dr": 0, "weakness": "Barely exists, no dashboard" },
-          { "name": "Thesis Tracker", "type": "direct", "dr": 0, "weakness": "Australian market only, barely launched" },
-          { "name": "Moatifi", "type": "direct", "dr": 5, "weakness": "Screener only, no position tracking, no thesis" },
-          { "name": "Simply Wall St", "type": "indirect", "dr": 74, "weakness": "General purpose, no anti-trading, no automated thesis tracking" },
-          { "name": "WallStreetZen", "type": "indirect", "dr": 71, "weakness": "Screener, no monitoring of own positions" },
-          { "name": "TIKR", "type": "indirect", "dr": 54, "weakness": "Raw data terminal, no scorecard or thesis" },
-          { "name": "AlphaSpread", "type": "indirect", "dr": 53, "weakness": "Valuation only, no portfolio/thesis" },
-          { "name": "Marketlog", "type": "indirect", "dr": 48, "weakness": "No thesis, no quality scorecard" },
-          { "name": "ValueInvesting.io", "type": "indirect", "dr": 41, "weakness": "Screener/backtest, no business-quality focus" },
-          { "name": "Beanvest", "type": "indirect", "dr": 40, "weakness": "Standalone tools, no integrating philosophy" }
+          {
+            "name": "useThesis",
+            "type": "direct",
+            "dr": 1,
+            "weakness": "No active intelligence, no quality scorecard, no philosophy"
+          },
+          {
+            "name": "ThesesWatch Pro",
+            "type": "direct",
+            "dr": 0,
+            "weakness": "Barely exists, no dashboard"
+          },
+          {
+            "name": "Thesis Tracker",
+            "type": "direct",
+            "dr": 0,
+            "weakness": "Australian market only, barely launched"
+          },
+          {
+            "name": "Moatifi",
+            "type": "direct",
+            "dr": 5,
+            "weakness": "Screener only, no position tracking, no thesis"
+          },
+          {
+            "name": "Simply Wall St",
+            "type": "indirect",
+            "dr": 74,
+            "weakness": "General purpose, no anti-trading, no automated thesis tracking"
+          },
+          {
+            "name": "WallStreetZen",
+            "type": "indirect",
+            "dr": 71,
+            "weakness": "Screener, no monitoring of own positions"
+          },
+          {
+            "name": "TIKR",
+            "type": "indirect",
+            "dr": 54,
+            "weakness": "Raw data terminal, no scorecard or thesis"
+          },
+          {
+            "name": "AlphaSpread",
+            "type": "indirect",
+            "dr": 53,
+            "weakness": "Valuation only, no portfolio/thesis"
+          },
+          {
+            "name": "Marketlog",
+            "type": "indirect",
+            "dr": 48,
+            "weakness": "No thesis, no quality scorecard"
+          },
+          {
+            "name": "ValueInvesting.io",
+            "type": "indirect",
+            "dr": 41,
+            "weakness": "Screener/backtest, no business-quality focus"
+          },
+          {
+            "name": "Beanvest",
+            "type": "indirect",
+            "dr": 40,
+            "weakness": "Standalone tools, no integrating philosophy"
+          }
         ],
         "competitiveDensity": "Open",
         "keywords": [
-          { "keyword": "dcf calculator", "volume": 1300, "kd": 6 },
-          { "keyword": "intrinsic value calculator", "volume": 600, "kd": 3 },
-          { "keyword": "what is intrinsic value", "volume": 2700, "kd": 11 },
-          { "keyword": "value investing", "volume": 4800, "kd": 43 },
-          { "keyword": "fundamental analysis", "volume": 3400, "kd": 26 },
-          { "keyword": "stock valuation", "volume": 900, "kd": 40 },
-          { "keyword": "reverse dcf calculator", "volume": 100, "kd": 1 },
-          { "keyword": "wide moat stocks", "volume": 150, "kd": 8 },
-          { "keyword": "how to calculate intrinsic value", "volume": 200, "kd": 12 },
-          { "keyword": "portfolio review tool", "volume": 150, "kd": 13 }
+          {
+            "keyword": "dcf calculator",
+            "volume": 1300,
+            "kd": 6
+          },
+          {
+            "keyword": "intrinsic value calculator",
+            "volume": 600,
+            "kd": 3
+          },
+          {
+            "keyword": "what is intrinsic value",
+            "volume": 2700,
+            "kd": 11
+          },
+          {
+            "keyword": "value investing",
+            "volume": 4800,
+            "kd": 43
+          },
+          {
+            "keyword": "fundamental analysis",
+            "volume": 3400,
+            "kd": 26
+          },
+          {
+            "keyword": "stock valuation",
+            "volume": 900,
+            "kd": 40
+          },
+          {
+            "keyword": "reverse dcf calculator",
+            "volume": 100,
+            "kd": 1
+          },
+          {
+            "keyword": "wide moat stocks",
+            "volume": 150,
+            "kd": 8
+          },
+          {
+            "keyword": "how to calculate intrinsic value",
+            "volume": 200,
+            "kd": 12
+          },
+          {
+            "keyword": "portfolio review tool",
+            "volume": 150,
+            "kd": 13
+          }
         ],
         "communitySignals": [
-          { "signal": "Finclaw: AI agent with thesis tracking, Show HN March 2026", "type": "REQUEST", "source": "Hacker News" },
-          { "signal": "Moatifi: Buffett-style moat analysis, Show HN February 2026", "type": "REQUEST", "source": "Hacker News" },
-          { "signal": "Show HN: 'I screened the entire S&P using Buffett's criteria'", "type": "REQUEST", "source": "Hacker News" },
-          { "signal": "Sleep Well Investments: newsletter with thesis tracker and checklist, paying subscribers", "type": "DISCUSSION", "source": "Substack" },
-          { "signal": "HN Ask 'What would you want a daily AI portfolio briefing?' — describes exact concept", "type": "REQUEST", "source": "Hacker News" },
-          { "signal": "Bloomberg launches AI Portfolio Commentary for institutional", "type": "DISCUSSION", "source": "Bloomberg" },
-          { "signal": "eToro: 46% of US investors want AI to 'save time on research'", "type": "DISCUSSION", "source": "eToro" },
-          { "signal": "Simply Wall St: portfolio sync broken, events module non-functional", "type": "COMPLAINT", "source": "Trustpilot" },
-          { "signal": "Alert fatigue documented as industry problem", "type": "COMPLAINT", "source": "InvestorsObserver" }
+          {
+            "signal": "Finclaw: AI agent with thesis tracking, Show HN March 2026",
+            "type": "REQUEST",
+            "source": "Hacker News"
+          },
+          {
+            "signal": "Moatifi: Buffett-style moat analysis, Show HN February 2026",
+            "type": "REQUEST",
+            "source": "Hacker News"
+          },
+          {
+            "signal": "Show HN: 'I screened the entire S&P using Buffett's criteria'",
+            "type": "REQUEST",
+            "source": "Hacker News"
+          },
+          {
+            "signal": "Sleep Well Investments: newsletter with thesis tracker and checklist, paying subscribers",
+            "type": "DISCUSSION",
+            "source": "Substack"
+          },
+          {
+            "signal": "HN Ask 'What would you want a daily AI portfolio briefing?' — describes exact concept",
+            "type": "REQUEST",
+            "source": "Hacker News"
+          },
+          {
+            "signal": "Bloomberg launches AI Portfolio Commentary for institutional",
+            "type": "DISCUSSION",
+            "source": "Bloomberg"
+          },
+          {
+            "signal": "eToro: 46% of US investors want AI to 'save time on research'",
+            "type": "DISCUSSION",
+            "source": "eToro"
+          },
+          {
+            "signal": "Simply Wall St: portfolio sync broken, events module non-functional",
+            "type": "COMPLAINT",
+            "source": "Trustpilot"
+          },
+          {
+            "signal": "Alert fatigue documented as industry problem",
+            "type": "COMPLAINT",
+            "source": "InvestorsObserver"
+          }
         ],
         "executability": {
           "complexity": "MEDIUM",
