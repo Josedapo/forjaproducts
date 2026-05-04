@@ -1,6 +1,193 @@
 {
   "ideas": [
     {
+      "idea": "AI Search Visibility Tracker",
+      "description": "Monitor brand mentions and ranking across ChatGPT, Perplexity, Claude, and Google AI Overviews with diff alerts when prompts surface or drop the brand",
+      "pain": "Marketers have no visibility into how their brand performs on AI-answer engines that increasingly intercept top-of-funnel traffic; legacy SEO trackers don't cover prompt-level results",
+      "source": "Reddit r/seo, r/DigitalMarketing (recurring threads on GEO/AEO blind spots)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Multi-State Sales Tax Automation for SMB",
+      "description": "Auto-calculate, collect, and file multi-state US sales tax returns for small e-commerce and service businesses",
+      "pain": "SMBs face state audits and penalties from unpaid sales tax across nexus states; existing tools (Avalara, TaxJar) overpriced for small operators",
+      "source": "Reddit r/smallbusiness, r/shopify (high-frequency complaint, pain score 90/100 in aggregator analysis)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Click Fraud Detection for SMB Google Ads",
+      "description": "Affordable click fraud detection for e-commerce advertisers spending $2K-20K monthly on Google Ads",
+      "pain": "Click fraud consumes ~14% of e-commerce ad budgets; existing solutions (ClickCease) priced for mid-market and above, leaving SMBs exposed",
+      "source": "Reddit r/PPC (quantified pain, recurring complaint)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Unified Compliance Manager",
+      "description": "Single platform mapping GDPR, HIPAA, and SOC 2 controls with automated evidence collection across the three frameworks",
+      "pain": "Companies subject to multiple frameworks duplicate evidence collection across siloed tools (Vanta, Drata) that each cover one regime well; SOC 2 certs cost $15K-50K through incumbents",
+      "source": "Reddit r/sysadmin, r/startups (multiple founder complaints)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Construction WIP Reporting Automation",
+      "description": "Auto-generate GAAP-compliant work-in-progress schedules from QuickBooks Online for construction accountants",
+      "pain": "Accountants serving construction clients spend 8-12 hours per client per month manually building WIP schedules in Excel; no SaaS automates this",
+      "source": "Reddit r/accounting (quantified pain)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Shopify+Amazon Profitability Tracker",
+      "description": "Connect both stores and show net profit per platform after fees, ads, COGS, and returns",
+      "pain": "Multi-channel sellers can't tell which platform is actually profitable; native dashboards show revenue, not net contribution; tax reports treat them as one bucket",
+      "source": "Reddit r/ecommerce, r/FulfillmentByAmazon (recurring complaints)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "LMS Integration Hub for Teachers",
+      "description": "Single overlay that consolidates Canvas, Schoology, Google Classroom, gradebook, attendance, and IEP tools into one teacher view",
+      "pain": "73% of educators report platform fragmentation as their biggest tech frustration; teachers maintain duplicate paper plans because LMS uploads don't replace existing systems",
+      "source": "Jotform EdTech Trends 2026, EdSurge, Edutopia (educator survey data)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Customer Concentration Risk Monitor",
+      "description": "Dashboard tracking revenue concentration per customer, alerting when any account exceeds 15-20% of revenue",
+      "pain": "Loss of a single major customer destroys SMBs that didn't see concentration creep; QuickBooks/Xero don't surface this risk natively",
+      "source": "Reddit r/smallbusiness (pain score 90/100 in aggregator analysis)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Business Process Documentation via Screen Recording",
+      "description": "Guide SMB owners through documenting workflows using screen recording plus AI-generated written SOPs",
+      "pain": "SMB owners are trapped in operations and can't delegate without documented processes; Loom captures video but not structured SOPs; Scribe is closest but expensive at scale",
+      "source": "Reddit r/smallbusiness, r/Entrepreneur (pain score 90/100)",
+      "painScore": 4,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "HR Onboarding Documentation Chatbot Generator",
+      "description": "Convert scattered HR docs into self-serve onboarding chatbots so new hires self-answer policy questions",
+      "pain": "HR managers lose ~50% of their day to repetitive onboarding questions; Notion/Confluence don't enforce findability; existing chatbot platforms require dev setup",
+      "source": "Reddit r/humanresources, r/productivity",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Backlink Impact Analysis Tool",
+      "description": "Show actual ranking correlation from backlinks instead of relying on Domain Authority/Domain Rating proxies",
+      "pain": "DA/DR scores oversimplify backlink value and cause SEOs to chase wrong links; no tool ties specific backlinks to ranking movement",
+      "source": "Reddit r/seo (recurring frustration with Ahrefs/Moz scoring)",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Google Ads Conversion Tracking Audit",
+      "description": "Auto-audit Google Ads setup to detect double-counting, validate tag firing, and surface misattribution",
+      "pain": "Misconfigured conversion tracking causes wrong bid decisions and inflated ROAS; agencies and in-house marketers debug this manually each quarter",
+      "source": "Reddit r/PPC (recurring complaint)",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "PDF-to-Spreadsheet Financial Data Extractor",
+      "description": "Specialized extraction for bank statements, invoices, and financial PDFs with direct Excel/Sheets export",
+      "pain": "Bookkeepers and finance staff manually copy figures from financial PDFs into spreadsheets monthly; generic OCR tools botch tabular financial data",
+      "source": "Reddit r/productivity, r/Accounting",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Therapist Billing & Scheduling Hub",
+      "description": "Solo-practitioner-grade scheduling, session notes, and HIPAA-compliant billing in one tool",
+      "pain": "Solo therapists handle admin manually or stitch together SimplePractice features they don't need; no stripped-down option for one-person mental health practices",
+      "source": "Greensighter aggregator analysis of mental health communities",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "Influencer CRM for Brand Marketing Teams",
+      "description": "Contact, deliverable, and campaign tracking for marketing teams managing 20+ influencer relationships",
+      "pain": "Brand marketers manage influencers in spreadsheets that break above ~20 relationships; existing platforms (Grin, CreatorIQ) priced for enterprise",
+      "source": "Reddit r/DigitalMarketing",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "AI Agent Runtime Security Layer",
+      "description": "Sandbox/runtime that enforces execution boundaries, traces actions, and replays decisions for LLM agents with tool access",
+      "pain": "As agentic systems ship to production, no standard runtime layer monitors injection, tool abuse, and data exfiltration; security teams reinvent guardrails per project",
+      "source": "Hacker News (multiple Show HN/Ask HN posts on agent security in 2026)",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
+      "idea": "AI Content Differentiation Tool",
+      "description": "Identify overused LLM phrases and structures in marketing copy and propose differentiated angles per brand voice",
+      "pain": "Brands using ChatGPT/Claude produce indistinguishable content that loses ranking and trust; manual rewriting defeats the speed advantage",
+      "source": "Reddit r/DigitalMarketing, r/SEO",
+      "painScore": 3,
+      "added": "2026-05-04",
+      "status": "NEW",
+      "reportUrl": null,
+      "pivotHistory": null
+    },
+    {
       "idea": "Trip scenario manager",
       "slug": "trip-scenario-manager",
       "description": "Tool to organize and compare multi-leg travel options (flights, trains, ferries) with cascading time constraints",
